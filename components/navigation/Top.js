@@ -12,6 +12,7 @@ import {
   Hide,
   Link,
   Show,
+  Text
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { FiHeart, FiHelpCircle, FiMenu, FiUsers } from "react-icons/fi";
@@ -25,30 +26,30 @@ export default function Top() {
     {
       href: "support",
       anchor: "Support",
-      icon: <FiHelpCircle color={"white"} />,
+      icon: <FiHelpCircle color={"white"} />
     },
     {
       href: "donate",
       anchor: "Donate",
-      icon: <FiHeart color={"white"} />,
+      icon: <FiHeart color={"white"} />
     },
     {
       href: "lgbtqia-community",
       anchor: "Community",
-      icon: <FiUsers color={"white"} />,
-    },
+      icon: <FiUsers color={"white"} />
+    }
   ];
   const policies = [
     { href: "terms", anchor: "Terms & Conditions" },
     { href: "privacy", anchor: "Privacy Policy" },
     { href: "eula", anchor: "End-User License Agreement" },
-    { href: "cookies", anchor: "Cookie Policy" },
+    { href: "cookies", anchor: "Cookie Policy" }
   ];
 
   return (
     <>
       <Flex align={"center"} justify={"space-between"}>
-        <Flex>
+        <Flex align={"center"}>
           <Heading color={"white"} mr={4}>
             <Link
               as={NextLink}
@@ -69,7 +70,9 @@ export default function Top() {
                 color={"white"}
                 ml={4}
               >
-                {link.anchor}
+                <Text my={0} lineHeight={1}>
+                  {link.anchor}
+                </Text>
               </Link>
             ))}
           </Show>
