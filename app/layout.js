@@ -2,10 +2,12 @@ import { Grid, GridItem } from "@chakra-ui/react";
 import Top from "@/components/navigation/Top";
 import Providers from "@/app/providers";
 import Footer from "@/components/navigation/Footer";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
 export const metadata = {
   title:
-    "Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community",
+    "Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
 };
 
 export default function RootLayout({ children }) {
@@ -38,6 +40,7 @@ export default function RootLayout({ children }) {
           </Grid>
         </Providers>
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
     </html>
   );
 }
