@@ -42,7 +42,7 @@ export default function Home() {
       {/*/>*/}
       <Flex
         bg={"primary.500"}
-        minH={"calc(100vh - 64px - 48px)"}
+        minH={"calc(100vh - 61px - 48px)"}
         // bgImage={"url('/splash.png')"}
         // bgPosition={"center"}
         // bgRepeat={"no-repeat"}
