@@ -1,0 +1,133 @@
+"use client";
+
+import {
+  Box,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerOverlay,
+  Flex,
+  Heading,
+  Hide,
+  Link,
+  Show,
+} from "@chakra-ui/react";
+import NextLink from "next/link";
+import { FiHeart, FiHelpCircle, FiMenu, FiUsers } from "react-icons/fi";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+
+export default function Top() {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const router = useRouter();
+  const links = [
+    {
+      href: "support",
+      anchor: "Support",
+      icon: <FiHelpCircle color={"white"} />,
+    },
+    {
+      href: "donate",
+      anchor: "Donate",
+      icon: <FiHeart color={"white"} />,
+    },
+    {
+      href: "lgbtqia-community",
+      anchor: "Community",
+      icon: <FiUsers color={"white"} />,
+    },
+  ];
+  const policies = [
+    { href: "terms", anchor: "Terms & Conditions" },
+    { href: "privacy", anchor: "Privacy Policy" },
+    { href: "eula", anchor: "End-User License Agreement" },
+    { href: "cookies", anchor: "Cookie Policy" },
+  ];
+
+  return (
+    <>
+      <Flex align={"center"} justify={"space-between"}>
+        <Flex>
+          <Heading color={"white"} mr={4}>
+            <Link
+              as={NextLink}
+              href={"/"}
+              title={
+                "Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
+              }
+            >
+              Bessa LGBTQIA+ Community App
+            </Link>
+          </Heading>
+          <Show above={"md"}>
+            {links?.map((link) => (
+              <Link
+                key={link.href}
+                href={`/${link.href}`}
+                title={`${link.anchor} | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community`}
+                color={"white"}
+                ml={4}
+              >
+                {link.anchor}
+              </Link>
+            ))}
+          </Show>
+        </Flex>
+        <Hide above={"md"}>
+          <Box cursor={"pointer"}>
+            <FiMenu
+              color={"white"}
+              size={27}
+              onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+            />
+          </Box>
+        </Hide>
+      </Flex>
+      <Drawer
+        isOpen={isDrawerOpen}
+        placement={"left"}
+        onClose={() => setIsDrawerOpen(false)}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton color={"white"} />
+          <DrawerBody
+            bg={"primary.500"}
+            display={"flex"}
+            alignItems={"center"}
+            h={"100%"}
+          >
+            <Box>
+              {links?.map((link) => (
+                <Flex
+                  key={link.href}
+                  alignItems={"center"}
+                  onClick={() => {
+                    setIsDrawerOpen(false);
+                    router.push(`/${link.href}`);
+                  }}
+                >
+                  <Flex mr={2}>{link?.icon && link.icon}</Flex>
+                  <Link color={"white"}>{link.anchor}</Link>
+                </Flex>
+              ))}
+              {policies?.map((link) => (
+                <Flex
+                  key={link.href}
+                  alignItems={"center"}
+                  onClick={() => {
+                    setIsDrawerOpen(false);
+                    router.push(`/${link.href}`);
+                  }}
+                >
+                  <Link color={"white"}>{link.anchor}</Link>
+                </Flex>
+              ))}
+            </Box>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+    </>
+  );
+}
