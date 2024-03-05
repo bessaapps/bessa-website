@@ -2,7 +2,12 @@
 
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "@/utils/chakra";
+import { UserProvider } from "@/context/UserContext";
 
 export default function Providers({ children }) {
-  return <ChakraProvider theme={theme}>{children}</ChakraProvider>;
+  return (
+    <UserProvider>
+      <ChakraProvider theme={theme}>{children}</ChakraProvider>
+    </UserProvider>
+  );
 }

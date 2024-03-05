@@ -12,6 +12,8 @@ import Logo from "@/images/logo.png";
 import Image from "next/image";
 
 export const metadata = {
+  title:
+    "Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community",
   description:
     "Bessa is a safe inclusive and body-positive community of LGBTQIA+ people who want to connect with others and socialize with their friends, family, and others.",
   openGraph: {

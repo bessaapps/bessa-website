@@ -5,11 +5,6 @@ import Footer from "@/components/navigation/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
-export const metadata = {
-  title:
-    "Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang={"en"}>
