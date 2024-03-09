@@ -15,7 +15,7 @@ import {
   Text
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { FiHeart, FiHelpCircle, FiMenu, FiUsers } from "react-icons/fi";
+import { FiMenu } from "react-icons/fi";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -25,18 +25,19 @@ export default function Top() {
   const links = [
     {
       href: "support",
-      anchor: "Support",
-      icon: <FiHelpCircle color={"white"} />
+      anchor: "Support"
     },
     {
       href: "donate",
-      anchor: "Donate",
-      icon: <FiHeart color={"white"} />
+      anchor: "Donate"
     },
     {
       href: "lgbtqia-community",
-      anchor: "Community",
-      icon: <FiUsers color={"white"} />
+      anchor: "Community"
+    },
+    {
+      href: "celebrating-international-transgender-day-of-visibility",
+      anchor: "Trans Day"
     }
   ];
   const policies = [
@@ -102,20 +103,7 @@ export default function Top() {
             h={"100%"}
           >
             <Box>
-              {links?.map((link) => (
-                <Flex
-                  key={link.href}
-                  alignItems={"center"}
-                  onClick={() => {
-                    setIsDrawerOpen(false);
-                    router.push(`/${link.href}`);
-                  }}
-                >
-                  <Flex mr={2}>{link?.icon && link.icon}</Flex>
-                  <Link color={"white"}>{link.anchor}</Link>
-                </Flex>
-              ))}
-              {policies?.map((link) => (
+              {[...links, ...policies]?.map((link) => (
                 <Flex
                   key={link.href}
                   alignItems={"center"}

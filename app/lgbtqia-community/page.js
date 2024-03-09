@@ -23,7 +23,7 @@ const jsonLd = {
   author: "Topher"
 };
 
-export default function EULA() {
+export default function LGBTQIACommunity() {
   return (
     <section>
       <script
