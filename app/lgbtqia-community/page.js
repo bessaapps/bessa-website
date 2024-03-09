@@ -9,21 +9,26 @@ export const metadata = {
     "Community is essential for fostering connections, providing support, promoting personal and collective growth, and contributing to the overall health and well-being of individuals. It fulfills fundamental human needs for connection, belonging, and shared purpose, especially with LGBTQIA+ people."
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  name: "Safely Finding LGBTQIA+ Community On- and Offline | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community",
+  description:
+    "Community is essential for fostering connections, providing support, promoting personal and collective growth, and contributing to the overall health and well-being of individuals. It fulfills fundamental human needs for connection, belonging, and shared purpose, especially with LGBTQIA+ people.",
+  url: "https://bessssssa.com/lgbtqia-community",
+  images: ["https://bessssssa.com/images/article.png"],
+  datePublished: "2024-02-13T00:00:00+00:00",
+  dateModified: "2024-02-13T00:00:00+00:00",
+  authorName: "Topher"
+};
+
 export default function EULA() {
   return (
-    <>
-      {/*<ArticleJsonLd*/}
-      {/*  type={"BlogPosting"}*/}
-      {/*  url={"https://bessssssa.com/lgbtqia-community"}*/}
-      {/*  title="Blog headline"*/}
-      {/*  images={["https://bessssssa.com/images/article.png"]}*/}
-      {/*  datePublished={"2024-02-13T00:00:00+00:00"}*/}
-      {/*  dateModified={"2024-02-13T00:00:00+00:00"}*/}
-      {/*  authorName={"Topher"}*/}
-      {/*  description={*/}
-      {/*    "Community is essential for fostering connections, providing support, promoting personal and collective growth, and contributing to the overall health and well-being of individuals. It fulfills fundamental human needs for connection, belonging, and shared purpose, especially with LGBTQIA+ people."*/}
-      {/*  }*/}
-      {/*/>*/}
+    <section>
+      <script
+        type={"application/ld+json"}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Container maxW={"container.lg"} py={16}>
         <Image
           src={Article}
@@ -340,6 +345,6 @@ export default function EULA() {
           stronger and more resilient to the challenges LGBTQIA+ often face.
         </Text>
       </Container>
-    </>
+    </section>
   );
 }

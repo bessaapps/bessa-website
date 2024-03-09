@@ -26,22 +26,21 @@ export const metadata = {
   }
 };
 
-// todo: update
-// const jsonLd = {
-//   "@context": "https://schema.org",
-//   "@type": "Software",
-//   name: "Bessa LGBTQIA+ Community App",
-//   description:
-//     "Bessa is a safe inclusive and body-positive community of LGBTQIA+ people who want to connect with others and socialize with their friends, family, and others.",
-// };
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Software",
+  name: "Bessa LGBTQIA+ Community App",
+  description:
+    "Bessa is a safe inclusive and body-positive community of LGBTQIA+ people who want to connect with others and socialize with their friends, family, and others."
+};
 
 export default function Home() {
   return (
-    <>
-      {/*<script*/}
-      {/*  type={"application/ld+json"}*/}
-      {/*  dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}*/}
-      {/*/>*/}
+    <section>
+      <script
+        type={"application/ld+json"}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Flex
         bg={"primary.500"}
         minH={"calc(100vh - 61px - 48px)"}
@@ -123,6 +122,6 @@ export default function Home() {
           </Flex>
         </Container>
       </Flex>
-    </>
+    </section>
   );
 }
