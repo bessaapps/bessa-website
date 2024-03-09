@@ -25,6 +25,33 @@ export default function Users() {
   const [isFetchingUsers, setIsFetchingUsers] = useState(false);
   const { user } = useUser();
 
+  const destroy = (_id, email) => {
+    if (isFetchingUsers) return;
+    setIsFetchingUsers(true);
+    axios
+      .delete(`${process.env.NEXT_PUBLIC_API_URL}/users`, {
+        params: { _id },
+        headers: { Authorization: user?.accessToken }
+      })
+      .then(async () => {
+        email &&
+          (await axios
+            .post(`${process.env.NEXT_PUBLIC_API_URL}/actions/send-mail`, {
+              to: email,
+              subject: "Your account has been deleted.",
+              text: "It looks like your account violates our community's rules! Your account has been deleted to protect members. If you need help, visit: https://bessssssa.com to learn more.",
+              html: `<p>It looks like your account violates our community's rules! Your account has been deleted to protect members. If you need help, visit: https://bessssssa.com to learn more.</p>`
+            })
+            .catch((error) => console.error(error)));
+        setUsers(users?.filter((user) => user?._id !== _id));
+        setIsFetchingUsers(false);
+      })
+      .catch((error) => {
+        console.error(error);
+        setIsFetchingUsers(false);
+      });
+  };
+
   useEffect(() => {
     if (isFetchingUsers || !user?.accessToken) return;
     setIsFetchingUsers(true);
