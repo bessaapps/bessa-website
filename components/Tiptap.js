@@ -18,7 +18,7 @@ export default function Tiptap({ handleSubmit, isLoading }) {
   const editor = useEditor({
     extensions: [StarterKit, Underline, TextStyle, Color],
     content:
-      '<p></p><p><strong><span style="color: #9362e3">Topher</span></strong></p><p><strong>Bessa LGBTQIA+ Community App</strong></p><p><span style="color: #7f7f7f">topher@bessssssa.com | https://bessssssa.com</span></p>'
+      '<p></p><p></p><p><strong><span style="color: #9362e3">Topher</span></strong></p><p><strong>Bessa LGBTQIA+ Community App</strong></p><p><span style="color: #7f7f7f">topher@bessssssa.com | https://bessssssa.com</span></p>'
   });
 
   if (!editor) return;
