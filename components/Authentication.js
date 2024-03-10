@@ -10,7 +10,7 @@ export default function Authentication() {
   const router = useRouter();
 
   useEffect(() => {
-    auth.onAuthStateChanged((firebaseUser) => {
+    auth.onAuthStateChanged(async (firebaseUser) => {
       if (
         firebaseUser?.email === "topher@bessssssa.com" ||
         firebaseUser?.email === "apps@bessssssa.com" ||
@@ -18,6 +18,7 @@ export default function Authentication() {
       ) {
         setUser(firebaseUser);
       } else {
+        await auth.signOut();
         setUser({});
         router.push("/");
       }
