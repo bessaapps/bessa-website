@@ -1,5 +1,6 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import AdminTop from "@/components/navigation/AdminTop";
+import "./styles.css";
 
 export const metadata = {
   title:

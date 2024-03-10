@@ -121,64 +121,62 @@ export default function Posts() {
   }, [user]);
 
   return (
-    <>
+    <section>
       <Authentication />
-      <section>
-        <Container maxW={"container.xl"} py={16}>
-          <Heading as={"h1"} mb={4}>
-            Posts
-          </Heading>
-          <SkeletonText isLoaded={!isFetchingPosts}>
-            <TableContainer>
-              <Table variant={"simple"} size={"xs"}>
-                <Thead>
-                  <Tr>
-                    <Th />
-                    <Th>Description</Th>
-                    <Th />
+      <Container maxW={"container.xl"} py={16}>
+        <Heading as={"h1"} mb={4}>
+          Posts
+        </Heading>
+        <SkeletonText isLoaded={!isFetchingPosts}>
+          <TableContainer>
+            <Table variant={"simple"} size={"xs"}>
+              <Thead>
+                <Tr>
+                  <Th />
+                  <Th>Description</Th>
+                  <Th />
+                </Tr>
+              </Thead>
+              <Tbody>
+                {posts?.map((post) => (
+                  <Tr key={post?._id} _hover={{ bg: "gray.50" }}>
+                    <Td>
+                      <Flex align={"center"}>
+                        {post?.isUnderReview && (
+                          <Flex mr={2}>
+                            <FiAlertTriangle />
+                          </Flex>
+                        )}
+                        {post?.reporter && (
+                          <Flex mr={2}>
+                            <FiFlag />
+                          </Flex>
+                        )}
+                      </Flex>
+                    </Td>
+                    <Td>
+                      <Text>{post?.description}</Text>
+                      <Text color={"gray.500"} fontSize={"xs"}>
+                        _id: {post?._id}, userId: {post?.userId}
+                      </Text>
+                    </Td>
+                    <Td>
+                      <Flex align={"center"}>
+                        <Button onClick={() => approve(post)} mr={2}>
+                          <FiCheck /> + <FiSend />
+                        </Button>
+                        <Button onClick={() => destroy(post)}>
+                          <FiTrash /> + <FiSend />
+                        </Button>
+                      </Flex>
+                    </Td>
                   </Tr>
-                </Thead>
-                <Tbody>
-                  {posts?.map((post) => (
-                    <Tr key={post?._id} _hover={{ bg: "gray.50" }}>
-                      <Td>
-                        <Flex align={"center"}>
-                          {post?.isUnderReview && (
-                            <Flex mr={2}>
-                              <FiAlertTriangle />
-                            </Flex>
-                          )}
-                          {post?.reporter && (
-                            <Flex mr={2}>
-                              <FiFlag />
-                            </Flex>
-                          )}
-                        </Flex>
-                      </Td>
-                      <Td>
-                        <Text>{post?.description}</Text>
-                        <Text color={"gray.500"} fontSize={"xs"}>
-                          _id: {post?._id}, userId: {post?.userId}
-                        </Text>
-                      </Td>
-                      <Td>
-                        <Flex align={"center"}>
-                          <Button onClick={() => approve(post)} mr={2}>
-                            <FiCheck /> + <FiSend />
-                          </Button>
-                          <Button onClick={() => destroy(post)}>
-                            <FiTrash /> + <FiSend />
-                          </Button>
-                        </Flex>
-                      </Td>
-                    </Tr>
-                  ))}
-                </Tbody>
-              </Table>
-            </TableContainer>
-          </SkeletonText>
-        </Container>
-      </section>
-    </>
+                ))}
+              </Tbody>
+            </Table>
+          </TableContainer>
+        </SkeletonText>
+      </Container>
+    </section>
   );
 }

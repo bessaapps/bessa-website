@@ -11,7 +11,11 @@ export default function Authentication() {
 
   useEffect(() => {
     auth.onAuthStateChanged((firebaseUser) => {
-      if (firebaseUser?.email === "topher@bessssssa.com") {
+      if (
+        firebaseUser?.email === "topher@bessssssa.com" ||
+        firebaseUser?.email === "apps@bessssssa.com" ||
+        firebaseUser?.email === "topherjamesknoll@gmail.com"
+      ) {
         setUser(firebaseUser);
       } else {
         setUser({});

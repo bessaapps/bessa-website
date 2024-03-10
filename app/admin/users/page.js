@@ -71,52 +71,50 @@ export default function Users() {
   }, [user]);
 
   return (
-    <>
+    <section>
       <Authentication />
-      <section>
-        <Container maxW={"container.xl"} py={16}>
-          <Heading as={"h1"} mb={4}>
-            Users ({users?.length})
-          </Heading>
-          <SkeletonText isLoaded={!isFetchingUsers}>
-            <TableContainer>
-              <Table variant={"simple"} size={"xs"}>
-                <Thead>
-                  <Tr>
-                    <Th>Username</Th>
-                    <Th>Headline</Th>
-                    <Th />
+      <Container maxW={"container.xl"} py={16}>
+        <Heading as={"h1"} mb={4}>
+          Users ({users?.length})
+        </Heading>
+        <SkeletonText isLoaded={!isFetchingUsers}>
+          <TableContainer>
+            <Table variant={"simple"} size={"xs"}>
+              <Thead>
+                <Tr>
+                  <Th>Username</Th>
+                  <Th>Headline</Th>
+                  <Th />
+                </Tr>
+              </Thead>
+              <Tbody>
+                {users?.map((user) => (
+                  <Tr key={user._id} _hover={{ bg: "gray.50" }}>
+                    <Td>
+                      <Text>{user?.username}</Text>
+                      <Text color={"gray.500"} fontSize={"xs"}>
+                        {user?._id}
+                      </Text>
+                    </Td>
+                    <Td>{user?.profile?.headline}</Td>
+                    <Td>
+                      <Button
+                        onClick={() => destroy(user?._id, user?.email)}
+                        mr={2}
+                      >
+                        <FiTrash /> + <FiSend />
+                      </Button>
+                      <Button onClick={() => destroy(user?._id)}>
+                        <FiTrash />
+                      </Button>
+                    </Td>
                   </Tr>
-                </Thead>
-                <Tbody>
-                  {users?.map((user) => (
-                    <Tr key={user._id} _hover={{ bg: "gray.50" }}>
-                      <Td>
-                        <Text>{user?.username}</Text>
-                        <Text color={"gray.500"} fontSize={"xs"}>
-                          {user?._id}
-                        </Text>
-                      </Td>
-                      <Td>{user?.profile?.headline}</Td>
-                      <Td>
-                        <Button
-                          onClick={() => destroy(user?._id, user?.email)}
-                          mr={2}
-                        >
-                          <FiTrash /> + <FiSend />
-                        </Button>
-                        <Button onClick={() => destroy(user?._id)}>
-                          <FiTrash />
-                        </Button>
-                      </Td>
-                    </Tr>
-                  ))}
-                </Tbody>
-              </Table>
-            </TableContainer>
-          </SkeletonText>
-        </Container>
-      </section>
-    </>
+                ))}
+              </Tbody>
+            </Table>
+          </TableContainer>
+        </SkeletonText>
+      </Container>
+    </section>
   );
 }
