@@ -1,7 +1,10 @@
 import { extendTheme } from "@chakra-ui/react";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"]
+});
 
 const theme = extendTheme({
   colors: {
@@ -16,56 +19,52 @@ const theme = extendTheme({
       600: "#545454",
       700: "#373737",
       800: "#202020",
-      900: "#191919",
+      900: "#191919"
     },
     primary: {
-      50: "#f9f6ff",
-      100: "#e8daff",
-      200: "#d4baff",
-      300: "#bb91ff",
-      400: "#ac79ff",
-      500: "#9362e3",
-      600: "#7c53c0",
-      700: "#64429a",
-      800: "#543882",
-      900: "#3d295e",
+      100: "#F0E0FD",
+      200: "#DFC2FC",
+      300: "#C8A2F6",
+      400: "#B388EE",
+      500: "#9362E3",
+      600: "#7147C3",
+      700: "#5331A3",
+      800: "#391F83",
+      900: "#27126C"
     },
     red: {
-      50: "#fff5f5",
-      100: "#ffd7d5",
-      200: "#ffb2af",
-      300: "#ff7f7b",
-      400: "#ee6b67",
-      500: "#c95b57",
-      600: "#a94c49",
-      700: "#883d3b",
-      800: "#733432",
-      900: "#532624",
+      100: "#FDEAE0",
+      200: "#FCD1C2",
+      300: "#F6B1A2",
+      400: "#EE9188",
+      500: "#e36262",
+      600: "#C34752",
+      700: "#A33145",
+      800: "#831F39",
+      900: "#6C1232"
     },
     orange: {
-      50: "#fffaf4",
-      100: "#ffead2",
-      200: "#ffd19c",
-      300: "#efaf67",
-      400: "#ce9759",
-      500: "#b2824d",
-      600: "#966e41",
-      700: "#775733",
-      800: "#5e4528",
-      900: "#4d3821",
+      100: "#FDF9E0",
+      200: "#FCF1C2",
+      300: "#F6E4A2",
+      400: "#EED588",
+      500: "#e3c062",
+      600: "#C39E47",
+      700: "#A37E31",
+      800: "#835F1F",
+      900: "#6C4A12"
     },
     green: {
-      50: "#effff7",
-      100: "#98ffcf",
-      200: "#66edae",
-      300: "#5bd49b",
-      400: "#50b988",
-      500: "#459f75",
-      600: "#398461",
-      700: "#2c664b",
-      800: "#24543d",
-      900: "#1e4532",
-    },
+      100: "#EAFDE0",
+      200: "#D1FCC2",
+      300: "#B1F6A2",
+      400: "#91EE88",
+      500: "#62e362",
+      600: "#47C352",
+      700: "#31A345",
+      800: "#1F8339",
+      900: "#126C32"
+    }
   },
   styles: {
     global: {
@@ -73,34 +72,34 @@ const theme = extendTheme({
         color: "gray.900",
         fontSize: 16,
         overflowX: "hidden",
-        lineHeight: 2,
+        lineHeight: 2
       },
       h1: { fontSize: "2rem !important" },
-      h2: { fontSize: "1.5rem !important" },
-    },
+      h2: { fontSize: "1.5rem !important" }
+    }
   },
   fonts: {
-    heading: inter.style.fontFamily,
-    body: inter.style.fontFamily,
+    heading: roboto.style.fontFamily,
+    body: roboto.style.fontFamily
   },
   components: {
     Link: {
       baseStyle: {
         _hover: {
-          textDecoration: "none",
-        },
-      },
+          textDecoration: "none"
+        }
+      }
     },
     Card: {
       baseStyle: {
         container: {
           boxShadow: "none",
           borderWidth: 1,
-          borderColor: "gray.100",
-        },
-      },
-    },
-  },
+          borderColor: "gray.100"
+        }
+      }
+    }
+  }
 });
 
 export default theme;

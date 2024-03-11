@@ -92,7 +92,9 @@ export default function Home() {
                   }
                 >
                   <Button
-                    colorScheme={"blackAlpha"}
+                    colorScheme={"primary"}
+                    bg={"primary.600"}
+                    color={"white"}
                     size={"lg"}
                     w={["100%", "auto"]}
                   >
