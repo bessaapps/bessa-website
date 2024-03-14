@@ -21,7 +21,7 @@ const jsonLd = {
   //   "Community is essential for fostering connections, providing support, promoting personal and collective growth, and contributing to the overall health and well-being of individuals. It fulfills fundamental human needs for connection, belonging, and shared purpose, especially with LGBTQIA+ people.",
   url: "https://bessssssa.com/celebrating-international-transgender-day-of-visibility",
   image:
-    "https://bessssssa.com/images/celebrating-international-transgender-day-of-visibility.png",
+    "https://bessssssa.com/api/og/celebrating-international-transgender-day-of-visibility",
   datePublished: "2024-03-09T00:00:00+00:00",
   dateModified: "2024-03-09T00:00:00+00:00",
   author: "Topher"
