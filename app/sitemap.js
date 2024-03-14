@@ -47,6 +47,12 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.7
+    },
+    {
+      url: "https://bessssssa.com/celebrating-international-transgender-day-of-visibility",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.7
     }
   ];
 }
