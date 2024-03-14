@@ -21,8 +21,7 @@ export const metadata = {
     "twitter:site": "@bessaapp",
     "twitter:title": "Safe Inclusive Body-Positive LGBTQIA+ Community",
     "twitter:description":
-      "Bessa is a safe inclusive and body-positive community of LGBTQIA+ people who want to connect with others and socialize with their friends, family, and others.",
-    "twitter:image": "https://bessssssa.com/twitter.png"
+      "Bessa is a safe inclusive and body-positive community of LGBTQIA+ people who want to connect with others and socialize with their friends, family, and others."
   }
 };
 
