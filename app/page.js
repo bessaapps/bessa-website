@@ -11,29 +11,6 @@ import { IoLogoAppleAppstore } from "react-icons/io5";
 import Logo from "@/images/logo.png";
 import Image from "next/image";
 
-export const metadata = {
-  title:
-    "Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community",
-  description:
-    "Bessa is a safe inclusive and body-positive community of LGBTQIA+ people who want to connect with others and socialize with their friends, family, and others.",
-  openGraph: {
-    title: "Safe Inclusive Body-Positive LGBTQIA+ Community",
-    description:
-      "Bessa is a safe inclusive and body-positive community of LGBTQIA+ people who want to connect with others and socialize with their friends, family, and others.",
-    url: "https://bessssssa.com",
-    siteName: "Bessa",
-    images: [
-      {
-        url: "https://bessssssa.com/api/og",
-        width: 800,
-        height: 600
-      }
-    ],
-    locale: "en_US",
-    type: "website"
-  }
-};
-
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Software",

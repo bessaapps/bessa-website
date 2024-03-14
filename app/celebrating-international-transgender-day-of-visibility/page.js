@@ -4,9 +4,12 @@ import Article from "/images/celebrating-international-transgender-day-of-visibi
 
 export const metadata = {
   title:
-    "Celebrating International Transgender Day of Visibility | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
-  // description:
-  //   "Community is essential for fostering connections, providing support, promoting personal and collective growth, and contributing to the overall health and well-being of individuals. It fulfills fundamental human needs for connection, belonging, and shared purpose, especially with LGBTQIA+ people."
+    "Celebrating International Transgender Day of Visibility | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community",
+  openGraph: {
+    title:
+      "Celebrating International Transgender Day of Visibility | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community",
+    url: "https://bessssssa.com/celebrating-international-transgender-day-of-visibility"
+  }
 };
 
 const jsonLd = {

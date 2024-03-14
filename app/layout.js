@@ -5,6 +5,29 @@ import Footer from "@/components/navigation/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
+export const metadata = {
+  title:
+    "Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community",
+  description:
+    "Bessa is a safe inclusive and body-positive community of LGBTQIA+ people who want to connect with others and socialize with their friends, family, and others.",
+  openGraph: {
+    title: "Safe Inclusive Body-Positive LGBTQIA+ Community",
+    description:
+      "Bessa is a safe inclusive and body-positive community of LGBTQIA+ people who want to connect with others and socialize with their friends, family, and others.",
+    url: "https://bessssssa.com",
+    siteName: "Bessa",
+    images: [
+      {
+        url: "https://bessssssa.com/api/og",
+        width: 800,
+        height: 600
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  }
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang={"en"}>
