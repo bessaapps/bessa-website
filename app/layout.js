@@ -5,12 +5,6 @@ import Footer from "@/components/navigation/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
-export const metadata = {
-  openGraph: {
-    "twitter:image": "https://bessssssa.com/api/og"
-  }
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang={"en"}>
