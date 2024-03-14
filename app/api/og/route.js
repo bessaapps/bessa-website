@@ -3,22 +3,24 @@ import { ImageResponse } from "next/og";
 export const runtime = "edge";
 
 export async function GET() {
+  const imageData = await fetch(new URL("./image.png", import.meta.url)).then(
+    (res) => res.arrayBuffer()
+  );
+
   return new ImageResponse(
     (
       <div
         style={{
-          fontSize: 40,
-          color: "black",
-          background: "white",
+          display: "flex",
+          background: "#f6f6f6",
           width: "100%",
           height: "100%",
-          padding: "50px 200px",
-          textAlign: "center",
+          flexDirection: "column",
           justifyContent: "center",
           alignItems: "center"
         }}
       >
-        👋 Hello
+        <img width={"256"} height={"256"} src={imageData} />
       </div>
     ),
     {
