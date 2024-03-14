@@ -17,12 +17,20 @@ export const metadata = {
   description:
     "Bessa is a safe inclusive and body-positive community of LGBTQIA+ people who want to connect with others and socialize with their friends, family, and others.",
   openGraph: {
-    "twitter:card": "summary_large_image",
-    "twitter:site": "@bessaapp",
-    "twitter:title": "Safe Inclusive Body-Positive LGBTQIA+ Community",
-    "twitter:description":
+    title: "Safe Inclusive Body-Positive LGBTQIA+ Community",
+    description:
       "Bessa is a safe inclusive and body-positive community of LGBTQIA+ people who want to connect with others and socialize with their friends, family, and others.",
-    "twitter:image": "https://bessssssa.com/api/og"
+    url: "https://bessssssa.com",
+    siteName: "Bessa",
+    images: [
+      {
+        url: "https://bessssssa.com/api/og",
+        width: 800,
+        height: 600
+      }
+    ],
+    locale: "en_US",
+    type: "website"
   }
 };
 
