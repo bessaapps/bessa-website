@@ -8,7 +8,17 @@ export const metadata = {
   openGraph: {
     title:
       "Celebrating International Transgender Day of Visibility | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community",
-    url: "https://bessssssa.com/celebrating-international-transgender-day-of-visibility"
+    url: "https://bessssssa.com/celebrating-international-transgender-day-of-visibility",
+    siteName: "Bessa",
+    images: [
+      {
+        url: "https://bessssssa.com/images/celebrating-international-transgender-day-of-visibility.png",
+        width: 800,
+        height: 600
+      }
+    ],
+    locale: "en_US",
+    type: "website"
   }
 };
 
