@@ -71,10 +71,10 @@ export default function CelebratingInternationalTransgenderDayOfVisibility() {
           everyone just stop blabbeirng and sit back and take one or two in for
           a bit? People can celebrate International Transgender Day of
           Visibility by passing the mic. Celebrating holidays and dedications
-          like Internal Transgender Day of Visibility is often about listening
-          and giving the space for these people to speak up, share, and, yes,
-          help shape our communities and culture as a whole. People can learn a
-          lot from transgender stories.
+          like International Transgender Day of Visibility is often about
+          listening and giving the space for these people to speak up, share,
+          and, yes, help shape communities and culture as a whole. People can
+          learn a lot from transgender stories.
         </Text>
         <Heading mb={4}>
           Learning the Culture, History, Policy, and Identity of Transgender
@@ -84,13 +84,13 @@ export default function CelebratingInternationalTransgenderDayOfVisibility() {
           The culture and history of transgender people can often be sad, but
           also a true story of inspiration and triumph among friends, family,
           neighbors, and co-workers. A valuable way to celebrate International
-          Transgender day of Visibility is for people to enrich their own
+          Transgender Day of Visibility is for people to enrich their own
           knowledge about the culture, history, government policy, and gender,
           sexual, and relational identities of transgender people. (Google up
           the Gender Unicorn. It&apos;s a great starting point.) Sitting back
           and listening to the story or just learning terminology is a great way
           to celebrate and enrich conversation, but also discourage
-          discrimination again transgender people.
+          discrimination against transgender people.
         </Text>
         <Heading mb={4}>Leveling Up in Communities!</Heading>
         <Text mb={4}>
@@ -101,7 +101,7 @@ export default function CelebratingInternationalTransgenderDayOfVisibility() {
           organizations to the next level by being an active member. People who
           aren&apos;t transgender can, for example, still use their voice in the
           world to spread awareness or lend an ear or friendship to someone in
-          need. People who aren&apos;t transgender can still elebrate
+          need. People who aren&apos;t transgender can still celebrate
           transgender people by joining and being active in communities and the
           experience can be very rewarding for everyone.
         </Text>
@@ -118,7 +118,54 @@ export default function CelebratingInternationalTransgenderDayOfVisibility() {
             Download it and join here for FREE!
           </Link>
         </Text>
-        {/*  #TransIsBeautiful to see the amazing community that pops up throughout*/}
+        <Heading mb={4}>Yes, Money</Heading>
+        <Text mb={4}>
+          Yes, yes but please don&apos;t skip this one! Be real; movements in
+          this country aren&apos;t free. Besides people always give the ones
+          they care about money for their birthday and for Christmas, so why
+          should this celebration be different? Donating money, items, time, or
+          other resources to those people and organizations in need can be an
+          honorable way to celebrate International Transgender Day of
+          Visibility. Even if funds are tight, people can volunteer or donate
+          material resources. And if there&apos;s even just a little in the
+          wallet, or a lot, finding the right people, organizations, or
+          charities is important. Finding a charity that has shared interests
+          can make monetary or other donations mutually beneficial and very
+          exciting.
+        </Text>
+        <Text mb={4}>
+          A great place to start is right here! Bessa has a fair amount of costs
+          to keep running. If you like Bessa or appreciate the communities its
+          trying to build, please check out the{" "}
+          <Link
+            href={"/donate"}
+            title={
+              "Give | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
+            }
+            color={"primary.500"}
+          >
+            Donations Page
+          </Link>{" "}
+          page to learn more and hopefully contribute.
+        </Text>
+        <Heading mb={4}>#TransIsBeautiful</Heading>
+        <Text mb={4}>
+          C&apos;mon! Social media is a blast! People are always all over it
+          too. Take a few minutes to post about International Transgender Day of
+          Visibility. Sharing stories or anything respectful and genuine can be
+          fun and very influential. Even reposting other awesome content about
+          International Transgender Day of Visibility is great! People learn and
+          take inspiration from others. Social media can be a great start place
+          to start change.
+        </Text>
+        <Text mb={4}>
+          This day of visibility is about carving out safe communities and
+          giving space and social justice to people who are often marginalized.
+          It&apos;s also about being joyful and proud. But get creative! The
+          list doesn&apos;t ender here. If nothing else, being kind and having
+          fun is the best anyone can do. People should feel safe and feel proud
+          to be themselves.
+        </Text>
       </Container>
     </section>
   );
