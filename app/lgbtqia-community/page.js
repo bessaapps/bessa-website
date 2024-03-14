@@ -36,7 +36,7 @@ export default function LGBTQIACommunity() {
           alt={"Safely Finding LGBTQIA+ Community On- and Offline"}
         />
       </Container>
-      <Container>
+      <Container pb={16}>
         <Heading as={"h1"} mb={4}>
           Safely Finding LGBTQIA+ Community On- and Offline
         </Heading>

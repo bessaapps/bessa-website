@@ -37,7 +37,7 @@ export default function CelebratingInternationalTransgenderDayOfVisibility() {
           alt={"Celebrating International Transgender Day of Visibility"}
         />
       </Container>
-      <Container>
+      <Container pb={16}>
         <Heading as={"h1"} mb={4}>
           Celebrating International Transgender Day of Visibility
         </Heading>
