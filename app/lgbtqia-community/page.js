@@ -1,12 +1,27 @@
 import { Container, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import Article from "/images/article.png";
+import HeroImage from "/images/lgbtqia-community.png";
 
 export const metadata = {
   title:
     "Safely Finding LGBTQIA+ Community On- and Offline | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community",
   description:
-    "Community is essential for fostering connections, providing support, promoting personal and collective growth, and contributing to the overall health and well-being of individuals. It fulfills fundamental human needs for connection, belonging, and shared purpose, especially with LGBTQIA+ people."
+    "Community is essential for fostering connections, providing support, promoting personal and collective growth, and contributing to the overall health and well-being of individuals. It fulfills fundamental human needs for connection, belonging, and shared purpose, especially with LGBTQIA+ people.",
+  openGraph: {
+    title:
+      "Safely Finding LGBTQIA+ Community On- and Offline | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community",
+    url: "https://bessssssa.com/lgbtqia-community",
+    siteName: "Bessa",
+    images: [
+      {
+        url: "https://bessssssa.com/images/lgbtqia-community.png",
+        width: 800,
+        height: 600
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  }
 };
 
 const jsonLd = {
@@ -17,7 +32,7 @@ const jsonLd = {
   description:
     "Community is essential for fostering connections, providing support, promoting personal and collective growth, and contributing to the overall health and well-being of individuals. It fulfills fundamental human needs for connection, belonging, and shared purpose, especially with LGBTQIA+ people.",
   url: "https://bessssssa.com/lgbtqia-community",
-  image: "https://bessssssa.com/images/article.png",
+  image: "https://bessssssa.com/images/lgbtqia-community.png",
   datePublished: "2024-02-13T00:00:00+00:00",
   dateModified: "2024-02-13T00:00:00+00:00",
   author: "Topher"
@@ -32,7 +47,7 @@ export default function LGBTQIACommunity() {
       />
       <Container maxW={"container.lg"} py={16}>
         <Image
-          src={Article}
+          src={HeroImage}
           alt={"Safely Finding LGBTQIA+ Community On- and Offline"}
         />
       </Container>

@@ -27,8 +27,6 @@ const jsonLd = {
   "@type": "BlogPosting",
   headline:
     "Celebrating International Transgender Day of Visibility | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community",
-  // description:
-  //   "Community is essential for fostering connections, providing support, promoting personal and collective growth, and contributing to the overall health and well-being of individuals. It fulfills fundamental human needs for connection, belonging, and shared purpose, especially with LGBTQIA+ people.",
   url: "https://bessssssa.com/celebrating-international-transgender-day-of-visibility",
   image:
     "https://bessssssa.com/images/celebrating-international-transgender-day-of-visibility.png",
