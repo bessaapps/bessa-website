@@ -18,7 +18,7 @@ export const metadata = {
     siteName: "Bessa",
     images: [
       {
-        url: "https://bessssssa.com/api/og",
+        url: "https://bessssssa.com/images/social.png",
         width: 800,
         height: 600
       }
