@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import {
   Button,
   Container,
+  Flex,
   Heading,
   SkeletonText,
   Table,
@@ -18,7 +19,8 @@ import {
   Thead,
   Tr
 } from "@chakra-ui/react";
-import { FiSend, FiTrash } from "react-icons/fi";
+import { FiAlertTriangle, FiSend, FiTrash } from "react-icons/fi";
+import dayjs from "dayjs";
 
 export default function Users() {
   const [users, setUsers] = useState([]);
@@ -82,8 +84,9 @@ export default function Users() {
             <Table variant={"simple"} size={"xs"}>
               <Thead>
                 <Tr>
+                  <Th />
                   <Th>Username</Th>
-                  <Th>Headline</Th>
+                  <Th>Join Date</Th>
                   <Th />
                 </Tr>
               </Thead>
@@ -91,12 +94,26 @@ export default function Users() {
                 {users?.map((user) => (
                   <Tr key={user._id} _hover={{ bg: "gray.50" }}>
                     <Td>
-                      <Text>{user?.username}</Text>
+                      {!user?.lastLoginAt && (
+                        <Flex align={"center"}>
+                          <Flex mr={2}>
+                            <FiAlertTriangle />
+                          </Flex>
+                          <Text fontSize={"xs"}>Hasn&apos;t logged in.</Text>
+                        </Flex>
+                      )}
+                    </Td>
+                    <Td>
+                      <Text>
+                        {user?.username}
+                        {user?.profile?.headline &&
+                          ` (${user.profile.headline})`}
+                      </Text>
                       <Text color={"gray.500"} fontSize={"xs"}>
                         {user?._id}
                       </Text>
                     </Td>
-                    <Td>{user?.profile?.headline}</Td>
+                    <Td>{dayjs(user?.createdAt).format("MMM 'YY")}</Td>
                     <Td>
                       <Button
                         onClick={() => destroy(user?._id, user?.email)}
