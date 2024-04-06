@@ -18,10 +18,6 @@ export default function AdminTop() {
     {
       href: "messages",
       anchor: "Messages"
-    },
-    {
-      href: "emails",
-      anchor: "Email"
     }
   ];
 
