@@ -15,7 +15,7 @@ export default function Support() {
   ];
 
   return (
-    <Container maxW={"100%"} py={16}>
+    <Container maxW={"container.lg"} py={16}>
       <Heading as={"h1"} mb={4}>
         Help &amp; Support
       </Heading>

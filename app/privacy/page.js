@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function Privacy() {
   return (
-    <Container maxW={"100%"} py={16}>
+    <Container maxW={"container.lg"} py={16}>
       <Rules />
       <Heading as={"h1"} mb={4}>
         Privacy Policy

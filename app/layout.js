@@ -1,9 +1,9 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Container, Flex, Grid, GridItem, Link, Text } from "@chakra-ui/react";
 import Top from "@/components/navigation/Top";
 import Providers from "@/app/providers";
 import Footer from "@/components/navigation/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
+import { FaHeart } from "react-icons/fa";
 
 export const metadata = {
   title:
@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
             gridTemplateRows={"auto 1fr auto"}
             h={"100vh"}
           >
-            <GridItem area={"header"} bg={"primary.600"} px={4} py={4}>
+            <GridItem area={"header"} bg={"primary.500"} px={4} py={4}>
               <header>
                 <nav>
                   <Top />
@@ -46,14 +46,36 @@ export default function RootLayout({ children }) {
               </header>
             </GridItem>
             <GridItem area={"main"} overflowY={"auto"}>
-              <main>{children}</main>
+              <Grid gridTemplateRows={"1fr auto"} h={"100%"}>
+                <GridItem>
+                  <main>{children}</main>
+                </GridItem>
+                <GridItem>
+                  <footer>
+                    <nav>
+                      <Footer />
+                    </nav>
+                  </footer>
+                </GridItem>
+              </Grid>
             </GridItem>
-            <GridItem area={"footer"} bg={"gray.900"} px={4} py={2}>
-              <footer>
-                <nav>
-                  <Footer />
-                </nav>
-              </footer>
+            <GridItem area={"footer"} bg={"gray.900"}>
+              <Container maxW={"container.lg"} py={2}>
+                <Flex alignItems={"center"} gap={4}>
+                  <FaHeart color={"white"} />
+                  <Text color={"white"} fontWeight={"bold"}>
+                    <Link
+                      href={"/donate"}
+                      title={
+                        "Give | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
+                      }
+                    >
+                      Click here to support inclusive, body-positive LGBTQIA+
+                      community
+                    </Link>
+                  </Text>
+                </Flex>
+              </Container>
             </GridItem>
           </Grid>
         </Providers>

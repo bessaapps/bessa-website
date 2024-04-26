@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function Terms() {
   return (
-    <Container maxW={"100%"} py={16}>
+    <Container maxW={"container.lg"} py={16}>
       <Rules />
       <Heading as={"h1"} mb={4}>
         Terms and Conditions

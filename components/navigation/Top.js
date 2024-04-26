@@ -10,9 +10,7 @@ import {
   Flex,
   Heading,
   Hide,
-  Link,
-  Show,
-  Text
+  Link
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { FiMenu } from "react-icons/fi";
@@ -62,21 +60,6 @@ export default function Top() {
               Bessa LGBTQIA+ Community App
             </Link>
           </Heading>
-          <Show above={"md"}>
-            {links?.map((link) => (
-              <Link
-                key={link.href}
-                href={`/${link.href}`}
-                title={`${link.anchor} | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community`}
-                color={"white"}
-                ml={4}
-              >
-                <Text my={0} lineHeight={1}>
-                  {link.anchor}
-                </Text>
-              </Link>
-            ))}
-          </Show>
         </Flex>
         <Hide above={"md"}>
           <Box cursor={"pointer"}>
