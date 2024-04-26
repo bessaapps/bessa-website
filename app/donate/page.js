@@ -60,7 +60,7 @@ export default function Donate() {
   ];
 
   return (
-    <Container maxW={"container.xl"} py={16}>
+    <Container maxW={"container.lg"} py={16}>
       <Box mb={4}>
         <Image
           src={heart}
