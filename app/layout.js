@@ -80,7 +80,9 @@ export default function RootLayout({ children }) {
           </Grid>
         </Providers>
       </body>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+      {process.env.NODE_ENV !== "development" && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+      )}
     </html>
   );
 }
