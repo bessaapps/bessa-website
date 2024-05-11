@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
             <GridItem area={"footer"} bg={"gray.900"}>
               <Container maxW={"container.lg"} py={2}>
                 <Flex alignItems={"center"} gap={4}>
-                  <FaHeart color={"white"} />
+                  <FaHeart color={"var(--chakra-colors-red-500)"} />
                   <Text color={"white"} fontWeight={"bold"}>
                     <Link
                       href={"/donate"}

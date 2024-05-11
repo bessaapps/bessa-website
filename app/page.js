@@ -126,7 +126,7 @@ export default function Home() {
         <Container maxW={"container.lg"} py={16}>
           <SimpleGrid columns={[1, 2]} gap={4}>
             <GridItem>
-              <Heading mb={8}>Make some Noise!</Heading>
+              <Heading my={8}>Make some Noise!</Heading>
               <Text>
                 Sharing your pride is now fun as ever. Through sharing updates,
                 images, videos, and audio recordings, you can express yourself
@@ -135,7 +135,7 @@ export default function Home() {
               </Text>
             </GridItem>
             <GridItem>
-              <Heading mb={8}>Socialize with Community</Heading>
+              <Heading my={8}>Socialize with Community</Heading>
               <Text>
                 Networking is a huge part of building your community. Find
                 members with shared interests near you and find your next
