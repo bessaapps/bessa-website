@@ -4,8 +4,11 @@ import {
   Container,
   Fade,
   Flex,
+  GridItem,
+  Highlight,
   Heading,
   Link,
+  SimpleGrid,
   Text
 } from "@chakra-ui/react";
 import { IoLogoAppleAppstore } from "react-icons/io5";
@@ -63,7 +66,7 @@ export default function Home() {
                   >
                     <Button
                       colorScheme={"primary"}
-                      bg={"primary.600"}
+                      bg={"primary.800"}
                       color={"white"}
                       size={"lg"}
                       w={["100%", "auto"]}
@@ -95,17 +98,52 @@ export default function Home() {
           </Container>
         </Flex>
         <Container maxW={"container.lg"} py={16}>
-          <Text mb={8}>
-            Through posting social media likes updates and media, people can be
-            proud to share who they are with their community. Through likes,
-            replies, direct messages, and a directory of people online and
-            around your area, people can find and build strong relationships
-            within their community.
-          </Text>
-          <Text>
-            Bessa works hard, through moderation and filtering dangerous
-            content, to keep this digital community a safe one.
-          </Text>
+          <Heading lineHeight={"tall"}>
+            <Highlight
+              query={[
+                "be proud",
+                "share who you are",
+                "build strong relationships",
+                "safe community"
+              ]}
+              styles={{
+                px: "2",
+                py: "1",
+                bg: "primary.800",
+                color: "white",
+                rounded: "md"
+              }}
+            >
+              Through posting social media likes updates and media, you can be
+              proud to share who you are with your community. Through likes,
+              replies, direct messages, and a directory of people online and
+              around your area, you can find and build strong relationships
+              within your community. Bessa works hard, through moderation and
+              dangerous content filters, to make it a safe community.
+            </Highlight>
+          </Heading>
+        </Container>
+        <Container maxW={"container.lg"} py={16}>
+          <SimpleGrid columns={[1, 2]} gap={4}>
+            <GridItem>
+              <Heading mb={8}>Make some Noise!</Heading>
+              <Text>
+                Sharing your pride is now fun as ever. Through sharing updates,
+                images, videos, and audio recordings, you can express yourself
+                to the ones you love. You can also build a following by posting
+                in various categories like event, jobs, and more.
+              </Text>
+            </GridItem>
+            <GridItem>
+              <Heading mb={8}>Socialize with Community</Heading>
+              <Text>
+                Networking is a huge part of building your community. Find
+                members with shared interests near you and find your next
+                friend, connection, or maybe more. Upload a selfie, update your
+                profile, and add some flair to join the club!
+              </Text>
+            </GridItem>
+          </SimpleGrid>
         </Container>
       </Box>
     </section>
