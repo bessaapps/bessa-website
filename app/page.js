@@ -13,6 +13,8 @@ import {
 } from "@chakra-ui/react";
 import { IoLogoAppleAppstore } from "react-icons/io5";
 import Logo from "@/images/logo.png";
+import Feed from "../images/feed.png";
+import Members from "../images/members.png";
 import Image from "next/image";
 
 const jsonLd = {
@@ -97,7 +99,7 @@ export default function Home() {
             </Flex>
           </Container>
         </Flex>
-        <Container maxW={"container.lg"} py={16}>
+        <Container maxW={"container.lg"} pb={32}>
           <Heading lineHeight={"tall"}>
             <Highlight
               query={[
@@ -123,11 +125,17 @@ export default function Home() {
             </Highlight>
           </Heading>
         </Container>
-        <Container maxW={"container.lg"} py={16}>
+        <Container maxW={"container.lg"} py={32}>
           <SimpleGrid columns={[1, 2]} gap={4}>
             <GridItem>
-              <Heading my={8}>Make some Noise!</Heading>
-              <Text>
+              <Image
+                src={Feed}
+                alt={
+                  "Make some Noise! | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
+                }
+              />
+              <Heading my={4}>Make some Noise!</Heading>
+              <Text mb={4}>
                 Sharing your pride is now fun as ever. Through sharing updates,
                 images, videos, and audio recordings, you can express yourself
                 to the ones you love. You can also build a following by posting
@@ -135,8 +143,14 @@ export default function Home() {
               </Text>
             </GridItem>
             <GridItem>
-              <Heading my={8}>Socialize with Community</Heading>
-              <Text>
+              <Image
+                src={Members}
+                alt={
+                  "Socialize with Community | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
+                }
+              />
+              <Heading my={4}>Socialize with Community</Heading>
+              <Text mb={4}>
                 Networking is a huge part of building your community. Find
                 members with shared interests near you and find your next
                 friend, connection, or maybe more. Upload a selfie, update your
