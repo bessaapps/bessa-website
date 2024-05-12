@@ -116,7 +116,7 @@ export default function Home() {
                 rounded: "md"
               }}
             >
-              Through posting social media likes updates and media, you can be
+              Through posting social media like updates and media, you can be
               proud to share who you are with your community. Through likes,
               replies, direct messages, and a directory of people online and
               around your area, you can find and build strong relationships
