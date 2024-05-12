@@ -136,10 +136,10 @@ export default function Home() {
               />
               <Heading my={4}>Make some Noise!</Heading>
               <Text mb={4}>
-                Sharing your pride is now fun as ever. Through sharing updates,
-                images, videos, and audio recordings, you can express yourself
-                to the ones you love. You can also build a following by posting
-                in various categories like event, jobs, and more.
+                Sharing your pride is now as fun as ever. Through sharing
+                updates, images, videos, and audio recordings, you can express
+                yourself to the ones you love. You can also build a following by
+                posting in various categories like events, jobs, and more.
               </Text>
             </GridItem>
             <GridItem>
