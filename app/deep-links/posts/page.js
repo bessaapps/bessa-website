@@ -2,10 +2,10 @@ import DeepLinkPost from "@/app/deep-links/posts/post";
 
 export async function generateMetadata({ searchParams }) {
   return {
-    title: searchParams?.description
-    //   openGraph: {
-    //     title: searchParams?.title
-    //   }
+    title: searchParams?.description,
+    openGraph: {
+      title: searchParams?.title
+    }
   };
 }
 
