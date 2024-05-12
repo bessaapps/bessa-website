@@ -2,7 +2,7 @@ import DeepLinkPost from "@/app/deep-links/posts/post";
 
 export async function generateMetadata({ searchParams }) {
   return {
-    title: searchParams?.description,
+    title: `@${searchParams?.username}`,
     openGraph: {
       title: searchParams?.title
     }
