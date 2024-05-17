@@ -4,19 +4,22 @@ import {
   Card,
   CardBody,
   Container,
-  GridItem,
   Heading,
   Link,
-  SimpleGrid,
-  Text
+  Stack,
+  Text,
+  Image,
+  Flex
 } from "@chakra-ui/react";
 import apple from "@/images/wishlist/apple.png";
 import expo from "@/images/wishlist/expo.png";
 import photoshop from "@/images/wishlist/photoshop.png";
 import play from "@/images/wishlist/play.png";
 import workspace from "@/images/wishlist/workspace.png";
-import Image from "next/image";
+import vercel from "@/images/wishlist/vercel.png";
+import brevo from "@/images/wishlist/brevo.png";
 import heart from "@/images/heart.jpg";
+import NextImage from "next/image";
 
 export const metadata = {
   title:
@@ -29,8 +32,22 @@ export default function Donate() {
       image: expo,
       heading: "Expo",
       description:
-        "Required to compile, build, deploy, and maintain the app for your favorite app store",
+        "This is how code gets turned into your favorite LGBTQIA+ Apple or Android social media app. It compiles the 1's and 0's, builds them into a mobile app, and helps publish it to the Apple App Store and Google Play.",
       price: "99/mo"
+    },
+    {
+      image: vercel,
+      heading: "Vercel",
+      description:
+        "An API is like the backbone to any mobile app. It helps handle all those posts, messages, and other information running around Bessa. Vercel helps to build, publish, and maintain the API for Bessa.",
+      price: "20/mo"
+    },
+    {
+      image: photoshop,
+      heading: "Photoshop",
+      description:
+        "Photoshop comes in handy for creating fun graphics for the app, snapshots of what Bessa can do, and more!",
+      price: "9.99/mo"
     },
     {
       image: apple,
@@ -39,16 +56,10 @@ export default function Donate() {
       price: "99/yr"
     },
     {
-      image: play,
-      heading: "Google Play",
-      description: "Required to publish the app to the Google Play store",
-      price: "25/lifetime"
-    },
-    {
-      image: photoshop,
-      heading: "Photoshop",
-      description: "For the occasional image editing",
-      price: "9.99/mo"
+      image: brevo,
+      heading: "Brevo",
+      description: "A tool for sending you alerts from your community",
+      price: "9/mo"
     },
     {
       image: workspace,
@@ -56,6 +67,12 @@ export default function Donate() {
       description:
         "Gmail, Google Drive, and other tools needed to keep things running",
       price: "7.20/mo"
+    },
+    {
+      image: play,
+      heading: "Google Play",
+      description: "Required to publish the app to the Google Play store",
+      price: "25/lifetime"
     }
   ];
 
@@ -63,6 +80,7 @@ export default function Donate() {
     <Container maxW={"container.lg"} py={16}>
       <Box mb={4}>
         <Image
+          as={NextImage}
           src={heart}
           alt={"Inclusive, Body-Positive LGBTQIA+ Community"}
           height={100}
@@ -73,7 +91,7 @@ export default function Donate() {
         Support Inclusive, Body-Positive LGBTQIA+ Community
       </Heading>
       <Text mb={4}>
-        Bessa is an inclusive and body-positive community of lesbian, gay,
+        Bessa is a safe, inclusive, and body-positive community of lesbian, gay,
         bisexual, transgender, queer, intersex, and asexual (LGBTQIA+) people
         who want to connect with others and socialize with their friends,
         family, and others. Your donation pays for services needed to keep this
@@ -90,43 +108,33 @@ export default function Donate() {
         </Button>
       </Link>
       <Heading textAlign={"center"} mb={4}>
-        Wishlist
+        The Light Bill
       </Heading>
-      <Link href={"https://donorbox.org/bessssssa2024"}>
-        <SimpleGrid columns={[1, 4]} spacing={4}>
-          {links.map((link) => (
-            <GridItem key={link.heading}>
-              <Card cursor={"pointer"} overflow={"hidden"} h={"100%"}>
-                <Image src={link.image} alt={"Donate to Bessa"} />
-                <CardBody
-                  display={"flex"}
-                  flexDir={"column"}
-                  justifyContent={"space-between"}
-                >
-                  <Box>
-                    <Text fontWeight={"bold"} mb={2}>
-                      {link.heading}
-                    </Text>
-                    <Text mb={4}>{link.description}</Text>
-                  </Box>
-                  <Box>
-                    <Button
-                      colorScheme={"primary"}
-                      minW={["100%", "40px"]}
-                      mb={2}
-                    >
-                      Give
-                    </Button>
-                    <Text fontWeight={"bold"} mb={2}>
-                      ${link.price}
-                    </Text>
-                  </Box>
-                </CardBody>
-              </Card>
-            </GridItem>
-          ))}
-        </SimpleGrid>
-      </Link>
+      <Flex direction={"column"} gap={4}>
+        {links.map((link) => (
+          <Card
+            key={link.heading}
+            direction={"row"}
+            overflow={"hidden"}
+            variant={"outline"}
+          >
+            <Image
+              as={NextImage}
+              objectFit={"cover"}
+              maxW={200}
+              src={link.image}
+              alt={link.description}
+            />
+            <Stack>
+              <CardBody>
+                <Heading mb={2}>{link.heading}</Heading>
+                <Text>{link.description}</Text>
+                <Text fontWeight={"bold"}>${link.price}</Text>
+              </CardBody>
+            </Stack>
+          </Card>
+        ))}
+      </Flex>
     </Container>
   );
 }
