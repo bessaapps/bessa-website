@@ -53,6 +53,12 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.7
+    },
+    {
+      url: "https://bessssssa.com/lgbtqia-health",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.7
     }
   ];
 }
