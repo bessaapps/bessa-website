@@ -15,6 +15,10 @@ export default function Footer() {
       anchor: "Help & Support"
     },
     {
+      href: "lgbtqia-health",
+      anchor: "LGBTQIA Health"
+    },
+    {
       href: "lgbtqia-community",
       anchor: "Community"
     },
