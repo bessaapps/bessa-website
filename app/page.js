@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Box,
   Button,
@@ -18,6 +20,7 @@ import Mockup2 from "../images/mockups/2.png";
 import Mockup3 from "../images/mockups/3.png";
 import Image from "next/image";
 import { SiAmazon, SiAppstore, SiGoogleplay, SiSamsung } from "react-icons/si";
+import { useRouter } from "next/navigation";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -28,6 +31,7 @@ const jsonLd = {
 };
 
 export default function Home() {
+  const router = useRouter();
   const appStores = [
     {
       name: "iOS",
@@ -200,6 +204,17 @@ export default function Home() {
               </Text>
             </GridItem>
           </SimpleGrid>
+        </Container>
+        <Container maxW={"container.lg"} py={32}>
+          <Button
+            onClick={() =>
+              router.push(
+                "https://apps.apple.com/app/apple-store/id6471383138?action=write-review"
+              )
+            }
+          >
+            Write a Review
+          </Button>
         </Container>
       </Box>
     </section>
