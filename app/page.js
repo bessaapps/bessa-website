@@ -9,13 +9,15 @@ import {
   Heading,
   Link,
   SimpleGrid,
-  Text
+  Text,
+  Tooltip
 } from "@chakra-ui/react";
-import { IoLogoAppleAppstore } from "react-icons/io5";
 import Logo from "@/images/logo.png";
-import Feed from "../images/feed.png";
-import Members from "../images/members.png";
+import Mockup1 from "../images/mockups/1.png";
+import Mockup2 from "../images/mockups/2.png";
+import Mockup3 from "../images/mockups/3.png";
 import Image from "next/image";
+import { SiAmazon, SiAppstore, SiGoogleplay, SiSamsung } from "react-icons/si";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -26,6 +28,20 @@ const jsonLd = {
 };
 
 export default function Home() {
+  const appStores = [
+    {
+      name: "iOS",
+      href: "https://apps.apple.com/us/app/bessa/id6471383138?platform=iphone",
+      icon: <SiAppstore />
+    },
+    {
+      name: "Amazon",
+      href: "https://www.amazon.com/gp/product/B0D6K568Z9",
+      icon: <SiAmazon />
+    },
+    { name: "Google", href: "", icon: <SiGoogleplay />, isDisabled: true },
+    { name: "Samsung", href: "", icon: <SiSamsung />, isDisabled: true }
+  ];
   return (
     <section>
       <script
@@ -61,34 +77,45 @@ export default function Home() {
                   in={true}
                   transition={{ enter: { duration: 0.66, delay: 1.32 } }}
                 >
-                  <Link
-                    href={
-                      "https://apps.apple.com/us/app/bessa/id6471383138?platform=iphone"
-                    }
-                  >
-                    <Button
-                      colorScheme={"primary"}
-                      bg={"primary.800"}
-                      color={"white"}
-                      size={"lg"}
-                      w={["100%", "auto"]}
-                    >
-                      <Flex mr={2}>
-                        <IoLogoAppleAppstore />
-                      </Flex>
-                      Download for FREE!
-                    </Button>
-                  </Link>
+                  <Heading as={"h2"} mb={2}>
+                    Bessa is FREE!
+                  </Heading>
+                  <Flex gap={4} flexWrap={"wrap"}>
+                    {appStores.map((store) =>
+                      store.isDisabled ? (
+                        <Tooltip
+                          key={store.name}
+                          label={"Coming Soon!"}
+                          placement={"top"}
+                        >
+                          <Button
+                            colorScheme={"primary"}
+                            bg={"primary.800"}
+                            color={"white"}
+                            size={"lg"}
+                            w={["100%", "auto"]}
+                          >
+                            <Flex mr={2}>{store.icon}</Flex>
+                            {store.name}
+                          </Button>
+                        </Tooltip>
+                      ) : (
+                        <Link key={store.name} href={store.href}>
+                          <Button
+                            colorScheme={"primary"}
+                            bg={"primary.800"}
+                            color={"white"}
+                            size={"lg"}
+                            w={["100%", "auto"]}
+                          >
+                            <Flex mr={2}>{store.icon}</Flex>
+                            {store.name}
+                          </Button>
+                        </Link>
+                      )
+                    )}
+                  </Flex>
                 </Fade>
-                {/*<Link href={"http://eepurl.com/iHsVDc"}>*/}
-                {/*  <Button colorScheme={"primary"} size={"lg"}>*/}
-                {/*    <Flex mr={2}>*/}
-                {/*      <IoLogoAndroid />*/}
-                {/*    </Flex>*/}
-                {/*    Get Early Access!*/}
-                {/*  </Button>*/}
-                {/*</Link>*/}
-                {/*</Flex>*/}
               </Flex>
               <Flex w={["100%", "50%"]}>
                 <Image
@@ -118,43 +145,58 @@ export default function Home() {
             >
               Through posting social media like updates and media, you can be
               proud to share who you are with your community. Through likes,
-              replies, direct messages, and a directory of people online and
-              around your area, you can find and build strong relationships
-              within your community. Bessa works hard, through moderation and
-              dangerous content filters, to make it a safe community.
+              replies, direct messages, and a directory of people and events
+              online and around your area, you can find and build strong
+              relationships within your community. Bessa works hard, through
+              moderation and dangerous content filters, to make it a safe
+              community.
             </Highlight>
           </Heading>
         </Container>
         <Container maxW={"container.lg"} py={32}>
-          <SimpleGrid columns={[1, 2]} gap={4}>
+          <SimpleGrid columns={[1, 3]} gap={4}>
             <GridItem>
               <Image
-                src={Feed}
+                src={Mockup1}
                 alt={
                   "Make some Noise! | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
                 }
               />
               <Heading my={4}>Make some Noise!</Heading>
               <Text mb={4}>
-                Sharing your pride is now as fun as ever. Through sharing
+                Sharing your LGBTQ pride is now as fun as ever. By sharing
                 updates, images, videos, and audio recordings, you can express
-                yourself to the ones you love. You can also build a following by
-                posting in various categories like events, jobs, and more.
+                yourself to the ones you love and make new queer friends as
+                well.
               </Text>
             </GridItem>
             <GridItem>
               <Image
-                src={Members}
+                src={Mockup2}
                 alt={
                   "Socialize with Community | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
                 }
               />
               <Heading my={4}>Socialize with Community</Heading>
               <Text mb={4}>
-                Networking is a huge part of building your community. Find
-                members with shared interests near you and find your next
-                friend, connection, or maybe more. Upload a selfie, update your
-                profile, and add some flair to join the club!
+                Networking is a huge part of building queer community. Find
+                LGBTQ members with shared interests near you and make queer
+                friends, connections, and maybe more. Chat, upload a selfie,
+                update your profile, and add flair to join the fun!
+              </Text>
+            </GridItem>
+            <GridItem>
+              <Image
+                src={Mockup3}
+                alt={
+                  "Socialize with Community | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
+                }
+              />
+              <Heading my={4}>Build your Following</Heading>
+              <Text mb={4}>
+                Share your LGBTQ thoughts, ideas, and other good stuff through
+                text, images, videos, event listings, and even audio to an LGBTQ
+                audience and build a following of LGBTQ fans.
               </Text>
             </GridItem>
           </SimpleGrid>

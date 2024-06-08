@@ -57,7 +57,7 @@ export default function Top() {
                 "Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
               }
             >
-              Bessa LGBTQIA+ Community App
+              Bessa
             </Link>
           </Heading>
         </Flex>
