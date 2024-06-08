@@ -81,7 +81,7 @@ export default function Home() {
                   in={true}
                   transition={{ enter: { duration: 0.66, delay: 1.32 } }}
                 >
-                  <Heading as={"h2"} mb={2}>
+                  <Heading as={"h2"} mb={4}>
                     Bessa is FREE!
                   </Heading>
                   <Flex gap={4} flexWrap={"wrap"}>
@@ -206,7 +206,15 @@ export default function Home() {
           </SimpleGrid>
         </Container>
         <Container maxW={"container.lg"} py={32}>
+          <Heading as={"h2"} mb={4}>
+            Liking Bessa?
+          </Heading>
+          <Text mb={4}>
+            Help our community grow by lettings others know how much you like
+            Bessa with a review.
+          </Text>
           <Button
+            size={"lg"}
             onClick={() =>
               router.push(
                 "https://apps.apple.com/app/apple-store/id6471383138?action=write-review"

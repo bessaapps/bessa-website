@@ -13,12 +13,6 @@ export default function sitemap() {
       priority: 0.7
     },
     {
-      url: "https://bessssssa.com/donate",
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.7
-    },
-    {
       url: "https://bessssssa.com/eula",
       lastModified: new Date(),
       changeFrequency: "daily",

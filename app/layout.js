@@ -64,12 +64,7 @@ export default function RootLayout({ children }) {
                 <Flex alignItems={"center"} gap={4}>
                   <FaHeart color={"var(--chakra-colors-red-500)"} />
                   <Text color={"white"} fontWeight={"bold"}>
-                    <Link
-                      href={"/donate"}
-                      title={
-                        "Give | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
-                      }
-                    >
+                    <Link href={"https://gofund.me/4a63173e"} target={"_blank"}>
                       Click here to support inclusive, body-positive LGBTQIA+
                       community
                     </Link>
