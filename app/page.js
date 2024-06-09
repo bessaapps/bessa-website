@@ -39,11 +39,15 @@ export default function Home() {
       icon: <SiAppstore />
     },
     {
+      name: "Google",
+      href: "https://play.google.com/store/apps/details?id=com.bessa.bessa",
+      icon: <SiGoogleplay />
+    },
+    {
       name: "Amazon",
       href: "https://www.amazon.com/gp/product/B0D6K568Z9",
       icon: <SiAmazon />
     },
-    { name: "Google", href: "", icon: <SiGoogleplay />, isDisabled: true },
     { name: "Samsung", href: "", icon: <SiSamsung />, isDisabled: true }
   ];
   return (
