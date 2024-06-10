@@ -11,15 +11,14 @@ import {
   Heading,
   Link,
   SimpleGrid,
-  Text,
-  Tooltip
+  Text
 } from "@chakra-ui/react";
 import Logo from "@/images/logo.png";
 import Mockup1 from "../images/mockups/1.png";
 import Mockup2 from "../images/mockups/2.png";
 import Mockup3 from "../images/mockups/3.png";
 import Image from "next/image";
-import { SiAmazon, SiAppstore, SiGoogleplay, SiSamsung } from "react-icons/si";
+import { SiAppstore, SiGoogleplay } from "react-icons/si";
 import { useRouter } from "next/navigation";
 
 const jsonLd = {
@@ -39,17 +38,12 @@ export default function Home() {
       icon: <SiAppstore />
     },
     {
-      name: "Google",
+      name: "Android",
       href: "https://play.google.com/store/apps/details?id=com.bessa.bessa",
       icon: <SiGoogleplay />
-    },
-    {
-      name: "Amazon",
-      href: "https://www.amazon.com/gp/product/B0D6K568Z9",
-      icon: <SiAmazon />
-    },
-    { name: "Samsung", href: "", icon: <SiSamsung />, isDisabled: true }
+    }
   ];
+
   return (
     <section>
       <script
@@ -89,39 +83,20 @@ export default function Home() {
                     Bessa is FREE!
                   </Heading>
                   <Flex gap={4} flexWrap={"wrap"}>
-                    {appStores.map((store) =>
-                      store.isDisabled ? (
-                        <Tooltip
-                          key={store.name}
-                          label={"Coming Soon!"}
-                          placement={"top"}
+                    {appStores.map((store) => (
+                      <Link key={store.name} href={store.href}>
+                        <Button
+                          colorScheme={"primary"}
+                          bg={"primary.800"}
+                          color={"white"}
+                          size={"lg"}
+                          w={["100%", "auto"]}
                         >
-                          <Button
-                            colorScheme={"primary"}
-                            bg={"primary.800"}
-                            color={"white"}
-                            size={"lg"}
-                            w={["100%", "auto"]}
-                          >
-                            <Flex mr={2}>{store.icon}</Flex>
-                            {store.name}
-                          </Button>
-                        </Tooltip>
-                      ) : (
-                        <Link key={store.name} href={store.href}>
-                          <Button
-                            colorScheme={"primary"}
-                            bg={"primary.800"}
-                            color={"white"}
-                            size={"lg"}
-                            w={["100%", "auto"]}
-                          >
-                            <Flex mr={2}>{store.icon}</Flex>
-                            {store.name}
-                          </Button>
-                        </Link>
-                      )
-                    )}
+                          <Flex mr={2}>{store.icon}</Flex>
+                          {store.name}
+                        </Button>
+                      </Link>
+                    ))}
                   </Flex>
                 </Fade>
               </Flex>
@@ -217,16 +192,34 @@ export default function Home() {
             Help our community grow by lettings others know how much you like
             Bessa with a review.
           </Text>
-          <Button
-            size={"lg"}
-            onClick={() =>
-              router.push(
-                "https://apps.apple.com/app/apple-store/id6471383138?action=write-review"
-              )
-            }
-          >
-            Write a Review
-          </Button>
+          <Flex gap={4} flexWrap={"wrap"}>
+            <Button
+              colorScheme={"primary"}
+              bg={"primary.800"}
+              color={"white"}
+              size={"lg"}
+              onClick={() =>
+                router.push(
+                  "https://apps.apple.com/app/apple-store/id6471383138?action=write-review"
+                )
+              }
+            >
+              Review on App Store
+            </Button>
+            <Button
+              colorScheme={"primary"}
+              bg={"primary.800"}
+              color={"white"}
+              size={"lg"}
+              onClick={() =>
+                router.push(
+                  "https://play.google.com/store/apps/details?id=com.bessa.bessa"
+                )
+              }
+            >
+              Review on Google Play
+            </Button>
+          </Flex>
         </Container>
       </Box>
     </section>
