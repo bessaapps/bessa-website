@@ -24,9 +24,9 @@ import { useRouter } from "next/navigation";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Software",
-  name: "Bessa LGBTQIA+ Community App",
+  name: "Bessa | An LGBTQ Community App",
   description:
-    "Bessa is a safe inclusive and body-positive community of LGBTQIA+ people who want to connect with others and socialize with their friends, family, and others."
+    "Bessa is an inclusive LGBTQ community of all genders, colors, shapes, and sizes who want to safely connect with new and existing friends, family, and others."
 };
 
 export default function Home() {
@@ -61,7 +61,7 @@ export default function Home() {
               <Flex direction={"column"} w={["100%", "50%"]} justify={"center"}>
                 <Fade in={true} transition={{ enter: { duration: 0.66 } }}>
                   <Heading as={"h1"} color={"white"} mb={4}>
-                    Safe Inclusive Body-Positive LGBTQIA+ Community
+                    LGBTQ Community
                   </Heading>
                 </Fade>
                 <Fade
@@ -69,10 +69,9 @@ export default function Home() {
                   transition={{ enter: { duration: 0.66, delay: 0.66 } }}
                 >
                   <Text mb={4}>
-                    Bessa is a safe, inclusive, and body-positive community of
-                    lesbian, gay, bisexual, transgender, queer, intersex, and
-                    asexual (LGBTQIA+) people who want to connect with others
-                    and socialize with their friends, family, and others.
+                    Bessa is an inclusive LGBTQ community of all genders,
+                    colors, shapes, and sizes who want to safely connect with
+                    new and existing friends, family, and others.
                   </Text>
                 </Fade>
                 <Fade
@@ -80,7 +79,7 @@ export default function Home() {
                   transition={{ enter: { duration: 0.66, delay: 1.32 } }}
                 >
                   <Heading as={"h2"} mb={4}>
-                    Bessa is FREE!
+                    Join for FREE!
                   </Heading>
                   <Flex gap={4} flexWrap={"wrap"}>
                     {appStores.map((store) => (
@@ -101,10 +100,7 @@ export default function Home() {
                 </Fade>
               </Flex>
               <Flex w={["100%", "50%"]}>
-                <Image
-                  src={Logo}
-                  alt={"Safe Inclusive Body-Positive LGBTQIA+ Community"}
-                />
+                <Image src={Logo} alt={"The LGBTQ Community App Unicorn"} />
               </Flex>
             </Flex>
           </Container>
@@ -139,12 +135,7 @@ export default function Home() {
         <Container maxW={"container.lg"} py={32}>
           <SimpleGrid columns={[1, 3]} gap={4}>
             <GridItem>
-              <Image
-                src={Mockup1}
-                alt={
-                  "Make some Noise! | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
-                }
-              />
+              <Image src={Mockup1} alt={"An LGBTQ Community App"} />
               <Heading my={4}>Make some Noise!</Heading>
               <Text mb={4}>
                 Sharing your LGBTQ pride is now as fun as ever. By sharing
@@ -154,12 +145,7 @@ export default function Home() {
               </Text>
             </GridItem>
             <GridItem>
-              <Image
-                src={Mockup2}
-                alt={
-                  "Socialize with Community | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
-                }
-              />
+              <Image src={Mockup2} alt={"An LGBTQ Community App"} />
               <Heading my={4}>Socialize with Community</Heading>
               <Text mb={4}>
                 Networking is a huge part of building queer community. Find
@@ -169,12 +155,7 @@ export default function Home() {
               </Text>
             </GridItem>
             <GridItem>
-              <Image
-                src={Mockup3}
-                alt={
-                  "Socialize with Community | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
-                }
-              />
+              <Image src={Mockup3} alt={"An LGBTQ Community App"} />
               <Heading my={4}>Build your Following</Heading>
               <Text mb={4}>
                 Share your LGBTQ thoughts, ideas, and other good stuff through

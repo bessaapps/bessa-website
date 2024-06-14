@@ -2,8 +2,7 @@ import { Container, Heading } from "@chakra-ui/react";
 import Rules from "@/components/Rules";
 
 export const metadata = {
-  title:
-    "Privacy Policy | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
+  title: "Privacy Policy | Bessa | An LGBTQ Community App"
 };
 
 export default function Privacy() {

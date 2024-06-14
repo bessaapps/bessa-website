@@ -53,9 +53,7 @@ export default function Top() {
             <Link
               as={NextLink}
               href={"/"}
-              title={
-                "Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
-              }
+              title={"Bessa | An LGBTQ Community App"}
             >
               Bessa
             </Link>

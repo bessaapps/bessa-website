@@ -4,10 +4,10 @@ import Article from "/images/celebrating-international-transgender-day-of-visibi
 
 export const metadata = {
   title:
-    "Celebrating International Transgender Day of Visibility | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community",
+    "Celebrating International Transgender Day of Visibility | Bessa | An LGBTQ Community App",
   openGraph: {
     title:
-      "Celebrating International Transgender Day of Visibility | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community",
+      "Celebrating International Transgender Day of Visibility | Bessa | An LGBTQ Community App",
     url: "https://bessssssa.com/celebrating-international-transgender-day-of-visibility",
     siteName: "Bessa",
     images: [
@@ -26,7 +26,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   headline:
-    "Celebrating International Transgender Day of Visibility | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community",
+    "Celebrating International Transgender Day of Visibility | Bessa | An LGBTQ Community App",
   url: "https://bessssssa.com/celebrating-international-transgender-day-of-visibility",
   image:
     "https://bessssssa.com/images/celebrating-international-transgender-day-of-visibility.png",

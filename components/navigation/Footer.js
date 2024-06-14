@@ -44,7 +44,7 @@ export default function Footer() {
               <Text key={link.href}>
                 <Link
                   href={`/${link.href}`}
-                  title={`${link.anchor} | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community`}
+                  title={`${link.anchor} | Bessa | An LGBTQ Community App`}
                   color={"white"}
                   mr={4}
                 >
@@ -58,7 +58,7 @@ export default function Footer() {
               <Text key={legalLink.href}>
                 <Link
                   href={`/${legalLink.href}`}
-                  title={`${legalLink.anchor} | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community`}
+                  title={`${legalLink.anchor} | Bessa | An LGBTQ Community App`}
                   color={"white"}
                   mr={4}
                 >
@@ -73,9 +73,7 @@ export default function Footer() {
           <Link
             as={NextLink}
             href={"/"}
-            title={
-              "Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
-            }
+            title={"Bessa | An LGBTQ Community App"}
           >
             Bessa Community Apps LLC
           </Link>
