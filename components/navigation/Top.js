@@ -23,11 +23,7 @@ export default function Top() {
   const links = [
     {
       href: "support",
-      anchor: "Support"
-    },
-    {
-      href: "donate",
-      anchor: "Donate"
+      anchor: "Help & Support"
     },
     {
       href: "lgbtqia-community",
@@ -36,6 +32,10 @@ export default function Top() {
     {
       href: "celebrating-international-transgender-day-of-visibility",
       anchor: "Trans Day"
+    },
+    {
+      href: "lgbtqia-health",
+      anchor: "LGBTQIA Health"
     }
   ];
   const policies = [
