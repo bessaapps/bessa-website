@@ -64,8 +64,7 @@ export default function RootLayout({ children }) {
                   <FaHeart color={"var(--chakra-colors-red-500)"} />
                   <Text color={"white"} fontWeight={"bold"}>
                     <Link href={"https://gofund.me/4a63173e"} target={"_blank"}>
-                      Click here to support inclusive, body-positive LGBTQIA+
-                      community
+                      Click here to support inclusive LGBTQ communities
                     </Link>
                   </Text>
                 </Flex>
