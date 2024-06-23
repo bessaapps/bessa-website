@@ -26,14 +26,6 @@ export default function Top() {
       anchor: "Help & Support"
     },
     {
-      href: "lgbtqia-community",
-      anchor: "Community"
-    },
-    {
-      href: "celebrating-international-transgender-day-of-visibility",
-      anchor: "Trans Day"
-    },
-    {
       href: "lgbtqia-health",
       anchor: "LGBTQIA Health"
     }
