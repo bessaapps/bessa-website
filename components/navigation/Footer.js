@@ -13,10 +13,6 @@ export default function Footer() {
     {
       href: "support",
       anchor: "Help & Support"
-    },
-    {
-      href: "lgbtqia-health",
-      anchor: "LGBTQIA Health"
     }
   ];
 
@@ -36,7 +32,7 @@ export default function Footer() {
               <Text key={link.href}>
                 <Link
                   href={`/${link.href}`}
-                  title={`${link.anchor} | Bessa | An LGBTQ Community App`}
+                  title={`${link.anchor} | Bessa | An LGBTQ Social Media App`}
                   color={"white"}
                   mr={4}
                 >
@@ -50,7 +46,7 @@ export default function Footer() {
               <Text key={legalLink.href}>
                 <Link
                   href={`/${legalLink.href}`}
-                  title={`${legalLink.anchor} | Bessa | An LGBTQ Community App`}
+                  title={`${legalLink.anchor} | Bessa | An LGBTQ Social Media App`}
                   color={"white"}
                   mr={4}
                 >
@@ -65,7 +61,7 @@ export default function Footer() {
           <Link
             as={NextLink}
             href={"/"}
-            title={"Bessa | An LGBTQ Community App"}
+            title={"Bessa | An LGBTQ Social Media App"}
           >
             Bessa Community Apps LLC
           </Link>

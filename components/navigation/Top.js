@@ -24,10 +24,6 @@ export default function Top() {
     {
       href: "support",
       anchor: "Help & Support"
-    },
-    {
-      href: "lgbtqia-health",
-      anchor: "LGBTQIA Health"
     }
   ];
   const policies = [
@@ -45,7 +41,7 @@ export default function Top() {
             <Link
               as={NextLink}
               href={"/"}
-              title={"Bessa | An LGBTQ Community App"}
+              title={"Bessa | An LGBTQ Social Media App"}
             >
               Bessa
             </Link>
