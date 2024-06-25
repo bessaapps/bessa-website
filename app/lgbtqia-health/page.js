@@ -18,7 +18,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   headline: "LGBTQIA+ Providers | Bessa | An LGBTQ Community App",
-  url: "https://bessssssa.com/lgbtqia-health",
+  url: "https://getbessa.com/lgbtqia-health",
   datePublished: "2024-05-26T00:00:00+00:00",
   dateModified: "2024-05-26T00:00:00+00:00",
   author: "Topher"

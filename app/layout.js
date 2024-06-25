@@ -6,18 +6,18 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { FaHeart } from "react-icons/fa";
 
 export const metadata = {
-  title: "Bessa | An LGBTQ Community App",
+  title: "Bessa | An LGBTQ Social Media App",
   description:
     "Bessa is an inclusive LGBTQ community of all genders, colors, shapes, and sizes who want to safely connect with new and existing friends, family, and others.",
   openGraph: {
-    title: "Bessa | An LGBTQ Community App",
+    title: "Bessa | An LGBTQ Social Media App",
     description:
       "Bessa is an inclusive LGBTQ community of all genders, colors, shapes, and sizes who want to safely connect with new and existing friends, family, and others.",
-    url: "https://bessssssa.com",
+    url: "https://getbessa.com",
     siteName: "Bessa",
     images: [
       {
-        url: "https://bessssssa.com/images/social.png",
+        url: "https://getbessa.com.com/images/social.png",
         width: 800,
         height: 600
       }

@@ -1,55 +1,37 @@
 export default function sitemap() {
   return [
     {
-      url: "https://bessssssa.com",
+      url: "https://getbessa.com",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1
     },
     {
-      url: "https://bessssssa.com/cookies",
+      url: "https://getbessa.com/support",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.7
     },
     {
-      url: "https://bessssssa.com/eula",
+      url: "https://getbessa.com/cookies",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.7
     },
     {
-      url: "https://bessssssa.com/lgbtqia-community",
+      url: "https://getbessa.com/eula",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.7
     },
     {
-      url: "https://bessssssa.com/privacy",
+      url: "https://getbessa.com/privacy",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.7
     },
     {
-      url: "https://bessssssa.com/support",
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.7
-    },
-    {
-      url: "https://bessssssa.com/terms",
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.7
-    },
-    {
-      url: "https://bessssssa.com/celebrating-international-transgender-day-of-visibility",
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.7
-    },
-    {
-      url: "https://bessssssa.com/lgbtqia-health",
+      url: "https://getbessa.com/terms",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.7

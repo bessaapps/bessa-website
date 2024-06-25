@@ -6,6 +6,6 @@ export default function robots() {
         disallow: ["/deep-links/*"]
       }
     ],
-    sitemap: "https://bessssssa.com/sitemap.xml"
+    sitemap: "https://getbessa.com/sitemap.xml"
   };
 }

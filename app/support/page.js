@@ -20,14 +20,14 @@ export default function Support() {
       </Heading>
       <Text mb={4}>
         You can reach me at{" "}
-        <Link href={"mailto:topher@bessssssa.com"} fontWeight={"bold"}>
-          topher@bessssssa.com
+        <Link href={"mailto:topher@getbessa.com"} fontWeight={"bold"}>
+          topher@getbessa.com
         </Link>
         !
       </Text>
       <Flex direction={["column", "row"]}>
         {buttons.map((button) => (
-          <Link href={"mailto:topher@bessssssa.com"} key={button}>
+          <Link href={"mailto:topher@getbessa.com"} key={button}>
             <Button mb={[4, 0]} mr={[0, 4]}>
               {button}
             </Button>

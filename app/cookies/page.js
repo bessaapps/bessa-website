@@ -256,8 +256,7 @@ export default function Cookies() {
       </p>
       <ul>
         <li>
-          Via Email:{" "}
-          <a href="mailto:topher@bessssa.com">topher@bessssssa.com</a>
+          Via Email: <a href="mailto:topher@bessssa.com">topher@getbessa.com</a>
         </li>
       </ul>
     </Container>

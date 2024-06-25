@@ -24,7 +24,7 @@ import { useRouter } from "next/navigation";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Software",
-  name: "Bessa | An LGBTQ Community App",
+  name: "Bessa | An LGBTQ Social Media App",
   description:
     "Bessa is an inclusive LGBTQ community of all genders, colors, shapes, and sizes who want to safely connect with new and existing friends, family, and others."
 };
@@ -60,15 +60,15 @@ export default function Home() {
             <Flex justify={"center"} direction={["column", "row"]}>
               <Flex direction={"column"} w={["100%", "50%"]} justify={"center"}>
                 <Fade in={true} transition={{ enter: { duration: 0.66 } }}>
-                  <Heading as={"h1"} color={"white"} mb={4}>
-                    LGBTQ Community
+                  <Heading as={"h1"} color={"white"} mb={[4, 8]}>
+                    An LGBTQ Social Media App
                   </Heading>
                 </Fade>
                 <Fade
                   in={true}
                   transition={{ enter: { duration: 0.66, delay: 0.66 } }}
                 >
-                  <Text mb={4}>
+                  <Text mb={[4, 8]}>
                     Bessa is an inclusive LGBTQ community of all genders,
                     colors, shapes, and sizes who want to safely connect with
                     new and existing friends, family, and others.
@@ -78,7 +78,7 @@ export default function Home() {
                   in={true}
                   transition={{ enter: { duration: 0.66, delay: 1.32 } }}
                 >
-                  <Heading as={"h2"} mb={4}>
+                  <Heading as={"h3"} mb={[2, 4]}>
                     Join for FREE!
                   </Heading>
                   <Flex gap={4} flexWrap={"wrap"}>
@@ -167,7 +167,7 @@ export default function Home() {
         </Container>
         <Container maxW={"container.lg"} py={32}>
           <Heading as={"h2"} mb={4}>
-            Liking Bessa?
+            Like Bessa?
           </Heading>
           <Text mb={4}>
             Help our community grow by lettings others know how much you like

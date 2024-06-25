@@ -447,7 +447,7 @@ export default function EULA() {
       <ul>
         <li>
           Via Email:{" "}
-          <a href="mailto:topher@bessssssa.com">topher@bessssssa.com</a>
+          <a href="mailto:topher@getbessa.com">topher@getbessa.com</a>
         </li>
       </ul>
     </Container>

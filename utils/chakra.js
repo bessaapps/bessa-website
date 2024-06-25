@@ -41,8 +41,11 @@ const theme = extendTheme({
         overflowX: "hidden",
         lineHeight: 2
       },
-      h1: { fontSize: "2rem !important" },
-      h2: { fontSize: "1.5rem !important" }
+      // Minor Second
+      // https://typescale.com
+      h1: { fontSize: "1.476rem !important" },
+      h2: { fontSize: "1.383rem !important" },
+      h3: { fontSize: "1.296rem !important" }
     }
   },
   fonts: {

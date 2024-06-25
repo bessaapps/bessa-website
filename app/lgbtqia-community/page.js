@@ -10,11 +10,11 @@ export const metadata = {
   openGraph: {
     title:
       "Safely Finding LGBTQIA+ Community On- and Offline | Bessa | An LGBTQ Community App",
-    url: "https://bessssssa.com/lgbtqia-community",
+    url: "https://getbessa.com/lgbtqia-community",
     siteName: "Bessa",
     images: [
       {
-        url: "https://bessssssa.com/images/lgbtqia-community.png",
+        url: "https://getbessa.com.com/images/lgbtqia-community.png",
         width: 800,
         height: 600
       }
@@ -31,8 +31,8 @@ const jsonLd = {
     "Safely Finding LGBTQIA+ Community On- and Offline | Bessa | An LGBTQ Community App",
   description:
     "Community is essential for fostering connections, providing support, promoting personal and collective growth, and contributing to the overall health and well-being of individuals. It fulfills fundamental human needs for connection, belonging, and shared purpose, especially with LGBTQIA+ people.",
-  url: "https://bessssssa.com/lgbtqia-community",
-  image: "https://bessssssa.com/images/lgbtqia-community.png",
+  url: "https://getbessa.com/lgbtqia-community",
+  image: "https://getbessa.com/images/lgbtqia-community.png",
   datePublished: "2024-02-13T00:00:00+00:00",
   dateModified: "2024-02-13T00:00:00+00:00",
   author: "Topher"

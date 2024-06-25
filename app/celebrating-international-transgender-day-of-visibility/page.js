@@ -8,11 +8,11 @@ export const metadata = {
   openGraph: {
     title:
       "Celebrating International Transgender Day of Visibility | Bessa | An LGBTQ Community App",
-    url: "https://bessssssa.com/celebrating-international-transgender-day-of-visibility",
+    url: "https://getbessa.com/celebrating-international-transgender-day-of-visibility",
     siteName: "Bessa",
     images: [
       {
-        url: "https://bessssssa.com/images/celebrating-international-transgender-day-of-visibility.png",
+        url: "https://getbessa.com/images/celebrating-international-transgender-day-of-visibility.png",
         width: 800,
         height: 600
       }
@@ -27,9 +27,9 @@ const jsonLd = {
   "@type": "BlogPosting",
   headline:
     "Celebrating International Transgender Day of Visibility | Bessa | An LGBTQ Community App",
-  url: "https://bessssssa.com/celebrating-international-transgender-day-of-visibility",
+  url: "https://getbessa.com/celebrating-international-transgender-day-of-visibility",
   image:
-    "https://bessssssa.com/images/celebrating-international-transgender-day-of-visibility.png",
+    "https://getbessa.com/images/celebrating-international-transgender-day-of-visibility.png",
   datePublished: "2024-03-09T00:00:00+00:00",
   dateModified: "2024-03-09T00:00:00+00:00",
   author: "Topher"
