@@ -17,7 +17,7 @@ import { useState } from "react";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline: "LGBTQIA+ Providers | Bessa | An LGBTQ Community App",
+  headline: "LGBTQIA+ Providers | Bessa | An LGBTQ Social Media App",
   url: "https://getbessa.com/lgbtqia-health",
   datePublished: "2024-05-26T00:00:00+00:00",
   dateModified: "2024-05-26T00:00:00+00:00",

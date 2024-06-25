@@ -4,10 +4,10 @@ import Article from "/images/celebrating-international-transgender-day-of-visibi
 
 export const metadata = {
   title:
-    "Celebrating International Transgender Day of Visibility | Bessa | An LGBTQ Community App",
+    "Celebrating International Transgender Day of Visibility | Bessa | An LGBTQ Social Media App",
   openGraph: {
     title:
-      "Celebrating International Transgender Day of Visibility | Bessa | An LGBTQ Community App",
+      "Celebrating International Transgender Day of Visibility | Bessa | An LGBTQ Social Media App",
     url: "https://getbessa.com/celebrating-international-transgender-day-of-visibility",
     siteName: "Bessa",
     images: [
@@ -26,7 +26,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   headline:
-    "Celebrating International Transgender Day of Visibility | Bessa | An LGBTQ Community App",
+    "Celebrating International Transgender Day of Visibility | Bessa | An LGBTQ Social Media App",
   url: "https://getbessa.com/celebrating-international-transgender-day-of-visibility",
   image:
     "https://getbessa.com/images/celebrating-international-transgender-day-of-visibility.png",
@@ -121,9 +121,7 @@ export default function CelebratingInternationalTransgenderDayOfVisibility() {
           welcoming everyone to its safe and diverse community!{" "}
           <Link
             href={"/"}
-            title={
-              "Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
-            }
+            title={"Bessa | An LGBTQ Social Media App"}
             color={"primary.500"}
           >
             Download it and join here for FREE!
@@ -150,9 +148,7 @@ export default function CelebratingInternationalTransgenderDayOfVisibility() {
           trying to build, please check out the{" "}
           <Link
             href={"/donate"}
-            title={
-              "Give | Bessa LGBTQIA+ Community App | Safe Inclusive Body-Positive LGBTQIA+ Community"
-            }
+            title={"Give | Bessa LGBTQ Social Media App"}
             color={"primary.500"}
           >
             Donations Page

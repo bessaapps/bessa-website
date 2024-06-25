@@ -2,7 +2,7 @@ import { Container, Heading } from "@chakra-ui/react";
 import Rules from "@/components/Rules";
 
 export const metadata = {
-  title: "Cookie Policy | Bessa | An LGBTQ Community App"
+  title: "Cookie Policy | Bessa | An LGBTQ Social Media App"
 };
 
 export default function Cookies() {

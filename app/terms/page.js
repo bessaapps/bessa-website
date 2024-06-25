@@ -2,7 +2,7 @@ import { Container, Heading } from "@chakra-ui/react";
 import Rules from "@/components/Rules";
 
 export const metadata = {
-  title: "Terms and Conditions | Bessa | An LGBTQ Community App"
+  title: "Terms and Conditions | Bessa | An LGBTQ Social Media App"
 };
 
 export default function Terms() {

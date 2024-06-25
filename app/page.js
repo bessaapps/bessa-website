@@ -100,7 +100,7 @@ export default function Home() {
                 </Fade>
               </Flex>
               <Flex w={["100%", "50%"]}>
-                <Image src={Logo} alt={"The LGBTQ Community App Unicorn"} />
+                <Image src={Logo} alt={"The LGBTQ Social Media App Unicorn"} />
               </Flex>
             </Flex>
           </Container>
@@ -135,7 +135,7 @@ export default function Home() {
         <Container maxW={"container.lg"} py={32}>
           <SimpleGrid columns={[1, 3]} gap={4}>
             <GridItem>
-              <Image src={Mockup1} alt={"An LGBTQ Community App"} />
+              <Image src={Mockup1} alt={"An LGBTQ Social Media App"} />
               <Heading my={4}>Make some Noise!</Heading>
               <Text mb={4}>
                 Sharing your LGBTQ pride is now as fun as ever. By sharing
@@ -145,7 +145,7 @@ export default function Home() {
               </Text>
             </GridItem>
             <GridItem>
-              <Image src={Mockup2} alt={"An LGBTQ Community App"} />
+              <Image src={Mockup2} alt={"An LGBTQ Social Media App"} />
               <Heading my={4}>Socialize with Community</Heading>
               <Text mb={4}>
                 Networking is a huge part of building queer community. Find
@@ -155,7 +155,7 @@ export default function Home() {
               </Text>
             </GridItem>
             <GridItem>
-              <Image src={Mockup3} alt={"An LGBTQ Community App"} />
+              <Image src={Mockup3} alt={"An LGBTQ Social Media App"} />
               <Heading my={4}>Build your Following</Heading>
               <Text mb={4}>
                 Share your LGBTQ thoughts, ideas, and other good stuff through

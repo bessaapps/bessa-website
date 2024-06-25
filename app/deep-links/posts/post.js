@@ -60,7 +60,7 @@ export default function DeepLinkPost({ searchParams }) {
             <Flex w={["100%", "50%"]}>
               <Image
                 src={Logo}
-                alt={"Safe Inclusive Body-Positive LGBTQIA+ Community"}
+                alt={"Safe Inclusive Body-Positive LGBTQ Community"}
               />
             </Flex>
           </Flex>

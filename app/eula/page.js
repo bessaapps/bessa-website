@@ -2,7 +2,7 @@ import { Container, Heading } from "@chakra-ui/react";
 import Rules from "@/components/Rules";
 
 export const metadata = {
-  title: "End-User License Agreement | Bessa | An LGBTQ Community App"
+  title: "End-User License Agreement | Bessa | An LGBTQ Social Media App"
 };
 
 export default function EULA() {

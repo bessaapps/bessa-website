@@ -4,7 +4,7 @@ import HeroImage from "/images/lgbtqia-community.png";
 
 export const metadata = {
   title:
-    "Safely Finding LGBTQIA+ Community On- and Offline | Bessa | An LGBTQ Community App",
+    "Safely Finding LGBTQIA+ Community On- and Offline | Bessa | An LGBTQ Social Media App",
   description:
     "Community is essential for fostering connections, providing support, promoting personal and collective growth, and contributing to the overall health and well-being of individuals. It fulfills fundamental human needs for connection, belonging, and shared purpose, especially with LGBTQIA+ people.",
   openGraph: {
