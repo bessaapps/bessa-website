@@ -44,7 +44,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "MobileApplication",
   name: "Bessa",
-  offers: { "@type": "Offer", price: "0" },
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   applicationCategory: "SocialNetworkingApplication",
   aggregateRating: {
     "@type": "AggregateRating",
