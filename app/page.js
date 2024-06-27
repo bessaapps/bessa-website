@@ -42,9 +42,11 @@ export const metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Software",
+  "@type": "Organization",
+  legalName: "Bessa Community Apps",
+  url,
   name: title,
-  description
+  logo: "/images/logo.png"
 };
 
 export default function Home() {
