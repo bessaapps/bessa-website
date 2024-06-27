@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Box,
   Button,
@@ -19,18 +17,37 @@ import Mockup2 from "../images/mockups/2.png";
 import Mockup3 from "../images/mockups/3.png";
 import Image from "next/image";
 import { SiAppstore, SiGoogleplay } from "react-icons/si";
-import { useRouter } from "next/navigation";
+import { description, title, url } from "@/utils/constants";
+
+export const metadata = {
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url,
+    siteName: title,
+    images: [
+      {
+        url: `${url}/images/social.png`,
+        width: 800,
+        height: 600
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  alternates: { canonical: url }
+};
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Software",
-  name: "Bessa | An LGBTQ Social Media App",
-  description:
-    "Bessa is an inclusive LGBTQ community of all genders, colors, shapes, and sizes who want to safely connect with new and existing friends, family, and others."
+  name: title,
+  description
 };
 
 export default function Home() {
-  const router = useRouter();
   const appStores = [
     {
       name: "iOS",
@@ -174,32 +191,34 @@ export default function Home() {
             Bessa with a review.
           </Text>
           <Flex gap={4} flexWrap={"wrap"}>
-            <Button
-              colorScheme={"primary"}
-              bg={"primary.800"}
-              color={"white"}
-              size={"lg"}
-              onClick={() =>
-                router.push(
-                  "https://apps.apple.com/app/apple-store/id6471383138?action=write-review"
-                )
+            <Link
+              href={
+                "https://apps.apple.com/app/apple-store/id6471383138?action=write-review"
               }
             >
-              Review on App Store
-            </Button>
-            <Button
-              colorScheme={"primary"}
-              bg={"primary.800"}
-              color={"white"}
-              size={"lg"}
-              onClick={() =>
-                router.push(
-                  "https://play.google.com/store/apps/details?id=com.bessa.bessa"
-                )
+              <Button
+                colorScheme={"primary"}
+                bg={"primary.800"}
+                color={"white"}
+                size={"lg"}
+              >
+                Review on App Store
+              </Button>
+            </Link>
+            <Link
+              href={
+                "https://play.google.com/store/apps/details?id=com.bessa.bessa"
               }
             >
-              Review on Google Play
-            </Button>
+              <Button
+                colorScheme={"primary"}
+                bg={"primary.800"}
+                color={"white"}
+                size={"lg"}
+              >
+                Review on Google Play
+              </Button>
+            </Link>
           </Flex>
         </Container>
       </Box>

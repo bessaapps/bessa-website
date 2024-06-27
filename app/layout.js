@@ -4,27 +4,27 @@ import Providers from "@/app/providers";
 import Footer from "@/components/navigation/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { FaHeart } from "react-icons/fa";
+import { description, title, url } from "@/utils/constants";
 
 export const metadata = {
-  title: "Bessa | An LGBTQ Social Media App",
-  description:
-    "Bessa is an inclusive LGBTQ community of all genders, colors, shapes, and sizes who want to safely connect with new and existing friends, family, and others.",
+  title,
+  description,
   openGraph: {
-    title: "Bessa | An LGBTQ Social Media App",
-    description:
-      "Bessa is an inclusive LGBTQ community of all genders, colors, shapes, and sizes who want to safely connect with new and existing friends, family, and others.",
-    url: "https://getbessa.com",
-    siteName: "Bessa",
+    title,
+    description,
+    url,
+    siteName: title,
     images: [
       {
-        url: "https://getbessa.com.com/images/social.png",
+        url: `${url}/images/social.png`,
         width: 800,
         height: 600
       }
     ],
     locale: "en_US",
     type: "website"
-  }
+  },
+  alternates: { canonical: url }
 };
 
 export default function RootLayout({ children }) {
