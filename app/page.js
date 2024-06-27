@@ -43,10 +43,15 @@ export const metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "MobileApplication",
-  legalName: "Bessa Community Apps",
-  url,
-  name: title,
-  logo: "/images/logo.png"
+  name: "Bessa",
+  offers: { "@type": "Offer", price: "0" },
+  applicationCategory: "SocialNetworkingApplication",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    ratingCount: "3"
+  },
+  operatingSystem: "ANDROID"
 };
 
 export default function Home() {
