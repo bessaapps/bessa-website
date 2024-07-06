@@ -15,6 +15,8 @@ import Logo from "@/images/logo.png";
 import Mockup1 from "../images/mockups/1.png";
 import Mockup2 from "../images/mockups/2.png";
 import Mockup3 from "../images/mockups/3.png";
+import Mockup4 from "../images/mockups/4.png";
+import Mockup5 from "../images/mockups/5.png";
 import Image from "next/image";
 import { SiAppstore, SiGoogleplay } from "react-icons/si";
 import { description, title, url } from "@/utils/constants";
@@ -65,6 +67,33 @@ export default function Home() {
       name: "Android",
       href: "https://play.google.com/store/apps/details?id=com.bessa.bessa",
       icon: <SiGoogleplay />
+    }
+  ];
+  const mockups = [
+    {
+      heading: "Be Heard!",
+      text: "Sharing your LGBTQ pride is now as fun as ever. By sharing updates, images, videos, and audio recordings, you can express yourself to the ones you love and make new queer friends as well.",
+      image: Mockup1
+    },
+    {
+      heading: "Make New Friends",
+      text: "Networking is a huge part of building queer community. Find LGBTQ members with shared interests near you and make queer friends, connections, and maybe more. Chat, upload a selfie, update your profile, and add flair to join the fun!",
+      image: Mockup2
+    },
+    {
+      heading: "Find a Community",
+      text: "Events can be a great way to find and involve yourself in LGBTQ communities. Find anything from groups, volunteer opportunities, or just fun things to do and meet new people at.",
+      image: Mockup3
+    },
+    {
+      heading: "Discover your Neighborhood",
+      text: "Find and support the best parts of your community. Use the map to find user-vetted, safe, and inclusive LGBTQ businesses, organizations, and resources around you. ",
+      image: Mockup4
+    },
+    {
+      heading: "Build a Following",
+      text: "Share your LGBTQ thoughts, ideas, and other good stuff through updates, images, videos, and even audio to an LGBTQ audience and build a following of LGBTQ fans.",
+      image: Mockup5
     }
   ];
 
@@ -146,53 +175,30 @@ export default function Home() {
                 rounded: "md"
               }}
             >
-              Through posting social media like updates and media, you can be
-              proud to share who you are with your community. Through likes,
-              replies, direct messages, and a directory of people and events
-              online and around your area, you can find and build strong
-              relationships within your community. Bessa works hard, through
-              moderation and dangerous content filters, to make it a safe
-              community.
+              Through posting social media like updates, media, events, and
+              places, you can be proud to share who you are with your community.
+              Through likes, replies, direct messages, and a directory of
+              people, events, and places online and around your area, you can
+              find and build strong relationships within your community. Bessa
+              works hard, through moderation and dangerous content filters, to
+              make it a safe community.
             </Highlight>
           </Heading>
         </Container>
-        <Container maxW={"container.lg"} py={32}>
-          <SimpleGrid columns={[1, 3]} gap={[4, 8]}>
-            <GridItem>
-              <Box mb={[4, 8]}>
-                <Image src={Mockup1} alt={"An LGBTQ Social Media App"} />
-              </Box>
-              <Heading my={4}>Make some Noise!</Heading>
-              <Text mb={4}>
-                Sharing your LGBTQ pride is now as fun as ever. By sharing
-                updates, images, videos, and audio recordings, you can express
-                yourself to the ones you love and make new queer friends as
-                well.
-              </Text>
-            </GridItem>
-            <GridItem>
-              <Box mb={[4, 8]}>
-                <Image src={Mockup2} alt={"An LGBTQ Social Media App"} />
-              </Box>
-              <Heading my={4}>Socialize with Community</Heading>
-              <Text mb={4}>
-                Networking is a huge part of building queer community. Find
-                LGBTQ members with shared interests near you and make queer
-                friends, connections, and maybe more. Chat, upload a selfie,
-                update your profile, and add flair to join the fun!
-              </Text>
-            </GridItem>
-            <GridItem>
-              <Box mb={[4, 8]}>
-                <Image src={Mockup3} alt={"An LGBTQ Social Media App"} />
-              </Box>
-              <Heading my={4}>Build your Following</Heading>
-              <Text mb={4}>
-                Share your LGBTQ thoughts, ideas, and other good stuff through
-                text, images, videos, event listings, and even audio to an LGBTQ
-                audience and build a following of LGBTQ fans.
-              </Text>
-            </GridItem>
+        <Container maxW={"container.xl"} py={32}>
+          <SimpleGrid columns={[1, 5]} gap={[4, 8]}>
+            {mockups?.map((mockup, index) => (
+              <GridItem key={index}>
+                <Box mb={[4, 8]}>
+                  <Image
+                    src={mockup.image}
+                    alt={`${mockup.heading} | An LGBTQ Social Media App`}
+                  />
+                </Box>
+                <Heading my={4}>{mockup.heading}</Heading>
+                <Text mb={4}>{mockup.text}</Text>
+              </GridItem>
+            ))}
           </SimpleGrid>
         </Container>
         <Container maxW={"container.lg"} py={32}>
