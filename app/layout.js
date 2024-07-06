@@ -2,7 +2,7 @@ import { Container, Flex, Grid, GridItem, Link, Text } from "@chakra-ui/react";
 import Top from "@/components/navigation/Top";
 import Providers from "@/app/providers";
 import Footer from "@/components/navigation/Footer";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { FaHeart } from "react-icons/fa";
 import { description, title, url } from "@/utils/constants";
 
@@ -74,7 +74,10 @@ export default function RootLayout({ children }) {
         </Providers>
       </body>
       {process.env.NODE_ENV !== "development" && (
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+        <>
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+          <GoogleTagManager gtmId={"AW-16623200556"} />
+        </>
       )}
     </html>
   );
