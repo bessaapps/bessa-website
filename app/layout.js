@@ -5,6 +5,7 @@ import Footer from "@/components/navigation/Footer";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { FaHeart } from "react-icons/fa";
 import { description, title, url } from "@/utils/constants";
+import Script from "next/script";
 
 export const metadata = {
   title,
@@ -77,6 +78,9 @@ export default function RootLayout({ children }) {
         <>
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
           <GoogleTagManager gtmId={"G-54V3486CCK"} />
+          <Script id={"Google Ads"}>
+            {`gtag('event', 'conversion', {'send_to': 'AW-16623200556/dnBYCK3IxMAZEKzSx_Y9'});`}
+          </Script>
         </>
       )}
     </html>
