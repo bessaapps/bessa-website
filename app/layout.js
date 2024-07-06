@@ -76,7 +76,7 @@ export default function RootLayout({ children }) {
       {process.env.NODE_ENV !== "development" && (
         <>
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
-          <GoogleTagManager gtmId={"AW-16623200556"} />
+          <GoogleTagManager gtmId={"G-54V3486CCK"} />
         </>
       )}
     </html>
