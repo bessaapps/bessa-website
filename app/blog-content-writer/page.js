@@ -15,6 +15,8 @@ export const metadata = {
   title: "Blog Content Writer | Bessa | An LGBTQ Social Media App",
   openGraph: {
     title: "Blog Content Writer | Bessa | An LGBTQ Social Media App",
+    description:
+      "Are you deeply involved in the LGBTQ community? Do you love to write fun, impactful, and informative content? A blog content writer for Bessa, writes work that LGBTQ communities find valuable, engaging, shareable and enjoy reading.",
     url: "https://getbessa.com/blog-content-writer",
     siteName: "Bessa",
     images: [
