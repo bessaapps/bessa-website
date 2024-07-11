@@ -13,6 +13,10 @@ export default function Footer() {
     {
       href: "support",
       anchor: "Help & Support"
+    },
+    {
+      href: "blog-content-writer",
+      anchor: "Blog Content Writer"
     }
   ];
 
