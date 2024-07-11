@@ -47,7 +47,11 @@ const jsonLd = {
     sameAs: "https://www.getbessa.com",
     logo: "https://www.getbessa.com/images/logo.png"
   },
-  jobLocationType: "TELECOMMUTE"
+  jobLocationType: "TELECOMMUTE",
+  applicantLocationRequirements: {
+    "@type": "Country",
+    name: "USA"
+  }
 };
 
 export default function BlogContentWriter() {
