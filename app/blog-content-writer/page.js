@@ -1,0 +1,120 @@
+import {
+  Container,
+  Flex,
+  Heading,
+  ListItem,
+  Tag,
+  Text,
+  UnorderedList,
+  Link
+} from "@chakra-ui/react";
+import Image from "next/image";
+import Article from "/images/celebrating-international-transgender-day-of-visibility.png";
+
+export const metadata = {
+  title: "Blog Content Writer | Bessa | An LGBTQ Social Media App",
+  openGraph: {
+    title: "Blog Content Writer | Bessa | An LGBTQ Social Media App",
+    url: "https://getbessa.com/blog-content-writer",
+    siteName: "Bessa",
+    images: [
+      {
+        url: "https://getbessa.com/images/celebrating-international-transgender-day-of-visibility.png",
+        width: 800,
+        height: 600
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  }
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  title: "LGBTQ Blog Content Writer",
+  description:
+    "Are you deeply involved in the LGBTQ community? Do you love to write fun, impactful, and informative content? A blog content writer for Bessa, writes work that LGBTQ communities find valuable, engaging, shareable and enjoy reading.",
+  datePosted: "2024-07-10",
+  employmentType: "CONTRACTOR",
+  hiringOrganization: {
+    "@type": "Organization",
+    name: "Bessa Community Apps",
+    sameAs: "https://www.getbessa.com",
+    logo: "https://www.getbessa.com/images/logo.png"
+  }
+};
+
+export default function BlogContentWriter() {
+  return (
+    <section>
+      <script
+        type={"application/ld+json"}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Container maxW={"container.lg"} py={16}>
+        <Image
+          src={Article}
+          alt={"Celebrating International Transgender Day of Visibility"}
+        />
+      </Container>
+      <Container pb={16}>
+        <Heading as={"h1"} mb={4}>
+          Blog Content Writer
+        </Heading>
+        <Flex gap={4} mb={4}>
+          <Tag>Contract</Tag>
+          <Tag>$150/article</Tag>
+          <Tag>Remote</Tag>
+        </Flex>
+        <Text mb={4}>
+          Are you deeply involved in the LGBTQ community? Do you love to write
+          fun, impactful, and informative content? A blog content writer for
+          Bessa, writes work that LGBTQ communities find valuable, engaging,
+          shareable and enjoy reading.
+        </Text>
+        <Heading mb={4}>Responsibilities and Duties</Heading>
+        <UnorderedList spacing={2} mb={4}>
+          <ListItem>
+            Write well-structured and engaging articles interesting to LGBTQ
+            people
+          </ListItem>
+          <ListItem>
+            Incorporate calls to action, mainly for Bessa, in articles
+          </ListItem>
+          <ListItem>
+            Incorporate search-engine-friendly keywords and content in articles.
+          </ListItem>
+          <ListItem>
+            Make revisions to articles according to editor feedback
+          </ListItem>
+          <ListItem>
+            Collaborate on articles both, suggested by you and the editor
+          </ListItem>
+        </UnorderedList>
+        <Heading mb={4}>Qualifications</Heading>
+        <UnorderedList spacing={2} mb={4}>
+          <ListItem>
+            Knowledge of lesbian, gay, bisexual, transgender, and/or queer
+            communities, current events, controversial topics, and other
+            interesting topics
+          </ListItem>
+          <ListItem>
+            Easy-to-read, concise, and engaging articles with a casual voice
+          </ListItem>
+          <ListItem>
+            Articles submitted via Google Docs or Microsoft Word
+          </ListItem>
+          <ListItem>
+            Basic &quot;about the author&quot; information such as picture, pen
+            name, website (or other link), and a short bio
+          </ListItem>
+        </UnorderedList>
+        <Text fontWeight={"bold"}>
+          Send resume and samples to{" "}
+          <Link href={"mailto:topher@getbessa.com"}>topher@getbessa.com</Link>.
+        </Text>
+      </Container>
+    </section>
+  );
+}
