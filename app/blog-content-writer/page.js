@@ -13,6 +13,8 @@ import Article from "/images/celebrating-international-transgender-day-of-visibi
 
 export const metadata = {
   title: "Blog Content Writer | Bessa | An LGBTQ Social Media App",
+  description:
+    "Are you deeply involved in the LGBTQ community? Do you love to write fun, impactful, and informative content? A blog content writer for Bessa, writes work that LGBTQ communities find valuable, engaging, shareable and enjoy reading.",
   openGraph: {
     title: "Blog Content Writer | Bessa | An LGBTQ Social Media App",
     description:
@@ -44,7 +46,8 @@ const jsonLd = {
     name: "Bessa Community Apps",
     sameAs: "https://www.getbessa.com",
     logo: "https://www.getbessa.com/images/logo.png"
-  }
+  },
+  jobLocationType: "TELECOMMUTE"
 };
 
 export default function BlogContentWriter() {

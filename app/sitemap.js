@@ -7,6 +7,12 @@ export default function sitemap() {
       priority: 1
     },
     {
+      url: "https://getbessa.com/blog-content-writer",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.7
+    },
+    {
       url: "https://getbessa.com/support",
       lastModified: new Date(),
       changeFrequency: "daily",
