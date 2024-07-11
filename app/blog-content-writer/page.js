@@ -9,16 +9,16 @@ import {
   Link
 } from "@chakra-ui/react";
 import Image from "next/image";
-import Article from "/images/celebrating-international-transgender-day-of-visibility.png";
+import Article from "/images/blog-content-writer.png";
 
 export const metadata = {
   title: "Blog Content Writer | Bessa | An LGBTQ Social Media App",
   description:
-    "Are you deeply involved in the LGBTQ community? Do you love to write fun, impactful, and informative content? A blog content writer for Bessa, writes work that LGBTQ communities find valuable, engaging, shareable and enjoy reading.",
+    "Are you deeply involved in the LGBTQ and/or BIPOC communities? Do you love to write fun, impactful, and informative content? A blog content writer for Bessa, writes work that LGBTQ communities find valuable, engaging, shareable and enjoy reading.",
   openGraph: {
     title: "Blog Content Writer | Bessa | An LGBTQ Social Media App",
     description:
-      "Are you deeply involved in the LGBTQ community? Do you love to write fun, impactful, and informative content? A blog content writer for Bessa, writes work that LGBTQ communities find valuable, engaging, shareable and enjoy reading.",
+      "Are you deeply involved in the LGBTQ and/or BIPOC communities? Do you love to write fun, impactful, and informative content? A blog content writer for Bessa, writes work that LGBTQ communities find valuable, engaging, shareable and enjoy reading.",
     url: "https://getbessa.com/blog-content-writer",
     siteName: "Bessa",
     images: [
@@ -77,10 +77,10 @@ export default function BlogContentWriter() {
           <Tag>Remote</Tag>
         </Flex>
         <Text mb={4}>
-          Are you deeply involved in the LGBTQ community? Do you love to write
-          fun, impactful, and informative content? A blog content writer for
-          Bessa, writes work that LGBTQ communities find valuable, engaging,
-          shareable and enjoy reading.
+          Are you deeply involved in the LGBTQ and/or BIPOC communities? Do you
+          love to write fun, impactful, and informative content? A blog content
+          writer for Bessa, writes work that LGBTQ communities find valuable,
+          engaging, shareable and enjoy reading.
         </Text>
         <Heading mb={4}>Responsibilities and Duties</Heading>
         <UnorderedList spacing={2} mb={4}>
