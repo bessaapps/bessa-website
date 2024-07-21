@@ -26,6 +26,10 @@ export default function Top() {
       anchor: "Help & Support"
     },
     {
+      href: "whats-new",
+      anchor: "What's New in Version 6!"
+    },
+    {
       href: "blog-content-writer",
       anchor: "Blog Content Writer"
     }
