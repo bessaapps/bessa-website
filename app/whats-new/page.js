@@ -50,7 +50,12 @@ export default function WhatsNew() {
   const changes = [
     {
       button: "Coming Soon",
-      items: ["Automatically Load More Members", "Improved Data Security"]
+      items: [
+        "Automatically Load More Members",
+        "Improved Data Security",
+        "Better Flagging Tools",
+        "Better Login and Registration Experiences"
+      ]
     },
     {
       button: "1.6.12",
