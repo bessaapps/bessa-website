@@ -85,8 +85,8 @@ export default function BlogContentWriter() {
         <Heading mb={4}>Responsibilities and Duties</Heading>
         <UnorderedList spacing={2} mb={4}>
           <ListItem>
-            Write well-structured and engaging articles interesting to LGBTQ
-            people
+            Write well-structured and engaging articles of 700 words or more
+            that are interesting to LGBTQ people
           </ListItem>
           <ListItem>
             Incorporate calls to action, mainly for Bessa, in articles
@@ -109,14 +109,13 @@ export default function BlogContentWriter() {
             interesting topics
           </ListItem>
           <ListItem>
-            Easy-to-read, concise, and engaging articles with a casual voice
+            Ability to write easy-to-read, concise, and engaging articles with a
+            casual voice
           </ListItem>
+          <ListItem>Experience with Google Docs or Microsoft Word</ListItem>
           <ListItem>
-            Articles submitted via Google Docs or Microsoft Word
-          </ListItem>
-          <ListItem>
-            Basic &quot;about the author&quot; information such as picture, pen
-            name, website (or other link), and a short bio
+            Basic &quot;about the author&quot; information such as a picture,
+            pen name, website (or other link), and a short bio
           </ListItem>
         </UnorderedList>
         <Text fontWeight={"bold"}>
