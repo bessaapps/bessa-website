@@ -53,8 +53,9 @@ export default function WhatsNew() {
       items: [
         "Stronger Spam Prevention",
         "Better Moderation",
-        "Improved Likes Design",
-        "Better Loading Indicators"
+        "SF Symbols",
+        "Better Loading Indicators",
+        "Improved Likes Design"
       ]
     },
     {
