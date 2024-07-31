@@ -1,9 +1,17 @@
-import { Container, Flex, Grid, GridItem, Link, Text } from "@chakra-ui/react";
+import {
+  Container,
+  Flex,
+  Grid,
+  GridItem,
+  Link,
+  SimpleGrid,
+  Text
+} from "@chakra-ui/react";
 import Top from "@/components/navigation/Top";
 import Providers from "@/app/providers";
 import Footer from "@/components/navigation/Footer";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
-import { FaHeart } from "react-icons/fa";
+import { FaHeart, FaShoppingBag } from "react-icons/fa";
 import { description, title, url } from "@/utils/constants";
 import Script from "next/script";
 
@@ -61,14 +69,36 @@ export default function RootLayout({ children }) {
             </GridItem>
             <GridItem area={"footer"} bg={"gray.900"}>
               <Container maxW={"container.lg"} py={2}>
-                <Flex alignItems={"center"} gap={4}>
-                  <FaHeart color={"var(--chakra-colors-red-500)"} />
-                  <Text color={"white"} fontWeight={"bold"}>
-                    <Link href={"https://gofund.me/4a63173e"} target={"_blank"}>
-                      Click here to support inclusive LGBTQ communities
-                    </Link>
-                  </Text>
-                </Flex>
+                <SimpleGrid columns={[1, 2]}>
+                  <GridItem>
+                    <Flex alignItems={"center"} gap={4}>
+                      <FaHeart color={"var(--chakra-colors-red-500)"} />
+                      <Text color={"white"} fontWeight={"bold"}>
+                        <Link
+                          href={"https://gofund.me/4a63173e"}
+                          target={"_blank"}
+                        >
+                          Donate to LGBTQ communities
+                        </Link>
+                      </Text>
+                    </Flex>
+                  </GridItem>
+                  <GridItem>
+                    <Flex alignItems={"center"} gap={4}>
+                      <FaShoppingBag
+                        color={"var(--chakra-colors-secondary-500)"}
+                      />
+                      <Text color={"white"} fontWeight={"bold"}>
+                        <Link
+                          href={"https://society6.com/getbessa"}
+                          target={"_blank"}
+                        >
+                          Shop LGBTQ Merch
+                        </Link>
+                      </Text>
+                    </Flex>
+                  </GridItem>
+                </SimpleGrid>
               </Container>
             </GridItem>
           </Grid>
