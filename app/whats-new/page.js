@@ -52,6 +52,7 @@ export default function WhatsNew() {
       button: "Coming Soon",
       items: [
         "Stronger Spam Prevention",
+        "Better Moderation",
         "Improved Likes Design",
         "Better Loading Indicators"
       ]
@@ -97,7 +98,7 @@ export default function WhatsNew() {
         <Heading as={"h2"} mb={4}>
           Change Log
         </Heading>
-        <Accordion>
+        <Accordion allowToggle defaultIndex={0}>
           {changes?.map((change, index) => (
             <AccordionItem key={index}>
               <AccordionButton>
