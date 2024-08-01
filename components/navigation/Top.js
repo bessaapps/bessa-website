@@ -22,23 +22,41 @@ export default function Top() {
   const router = useRouter();
   const links = [
     {
+      anchor: "Download for iOS",
+      href: "https://apps.apple.com/us/app/bessa/id6471383138?platform=iphone"
+    },
+    {
+      anchor: "Download for Android",
+      href: "https://play.google.com/store/apps/details?id=com.bessa.bessa"
+    },
+    {
+      href: "https://gofund.me/4a63173e",
+      anchor: "Donate to LGBTQ communities"
+    },
+    {
+      href: "https://society6.com/getbessa",
+      anchor: "Shop LGBTQ Merch"
+    },
+    {
+      href: "/support",
+      anchor: "Help & Support"
+    },
+    {
+      href: "/whats-new",
+      anchor: "What's New in Version 6!"
+    },
+    {
+      href: "/blog-content-writer",
+      anchor: "Blog Content Writer"
+    },
+    {
       href: "support",
       anchor: "Help & Support"
     },
     {
       href: "whats-new",
       anchor: "What's New in Version 6!"
-    },
-    {
-      href: "blog-content-writer",
-      anchor: "Blog Content Writer"
     }
-  ];
-  const policies = [
-    { href: "terms", anchor: "Terms & Conditions" },
-    { href: "privacy", anchor: "Privacy Policy" },
-    { href: "eula", anchor: "End-User License Agreement" },
-    { href: "cookies", anchor: "Cookie Policy" }
   ];
 
   return (
@@ -80,13 +98,13 @@ export default function Top() {
             h={"100%"}
           >
             <Box>
-              {[...links, ...policies]?.map((link) => (
+              {links.map((link) => (
                 <Flex
                   key={link.href}
                   alignItems={"center"}
                   onClick={() => {
                     setIsDrawerOpen(false);
-                    router.push(`/${link.href}`);
+                    router.push(link.href);
                   }}
                 >
                   <Link color={"white"}>{link.anchor}</Link>

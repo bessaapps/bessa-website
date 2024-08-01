@@ -78,9 +78,12 @@ export default function BlogContentWriter() {
         </Flex>
         <Text mb={4}>
           Are you deeply involved in the LGBTQ and/or BIPOC communities? Do you
-          love to write fun, impactful, and informative content? A blog content
-          writer for Bessa, writes work that LGBTQ communities find valuable,
-          engaging, shareable and enjoy reading.
+          love to write fun, impactful, and informative content with a casual
+          voice? A blog content writer for Bessa, writes work that LGBTQ
+          communities find valuable, engaging, shareable and enjoy reading,
+          including topics such as LGBTQ travel, tech, sexual health, rights,
+          politics, pop culture, news, sex, dating, and entertainment. And, much
+          more!
         </Text>
         <Heading mb={4}>Responsibilities and Duties</Heading>
         <UnorderedList spacing={2} mb={4}>
@@ -108,6 +111,7 @@ export default function BlogContentWriter() {
             communities, current events, controversial topics, and other
             interesting topics
           </ListItem>
+          <ListItem>Knowledge of Bessa, an LGBTQ social media app</ListItem>
           <ListItem>
             Ability to write easy-to-read, concise, and engaging articles with a
             casual voice
@@ -118,7 +122,7 @@ export default function BlogContentWriter() {
             pen name, website (or other link), and a short bio
           </ListItem>
         </UnorderedList>
-        <Text fontWeight={"bold"}>
+        <Text as={"i"} fontWeight={"bold"}>
           Send resume and samples to{" "}
           <Link href={"mailto:topher@getbessa.com"}>topher@getbessa.com</Link>.
         </Text>

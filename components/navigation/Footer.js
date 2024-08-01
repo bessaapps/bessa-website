@@ -4,23 +4,57 @@ import {
   Container,
   Box,
   SimpleGrid,
-  GridItem
+  GridItem,
+  HStack
 } from "@chakra-ui/react";
 import NextLink from "next/link";
+import { SiAppstore, SiGoogleplay } from "react-icons/si";
+import {
+  FiBriefcase,
+  FiHeart,
+  FiHelpCircle,
+  FiShoppingBag,
+  FiSmartphone
+} from "react-icons/fi";
 
 export default function Footer() {
   const links = [
     {
-      href: "support",
-      anchor: "Help & Support"
+      anchor: "Download for iOS",
+      href: "https://apps.apple.com/us/app/bessa/id6471383138?platform=iphone",
+      icon: <SiAppstore color={"white"} />
     },
     {
-      href: "whats-new",
-      anchor: "What's New in Version 6!"
+      anchor: "Download for Android",
+      href: "https://play.google.com/store/apps/details?id=com.bessa.bessa",
+      icon: <SiGoogleplay color={"white"} />,
+      margin: [0, 4]
     },
     {
-      href: "blog-content-writer",
-      anchor: "Blog Content Writer"
+      href: "https://gofund.me/4a63173e",
+      anchor: "Donate to LGBTQ communities",
+      icon: <FiHeart color={"white"} />
+    },
+    {
+      href: "https://society6.com/getbessa",
+      anchor: "Shop LGBTQ Merch",
+      icon: <FiShoppingBag color={"white"} />,
+      margin: [0, 4]
+    },
+    {
+      href: "/support",
+      anchor: "Help & Support",
+      icon: <FiHelpCircle color={"white"} />
+    },
+    {
+      href: "/whats-new",
+      anchor: "What's New in Version 6!",
+      icon: <FiSmartphone color={"white"} />
+    },
+    {
+      href: "/blog-content-writer",
+      anchor: "Blog Content Writer",
+      icon: <FiBriefcase color={"white"} />
     }
   ];
 
@@ -34,9 +68,24 @@ export default function Footer() {
   return (
     <Box bg={"gray.800"}>
       <Container maxW={"container.lg"} py={4}>
-        <SimpleGrid columns={[1, 2]} mb={4}>
+        <SimpleGrid columns={[1, 2]} spacing={4} mb={4}>
           <GridItem>
-            {links?.map((link) => (
+            {links.map((link) => (
+              <HStack key={link.href} mb={link?.margin}>
+                {link.icon}
+                <Link
+                  href={link.href}
+                  title={`${link.anchor} | Bessa | An LGBTQ Social Media App`}
+                  color={"white"}
+                  mr={4}
+                >
+                  {link.anchor}
+                </Link>
+              </HStack>
+            ))}
+          </GridItem>
+          <GridItem>
+            {legalLinks.map((link) => (
               <Text key={link.href}>
                 <Link
                   href={`/${link.href}`}
@@ -45,20 +94,6 @@ export default function Footer() {
                   mr={4}
                 >
                   {link.anchor}
-                </Link>
-              </Text>
-            ))}
-          </GridItem>
-          <GridItem>
-            {legalLinks?.map((legalLink) => (
-              <Text key={legalLink.href}>
-                <Link
-                  href={`/${legalLink.href}`}
-                  title={`${legalLink.anchor} | Bessa | An LGBTQ Social Media App`}
-                  color={"white"}
-                  mr={4}
-                >
-                  {legalLink.anchor}
                 </Link>
               </Text>
             ))}
