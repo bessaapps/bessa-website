@@ -50,6 +50,10 @@ export default function WhatsNew() {
   const changes = [
     {
       button: "Coming Soon",
+      items: ["Birthday Fix"]
+    },
+    {
+      button: "1.6.14",
       items: [
         "Stronger Spam Prevention",
         "Better Moderation",
