@@ -14,11 +14,11 @@ import Article from "/images/blog-content-writer.png";
 export const metadata = {
   title: "Blog Content Writer | Bessa | An LGBTQ Social Media App",
   description:
-    "Are you deeply involved in the LGBTQ and/or BIPOC communities? Do you love to write fun, impactful, and informative content? A blog content writer for Bessa, writes work that LGBTQ communities find valuable, engaging, shareable and enjoy reading.",
+    "Are you deeply involved in the LGBTQ and/or BIPOC communities? Do you love to write fun, impactful, and informative content with a casual voice? A blog content writer for Bessa, writes work that LGBTQ communities find valuable, engaging, shareable and enjoy reading, including topics such as LGBTQ travel, tech, sexual health, rights, politics, pop culture, news, sex, dating, and entertainment. And, much more!",
   openGraph: {
     title: "Blog Content Writer | Bessa | An LGBTQ Social Media App",
     description:
-      "Are you deeply involved in the LGBTQ and/or BIPOC communities? Do you love to write fun, impactful, and informative content? A blog content writer for Bessa, writes work that LGBTQ communities find valuable, engaging, shareable and enjoy reading.",
+      "Are you deeply involved in the LGBTQ and/or BIPOC communities? Do you love to write fun, impactful, and informative content with a casual voice? A blog content writer for Bessa, writes work that LGBTQ communities find valuable, engaging, shareable and enjoy reading, including topics such as LGBTQ travel, tech, sexual health, rights, politics, pop culture, news, sex, dating, and entertainment. And, much more!",
     url: "https://getbessa.com/blog-content-writer",
     siteName: "Bessa",
     images: [
@@ -38,7 +38,7 @@ const jsonLd = {
   "@type": "JobPosting",
   title: "LGBTQ Blog Content Writer",
   description:
-    "Are you deeply involved in the LGBTQ community? Do you love to write fun, impactful, and informative content? A blog content writer for Bessa, writes work that LGBTQ communities find valuable, engaging, shareable and enjoy reading.",
+    "Are you deeply involved in the LGBTQ and/or BIPOC communities? Do you love to write fun, impactful, and informative content with a casual voice? A blog content writer for Bessa, writes work that LGBTQ communities find valuable, engaging, shareable and enjoy reading, including topics such as LGBTQ travel, tech, sexual health, rights, politics, pop culture, news, sex, dating, and entertainment. And, much more!",
   datePosted: "2024-07-10",
   employmentType: "CONTRACTOR",
   hiringOrganization: {

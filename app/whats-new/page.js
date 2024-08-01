@@ -12,6 +12,8 @@ import {
   AccordionIcon
 } from "@chakra-ui/react";
 import { title, url } from "@/utils/constants";
+import Image from "next/image";
+import Article from "@/images/whats-new.png";
 
 export const metadata = {
   title: `What's New in Version 6! | ${title}`,
@@ -89,7 +91,13 @@ export default function WhatsNew() {
         type={"application/ld+json"}
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Container py={16}>
+      <Container maxW={"container.lg"} py={16}>
+        <Image
+          src={Article}
+          alt={"Celebrating International Transgender Day of Visibility"}
+        />
+      </Container>
+      <Container pb={16}>
         <Heading as={"h1"} mb={4}>
           What&apos;s New in Version 6
         </Heading>
