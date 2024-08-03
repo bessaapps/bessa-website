@@ -55,6 +55,8 @@ export default function WhatsNew() {
       items: [
         "Post Pictures Directly from your Camera",
         "On-Profile Member Reviews and Events",
+        "Ability to Flag Single Posts",
+        "Ability to Flag Places and Reviews",
         "Birthday Fix"
       ]
     },
