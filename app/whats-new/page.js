@@ -52,7 +52,11 @@ export default function WhatsNew() {
   const changes = [
     {
       button: "Coming Soon",
-      items: ["Birthday Fix"]
+      items: [
+        "Post Pictures Directly from your Camera",
+        "On-Profile Member Reviews and Events",
+        "Birthday Fix"
+      ]
     },
     {
       button: "1.6.14",
