@@ -1,5 +1,4 @@
 import { Button, Container, Flex, Heading, Link, Text } from "@chakra-ui/react";
-import Script from "next/script";
 
 export const metadata = {
   title: "Help & Support | Bessa | An LGBTQ Social Media App"
@@ -19,15 +18,6 @@ export default function Support() {
       <Heading as={"h1"} mb={4}>
         Help &amp; Support
       </Heading>
-      <Script
-        id={"5abccb96-8ac5-47b6-aa55-7a3c9b63a572"}
-        data-yt-url={"https://getbessa.youtrack.cloud"}
-        src={
-          "https://getbessa.youtrack.cloud/static/simplified/form/form-entry.js"
-        }
-        data-theme={"light"}
-        data-lang={"en"}
-      />
       <Text mb={4}>
         You can reach me at{" "}
         <Link href={"mailto:topher@getbessa.com"} fontWeight={"bold"}>
