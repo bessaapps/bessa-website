@@ -51,7 +51,11 @@ const jsonLd = {
 export default function WhatsNew() {
   const changes = [
     {
-      button: "Coming Soon",
+      button: "1.6.16",
+      items: ["Profile Fix", "Add Post, Event, and Place Fix"]
+    },
+    {
+      button: "1.6.15",
       items: [
         "Post Pictures Directly from your Camera",
         "On-Profile Member Reviews and Events",

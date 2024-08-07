@@ -104,11 +104,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Box bg={"primary.500"} color={"gray.100"}>
-        <Flex
-          minH={"calc(100vh - 61px - 48px)"}
-          align={"center"}
-          justify={"center"}
-        >
+        <Flex minH={"calc(100vh - 59px)"} align={"center"} justify={"center"}>
           <Container maxW={"container.lg"} py={16}>
             <Flex justify={"center"} direction={["column", "row"]}>
               <Flex direction={"column"} w={["100%", "50%"]} justify={"center"}>
