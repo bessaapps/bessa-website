@@ -1,19 +1,17 @@
 import { Container, Heading, Link, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Article from "/images/celebrating-international-transgender-day-of-visibility.png";
-import { blogCategories } from "@/utils/constants";
+import { blogCategories, blogPosts, title, url } from "@/utils/constants";
 
 export const metadata = {
-  title:
-    "Celebrating International Transgender Day of Visibility | Bessa | An LGBTQ Social Media App",
+  title: `${blogPosts[1].title} | ${title}`,
   openGraph: {
-    title:
-      "Celebrating International Transgender Day of Visibility | Bessa | An LGBTQ Social Media App",
-    url: "https://getbessa.com/blog/guides/celebrating-international-transgender-day-of-visibility",
+    title: `${blogPosts[1].title} | ${title}`,
+    url: `${url}/blog/guides/celebrating-international-transgender-day-of-visibility`,
     siteName: "Bessa",
     images: [
       {
-        url: "https://getbessa.com/images/celebrating-international-transgender-day-of-visibility.png",
+        url: `${url}/images/celebrating-international-transgender-day-of-visibility.png`,
         width: 800,
         height: 600
       }
@@ -26,11 +24,9 @@ export const metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline:
-    "Celebrating International Transgender Day of Visibility | Bessa | An LGBTQ Social Media App",
-  url: "https://getbessa.com/blog/guides/celebrating-international-transgender-day-of-visibility",
-  image:
-    "https://getbessa.com/images/celebrating-international-transgender-day-of-visibility.png",
+  headline: `${blogPosts[1].title} | ${title}`,
+  url: `${url}/blog/guides/celebrating-international-transgender-day-of-visibility`,
+  image: `${url}/images/celebrating-international-transgender-day-of-visibility.png`,
   datePublished: "2024-03-09T00:00:00+00:00",
   dateModified: "2024-03-09T00:00:00+00:00",
   author: "Topher"
@@ -46,7 +42,7 @@ export default function CelebratingInternationalTransgenderDayOfVisibility() {
       <Container maxW={"container.lg"} py={16}>
         <Image
           src={Article}
-          alt={"Celebrating International Transgender Day of Visibility"}
+          alt={blogPosts[1].title}
           style={{ borderRadius: 8 }}
         />
       </Container>
@@ -57,7 +53,7 @@ export default function CelebratingInternationalTransgenderDayOfVisibility() {
           </Link>
         </Text>
         <Heading as={"h1"} mb={4}>
-          Celebrating International Transgender Day of Visibility
+          {blogPosts[1].title}
         </Heading>
         <Text fontWeight={"bold"} mb={4}>
           Firstly, please don&apos;t out trans people. Also, don&apos;t out

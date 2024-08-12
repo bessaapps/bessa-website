@@ -1,21 +1,19 @@
 import { Container, Link, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import HeroImage from "/images/safely-finding-lgbtqai-community-on-and-offline.png";
-import { blogCategories } from "@/utils/constants";
+import { blogCategories, blogPosts, title, url } from "@/utils/constants";
 
 export const metadata = {
-  title:
-    "Safely Finding LGBTQIA+ Community On- and Offline | Bessa | An LGBTQ Social Media App",
+  title: `${blogPosts[0].title} | ${title}`,
   description:
     "Community is essential for fostering connections, providing support, promoting personal and collective growth, and contributing to the overall health and well-being of individuals. It fulfills fundamental human needs for connection, belonging, and shared purpose, especially with LGBTQIA+ people.",
   openGraph: {
-    title:
-      "Safely Finding LGBTQIA+ Community On- and Offline | Bessa | An LGBTQ Community App",
-    url: "https://getbessa.com/blog/guides/safely-finding-lgbtqai-community-on-and-offline",
+    title: `${blogPosts[0].title} | ${title}`,
+    url: `${url}/blog/guides/safely-finding-lgbtqai-community-on-and-offline`,
     siteName: "Bessa",
     images: [
       {
-        url: "https://getbessa.com.com/images/safely-finding-lgbtqai-community-on-and-offline.png",
+        url: `${url}/images/safely-finding-lgbtqai-community-on-and-offline.png`,
         width: 800,
         height: 600
       }
@@ -28,13 +26,11 @@ export const metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline:
-    "Safely Finding LGBTQIA+ Community On- and Offline | Bessa | An LGBTQ Community App",
+  headline: `${blogPosts[0].title} | ${title}`,
   description:
     "Community is essential for fostering connections, providing support, promoting personal and collective growth, and contributing to the overall health and well-being of individuals. It fulfills fundamental human needs for connection, belonging, and shared purpose, especially with LGBTQIA+ people.",
-  url: "https://getbessa.com/blog/guides/safely-finding-lgbtqai-community-on-and-offline",
-  image:
-    "https://getbessa.com/images/safely-finding-lgbtqai-community-on-and-offline.png",
+  url: `${url}/blog/guides/safely-finding-lgbtqai-community-on-and-offline`,
+  image: `${url}/images/safely-finding-lgbtqai-community-on-and-offline.png`,
   datePublished: "2024-02-13T00:00:00+00:00",
   dateModified: "2024-02-13T00:00:00+00:00",
   author: "Topher"
@@ -50,7 +46,7 @@ export default function LGBTQIACommunity() {
       <Container maxW={"container.lg"} py={16}>
         <Image
           src={HeroImage}
-          alt={"Safely Finding LGBTQIA+ Community On- and Offline"}
+          alt={blogPosts[0].title}
           style={{ borderRadius: 8 }}
         />
       </Container>
@@ -61,7 +57,7 @@ export default function LGBTQIACommunity() {
           </Link>
         </Text>
         <Heading as={"h1"} mb={4}>
-          Safely Finding LGBTQIA+ Community On- and Offline
+          {blogPosts[0].title}
         </Heading>
         <Text mb={4}>
           The LGBTQIA+ community plays a crucial role in the well-being and
