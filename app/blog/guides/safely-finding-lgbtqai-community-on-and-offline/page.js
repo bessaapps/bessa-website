@@ -1,6 +1,7 @@
-import { Container, Heading, Text } from "@chakra-ui/react";
+import { Container, Link, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import HeroImage from "/images/lgbtqia-community.png";
+import HeroImage from "/images/safely-finding-lgbtqai-community-on-and-offline.png";
+import { blogCategories } from "@/utils/constants";
 
 export const metadata = {
   title:
@@ -10,11 +11,11 @@ export const metadata = {
   openGraph: {
     title:
       "Safely Finding LGBTQIA+ Community On- and Offline | Bessa | An LGBTQ Community App",
-    url: "https://getbessa.com/lgbtqia-community",
+    url: "https://getbessa.com/blog/guides/safely-finding-lgbtqai-community-on-and-offline",
     siteName: "Bessa",
     images: [
       {
-        url: "https://getbessa.com.com/images/lgbtqia-community.png",
+        url: "https://getbessa.com.com/images/safely-finding-lgbtqai-community-on-and-offline.png",
         width: 800,
         height: 600
       }
@@ -31,8 +32,9 @@ const jsonLd = {
     "Safely Finding LGBTQIA+ Community On- and Offline | Bessa | An LGBTQ Community App",
   description:
     "Community is essential for fostering connections, providing support, promoting personal and collective growth, and contributing to the overall health and well-being of individuals. It fulfills fundamental human needs for connection, belonging, and shared purpose, especially with LGBTQIA+ people.",
-  url: "https://getbessa.com/lgbtqia-community",
-  image: "https://getbessa.com/images/lgbtqia-community.png",
+  url: "https://getbessa.com/blog/guides/safely-finding-lgbtqai-community-on-and-offline",
+  image:
+    "https://getbessa.com/images/safely-finding-lgbtqai-community-on-and-offline.png",
   datePublished: "2024-02-13T00:00:00+00:00",
   dateModified: "2024-02-13T00:00:00+00:00",
   author: "Topher"
@@ -49,9 +51,15 @@ export default function LGBTQIACommunity() {
         <Image
           src={HeroImage}
           alt={"Safely Finding LGBTQIA+ Community On- and Offline"}
+          style={{ borderRadius: 8 }}
         />
       </Container>
       <Container pb={16}>
+        <Text color="primary.500" fontWeight={"bold"}>
+          <Link href={`/blog/${blogCategories[0].slug}`}>
+            {blogCategories[0].name}
+          </Link>
+        </Text>
         <Heading as={"h1"} mb={4}>
           Safely Finding LGBTQIA+ Community On- and Offline
         </Heading>

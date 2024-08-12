@@ -38,7 +38,7 @@ export default function Top() {
       anchor: "Shop LGBTQ Merch"
     },
     {
-      href: "https://getbessa.youtrack.cloud/form/5abccb96-8ac5-47b6-aa55-7a3c9b63a572",
+      href: "/support",
       anchor: "Help & Support"
     },
     {
