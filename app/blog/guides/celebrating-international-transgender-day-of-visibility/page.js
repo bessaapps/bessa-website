@@ -1,6 +1,7 @@
 import { Container, Heading, Link, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Article from "/images/celebrating-international-transgender-day-of-visibility.png";
+import { blogCategories } from "@/utils/constants";
 
 export const metadata = {
   title:
@@ -8,7 +9,7 @@ export const metadata = {
   openGraph: {
     title:
       "Celebrating International Transgender Day of Visibility | Bessa | An LGBTQ Social Media App",
-    url: "https://getbessa.com/celebrating-international-transgender-day-of-visibility",
+    url: "https://getbessa.com/blog/guides/celebrating-international-transgender-day-of-visibility",
     siteName: "Bessa",
     images: [
       {
@@ -27,7 +28,7 @@ const jsonLd = {
   "@type": "BlogPosting",
   headline:
     "Celebrating International Transgender Day of Visibility | Bessa | An LGBTQ Social Media App",
-  url: "https://getbessa.com/celebrating-international-transgender-day-of-visibility",
+  url: "https://getbessa.com/blog/guides/celebrating-international-transgender-day-of-visibility",
   image:
     "https://getbessa.com/images/celebrating-international-transgender-day-of-visibility.png",
   datePublished: "2024-03-09T00:00:00+00:00",
@@ -46,9 +47,15 @@ export default function CelebratingInternationalTransgenderDayOfVisibility() {
         <Image
           src={Article}
           alt={"Celebrating International Transgender Day of Visibility"}
+          style={{ borderRadius: 8 }}
         />
       </Container>
       <Container pb={16}>
+        <Text color="primary.500" fontWeight={"bold"}>
+          <Link href={`/blog/${blogCategories[0].slug}`}>
+            {blogCategories[0].name}
+          </Link>
+        </Text>
         <Heading as={"h1"} mb={4}>
           Celebrating International Transgender Day of Visibility
         </Heading>
