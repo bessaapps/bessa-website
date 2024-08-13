@@ -16,7 +16,8 @@ import {
   Th,
   Table,
   TableContainer,
-  Thead
+  Thead,
+  Card
 } from "@chakra-ui/react";
 import { title, url } from "@/utils/constants";
 import Image from "next/image";
@@ -154,89 +155,94 @@ export default function WhatsNew() {
         </Heading>
         <Text mb={4}>
           It&apos;s important that this LGBTQ social media app remain accessible
-          and free! On Bessa you can connect, share, discover, and engage, all
-          for absolutely nothing!
+          and free! Unlike other apps like Twitter, Grindr, HER, and OkCupid,
+          Bessa costs absolutely nothing. Additionally, Bessa is loaded with
+          community-building features Twitter and Grindr don&apos;t offer. Here
+          you can connect, share, discover, and engage with your LGBTQ community
+          for free.
         </Text>
       </Container>
       <Container maxW={"container.lg"} mb={16}>
-        <TableContainer>
-          <Table variant="simple">
-            <Thead>
-              <Tr>
-                <Th />
-                <Th>Bessa</Th>
-                <Th>Twitter</Th>
-                <Th>Grindr</Th>
-                <Th>OkCupid</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>Map</Td>
-                <Td>FREE!</Td>
-                <Td>
-                  <FiX />
-                </Td>
-                <Td>
-                  <FiX />
-                </Td>
-                <Td>
-                  <FiX />
-                </Td>
-              </Tr>
-              <Tr>
-                <Td>Events</Td>
-                <Td>FREE!</Td>
-                <Td>
-                  <FiX />
-                </Td>
-                <Td>
-                  <FiX />
-                </Td>
-                <Td>
-                  <FiX />
-                </Td>
-              </Tr>
-              <Tr>
-                <Td>Read Receipts</Td>
-                <Td>FREE!</Td>
-                <Td>
-                  <FiCheck />
-                </Td>
-                <Td>Premium</Td>
-                <Td>Premium</Td>
-              </Tr>
-              <Tr>
-                <Td>Social Feed</Td>
-                <Td>FREE!</Td>
-                <Td>
-                  <FiCheck />
-                </Td>
-                <Td>
-                  <FiX />
-                </Td>
+        <Card>
+          <TableContainer>
+            <Table variant="simple">
+              <Thead>
+                <Tr>
+                  <Th />
+                  <Th>Bessa</Th>
+                  <Th>Twitter</Th>
+                  <Th>Grindr</Th>
+                  <Th>OkCupid</Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                <Tr>
+                  <Td>Map</Td>
+                  <Td>FREE!</Td>
+                  <Td>
+                    <FiX />
+                  </Td>
+                  <Td>
+                    <FiX />
+                  </Td>
+                  <Td>
+                    <FiX />
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td>Events</Td>
+                  <Td>FREE!</Td>
+                  <Td>
+                    <FiX />
+                  </Td>
+                  <Td>
+                    <FiX />
+                  </Td>
+                  <Td>
+                    <FiX />
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td>Read Receipts</Td>
+                  <Td>FREE!</Td>
+                  <Td>
+                    <FiCheck />
+                  </Td>
+                  <Td>Premium</Td>
+                  <Td>Premium</Td>
+                </Tr>
+                <Tr>
+                  <Td>Social Feed</Td>
+                  <Td>FREE!</Td>
+                  <Td>
+                    <FiCheck />
+                  </Td>
+                  <Td>
+                    <FiX />
+                  </Td>
 
-                <Td>
-                  <FiX />
-                </Td>
-              </Tr>
-              <Tr>
-                <Td>Members Directory</Td>
-                <Td>FREE!</Td>
-                <Td>
-                  <FiX />
-                </Td>
-                <Td>
-                  <FiCheck />
-                </Td>
+                  <Td>
+                    <FiX />
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td>Members Directory</Td>
+                  <Td>FREE!</Td>
+                  <Td>
+                    <FiX />
+                  </Td>
+                  <Td>
+                    <FiCheck />
+                  </Td>
 
-                <Td>
-                  <FiCheck />
-                </Td>
-              </Tr>
-            </Tbody>
-          </Table>
-        </TableContainer>
+                  <Td>
+                    <FiCheck />
+                  </Td>
+                </Tr>
+              </Tbody>
+            </Table>
+          </TableContainer>
+        </Card>
       </Container>
     </section>
   );

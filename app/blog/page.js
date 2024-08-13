@@ -1,18 +1,42 @@
-import { blogCategories, blogPosts } from "@/utils/constants";
-import { Container, Link, Text } from "@chakra-ui/react";
+import { blogCategories, blogPosts, title } from "@/utils/constants";
+import {
+  Box,
+  Container,
+  Heading,
+  LinkBox,
+  LinkOverlay,
+  SimpleGrid,
+  Tag
+} from "@chakra-ui/react";
+import Image from "next/image";
 
 export default function Blog() {
   return (
     <Container maxW={"container.lg"} py={16}>
-      {blogPosts.map((blogPost) => (
-        <Text key={blogPost.slug}>
-          <Link
-            href={`/blog/${blogCategories[blogPost.category].slug}/${blogPost.slug}`}
-          >
-            {blogPost?.title}
-          </Link>
-        </Text>
-      ))}
+      <SimpleGrid columns={[1, 2]} spacing={4}>
+        {blogPosts.map((blogPost) => (
+          <LinkBox as={"article"} key={blogPost.slug}>
+            <Box mb={4}>
+              <Image
+                src={blogPost.image}
+                alt={blogPost.title}
+                style={{ borderRadius: 8 }}
+              />
+            </Box>
+            <Tag colorScheme={"primary"} mb={4}>
+              {blogCategories[blogPost.category].name}
+            </Tag>
+            <Heading>
+              <LinkOverlay
+                href={`/blog/${blogCategories[blogPost.category].slug}/${blogPost.slug}`}
+                title={`${blogPost.title} | ${title}`}
+              >
+                {blogPost?.title}
+              </LinkOverlay>
+            </Heading>
+          </LinkBox>
+        ))}
+      </SimpleGrid>
     </Container>
   );
 }

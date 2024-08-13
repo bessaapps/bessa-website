@@ -64,6 +64,9 @@ const theme = extendTheme({
     heading: roboto.style.fontFamily,
     body: roboto.style.fontFamily
   },
+  radii: {
+    md: "8px"
+  },
   components: {
     Link: {
       baseStyle: {
@@ -77,7 +80,8 @@ const theme = extendTheme({
         container: {
           boxShadow: "none",
           borderWidth: 1,
-          borderColor: "gray.100"
+          borderColor: "gray.100",
+          overflow: "hidden"
         }
       }
     }
