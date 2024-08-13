@@ -1,4 +1,4 @@
-import { Container, Heading, Link, Text } from "@chakra-ui/react";
+import { Container, Flex, Heading, Link, Tag, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Article from "/images/celebrating-international-transgender-day-of-visibility.png";
 import { blogCategories, blogPosts, title, url } from "@/utils/constants";
@@ -33,6 +33,15 @@ const jsonLd = {
 };
 
 export default function CelebratingInternationalTransgenderDayOfVisibility() {
+  const tags = [
+    "Transgender Day of Visibility",
+    "Gender Identity",
+    "Transgender People",
+    "Gender Unicorn",
+    "LGBTQ Rights",
+    "LGBTQ Community"
+  ];
+
   return (
     <section>
       <script
@@ -55,6 +64,11 @@ export default function CelebratingInternationalTransgenderDayOfVisibility() {
         <Heading as={"h1"} mb={4}>
           {blogPosts[1].title}
         </Heading>
+        <Flex gap={2} wrap={"wrap"} mb={4}>
+          {tags.map((tag) => (
+            <Tag key={tag}>{tag}</Tag>
+          ))}
+        </Flex>
         <Text fontWeight={"bold"} mb={4}>
           Firstly, please don&apos;t out trans people. Also, don&apos;t out
           trans people. Is this in bold?

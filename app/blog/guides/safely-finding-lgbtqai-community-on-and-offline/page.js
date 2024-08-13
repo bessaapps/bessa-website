@@ -1,4 +1,4 @@
-import { Container, Link, Heading, Text } from "@chakra-ui/react";
+import { Container, Link, Heading, Text, Tag, Flex } from "@chakra-ui/react";
 import Image from "next/image";
 import HeroImage from "/images/safely-finding-lgbtqai-community-on-and-offline.png";
 import { blogCategories, blogPosts, title, url } from "@/utils/constants";
@@ -37,6 +37,8 @@ const jsonLd = {
 };
 
 export default function LGBTQIACommunity() {
+  const tags = ["LGBTQ Meaning", "Gay People", "Sexual Orientation"];
+
   return (
     <section>
       <script
@@ -59,6 +61,11 @@ export default function LGBTQIACommunity() {
         <Heading as={"h1"} mb={4}>
           {blogPosts[0].title}
         </Heading>
+        <Flex gap={2} wrap={"wrap"} mb={4}>
+          {tags.map((tag) => (
+            <Tag key={tag}>{tag}</Tag>
+          ))}
+        </Flex>
         <Text mb={4}>
           The LGBTQIA+ community plays a crucial role in the well-being and
           development of individuals. Community is essential for fostering
