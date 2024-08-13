@@ -52,10 +52,6 @@ export default function Top() {
     {
       href: "/blog-content-writer",
       anchor: "Jobs"
-    },
-    {
-      href: "/whats-new",
-      anchor: "What's New in Version 6!"
     }
   ];
 

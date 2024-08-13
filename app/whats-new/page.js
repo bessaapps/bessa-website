@@ -9,11 +9,19 @@ import {
   AccordionButton,
   AccordionItem,
   Box,
-  AccordionIcon
+  AccordionIcon,
+  Td,
+  Tr,
+  Tbody,
+  Th,
+  Table,
+  TableContainer,
+  Thead
 } from "@chakra-ui/react";
 import { title, url } from "@/utils/constants";
 import Image from "next/image";
 import Article from "@/images/whats-new.png";
+import { FiCheck, FiX } from "react-icons/fi";
 
 export const metadata = {
   title: `What's New in Version 6! | ${title}`,
@@ -108,7 +116,7 @@ export default function WhatsNew() {
           style={{ borderRadius: 8 }}
         />
       </Container>
-      <Container pb={16}>
+      <Container mb={8}>
         <Heading as={"h1"} mb={4}>
           What&apos;s New in Version 6
         </Heading>
@@ -122,7 +130,7 @@ export default function WhatsNew() {
         <Heading as={"h2"} mb={4}>
           Change Log
         </Heading>
-        <Accordion allowToggle defaultIndex={0}>
+        <Accordion allowToggle defaultIndex={0} mb={8}>
           {changes?.map((change, index) => (
             <AccordionItem key={index}>
               <AccordionButton>
@@ -141,6 +149,94 @@ export default function WhatsNew() {
             </AccordionItem>
           ))}
         </Accordion>
+        <Heading as={"h2"} mb={4}>
+          Bessa Costs Nothing!
+        </Heading>
+        <Text mb={4}>
+          It&apos;s important that this LGBTQ social media app remain accessible
+          and free! On Bessa you can connect, share, discover, and engage, all
+          for absolutely nothing!
+        </Text>
+      </Container>
+      <Container maxW={"container.lg"} mb={16}>
+        <TableContainer>
+          <Table variant="simple">
+            <Thead>
+              <Tr>
+                <Th />
+                <Th>Bessa</Th>
+                <Th>Twitter</Th>
+                <Th>Grindr</Th>
+                <Th>OkCupid</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              <Tr>
+                <Td>Map</Td>
+                <Td>FREE!</Td>
+                <Td>
+                  <FiX />
+                </Td>
+                <Td>
+                  <FiX />
+                </Td>
+                <Td>
+                  <FiX />
+                </Td>
+              </Tr>
+              <Tr>
+                <Td>Events</Td>
+                <Td>FREE!</Td>
+                <Td>
+                  <FiX />
+                </Td>
+                <Td>
+                  <FiX />
+                </Td>
+                <Td>
+                  <FiX />
+                </Td>
+              </Tr>
+              <Tr>
+                <Td>Read Receipts</Td>
+                <Td>FREE!</Td>
+                <Td>
+                  <FiCheck />
+                </Td>
+                <Td>Premium</Td>
+                <Td>Premium</Td>
+              </Tr>
+              <Tr>
+                <Td>Social Feed</Td>
+                <Td>FREE!</Td>
+                <Td>
+                  <FiCheck />
+                </Td>
+                <Td>
+                  <FiX />
+                </Td>
+
+                <Td>
+                  <FiX />
+                </Td>
+              </Tr>
+              <Tr>
+                <Td>Members Directory</Td>
+                <Td>FREE!</Td>
+                <Td>
+                  <FiX />
+                </Td>
+                <Td>
+                  <FiCheck />
+                </Td>
+
+                <Td>
+                  <FiCheck />
+                </Td>
+              </Tr>
+            </Tbody>
+          </Table>
+        </TableContainer>
       </Container>
     </section>
   );
