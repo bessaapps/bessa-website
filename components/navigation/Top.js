@@ -46,15 +46,15 @@ export default function Top() {
       anchor: "What's New in Version 6!"
     },
     {
+      href: "/blog",
+      anchor: "Blog"
+    },
+    {
       href: "/blog-content-writer",
-      anchor: "Blog Content Writer"
+      anchor: "Jobs"
     },
     {
-      href: "support",
-      anchor: "Help & Support"
-    },
-    {
-      href: "whats-new",
+      href: "/whats-new",
       anchor: "What's New in Version 6!"
     }
   ];

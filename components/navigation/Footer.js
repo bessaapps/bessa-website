@@ -10,6 +10,7 @@ import {
 import NextLink from "next/link";
 import { SiAppstore, SiGoogleplay } from "react-icons/si";
 import {
+  FiBookOpen,
   FiBriefcase,
   FiHeart,
   FiHelpCircle,
@@ -52,8 +53,13 @@ export default function Footer() {
       icon: <FiSmartphone color={"white"} />
     },
     {
+      href: "/blog",
+      anchor: "Blog",
+      icon: <FiBookOpen color={"white"} />
+    },
+    {
       href: "/blog-content-writer",
-      anchor: "Blog Content Writer",
+      anchor: "Jobs",
       icon: <FiBriefcase color={"white"} />
     }
   ];

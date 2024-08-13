@@ -102,7 +102,11 @@ export default function WhatsNew() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Container maxW={"container.lg"} py={16}>
-        <Image src={Article} alt={"What's New in Version 6!"} />
+        <Image
+          src={Article}
+          alt={"What's New in Version 6!"}
+          style={{ borderRadius: 8 }}
+        />
       </Container>
       <Container pb={16}>
         <Heading as={"h1"} mb={4}>

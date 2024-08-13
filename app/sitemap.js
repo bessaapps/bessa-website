@@ -7,6 +7,12 @@ export default function sitemap() {
       priority: 1
     },
     {
+      url: "https://getbessa.com/blog",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.7
+    },
+    {
       url: "https://getbessa.com/blog/guides/safely-finding-lgbtqai-community-on-and-offline",
       lastModified: new Date(),
       changeFrequency: "daily",

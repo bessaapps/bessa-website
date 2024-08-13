@@ -65,6 +65,7 @@ export default function BlogContentWriter() {
         <Image
           src={Article}
           alt={"Celebrating International Transgender Day of Visibility"}
+          style={{ borderRadius: 8 }}
         />
       </Container>
       <Container pb={16}>

@@ -3,17 +3,6 @@ export const description =
   "Bessa is an inclusive LGBTQ community of all genders, colors, shapes, and sizes who want to safely connect with new and existing friends, family, and others.";
 export const url = "https://getbessa.com";
 
-export const blogPosts = [
-  {
-    title: "Safely Finding LGBTQIA+ Community On- and Offline",
-    slug: "safely-finding-lgbtqai-community-on-and-offline"
-  },
-  {
-    title: "Celebrating International Transgender Day of Visibility",
-    slug: "celebrating-international-transgender-day-of-visibility"
-  }
-];
-
 export const blogCategories = [
   { name: "Guides", slug: "guides" }
   // { name: "Travel", slug: "travel" },
@@ -26,4 +15,16 @@ export const blogCategories = [
   // { name: "Sex", slug: "sex" },
   // { name: "Dating", slug: "dating" },
   // { name: "Entertainment", slug: "entertainment" }
+];
+export const blogPosts = [
+  {
+    title: "Safely Finding LGBTQIA+ Community On- and Offline",
+    slug: "safely-finding-lgbtqai-community-on-and-offline",
+    category: 0
+  },
+  {
+    title: "Celebrating International Transgender Day of Visibility",
+    slug: "celebrating-international-transgender-day-of-visibility",
+    category: 0
+  }
 ];
