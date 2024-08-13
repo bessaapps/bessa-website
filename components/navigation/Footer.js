@@ -21,12 +21,12 @@ import {
 export default function Footer() {
   const links = [
     {
-      anchor: "Download for iOS",
+      anchor: "Bessa for iOS",
       href: "https://apps.apple.com/us/app/bessa/id6471383138?platform=iphone",
       icon: <SiAppstore color={"white"} />
     },
     {
-      anchor: "Download for Android",
+      anchor: "Bessa for Android",
       href: "https://play.google.com/store/apps/details?id=com.bessa.bessa",
       icon: <SiGoogleplay color={"white"} />,
       margin: [0, 4]

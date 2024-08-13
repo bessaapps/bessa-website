@@ -16,19 +16,12 @@ import NextLink from "next/link";
 import { FiMenu } from "react-icons/fi";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { SiAppstore, SiGoogleplay } from "react-icons/si";
 
 export default function Top() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const router = useRouter();
   const links = [
-    {
-      anchor: "Download for iOS",
-      href: "https://apps.apple.com/us/app/bessa/id6471383138?platform=iphone"
-    },
-    {
-      anchor: "Download for Android",
-      href: "https://play.google.com/store/apps/details?id=com.bessa.bessa"
-    },
     {
       href: "https://gofund.me/4a63173e",
       anchor: "Donate to LGBTQ communities"
@@ -69,15 +62,29 @@ export default function Top() {
             </Link>
           </Heading>
         </Flex>
-        <Hide above={"md"}>
-          <Box cursor={"pointer"}>
+        <Flex align={"center"} gap={4}>
+          <Link
+            href={
+              "https://apps.apple.com/us/app/bessa/id6471383138?platform=iphone"
+            }
+          >
+            <SiAppstore color={"white"} />
+          </Link>
+          <Link
+            href={
+              "https://play.google.com/store/apps/details?id=com.bessa.bessa"
+            }
+          >
+            <SiGoogleplay color={"white"} />
+          </Link>
+          <Hide above={"md"}>
             <FiMenu
               color={"white"}
               size={27}
               onClick={() => setIsDrawerOpen(!isDrawerOpen)}
             />
-          </Box>
-        </Hide>
+          </Hide>
+        </Flex>
       </Flex>
       <Drawer
         isOpen={isDrawerOpen}
