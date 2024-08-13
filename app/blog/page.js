@@ -1,4 +1,4 @@
-import { blogCategories, blogPosts, title } from "@/utils/constants";
+import { blogCategories, blogPosts, title, url } from "@/utils/constants";
 import {
   Box,
   Container,
@@ -9,6 +9,17 @@ import {
   Tag
 } from "@chakra-ui/react";
 import Image from "next/image";
+
+export const metadata = {
+  title: `Blog | ${title}`,
+  openGraph: {
+    title: `Blog | ${title}`,
+    url: `${url}/blog`,
+    siteName: "Bessa",
+    locale: "en_US",
+    type: "website"
+  }
+};
 
 export default function Blog() {
   return (
