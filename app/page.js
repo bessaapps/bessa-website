@@ -81,13 +81,13 @@ export default function Home() {
       image: Mockup2
     },
     {
-      heading: "Find a Community",
-      text: "Events can be a great way to find and involve yourself in LGBTQ communities. Find anything from groups, volunteer opportunities, or just fun things to do and meet new people at.",
+      heading: "Discover your Gayborhood",
+      text: "Find and support the best parts of your community. Use the map to find user-vetted, safe, and inclusive LGBTQ businesses, organizations, and resources around you. ",
       image: Mockup3
     },
     {
-      heading: "Discover your Neighborhood",
-      text: "Find and support the best parts of your community. Use the map to find user-vetted, safe, and inclusive LGBTQ businesses, organizations, and resources around you. ",
+      heading: "Find a Community",
+      text: "Events can be a great way to find and involve yourself in LGBTQ communities. Find anything from groups, volunteer opportunities, or just fun things to do and meet new people at.",
       image: Mockup4
     },
     {
