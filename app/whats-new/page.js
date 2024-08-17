@@ -60,6 +60,10 @@ const jsonLd = {
 export default function WhatsNew() {
   const changes = [
     {
+      button: "Coming Soon",
+      items: ["Repeating Events"]
+    },
+    {
       button: "1.6.16",
       items: ["Profile Fix", "Add Post, Event, and Place Fix"]
     },
