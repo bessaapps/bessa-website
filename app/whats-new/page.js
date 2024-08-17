@@ -10,19 +10,16 @@ import {
   AccordionItem,
   Box,
   AccordionIcon,
-  Td,
-  Tr,
-  Tbody,
-  Th,
-  Table,
-  TableContainer,
-  Thead,
-  Card
+  SimpleGrid,
+  GridItem,
+  List,
+  Flex,
+  Divider
 } from "@chakra-ui/react";
 import { title, url } from "@/utils/constants";
 import Image from "next/image";
 import Article from "@/images/whats-new.png";
-import { FiCheck, FiX } from "react-icons/fi";
+import { Fragment } from "react";
 
 export const metadata = {
   title: `What's New in Version 6! | ${title}`,
@@ -108,6 +105,49 @@ export default function WhatsNew() {
     }
   ];
 
+  const comparisons = [
+    {
+      app: "Bessa",
+      features: [
+        "✅ Map",
+        "✅ Events",
+        "✅ Read Receipts",
+        "✅ Social Feed",
+        "✅ Members Directory"
+      ]
+    },
+    {
+      app: "Twitter",
+      features: [
+        "❌ Map",
+        "❌ Events",
+        "✅ Read Receipts",
+        "✅ Social Feed",
+        "❌ Members Directory"
+      ]
+    },
+    {
+      app: "Grindr",
+      features: [
+        "❌ Map",
+        "❌ Events",
+        "💰 Read Receipts",
+        "❌ Social Feed",
+        "✅ Members Directory"
+      ]
+    },
+    {
+      app: "OkCupid",
+      features: [
+        "❌ Map",
+        "❌ Events",
+        "💰 Read Receipts",
+        "❌ Social Feed",
+        "✅ Members Directory"
+      ]
+    }
+  ];
+
   return (
     <section>
       <script
@@ -165,88 +205,31 @@ export default function WhatsNew() {
           you can connect, share, discover, and engage with your LGBTQ community
           for free.
         </Text>
-      </Container>
-      <Container maxW={"container.lg"} mb={16}>
-        <Card>
-          <TableContainer>
-            <Table variant="simple">
-              <Thead>
-                <Tr>
-                  <Th />
-                  <Th>Bessa</Th>
-                  <Th>Twitter</Th>
-                  <Th>Grindr</Th>
-                  <Th>OkCupid</Th>
-                </Tr>
-              </Thead>
-              <Tbody>
-                <Tr>
-                  <Td>Map</Td>
-                  <Td>FREE!</Td>
-                  <Td>
-                    <FiX />
-                  </Td>
-                  <Td>
-                    <FiX />
-                  </Td>
-                  <Td>
-                    <FiX />
-                  </Td>
-                </Tr>
-                <Tr>
-                  <Td>Events</Td>
-                  <Td>FREE!</Td>
-                  <Td>
-                    <FiX />
-                  </Td>
-                  <Td>
-                    <FiX />
-                  </Td>
-                  <Td>
-                    <FiX />
-                  </Td>
-                </Tr>
-                <Tr>
-                  <Td>Read Receipts</Td>
-                  <Td>FREE!</Td>
-                  <Td>
-                    <FiCheck />
-                  </Td>
-                  <Td>Premium</Td>
-                  <Td>Premium</Td>
-                </Tr>
-                <Tr>
-                  <Td>Social Feed</Td>
-                  <Td>FREE!</Td>
-                  <Td>
-                    <FiCheck />
-                  </Td>
-                  <Td>
-                    <FiX />
-                  </Td>
-
-                  <Td>
-                    <FiX />
-                  </Td>
-                </Tr>
-                <Tr>
-                  <Td>Members Directory</Td>
-                  <Td>FREE!</Td>
-                  <Td>
-                    <FiX />
-                  </Td>
-                  <Td>
-                    <FiCheck />
-                  </Td>
-
-                  <Td>
-                    <FiCheck />
-                  </Td>
-                </Tr>
-              </Tbody>
-            </Table>
-          </TableContainer>
-        </Card>
+        <SimpleGrid columns={2} spacing={4}>
+          {comparisons.map((comparison, i) => (
+            <Fragment key={i}>
+              <GridItem display={"flex"} alignItems={"center"}>
+                <Heading>{comparison.app}</Heading>
+              </GridItem>
+              <GridItem>
+                <List spacing={2}>
+                  {comparison.features.map((feature, j) => (
+                    <ListItem key={j}>
+                      <Flex align={"center"} gap={2}>
+                        {feature}
+                      </Flex>
+                    </ListItem>
+                  ))}
+                </List>
+              </GridItem>
+              {i < comparisons.length - 1 && (
+                <GridItem colSpan={2}>
+                  <Divider />
+                </GridItem>
+              )}
+            </Fragment>
+          ))}
+        </SimpleGrid>
       </Container>
     </section>
   );
