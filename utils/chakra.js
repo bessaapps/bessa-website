@@ -84,6 +84,13 @@ const theme = extendTheme({
           overflow: "hidden"
         }
       }
+    },
+    Alert: {
+      baseStyle: {
+        container: {
+          borderRadius: 8
+        }
+      }
     }
   }
 });
