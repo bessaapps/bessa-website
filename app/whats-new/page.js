@@ -58,6 +58,10 @@ export default function WhatsNew() {
   const changes = [
     {
       button: "Coming Soon",
+      items: ["Event RSVP's"]
+    },
+    {
+      button: "1.6.17",
       items: ["Repeating Events"]
     },
     {
