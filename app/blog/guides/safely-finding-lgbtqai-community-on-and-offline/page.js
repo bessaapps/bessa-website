@@ -19,10 +19,10 @@ export const metadata = {
       }
     ],
     locale: "en_US",
-    type: "website",
-    alternates: {
-      canonical: `${url}/blog/guides/safely-finding-lgbtqai-community-on-and-offline`
-    }
+    type: "website"
+  },
+  alternates: {
+    canonical: `${url}/blog/guides/safely-finding-lgbtqai-community-on-and-offline`
   }
 };
 
