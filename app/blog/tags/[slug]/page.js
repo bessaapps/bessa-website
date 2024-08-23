@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function Category({ params }) {
+export default function Tag({ params }) {
   const tagTitle = tags?.find((tag) => tag.slug === params.slug)?.name;
 
   return (
