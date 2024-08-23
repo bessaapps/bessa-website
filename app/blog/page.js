@@ -42,7 +42,7 @@ export default function Blog() {
                 />
               </Box>
               <Text color={"primary.500"} fontWeight={"bold"}>
-                <Link href={`/blog/${post.category.slug}`}>
+                <Link href={`/blog/categories/${post.category.slug}`}>
                   {post.category.name}
                 </Link>
               </Text>

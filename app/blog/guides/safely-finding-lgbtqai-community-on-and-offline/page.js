@@ -55,7 +55,9 @@ export default function LGBTQIACommunity() {
       </Container>
       <Container pb={16}>
         <Text color="primary.500" fontWeight={"bold"}>
-          <Link href={`/blog/${post.category.slug}`}>{post.category.name}</Link>
+          <Link href={`/blog/categories/${post.category.slug}`}>
+            {post.category.name}
+          </Link>
         </Text>
         <Heading as={"h1"} mb={4}>
           {post.title}
