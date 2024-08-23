@@ -60,7 +60,9 @@ export default function CelebratingInternationalTransgenderDayOfVisibility() {
         </Heading>
         <Flex gap={2} wrap={"wrap"} mb={4}>
           {postTags.map((tag) => (
-            <Tag key={tag.slug}>{tag.name}</Tag>
+            <Tag key={tag.slug}>
+              <Link href={`/blog/tags/${tag.slug}`}>{tag.name}</Link>
+            </Tag>
           ))}
         </Flex>
         <Text fontWeight={"bold"} mb={4}>
