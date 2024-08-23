@@ -1,17 +1,21 @@
 import { Container, Flex, Heading, Link, Tag, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Article from "/images/celebrating-international-transgender-day-of-visibility.png";
-import { blogCategories, blogPosts, title, url } from "@/utils/constants";
+import { title, url } from "@/utils/constants";
+import { posts, tags } from "@/utils/blog";
+
+const post = posts[0];
+const postTags = tags?.filter((tag) => tag.posts.includes(1));
 
 export const metadata = {
-  title: `${blogPosts[1].title} | ${title}`,
+  title: `${post.title} | ${title}`,
   openGraph: {
-    title: `${blogPosts[1].title} | ${title}`,
-    url: `${url}/blog/guides/celebrating-international-transgender-day-of-visibility`,
+    title: `${post.title} | ${title}`,
+    url: `${url}/blog/${post.category.slug}/${post.slug}`,
     siteName: "Bessa",
     images: [
       {
-        url: `${url}/images/celebrating-international-transgender-day-of-visibility.png`,
+        url: `${url}/images/${post.slug}.png`,
         width: 800,
         height: 600
       }
@@ -20,31 +24,22 @@ export const metadata = {
     type: "website"
   },
   alternates: {
-    canonical: `${url}/blog/guides/celebrating-international-transgender-day-of-visibility`
+    canonical: `${url}/blog/${post.category.slug}/${post.slug}`
   }
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline: `${blogPosts[1].title} | ${title}`,
-  url: `${url}/blog/guides/celebrating-international-transgender-day-of-visibility`,
-  image: `${url}/images/celebrating-international-transgender-day-of-visibility.png`,
+  headline: `${post.title} | ${title}`,
+  url: `${url}/blog/${post.category.slug}/${post.slug}`,
+  image: `${url}/images/${post.slug}.png`,
   datePublished: "2024-03-09T00:00:00+00:00",
   dateModified: "2024-03-09T00:00:00+00:00",
   author: "Topher"
 };
 
 export default function CelebratingInternationalTransgenderDayOfVisibility() {
-  const tags = [
-    "Transgender Day of Visibility",
-    "Gender Identity",
-    "Transgender People",
-    "Gender Unicorn",
-    "LGBTQ Rights",
-    "LGBTQ Community"
-  ];
-
   return (
     <section>
       <script
@@ -52,24 +47,18 @@ export default function CelebratingInternationalTransgenderDayOfVisibility() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Container maxW={"container.lg"} py={16}>
-        <Image
-          src={Article}
-          alt={blogPosts[1].title}
-          style={{ borderRadius: 8 }}
-        />
+        <Image src={Article} alt={post.title} style={{ borderRadius: 8 }} />
       </Container>
       <Container pb={16}>
-        <Text color="primary.500" fontWeight={"bold"}>
-          <Link href={`/blog/${blogCategories[0].slug}`}>
-            {blogCategories[0].name}
-          </Link>
+        <Text color={"primary.500"} fontWeight={"bold"}>
+          <Link href={`/blog/${post.slug}`}>{post.category.name}</Link>
         </Text>
         <Heading as={"h1"} mb={4}>
-          {blogPosts[1].title}
+          {post.title}
         </Heading>
         <Flex gap={2} wrap={"wrap"} mb={4}>
-          {tags.map((tag) => (
-            <Tag key={tag}>{tag}</Tag>
+          {postTags.map((tag) => (
+            <Tag key={tag.slug}>{tag.name}</Tag>
           ))}
         </Flex>
         <Text fontWeight={"bold"} mb={4}>

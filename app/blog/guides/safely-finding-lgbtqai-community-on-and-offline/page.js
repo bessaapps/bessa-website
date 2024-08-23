@@ -1,19 +1,23 @@
 import { Container, Link, Heading, Text, Tag, Flex } from "@chakra-ui/react";
 import Image from "next/image";
 import HeroImage from "/images/safely-finding-lgbtqai-community-on-and-offline.png";
-import { blogCategories, blogPosts, title, url } from "@/utils/constants";
+import { title, url } from "@/utils/constants";
+import { posts, tags } from "@/utils/blog";
+
+const post = posts[1];
+const postTags = tags?.filter((tag) => tag.posts.includes(1));
 
 export const metadata = {
-  title: `${blogPosts[0].title} | ${title}`,
+  title: `${post.title} | ${title}`,
   description:
     "Community is essential for fostering connections, providing support, promoting personal and collective growth, and contributing to the overall health and well-being of individuals. It fulfills fundamental human needs for connection, belonging, and shared purpose, especially with LGBTQIA+ people.",
   openGraph: {
-    title: `${blogPosts[0].title} | ${title}`,
-    url: `${url}/blog/guides/safely-finding-lgbtqai-community-on-and-offline`,
+    title: `${post.title} | ${title}`,
+    url: `${url}/blog/${post.category.slug}/${post.slug}`,
     siteName: "Bessa",
     images: [
       {
-        url: `${url}/images/safely-finding-lgbtqai-community-on-and-offline.png`,
+        url: `${url}/images/${post.slug}`.png,
         width: 800,
         height: 600
       }
@@ -22,26 +26,24 @@ export const metadata = {
     type: "website"
   },
   alternates: {
-    canonical: `${url}/blog/guides/safely-finding-lgbtqai-community-on-and-offline`
+    canonical: `${url}/blog/${post.category.slug}/${post.slug}`
   }
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline: `${blogPosts[0].title} | ${title}`,
+  headline: `${post.title} | ${title}`,
   description:
     "Community is essential for fostering connections, providing support, promoting personal and collective growth, and contributing to the overall health and well-being of individuals. It fulfills fundamental human needs for connection, belonging, and shared purpose, especially with LGBTQIA+ people.",
-  url: `${url}/blog/guides/safely-finding-lgbtqai-community-on-and-offline`,
-  image: `${url}/images/safely-finding-lgbtqai-community-on-and-offline.png`,
+  url: `${url}/blog/${post.category.slug}/${post.slug}`,
+  image: `${url}/images/${post.slug}.png`,
   datePublished: "2024-02-13T00:00:00+00:00",
   dateModified: "2024-02-13T00:00:00+00:00",
   author: "Topher"
 };
 
 export default function LGBTQIACommunity() {
-  const tags = ["LGBTQ Meaning", "Gay People", "Sexual Orientation"];
-
   return (
     <section>
       <script
@@ -49,24 +51,18 @@ export default function LGBTQIACommunity() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Container maxW={"container.lg"} py={16}>
-        <Image
-          src={HeroImage}
-          alt={blogPosts[0].title}
-          style={{ borderRadius: 8 }}
-        />
+        <Image src={HeroImage} alt={post.title} style={{ borderRadius: 8 }} />
       </Container>
       <Container pb={16}>
         <Text color="primary.500" fontWeight={"bold"}>
-          <Link href={`/blog/${blogCategories[0].slug}`}>
-            {blogCategories[0].name}
-          </Link>
+          <Link href={`/blog/${post.category.slug}`}>{post.category.name}</Link>
         </Text>
         <Heading as={"h1"} mb={4}>
-          {blogPosts[0].title}
+          {post.title}
         </Heading>
         <Flex gap={2} wrap={"wrap"} mb={4}>
-          {tags.map((tag) => (
-            <Tag key={tag}>{tag}</Tag>
+          {postTags.map((tag) => (
+            <Tag key={tag.slug}>{tag.name}</Tag>
           ))}
         </Flex>
         <Text mb={4}>
