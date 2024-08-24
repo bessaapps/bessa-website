@@ -58,11 +58,18 @@ export default function WhatsNew() {
   const changes = [
     {
       button: "Coming Soon",
-      items: ["Event RSVP's"]
+      items: [
+        "Improved LGBTQ Place Listings",
+        "More Popular Posts at the Top of your Feed"
+      ]
+    },
+    {
+      button: "1.6.18",
+      items: ["LGTBQ Event RSVP's"]
     },
     {
       button: "1.6.17",
-      items: ["Repeating Events"]
+      items: ["Repeating LGBTQ Events"]
     },
     {
       button: "1.6.16",
