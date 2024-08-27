@@ -57,10 +57,10 @@ const jsonLd = {
 export default function WhatsNew() {
   const changes = [
     {
-      button: "Coming Soon",
+      button: "1.6.19",
       items: [
         "Improved LGBTQ Place Listings",
-        "More Popular Posts at the Top of your Feed"
+        "More Relevant LGBTQ content at the top of your Feed"
       ]
     },
     {
