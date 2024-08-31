@@ -178,10 +178,10 @@ export default function WhatsNew() {
         </Heading>
         <Text mb={4}>
           Being a part of the LGBTQ community gets even better in Bessa 6! Share
-          updates and media. Create a profile and browse other members&apos;
-          profiles. Share and discover LGBTQ places and events near you and much
-          more! Bessa 6 is packed full of fun ways to be a part of and interact
-          with our LGBTQ community.
+          updates, media, and other LGBTQ content. Create a profile and browse
+          other members&apos; profiles. Share and discover LGBTQ places and
+          events near you and much more! Bessa 6 is packed full of fun ways to
+          be a part of and interact with our LGBTQ community.
         </Text>
         <Heading as={"h2"} mb={4}>
           Change Log

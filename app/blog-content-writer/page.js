@@ -74,7 +74,7 @@ export default function BlogContentWriter() {
         </Heading>
         <Flex gap={4} mb={4}>
           <Tag>Contract</Tag>
-          <Tag>$150/article</Tag>
+          <Tag>$25-150/article</Tag>
           <Tag>Remote</Tag>
         </Flex>
         <Text mb={4}>

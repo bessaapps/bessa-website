@@ -72,7 +72,7 @@ export default function Footer() {
   ];
 
   return (
-    <Box bg={"gray.800"}>
+    <Box bg={"gray.900"}>
       <Container maxW={"container.lg"} py={4}>
         <SimpleGrid columns={[1, 2]} spacing={4} mb={4}>
           <GridItem>

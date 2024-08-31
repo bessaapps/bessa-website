@@ -1,5 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 import { Roboto } from "next/font/google";
+import { mode } from "@chakra-ui/theme-tools";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -7,6 +8,7 @@ const roboto = Roboto({
 });
 
 const theme = extendTheme({
+  config: { initialColorMode: "system", useSystemColorMode: true },
   colors: {
     black: "#101010",
     gray: {
@@ -47,9 +49,10 @@ const theme = extendTheme({
     }
   },
   styles: {
-    global: {
+    global: (props) => ({
       "html, body": {
-        color: "gray.900",
+        bg: mode("white", "gray.800")(props),
+        color: mode("gray.900", "gray.100")(props),
         overflowX: "hidden",
         lineHeight: 2
       },
@@ -58,7 +61,7 @@ const theme = extendTheme({
       h1: { fontSize: "1.476rem !important" },
       h2: { fontSize: "1.383rem !important" },
       h3: { fontSize: "1.296rem !important" }
-    }
+    })
   },
   fonts: {
     heading: roboto.style.fontFamily,

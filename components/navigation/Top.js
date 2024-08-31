@@ -2,6 +2,8 @@
 
 import {
   Box,
+  Button,
+  ButtonGroup,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -10,10 +12,11 @@ import {
   Flex,
   Heading,
   Hide,
-  Link
+  Link,
+  useColorMode
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { FiMenu } from "react-icons/fi";
+import { FiMenu, FiMoon, FiSun } from "react-icons/fi";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { SiAppstore, SiGoogleplay } from "react-icons/si";
@@ -21,6 +24,8 @@ import { SiAppstore, SiGoogleplay } from "react-icons/si";
 export default function Top() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const router = useRouter();
+  const { setColorMode } = useColorMode();
+
   const links = [
     {
       href: "https://gofund.me/4a63173e",
@@ -63,20 +68,36 @@ export default function Top() {
           </Heading>
         </Flex>
         <Flex align={"center"} gap={4}>
-          <Link
-            href={
-              "https://apps.apple.com/us/app/bessa/id6471383138?platform=iphone"
-            }
-          >
-            <SiAppstore color={"white"} />
-          </Link>
-          <Link
-            href={
-              "https://play.google.com/store/apps/details?id=com.bessa.bessa"
-            }
-          >
-            <SiGoogleplay color={"white"} />
-          </Link>
+          <ButtonGroup isAttached variant={"outline"}>
+            <Button size={"sm"} onClick={() => setColorMode("light")}>
+              <FiSun color={"white"} />
+            </Button>
+            <Button size={"sm"} onClick={() => setColorMode("dark")}>
+              <FiMoon color={"white"} />
+            </Button>
+          </ButtonGroup>
+          <ButtonGroup isAttached variant={"outline"}>
+            <Button
+              size={"sm"}
+              onClick={() =>
+                router.push(
+                  "https://apps.apple.com/us/app/bessa/id6471383138?platform=iphone"
+                )
+              }
+            >
+              <SiAppstore color={"white"} />
+            </Button>
+            <Button
+              size={"sm"}
+              onClick={() =>
+                router.push(
+                  "https://play.google.com/store/apps/details?id=com.bessa.bessa"
+                )
+              }
+            >
+              <SiGoogleplay color={"white"} />
+            </Button>
+          </ButtonGroup>
           <Hide above={"md"}>
             <FiMenu
               color={"white"}
@@ -86,11 +107,7 @@ export default function Top() {
           </Hide>
         </Flex>
       </Flex>
-      <Drawer
-        isOpen={isDrawerOpen}
-        placement={"left"}
-        onClose={() => setIsDrawerOpen(false)}
-      >
+      <Drawer isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton color={"white"} />
