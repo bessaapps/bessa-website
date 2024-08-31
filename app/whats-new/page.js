@@ -186,7 +186,7 @@ export default function WhatsNew() {
         <Heading as={"h2"} mb={4}>
           Change Log
         </Heading>
-        <Accordion allowToggle defaultIndex={0} mb={8}>
+        <Accordion mb={8}>
           {changes?.map((change, index) => (
             <AccordionItem key={index}>
               <AccordionButton>
