@@ -51,7 +51,9 @@ const jsonLd = {
     "@type": "AggregateRating",
     ratingValue: "5",
     ratingCount: "3"
-  }
+  },
+  url,
+  image: `${url}/images/social.png`
 };
 
 export default function Home() {
