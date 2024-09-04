@@ -4,7 +4,7 @@ import Article from "/images/celebrating-international-transgender-day-of-visibi
 import { title, url } from "@/utils/constants";
 import { posts, tags } from "@/utils/blog";
 
-const post = posts[0];
+const post = posts[1];
 const postTags = tags?.filter((tag) => tag.posts.includes(1));
 
 export const metadata = {
@@ -158,15 +158,8 @@ export default function CelebratingInternationalTransgenderDayOfVisibility() {
         <Text mb={4}>
           A great place to start is right here! Bessa has a fair amount of costs
           to keep running. If you like Bessa or appreciate the communities its
-          trying to build, please check out the{" "}
-          <Link
-            href={"/donate"}
-            title={"Give | Bessa LGBTQ Social Media App"}
-            color={"primary.500"}
-          >
-            Donations Page
-          </Link>{" "}
-          page to learn more and hopefully contribute.
+          trying to build, please check out the Donations Page page to learn
+          more and hopefully contribute.
         </Text>
         <Heading mb={4}>#TransIsBeautiful</Heading>
         <Text mb={4}>

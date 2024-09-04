@@ -4,7 +4,7 @@ import HeroImage from "/images/safely-finding-lgbtqai-community-on-and-offline.p
 import { title, url } from "@/utils/constants";
 import { posts, tags } from "@/utils/blog";
 
-const post = posts[1];
+const post = posts[0];
 const postTags = tags?.filter((tag) => tag.posts.includes(1));
 
 export const metadata = {
