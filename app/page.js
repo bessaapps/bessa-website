@@ -53,7 +53,8 @@ const jsonLd = {
     ratingCount: "3"
   },
   url,
-  image: `${url}/images/social.png`
+  image: `${url}/images/social.png`,
+  operatingSystem: ["ANDROID", "iOS"]
 };
 
 export default function Home() {
