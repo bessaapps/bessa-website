@@ -17,7 +17,14 @@ export const metadata = {
 export default function Support() {
   const guides = [
     { heading: "How to Share a Post", id: "how-to-share-a-post" },
-    { heading: "How to Share an Event", id: "how-to-share-an-event" }
+    {
+      heading: "How to Share an LGBTQ-Friendly Place",
+      id: "how-to-share-an-lgbtq-friendly-place"
+    },
+    {
+      heading: "How to Share an LGBTQ Event",
+      id: "how-to-share-an-lgbtq-event"
+    }
   ];
 
   return (
@@ -70,7 +77,7 @@ export default function Support() {
             the top.
           </ListItem>
           <ListItem>
-            Fill out the filed with something you&qpos;d like to share.
+            Fill out the filed with something you&apos;d like to share.
           </ListItem>
           <ListItem>
             Tap the{" "}
@@ -80,8 +87,37 @@ export default function Support() {
             button in the upper right.
           </ListItem>
         </OrderedList>
-        <Heading id={"how-to-share-an-event"} mb={4}>
-          How to Share an Event
+        <Heading id={"how-to-share-an-lgbtq-friendly-place"} mb={4}>
+          How to Share an LGBTQ-Friendly Place
+        </Heading>
+        <OrderedList mb={8}>
+          <ListItem>
+            From the home screen, press the &quot;
+            <Text as={"span"} fontWeight={"bold"}>
+              +
+            </Text>
+            &quot;
+          </ListItem>
+          <ListItem>
+            Select{" "}
+            <Text as={"span"} fontWeight={"bold"}>
+              Place
+            </Text>
+            .
+          </ListItem>
+          <ListItem>
+            Fill out all the required fields. Optional fields are marked.
+          </ListItem>
+          <ListItem>
+            Tap the{" "}
+            <Text as={"span"} fontWeight={"bold"}>
+              Share
+            </Text>{" "}
+            button
+          </ListItem>
+        </OrderedList>
+        <Heading id={"how-to-share-an-lgbtq-event"} mb={4}>
+          How to Share an LGBTQ Event
         </Heading>
         <Alert status={"info"} my={4}>
           <AlertIcon />
