@@ -57,7 +57,14 @@ const jsonLd = {
 export default function WhatsNew() {
   const changes = [
     {
-      button: "Coming Soon!",
+      button: "1.6.22",
+      items: [
+        "Better Push and Email Notifications Customization",
+        "Scroll Fixes"
+      ]
+    },
+    {
+      button: "1.6.21",
       items: ["Profile Picture Loading Improvements"]
     },
     {
