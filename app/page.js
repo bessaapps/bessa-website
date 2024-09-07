@@ -104,8 +104,14 @@ export default function Home() {
         type={"application/ld+json"}
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Box bg={"primary.500"} color={"gray.100"}>
-        <Flex minH={"calc(100vh - 59px)"} align={"center"} justify={"center"}>
+      <Box>
+        <Flex
+          minH={"calc(100vh - 59px)"}
+          align={"center"}
+          justify={"center"}
+          bg={"primary.500"}
+          color={"gray.100"}
+        >
           <Container maxW={"container.lg"} py={16}>
             <Flex justify={"center"} direction={["column", "row"]}>
               <Flex direction={"column"} w={["100%", "50%"]} justify={"center"}>
@@ -155,7 +161,7 @@ export default function Home() {
             </Flex>
           </Container>
         </Flex>
-        <Container maxW={"container.lg"} pb={32}>
+        <Container maxW={"container.lg"} my={32}>
           <Heading lineHeight={"tall"}>
             <Highlight
               query={[
@@ -182,7 +188,7 @@ export default function Home() {
             </Highlight>
           </Heading>
         </Container>
-        <Container maxW={"container.xl"} py={32}>
+        <Container maxW={"container.xl"} my={32}>
           <SimpleGrid columns={[1, 5]} gap={[4, 8]}>
             {mockups?.map((mockup, index) => (
               <GridItem key={index}>
@@ -198,7 +204,7 @@ export default function Home() {
             ))}
           </SimpleGrid>
         </Container>
-        <Container maxW={"container.lg"} py={32}>
+        <Container maxW={"container.lg"} my={32}>
           <Heading as={"h2"} mb={4}>
             Like Bessa?
           </Heading>
