@@ -1,4 +1,12 @@
-import { Container, Link, Heading, Text, Tag, Flex } from "@chakra-ui/react";
+import {
+  Container,
+  Link,
+  Heading,
+  Text,
+  Tag,
+  Flex,
+  Avatar
+} from "@chakra-ui/react";
 import Image from "next/image";
 import HeroImage from "/images/safely-finding-lgbtqai-community-on-and-offline.png";
 import { title, url } from "@/utils/constants";
@@ -54,6 +62,12 @@ export default function LGBTQIACommunity() {
         <Image src={HeroImage} alt={post.title} style={{ borderRadius: 8 }} />
       </Container>
       <Container pb={16}>
+        <Flex align={"center"} gap={2} mb={4}>
+          <Avatar name={post.author.name} src={post.author.image} size={"xs"} />
+          <Text>
+            <Link href={`/authors/${post.author.slug}`}>By Topher</Link>
+          </Text>
+        </Flex>
         <Text color="primary.500" fontWeight={"bold"}>
           <Link href={`/blog/categories/${post.category.slug}`}>
             {post.category.name}

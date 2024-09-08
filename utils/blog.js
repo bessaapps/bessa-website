@@ -14,20 +14,32 @@ export const categories = [
   // { name: "Dating", slug: "dating" },
   // { name: "Entertainment", slug: "entertainment" }
 ];
+
+export const authors = [
+  {
+    name: "Topher",
+    slug: "topher",
+    image: "https://getbessa.com/images/social.png"
+  }
+];
+
 export const posts = [
   {
     title: "Safely Finding LGBTQIA+ Community On- and Offline",
     slug: "safely-finding-lgbtqai-community-on-and-offline",
     image: SafelyFindingLGBTQIACommunityOnAndOffline,
-    category: categories[0]
+    category: categories[0],
+    author: authors[0]
   },
   {
     title: "Celebrating International Transgender Day of Visibility",
     slug: "celebrating-international-transgender-day-of-visibility",
     image: CelebratingInternationalTransgenderDayOfVisibility,
-    category: categories[0]
+    category: categories[0],
+    author: authors[0]
   }
 ];
+
 export const tags = [
   {
     name: "Transgender Day of Visibility",

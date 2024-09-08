@@ -1,4 +1,12 @@
-import { Container, Flex, Heading, Link, Tag, Text } from "@chakra-ui/react";
+import {
+  Avatar,
+  Container,
+  Flex,
+  Heading,
+  Link,
+  Tag,
+  Text
+} from "@chakra-ui/react";
 import Image from "next/image";
 import Article from "/images/celebrating-international-transgender-day-of-visibility.png";
 import { title, url } from "@/utils/constants";
@@ -50,6 +58,12 @@ export default function CelebratingInternationalTransgenderDayOfVisibility() {
         <Image src={Article} alt={post.title} style={{ borderRadius: 8 }} />
       </Container>
       <Container pb={16}>
+        <Flex align={"center"} gap={2} mb={4}>
+          <Avatar name={post.author.name} src={post.author.image} size={"xs"} />
+          <Text>
+            <Link href={`/authors/${post.author.slug}`}>By Topher</Link>
+          </Text>
+        </Flex>
         <Text color={"primary.500"} fontWeight={"bold"}>
           <Link href={`/blog/categories/${post.category.slug}`}>
             {post.category.name}

@@ -1,4 +1,4 @@
-import { categories, tags } from "@/utils/blog";
+import { authors, categories, tags } from "@/utils/blog";
 
 export default function sitemap() {
   return [
@@ -37,6 +37,14 @@ export default function sitemap() {
     ...tags?.map((tag) => {
       return {
         url: `https://getbessa.com/blog/tags/${tag.slug}`,
+        lastModified: new Date(),
+        changeFrequency: "daily",
+        priority: 0.7
+      };
+    }),
+    ...authors?.map((author) => {
+      return {
+        url: `https://getbessa.com/authors/${author.slug}`,
         lastModified: new Date(),
         changeFrequency: "daily",
         priority: 0.7
