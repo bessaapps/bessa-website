@@ -18,7 +18,7 @@ export default function BlogCard({ post, tags, isHidingCategory }) {
       <Box mb={4}>
         <Image src={post.image} alt={post.title} style={{ borderRadius: 8 }} />
       </Box>
-      <Flex align={"center"} gap={2}>
+      <Flex align={"center"} gap={2} mb={6}>
         <Avatar name={post.author.name} src={post.author.image} size={"xs"} />
         <Text>
           <Link href={`/authors/${post.author.slug}`}>By Topher</Link>

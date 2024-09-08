@@ -62,7 +62,7 @@ export default function LGBTQIACommunity() {
         <Image src={HeroImage} alt={post.title} style={{ borderRadius: 8 }} />
       </Container>
       <Container pb={16}>
-        <Flex align={"center"} gap={2} mb={4}>
+        <Flex align={"center"} gap={2} mb={6}>
           <Avatar name={post.author.name} src={post.author.image} size={"xs"} />
           <Text>
             <Link href={`/authors/${post.author.slug}`}>By Topher</Link>
