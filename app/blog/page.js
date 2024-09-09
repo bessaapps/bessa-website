@@ -6,7 +6,7 @@ import BlogCard from "@/components/BlogCard";
 export const metadata = {
   title: `Blog | ${title}`,
   openGraph: {
-    title,
+    title: `Blog | ${title}`,
     url,
     siteName: title,
     images: [
