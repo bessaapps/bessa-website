@@ -6,9 +6,16 @@ import BlogCard from "@/components/BlogCard";
 export const metadata = {
   title: `Blog | ${title}`,
   openGraph: {
-    title: `Blog | ${title}`,
-    url: `${url}/blog`,
-    siteName: "Bessa",
+    title,
+    url,
+    siteName: title,
+    images: [
+      {
+        url: `${url}/images/social.png`,
+        width: 800,
+        height: 600
+      }
+    ],
     locale: "en_US",
     type: "website"
   }
