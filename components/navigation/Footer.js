@@ -65,6 +65,7 @@ export default function Footer() {
   ];
 
   const legalLinks = [
+    { href: "guidelines", anchor: "Guidelines" },
     { href: "terms", anchor: "Terms & Conditions" },
     { href: "privacy", anchor: "Privacy Policy" },
     { href: "eula", anchor: "End-User License Agreement" },

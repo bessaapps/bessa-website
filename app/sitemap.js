@@ -69,6 +69,12 @@ export default function sitemap() {
       priority: 0.7
     },
     {
+      url: "https://getbessa.com/guidelines",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.7
+    },
+    {
       url: "https://getbessa.com/cookies",
       lastModified: new Date(),
       changeFrequency: "daily",

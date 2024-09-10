@@ -38,8 +38,7 @@ export const metadata = {
     ],
     locale: "en_US",
     type: "website"
-  },
-  alternates: { canonical: url }
+  }
 };
 
 const jsonLd = {
