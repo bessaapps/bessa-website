@@ -310,9 +310,9 @@ export default function Home() {
             Check out the shop for these and more! 30% of every purchas supports
             Bessa!
           </Text>
-          <SimpleGrid columns={[1, 4]} spacingX={4} mb={4}>
+          <SimpleGrid columns={[1, 4]} spacingX={4}>
             {products?.map((product) => (
-              <GridItem key={product.title}>
+              <GridItem key={product.title} mb={4}>
                 <LinkBox>
                   <Box borderRadius={8} overflow={"hidden"} mb={4}>
                     <Image src={product.image} alt={product.title} />
