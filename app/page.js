@@ -23,7 +23,7 @@ import Image from "next/image";
 import { SiAppstore, SiGoogleplay } from "react-icons/si";
 import { description, title, url } from "@/utils/constants";
 import { FiStar } from "react-icons/fi";
-import IcedCoffeeGlass from "@/images/products/4465-690-66e0da5fb9536__360.webp";
+import IcedCoffeeGlass from "@/images/products/stereotypically-gay-iced-coffee-glass.png";
 import TruckerCap from "@/images/products/4465-422-66df241e4ae04__360.webp";
 import BoxerBriefs from "@/images/products/4465-428-66df235d413f3__360.webp";
 import ToteBag from "@/images/products/14321751-84-66e0714863637__360.webp";
