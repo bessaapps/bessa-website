@@ -20,6 +20,7 @@ import Mockup5 from "../images/mockups/5.png";
 import Image from "next/image";
 import { SiAppstore, SiGoogleplay } from "react-icons/si";
 import { description, title, url } from "@/utils/constants";
+import { FiStar } from "react-icons/fi";
 
 export const metadata = {
   title,
@@ -95,6 +96,23 @@ export default function Home() {
       text: "Share your LGBTQ thoughts, ideas, and other good stuff through updates, images, videos, and even audio to an LGBTQ audience and build a following of LGBTQ fans.",
       image: Mockup5
     }
+  ];
+  const memberships = [
+    "Empower",
+    "Royal",
+    "Champion",
+    "Pioneer",
+    "Pro",
+    "Ultimate",
+    "Ambassador",
+    "premier",
+    "VIP",
+    "Elite",
+    "Diamond",
+    "Platinum",
+    "Gold",
+    "Silver",
+    "Ally"
   ];
 
   return (
@@ -205,11 +223,59 @@ export default function Home() {
         </Container>
         <Container maxW={"container.lg"} my={32}>
           <Heading as={"h2"} mb={4}>
+            Be with Friends!
+          </Heading>
+          <Text mb={4}>
+            Join your LGBTQ community and link with others online instantly with
+            Bessa. It&apos;s totally free!
+          </Text>
+          <Flex gap={4} flexWrap={"wrap"}>
+            {appStores.map((store) => (
+              <Link key={store.name} href={store.href}>
+                <Button
+                  colorScheme={"primary"}
+                  bg={"primary.800"}
+                  color={"white"}
+                  size={"lg"}
+                  w={["100%", "auto"]}
+                >
+                  <Flex mr={2}>{store.icon}</Flex>
+                  {store.name}
+                </Button>
+              </Link>
+            ))}
+          </Flex>
+        </Container>
+        <Container maxW={"container.lg"} my={32}>
+          <Heading as={"h2"} mb={4}>
+            Become a Supporting Member
+          </Heading>
+          <Text mb={4}>
+            Bessa is about building community, not ad revenue. If you&apos;d
+            like to help out, consider becoming a supporting member! You can tap
+            the banner in your app to subscribe. Your memberships helps this
+            inclusive LGBTQ community operate without annoying ads. ps:
+            You&apos;ll receive a little extra flair on your profile and
+            throughout the app to show you care about your community.
+          </Text>
+          <SimpleGrid columns={[1, 3]} spacingX={4}>
+            {memberships?.map((membership) => (
+              <GridItem key={membership}>
+                <Flex align={"center"} gap={2}>
+                  <FiStar color={"var(--chakra-colors-primary-500)"} />{" "}
+                  {membership}
+                </Flex>
+              </GridItem>
+            ))}
+          </SimpleGrid>
+        </Container>
+        <Container maxW={"container.lg"} my={32}>
+          <Heading as={"h2"} mb={4}>
             Like Bessa?
           </Heading>
           <Text mb={4}>
-            Help our community grow by lettings others know how much you like
-            Bessa with a review.
+            Help our LGBTQ community grow by lettings others know how much you
+            like Bessa with a review.
           </Text>
           <Flex gap={4} flexWrap={"wrap"}>
             <Link
