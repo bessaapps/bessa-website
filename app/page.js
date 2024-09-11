@@ -9,7 +9,9 @@ import {
   Heading,
   Link,
   SimpleGrid,
-  Text
+  Text,
+  LinkBox,
+  LinkOverlay
 } from "@chakra-ui/react";
 import Logo from "@/images/logo.png";
 import Mockup1 from "../images/mockups/1.png";
@@ -21,6 +23,10 @@ import Image from "next/image";
 import { SiAppstore, SiGoogleplay } from "react-icons/si";
 import { description, title, url } from "@/utils/constants";
 import { FiStar } from "react-icons/fi";
+import IcedCoffeeGlass from "@/images/products/4465-690-66e0da5fb9536__360.webp";
+import TruckerCap from "@/images/products/4465-422-66df241e4ae04__360.webp";
+import BoxerBriefs from "@/images/products/4465-428-66df235d413f3__360.webp";
+import ToteBag from "@/images/products/14321751-84-66e0714863637__360.webp";
 
 export const metadata = {
   title,
@@ -113,6 +119,32 @@ export default function Home() {
     "Gold",
     "Silver",
     "Ally"
+  ];
+  const products = [
+    {
+      image: IcedCoffeeGlass,
+      title: "Ice Coffee Glass",
+      price: 12,
+      href: "https://bessa.printful.me/product/iced-coffee-glass"
+    },
+    {
+      image: TruckerCap,
+      title: "Trucker Cap",
+      price: 23,
+      href: "https://bessa.printful.me/product/trucker-cap-66de3030ef230"
+    },
+    {
+      image: BoxerBriefs,
+      title: "Boxer Briefs",
+      price: 26,
+      href: "https://bessa.printful.me/product/boxer-briefs"
+    },
+    {
+      image: ToteBag,
+      title: "Tote Bag",
+      price: 18.5,
+      href: "https://bessa.printful.me/product/tote-bag"
+    }
   ];
 
   return (
@@ -254,9 +286,10 @@ export default function Home() {
             Bessa is about building community, not ad revenue. If you&apos;d
             like to help out, consider becoming a supporting member! You can tap
             the banner in your app to subscribe. Your memberships helps this
-            inclusive LGBTQ community operate without annoying ads. ps:
-            You&apos;ll receive a little extra flair on your profile and
-            throughout the app to show you care about your community.
+            inclusive LGBTQ community operate without annoying ads. Memberships
+            start at just $1 and you can cancel at anytime. ps: You&apos;ll
+            receive a little extra flair on your profile and throughout the app
+            to show you care about your community. THANKS!
           </Text>
           <SimpleGrid columns={[1, 3]} spacingX={4}>
             {memberships?.map((membership) => (
@@ -268,6 +301,39 @@ export default function Home() {
               </GridItem>
             ))}
           </SimpleGrid>
+        </Container>
+        <Container maxW={"container.lg"} my={32}>
+          <Heading as={"h2"} mb={4}>
+            Shop LGBTQ Merch
+          </Heading>
+          <Text mb={4}>
+            Check out the shop for these and more! 30% of every purchas supports
+            Bessa!
+          </Text>
+          <SimpleGrid columns={[1, 4]} spacingX={4} mb={4}>
+            {products?.map((product) => (
+              <GridItem key={product.title}>
+                <LinkBox>
+                  <Box borderRadius={8} overflow={"hidden"} mb={4}>
+                    <Image src={product.image} alt={product.title} />
+                  </Box>
+                  <Text>
+                    <LinkOverlay href={product.href}>
+                      {product.title}
+                    </LinkOverlay>
+                  </Text>
+                  <Text fontWeight={"bold"}>
+                    From ${product.price.toFixed(2)}
+                  </Text>
+                </LinkBox>
+              </GridItem>
+            ))}
+          </SimpleGrid>
+          <Flex justify={"flex-end"}>
+            <Button>
+              <Link href={"https://bessa.printful.me"}>Shop All</Link>
+            </Button>
+          </Flex>
         </Container>
         <Container maxW={"container.lg"} my={32}>
           <Heading as={"h2"} mb={4}>
