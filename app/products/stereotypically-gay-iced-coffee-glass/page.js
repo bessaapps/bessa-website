@@ -41,9 +41,32 @@ export const metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
-  title: "Stereotypically Gay Iced Coffee Glass",
+  name: "Stereotypically Gay Iced Coffee Glass",
   description:
-    "Make every coffee break gay AF with this stereotypically gay iced coffee glass with the Bessa logo, a purple unicorn."
+    "Make every coffee break gay AF with this stereotypically gay iced coffee glass with the Bessa logo, a purple unicorn.",
+  offers: [
+    {
+      "@type": "Offer",
+      // "name": "Default Title",
+      availability: "https://schema.org/InStock",
+      price: 12,
+      priceCurrency: "USD"
+      // "priceValidUntil": "2024-03-31","url": "/products/3-step-brightening-system?variant=43098868056293"
+    }
+  ],
+  // "category": "Hyperpigmentation",
+  url: `${url}/products/stereotypically-gay-iced-coffee-glass`
+  // "sku": "",
+  // todo: add image
+  // image: {
+  //   "@type": "ImageObject",
+  //   url: "https://shop.drherschthal.com/cdn/shop/products/cycpera_1024x.jpg?v=1657055636",
+  //   image:
+  //     "https://shop.drherschthal.com/cdn/shop/products/cycpera_1024x.jpg?v=1657055636",
+  //   name: "3 Step Brightening System",
+  //   width: "1024",
+  //   height: "1024"
+  // },
 };
 
 export default function StereotypicallyGayIcedCoffeeGlass() {
