@@ -28,7 +28,7 @@ export const metadata = {
     siteName: title,
     images: [
       {
-        url: `${url}/images/social.png`,
+        url: `${url}/images/products/stereotypically-gay-iced-coffee-glass.png`,
         width: 800,
         height: 600
       }
@@ -47,26 +47,20 @@ const jsonLd = {
   offers: [
     {
       "@type": "Offer",
-      // "name": "Default Title",
       availability: "https://schema.org/InStock",
       price: 12,
       priceCurrency: "USD"
-      // "priceValidUntil": "2024-03-31","url": "/products/3-step-brightening-system?variant=43098868056293"
     }
   ],
-  // "category": "Hyperpigmentation",
-  url: `${url}/products/stereotypically-gay-iced-coffee-glass`
-  // "sku": "",
-  // todo: add image
-  // image: {
-  //   "@type": "ImageObject",
-  //   url: "https://shop.drherschthal.com/cdn/shop/products/cycpera_1024x.jpg?v=1657055636",
-  //   image:
-  //     "https://shop.drherschthal.com/cdn/shop/products/cycpera_1024x.jpg?v=1657055636",
-  //   name: "3 Step Brightening System",
-  //   width: "1024",
-  //   height: "1024"
-  // },
+  url: `${url}/products/stereotypically-gay-iced-coffee-glass`,
+  image: {
+    "@type": "ImageObject",
+    url: `${url}/images/products/stereotypically-gay-iced-coffee-glass.png`,
+    image: `${url}/images/products/stereotypically-gay-iced-coffee-glass.png`,
+    name: "3 Step Brightening System",
+    width: "1024",
+    height: "1024"
+  }
 };
 
 export default function StereotypicallyGayIcedCoffeeGlass() {
