@@ -61,7 +61,7 @@ export default function CelebratingInternationalTransgenderDayOfVisibility() {
         <Flex align={"center"} gap={2} mb={6}>
           <Avatar name={post.author.name} src={post.author.image} size={"xs"} />
           <Text>
-            <Link href={`/authors/${post.author.slug}`}>By Topher</Link>
+            <Link href={`/blog/authors/${post.author.slug}`}>By Topher</Link>
           </Text>
         </Flex>
         <Text color={"primary.500"} fontWeight={"bold"}>

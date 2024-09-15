@@ -44,12 +44,18 @@ export default function sitemap() {
     }),
     ...authors?.map((author) => {
       return {
-        url: `https://getbessa.com/authors/${author.slug}`,
+        url: `https://getbessa.com/blog/authors/${author.slug}`,
         lastModified: new Date(),
         changeFrequency: "daily",
         priority: 0.7
       };
     }),
+    {
+      url: "https://getbessa.com/products/stereotypically-gay-iced-coffee-glass",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.7
+    },
     {
       url: "https://getbessa.com/blog-content-writer",
       lastModified: new Date(),

@@ -125,7 +125,7 @@ export default function Home() {
       image: IcedCoffeeGlass,
       title: "Ice Coffee Glass",
       price: 12,
-      href: "https://bessa.printful.me/product/iced-coffee-glass"
+      href: "/products/stereotypically-gay-iced-coffee-glass"
     },
     {
       image: TruckerCap,

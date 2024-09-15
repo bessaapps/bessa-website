@@ -71,7 +71,7 @@ export default function StereotypicallyGayIcedCoffeeGlass() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Container maxW={"container.lg"} my={16}>
-        <SimpleGrid columns={[1, 3]} gap={4}>
+        <SimpleGrid columns={[1, 2]} gap={4}>
           <GridItem>
             <AspectRatio ratio={1}>
               <Image
@@ -81,13 +81,13 @@ export default function StereotypicallyGayIcedCoffeeGlass() {
               />
             </AspectRatio>
           </GridItem>
-          <GridItem colSpan={[undefined, 2]}>
+          <GridItem>
             <Heading as={"h1"} mb={4}>
               Stereotypically Gay Iced Coffee Glass
             </Heading>
-            <Alert status={"info"} mb={4}>
+            <Alert status={"info"} colorScheme={"primary"} mb={4}>
               <AlertIcon />
-              30% of your purchase supports Bessa, an LGBTQ social media app!
+              30% of your purchase supports Bessa!
             </Alert>
             <Text mb={4}>
               Make every coffee break gay AF with this stereotypically gay iced

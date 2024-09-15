@@ -21,7 +21,7 @@ export default function BlogCard({ post, tags, isHidingCategory }) {
       <Flex align={"center"} gap={2} mb={6}>
         <Avatar name={post.author.name} src={post.author.image} size={"xs"} />
         <Text>
-          <Link href={`/authors/${post.author.slug}`}>By Topher</Link>
+          <Link href={`/blog/authors/${post.author.slug}`}>By Topher</Link>
         </Text>
       </Flex>
       {!isHidingCategory && (
