@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Container,
   Heading,
@@ -10,38 +12,13 @@ import {
   AccordionItem,
   Box,
   AccordionIcon,
-  SimpleGrid,
-  GridItem,
   List,
-  Flex,
-  Divider
+  ListIcon
 } from "@chakra-ui/react";
 import { title, url } from "@/utils/constants";
 import Image from "next/image";
 import Article from "@/images/whats-new.png";
-import { Fragment } from "react";
-
-export const metadata = {
-  title: `What's New in Version 6! | ${title}`,
-  description:
-    "Being a part of the LGBTQ community gets even better in Bessa 6! It's packed full of fun ways to be a part of and interact with our LGBTQ community.",
-  openGraph: {
-    title: `What's New in Version 6! | ${title}`,
-    description:
-      "Being a part of the LGBTQ community gets even better in Bessa 6! It's packed full of fun ways to be a part of and interact with our LGBTQ community.",
-    url: `${url}/whats-new`,
-    siteName: "Bessa",
-    images: [
-      {
-        url: `${url}/images/social.png`,
-        width: 800,
-        height: 600
-      }
-    ],
-    locale: "en_US",
-    type: "website"
-  }
-};
+import { FiCheckCircle, FiDollarSign, FiXCircle } from "react-icons/fi";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -135,41 +112,73 @@ export default function WhatsNew() {
     {
       app: "Bessa",
       features: [
-        "✅ Map",
-        "✅ Events",
-        "✅ Read Receipts",
-        "✅ Social Feed",
-        "✅ Members Directory"
+        { icon: FiCheckCircle, description: "Map", color: "green.500" },
+        { icon: FiCheckCircle, description: "Events", color: "green.500" },
+        {
+          icon: FiCheckCircle,
+          description: "Read Receipts",
+          color: "green.500"
+        },
+        { icon: FiCheckCircle, description: "Social Feed", color: "green.500" },
+        {
+          icon: FiCheckCircle,
+          description: "Members Directory",
+          color: "green.500"
+        }
       ]
     },
     {
       app: "Twitter",
       features: [
-        "❌ Map",
-        "❌ Events",
-        "✅ Read Receipts",
-        "✅ Social Feed",
-        "❌ Members Directory"
+        { icon: FiXCircle, description: "Map", color: "red.500" },
+        { icon: FiXCircle, description: "Events", color: "red.500" },
+        {
+          icon: FiCheckCircle,
+          description: "Read Receipts",
+          color: "green.500"
+        },
+        { icon: FiCheckCircle, description: "Social Feed", color: "green.500" },
+        {
+          icon: FiXCircle,
+          description: "Members Directory",
+          color: "red.500"
+        }
       ]
     },
     {
       app: "Grindr",
       features: [
-        "❌ Map",
-        "❌ Events",
-        "💰 Read Receipts",
-        "❌ Social Feed",
-        "✅ Members Directory"
+        { icon: FiXCircle, description: "Map", color: "red.500" },
+        { icon: FiXCircle, description: "Events", color: "red.500" },
+        {
+          icon: FiDollarSign,
+          description: "Read Receipts",
+          color: "red.500"
+        },
+        { icon: FiXCircle, description: "Social Feed", color: "red.500" },
+        {
+          icon: FiCheckCircle,
+          description: "Members Directory",
+          color: "green.500"
+        }
       ]
     },
     {
       app: "OkCupid",
       features: [
-        "❌ Map",
-        "❌ Events",
-        "💰 Read Receipts",
-        "❌ Social Feed",
-        "✅ Members Directory"
+        { icon: FiXCircle, description: "Map", color: "red.500" },
+        { icon: FiXCircle, description: "Events", color: "red.500" },
+        {
+          icon: FiDollarSign,
+          description: "Read Receipts",
+          color: "red.500"
+        },
+        { icon: FiXCircle, description: "Social Feed", color: "red.500" },
+        {
+          icon: FiCheckCircle,
+          description: "Members Directory",
+          color: "green.500"
+        }
       ]
     }
   ];
@@ -231,31 +240,46 @@ export default function WhatsNew() {
           you can connect, share, discover, and engage with your LGBTQ community
           for free.
         </Text>
-        <SimpleGrid columns={2} spacing={4}>
-          {comparisons.map((comparison, i) => (
-            <Fragment key={i}>
-              <GridItem display={"flex"} alignItems={"center"}>
-                <Heading>{comparison.app}</Heading>
-              </GridItem>
-              <GridItem>
-                <List spacing={2}>
-                  {comparison.features.map((feature, j) => (
-                    <ListItem key={j}>
-                      <Flex align={"center"} gap={2}>
-                        {feature}
-                      </Flex>
-                    </ListItem>
-                  ))}
-                </List>
-              </GridItem>
-              {i < comparisons.length - 1 && (
-                <GridItem colSpan={2}>
-                  <Divider />
-                </GridItem>
-              )}
-            </Fragment>
-          ))}
-        </SimpleGrid>
+        {/*<SimpleGrid columns={2} spacing={4}>*/}
+        {/*  {comparisons.map((comparison, i) => (*/}
+        {/*    <Fragment key={i}>*/}
+        {/*      <GridItem display={"flex"} alignItems={"center"}>*/}
+        {/*        <Heading>{comparison.app}</Heading>*/}
+        {/*      </GridItem>*/}
+        {/*      <GridItem>*/}
+        {/*        <List spacing={2}>*/}
+        {/*          {comparison.features.map((feature, j) => (*/}
+        {/*            <ListItem key={j}>*/}
+        {/*              <Flex align={"center"} gap={2}>*/}
+        {/*                {feature}*/}
+        {/*              </Flex>*/}
+        {/*            </ListItem>*/}
+        {/*          ))}*/}
+        {/*        </List>*/}
+        {/*      </GridItem>*/}
+        {/*      {i < comparisons.length - 1 && (*/}
+        {/*        <GridItem colSpan={2}>*/}
+        {/*          <Divider />*/}
+        {/*        </GridItem>*/}
+        {/*      )}*/}
+        {/*    </Fragment>*/}
+        {/*  ))}*/}
+        {/*</SimpleGrid>*/}
+        {comparisons?.map((comparison) => (
+          <Box key={comparison.app} mb={4}>
+            <Heading as={"h3"} mb={4}>
+              {comparison.app}
+            </Heading>
+            <List spacing={2}>
+              {comparison.features.map((feature) => (
+                <ListItem key={feature.description}>
+                  <ListIcon as={feature.icon} color={feature.color} />
+                  {feature.description}
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+        ))}
       </Container>
     </section>
   );
