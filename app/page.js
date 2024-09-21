@@ -186,7 +186,7 @@ export default function Home() {
                   <Heading as={"h3"} mb={[2, 4]}>
                     Join for FREE!
                   </Heading>
-                  <Flex gap={4} flexWrap={"wrap"}>
+                  <Flex gap={4} flexWrap={"wrap"} mb={4}>
                     {appStores.map((store) => (
                       <Link key={store.name} href={store.href}>
                         <Button
@@ -202,6 +202,14 @@ export default function Home() {
                       </Link>
                     ))}
                   </Flex>
+                  <Text as={"span"}>or </Text>
+                  <Link
+                    href={"https://www.upload-apk.com/en/1HAntdUaSIZK5Ts"}
+                    target="_blank"
+                    fontWeight={"bold"}
+                  >
+                    Sideload for Android
+                  </Link>
                 </Fade>
               </Flex>
               <Flex w={["100%", "50%"]}>
