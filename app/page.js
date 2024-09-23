@@ -123,7 +123,7 @@ export default function Home() {
   const products = [
     {
       image: IcedCoffeeGlass,
-      title: "Ice Coffee Glass",
+      title: "Stereotypically Gay Iced Coffee Glass",
       price: 12,
       href: "/products/stereotypically-gay-iced-coffee-glass"
     },
