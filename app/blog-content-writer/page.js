@@ -51,6 +51,16 @@ const jsonLd = {
   applicantLocationRequirements: {
     "@type": "Country",
     name: "USA"
+  },
+  baseSalary: {
+    "@type": "MonetaryAmount",
+    currency: "USD",
+    value: {
+      "@type": "QuantitativeValue",
+      minValue: 8,
+      maxValue: 24,
+      unitText: "HOUR"
+    }
   }
 };
 
