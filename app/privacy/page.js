@@ -4,9 +4,9 @@ import {
   Tag,
   Text,
   UnorderedList,
-  ListItem
+  ListItem,
+  Link
 } from "@chakra-ui/react";
-import Rules from "@/components/Rules";
 
 export const metadata = {
   title: "Privacy Policy | Bessa | An LGBTQ Social Media App"
@@ -15,17 +15,16 @@ export const metadata = {
 export default function Privacy() {
   return (
     <Container maxW={"container.lg"} py={16}>
-      <Rules />
       <Heading as={"h1"} mb={4}>
         Privacy Policy
       </Heading>
-      <Tag>Updated at 2023-11-21</Tag>
-      <Text>
+      <Tag mb={4}>Updated November, 21st, 2023</Tag>
+      <Text mb={4}>
         Bessa (“we,” “our,” or “us”) is committed to protecting your privacy.
         This Privacy Policy explains how your personal information is collected,
         used, and disclosed by Bessa.
       </Text>
-      <Text>
+      <Text mb={4}>
         This Privacy Policy applies to our website, and its associated
         subdomains (collectively, our “Service”) alongside our application,
         Bessa. By accessing or using our Service, you signify that you have
@@ -33,8 +32,8 @@ export default function Privacy() {
         disclosure of your personal information as described in this Privacy
         Policy and our Terms of Service.
       </Text>
-      <Text as={"h2"}>Definitions and key terms</Text>
-      <Text>
+      <Heading mb={4}>Definitions and key terms</Heading>
+      <Text mb={4}>
         To help explain things as clearly as possible in this Privacy Policy,
         every time any of these terms are referenced, are strictly defined as:
       </Text>
@@ -99,8 +98,8 @@ export default function Privacy() {
           Services.
         </ListItem>
       </UnorderedList>
-      <Text as={"h2"}>What Information Do We Collect?</Text>
-      <Text>
+      <Heading mb={4}>What Information Do We Collect?</Heading>
+      <Text mb={4}>
         We collect information from you when you visit our app, register on our
         site, place an order, subscribe to our newsletter, respond to a survey
         or fill out a form.
@@ -116,7 +115,7 @@ export default function Privacy() {
         <ListItem>Age</ListItem>
         <ListItem>Password</ListItem>
       </UnorderedList>
-      <Text>
+      <Text mb={4}>
         We also collect information from mobile devices for a better user
         experience, although these features are completely optional:
       </Text>
@@ -142,8 +141,8 @@ export default function Privacy() {
           deny photo gallery access for this app.
         </ListItem>
       </UnorderedList>
-      <Text as={"h2"}>How Do We Use The Information We Collect?</Text>
-      <Text>
+      <Heading mb={4}>How Do We Use The Information We Collect?</Heading>
+      <Text mb={4}>
         Any of the information we collect from you may be used in one of the
         following ways:
       </Text>
@@ -167,14 +166,14 @@ export default function Privacy() {
         </ListItem>
         <ListItem>To send periodic emails</ListItem>
       </UnorderedList>
-      <Text as={"h2"}>
+      <Heading mb={4}>
         When does Bessa use end user information from third parties?
-      </Text>
-      <Text>
+      </Heading>
+      <Text mb={4}>
         Bessa will collect End User Data necessary to provide the Bessa services
         to our customers.
       </Text>
-      <Text>
+      <Text mb={4}>
         End users may voluntarily provide us with information they have made
         available on social media websites. If you provide us with any such
         information, we may collect publicly available information from the
@@ -182,10 +181,10 @@ export default function Privacy() {
         your information social media websites make public by visiting these
         websites and changing your privacy settings.
       </Text>
-      <Text as={"h2"}>
+      <Heading mb={4}>
         When does Bessa use customer information from third parties?
-      </Text>
-      <Text>
+      </Heading>
+      <Text mb={4}>
         We receive some information from the third parties when you contact us.
         For example, when you submit your email address to us to show interest
         in becoming a Bessa customer, we receive information from a third party
@@ -195,10 +194,10 @@ export default function Privacy() {
         social media websites make public by visiting these websites and
         changing your privacy settings.
       </Text>
-      <Text as={"h2"}>
+      <Heading mb={4}>
         Do we share the information we collect with third parties?
-      </Text>
-      <Text>
+      </Heading>
+      <Text mb={4}>
         We may share the information that we collect, both personal and
         non-personal, with third parties such as advertisers, contest sponsors,
         promotional and marketing partners, and others who provide our content
@@ -208,7 +207,7 @@ export default function Privacy() {
         business reorganization, we may also share or transfer your personal and
         non-personal information to our successors-in-interest.
       </Text>
-      <Text>
+      <Text mb={4}>
         We may engage trusted third party service providers to perform functions
         and provide services to us, such as hosting and maintaining our servers
         and the app, database storage and management, e-mail management, storage
@@ -218,7 +217,7 @@ export default function Privacy() {
         non-personal information, with these third parties to enable them to
         perform these services for us and for you.
       </Text>
-      <Text>
+      <Text mb={4}>
         We may share portions of our log file data, including IP addresses, for
         analytics purposes with third parties such as web analytics partners,
         application developers, and ad networks. If your IP address is shared,
@@ -236,16 +235,16 @@ export default function Privacy() {
         legally actionable activity, or to otherwise comply with applicable
         court orders, laws, rules and regulations.
       </Text>
-      <Text as={"h2"}>
+      <Heading mb={4}>
         Where and when is information collected from customers and end users?
-      </Text>
-      <Text>
+      </Heading>
+      <Text mb={4}>
         Bessa will collect personal information that you submit to us. We may
         also receive personal information about you from third parties as
         described above.
       </Text>
-      <Text as={"h2"}>How Do We Use Your Email Address?</Text>
-      <Text>
+      <Heading mb={4}>How Do We Use Your Email Address?</Heading>
+      <Text mb={4}>
         By submitting your email address on this app, you agree to receive
         emails from us. You can cancel your participation in any of these email
         lists at any time by clicking on the opt-out link or other unsubscribe
@@ -264,8 +263,8 @@ export default function Privacy() {
         would like to unsubscribe from receiving future emails, we include
         detailed unsubscribe instructions at the bottom of each email.
       </Text>
-      <Text as={"h2"}>How Long Do We Keep Your Information?</Text>
-      <Text>
+      <Heading mb={4}>How Long Do We Keep Your Information?</Heading>
+      <Text mb={4}>
         We keep your information only so long as we need it to provide Bessa to
         you and fulfill the purposes described in this policy. This is also the
         case for anyone that we share your information with and who carries out
@@ -274,8 +273,8 @@ export default function Privacy() {
         regulatory obligations, we’ll either remove it from our systems or
         depersonalize it so that we can&apos;t identify you.
       </Text>
-      <Text as={"h2"}>How Do We Protect Your Information?</Text>
-      <Text>
+      <Heading mb={4}>How Do We Protect Your Information?</Heading>
+      <Text mb={4}>
         We implement a variety of security measures to maintain the safety of
         your personal information when you place an order or enter, submit, or
         access your personal information. We offer the use of a secure server.
@@ -291,10 +290,10 @@ export default function Privacy() {
         a breach of any of our physical, technical, or managerial safeguards.
       </Text>
 
-      <Text as={"h2"}>
+      <Heading mb={4}>
         Could my information be transferred to other countries?
-      </Text>
-      <Text>
+      </Heading>
+      <Text mb={4}>
         Bessa is incorporated in United States. Information collected via our
         website, through direct interactions with you, or from use of our help
         services may be transferred from time to time to our offices or
@@ -306,10 +305,10 @@ export default function Privacy() {
         and hosting of such information.
       </Text>
 
-      <Text as={"h2"}>
+      <Heading mb={4}>
         Is the information collected through the Bessa Service secure?
-      </Text>
-      <Text>
+      </Heading>
+      <Text mb={4}>
         We take precautions to protect the security of your information. We have
         physical, electronic, and managerial procedures to help safeguard,
         prevent unauthorized access, maintain data security, and correctly use
@@ -323,14 +322,14 @@ export default function Privacy() {
         compliance with that duty.
       </Text>
 
-      <Text as={"h2"}>Can I update or correct my information?</Text>
-      <Text>
+      <Heading mb={4}>Can I update or correct my information?</Heading>
+      <Text mb={4}>
         The rights you have to request updates or corrections to the information
         Bessa collects depend on your relationship with Bessa. Personnel may
         update or correct their information as detailed in our internal company
         employment policies.
       </Text>
-      <Text>
+      <Text mb={4}>
         Customers have the right to request the restriction of certain uses and
         disclosures of personally identifiable information as follows. You can
         contact us in order to (1) update or correct your personally
@@ -347,7 +346,7 @@ export default function Privacy() {
         access or making corrections. You are responsible for maintaining the
         secrecy of your unique password and account information at all times.
       </Text>
-      <Text>
+      <Text mb={4}>
         You should be aware that it is not technologically possible to remove
         each and every record of the information you have provided to us from
         our system. The need to back up our systems to protect information from
@@ -358,13 +357,13 @@ export default function Privacy() {
         updated, corrected, changed or deleted, as appropriate, as soon as and
         to the extent reasonably and technically practicable.
       </Text>
-      <Text>
+      <Text mb={4}>
         If you are an end user and wish to update, delete, or receive any
         information we have about you, you may do so by contacting the
         organization of which you are a customer.
       </Text>
-      <Text as={"h2"}>Sale of Business</Text>
-      <Text>
+      <Heading mb={4}>Sale of Business</Heading>
+      <Text mb={4}>
         We reserve the right to transfer information to a third party in the
         event of a sale, merger or other transfer of all or substantially all of
         the assets of Bessa or any of its Corporate Affiliates (as defined
@@ -375,8 +374,8 @@ export default function Privacy() {
         third party agrees to adhere to the terms of this Privacy Policy.
       </Text>
 
-      <Text as={"h2"}>Affiliates</Text>
-      <Text>
+      <Heading mb={4}>Affiliates</Heading>
+      <Text mb={4}>
         We may disclose information (including personal information) about you
         to our Corporate Affiliates. For purposes of this Privacy Policy,
         &quot;Corporate Affiliate&quot; means any person or entity which
@@ -387,8 +386,8 @@ export default function Privacy() {
         this Privacy Policy.
       </Text>
 
-      <Text as={"h2"}>Governing Law</Text>
-      <Text>
+      <Heading mb={4}>Governing Law</Heading>
+      <Text mb={4}>
         This Privacy Policy is governed by the laws of United States without
         regard to its conflict of laws provision. You consent to the exclusive
         jurisdiction of the courts in connection with any action or dispute
@@ -396,12 +395,12 @@ export default function Privacy() {
         Policy except for those individuals who may have rights to make claims
         under Privacy Shield, or the Swiss-US framework.
       </Text>
-      <Text>
+      <Text mb={4}>
         The laws of United States, excluding its conflicts of law rules, shall
         govern this Agreement and your use of the app. Your use of the app may
         also be subject to other local, state, national, or international laws.
       </Text>
-      <Text>
+      <Text mb={4}>
         By using Bessa or contacting us directly, you signify your acceptance of
         this Privacy Policy. If you do not agree to this Privacy Policy, you
         should not engage with our website, or use our services. Continued use
@@ -411,8 +410,8 @@ export default function Privacy() {
         those changes.
       </Text>
 
-      <Text as={"h2"}>Your Consent</Text>
-      <Text>
+      <Heading mb={4}>Your Consent</Heading>
+      <Text mb={4}>
         We&apos;ve updated our Privacy Policy to provide you with complete
         transparency into what is being set when you visit our site and how
         it&apos;s being used. By using our app, registering an account, or
@@ -420,8 +419,8 @@ export default function Privacy() {
         its terms.
       </Text>
 
-      <Text as={"h2"}>Links to Other Websites</Text>
-      <Text>
+      <Heading mb={4}>Links to Other Websites</Heading>
+      <Text mb={4}>
         This Privacy Policy applies only to the Services. The Services may
         contain links to other websites not operated or controlled by Bessa. We
         are not responsible for the content, accuracy or opinions expressed in
@@ -433,8 +432,8 @@ export default function Privacy() {
         subject to that website’s own rules and policies. Such third parties may
         use their own cookies or other methods to collect information about you.
       </Text>
-      <Text as={"h2"}>Advertising</Text>
-      <Text>
+      <Heading mb={4}>Advertising</Heading>
+      <Text mb={4}>
         This app may contain third party advertisements and links to third party
         sites. Bessa does not make any representation as to the accuracy or
         suitability of any of the information contained in those advertisements
@@ -442,12 +441,12 @@ export default function Privacy() {
         conduct or content of those advertisements and sites and the offerings
         made by the third parties.
       </Text>
-      <Text>
+      <Text mb={4}>
         Advertising keeps Bessa and many of the websites and services you use
         free of charge. We work hard to make sure that ads are safe,
         unobtrusive, and as relevant as possible.
       </Text>
-      <Text>
+      <Text mb={4}>
         Third party advertisements and links to other sites where goods or
         services are advertised are not endorsements or recommendations by Bessa
         of the third party sites, goods or services. Bessa takes no
@@ -456,8 +455,8 @@ export default function Privacy() {
         advertisements.
       </Text>
 
-      <Text as={"h2"}>Cookies for Advertising</Text>
-      <Text>
+      <Heading mb={4}>Cookies for Advertising</Heading>
+      <Text mb={4}>
         These cookies collect information over time about your online activity
         on the app and other online services to make online advertisements more
         relevant and effective to you. This is known as interest-based
@@ -467,8 +466,8 @@ export default function Privacy() {
         advertiser to reach its audience, or to know how many ads were shown and
         how many clicks they received.
       </Text>
-      <Text as={"h2"}>Cookies</Text>
-      <Text>
+      <Heading mb={4}>Cookies</Heading>
+      <Text mb={4}>
         Bessa uses &quot;Cookies&quot; to identify the areas of our website that
         you have visited. A Cookie is a small piece of data stored on your
         computer or mobile device by your web browser. We use Cookies to enhance
@@ -482,10 +481,10 @@ export default function Privacy() {
         We never place Personally Identifiable Information in Cookies.
       </Text>
 
-      <Text as={"h2"}>
+      <Heading mb={4}>
         Blocking and disabling cookies and similar technologies
-      </Text>
-      <Text>
+      </Heading>
+      <Text mb={4}>
         Wherever you&apos;re located you may also set your browser to block
         cookies and similar technologies, but this action may block our
         essential cookies and prevent our website from functioning properly, and
@@ -498,16 +497,16 @@ export default function Privacy() {
         browser, you should visit your browser&apos;s help menu for more
         information.
       </Text>
-      <Text as={"h2"}>Remarketing Services</Text>
-      <Text>
+      <Heading mb={4}>Remarketing Services</Heading>
+      <Text mb={4}>
         We use remarketing services. What Is Remarketing? In digital marketing,
         remarketing (or retargeting) is the practice of serving ads across the
         internet to people who have already visited your website. It allows your
         company to seem like they&apos;re “following” people around the internet
         by serving ads on the websites and platforms they use most.
       </Text>
-      <Text as={"h2"}>Kids&apos; Privacy</Text>
-      <Text>
+      <Heading mb={4}>Kids&apos; Privacy</Heading>
+      <Text mb={4}>
         We do not address anyone under the age of 13. We do not knowingly
         collect personally identifiable information from anyone under the age of
         13. If You are a parent or guardian and You are aware that Your child
@@ -516,8 +515,8 @@ export default function Privacy() {
         13 without verification of parental consent, We take steps to remove
         that information from Our servers.
       </Text>
-      <Text as={"h2"}>Changes To Our Privacy Policy</Text>
-      <Text>
+      <Heading mb={4}>Changes To Our Privacy Policy</Heading>
+      <Text mb={4}>
         We may change our Service and policies, and we may need to make changes
         to this Privacy Policy so that they accurately reflect our Service and
         policies. Unless otherwise required by law, we will notify you (for
@@ -528,14 +527,14 @@ export default function Privacy() {
         updated Privacy Policy, you can delete your account.
       </Text>
 
-      <Text as={"h2"}>Third-Party Services</Text>
-      <Text>
+      <Heading mb={4}>Third-Party Services</Heading>
+      <Text mb={4}>
         We may display, include or make available third-party content (including
         data, information, applications and other products services) or provide
         links to third-party websites or services (&quot;Third- Party
         Services&quot;).
       </Text>
-      <Text>
+      <Text mb={4}>
         You acknowledge and agree that Bessa shall not be responsible for any
         Third-Party Services, including their accuracy, completeness,
         timeliness, validity, copyright compliance, legality, decency, quality
@@ -543,13 +542,13 @@ export default function Privacy() {
         any liability or responsibility to you or any other person or entity for
         any Third-Party Services.
       </Text>
-      <Text>
+      <Text mb={4}>
         Third-Party Services and links thereto are provided solely as a
         convenience to you and you access and use them entirely at your own risk
         and subject to such third parties&apos; terms and conditions.
       </Text>
-      <Text as={"h2"}>Facebook Pixel</Text>
-      <Text>
+      <Heading mb={4}>Facebook Pixel</Heading>
+      <Text mb={4}>
         Facebook pixel is an analytics tool that allows you to measure the
         effectiveness of your advertising by understanding the actions people
         take on your website. You can use the pixel to: Make sure your ads are
@@ -557,28 +556,28 @@ export default function Privacy() {
         your device when you use the service. Facebook pixel collects
         information that is held in accordance with its Privacy Policy
       </Text>
-      <Text as={"h2"}>Tracking Technologies</Text>
+      <Heading mb={4}>Tracking Technologies</Heading>
       <UnorderedList>
         <ListItem>
           Google Maps API
-          <Text>
+          <Text mb={4}>
             Google Maps API is a robust tool that can be used to create a custom
             map, a searchable map, check-in functions, display live data
             synching with location, plan routes, or create a mashup just to name
             a few.
           </Text>
-          <Text>
+          <Text mb={4}>
             Google Maps API may collect information from You and from Your
             Device for security purposes.
           </Text>
-          <Text>
+          <Text mb={4}>
             Google Maps API collects information that is held in accordance with
             its Privacy Policy
           </Text>
         </ListItem>
         <ListItem>
           Cookies
-          <Text>
+          <Text mb={4}>
             We use Cookies to enhance the performance and functionality of our
             platform but are non-essential to their use. However, without these
             cookies, certain functionality like videos may become unavailable or
@@ -589,7 +588,7 @@ export default function Privacy() {
         </ListItem>
         <ListItem>
           Local Storage
-          <Text>
+          <Text mb={4}>
             Local Storage sometimes known as DOM storage, provides web apps with
             methods and protocols for storing client-side data. Web storage
             supports persistent data storage, similar to cookies but with a
@@ -599,17 +598,17 @@ export default function Privacy() {
         </ListItem>
         <ListItem>
           Sessions
-          <Text>
+          <Text mb={4}>
             We use &quot;Sessions&quot; to identify the areas of our website
             that you have visited. A Session is a small piece of data stored on
             your computer or mobile device by your web browser.
           </Text>
         </ListItem>
       </UnorderedList>
-      <Text as={"h2"}>
+      <Heading mb={4}>
         Information about General Data Protection Regulation (GDPR)
-      </Text>
-      <Text>
+      </Heading>
+      <Text mb={4}>
         We may be collecting and using information from you if you are from the
         European Economic Area (EEA), and in this section of our Privacy Policy
         we are going to explain exactly how and why is this data collected, and
@@ -617,21 +616,21 @@ export default function Privacy() {
         in the wrong way.
       </Text>
 
-      <Text as={"h2"}>What is GDPR?</Text>
-      <Text>
+      <Heading mb={4}>What is GDPR?</Heading>
+      <Text mb={4}>
         GDPR is an EU-wide privacy and data protection law that regulates how EU
         residents&apos; data is protected by companies and enhances the control
         the EU residents have, over their personal data.
       </Text>
-      <Text>
+      <Text mb={4}>
         The GDPR is relevant to any globally operating company and not just the
         EU-based businesses and EU residents. Our customers’ data is important
         irrespective of where they are located, which is why we have implemented
         GDPR controls as our baseline standard for all our operations worldwide.
       </Text>
 
-      <Text as={"h2"}>What is personal data?</Text>
-      <Text>
+      <Heading mb={4}>What is personal data?</Heading>
+      <Text mb={4}>
         Any data that relates to an identifiable or identified individual. GDPR
         covers a broad spectrum of information that could be used on its own, or
         in combination with other pieces of information, to identify a person.
@@ -640,7 +639,9 @@ export default function Privacy() {
         data, biometric data, IP addresses, physical address, sexual
         orientation, and ethnicity.
       </Text>
-      <Text>The Data Protection Principles include requirements such as:</Text>
+      <Text mb={4}>
+        The Data Protection Principles include requirements such as:
+      </Text>
       <UnorderedList>
         <ListItem>
           Personal data collected must be processed in a fair, legal, and
@@ -663,8 +664,8 @@ export default function Privacy() {
         </ListItem>
       </UnorderedList>
 
-      <Text as={"h2"}>Why is GDPR important?</Text>
-      <Text>
+      <Heading mb={4}>Why is GDPR important?</Heading>
+      <Text mb={4}>
         GDPR adds some new requirements regarding how companies should protect
         individuals&apos; personal data that they collect and process. It also
         raises the stakes for compliance by increasing enforcement and imposing
@@ -674,11 +675,11 @@ export default function Privacy() {
         place that go beyond the requirements of this new regulation.
       </Text>
 
-      <Text as={"h2"}>
+      <Heading mb={4}>
         Individual Data Subject&apos;s Rights - Data Access, Portability and
         Deletion
-      </Text>
-      <Text>
+      </Heading>
+      <Text mb={4}>
         We are committed to helping our customers meet the data subject rights
         requirements of GDPR. Bessa processes or stores all personal data in
         fully vetted, DPA compliant vendors. We do store all conversation and
@@ -686,7 +687,7 @@ export default function Privacy() {
         case, we dispose of all data in accordance with our Terms of Service and
         Privacy Policy, but we will not hold it longer than 60 days.
       </Text>
-      <Text>
+      <Text mb={4}>
         We are aware that if you are working with EU customers, you need to be
         able to provide them with the ability to access, update, retrieve and
         remove personal data. We got you! We&apos;ve been set up as self service
@@ -694,14 +695,14 @@ export default function Privacy() {
         customers data. Our customer support team is here for you to answer any
         questions you might have about working with the API.
       </Text>
-      <Text as={"h2"}>California Residents</Text>
-      <Text>
+      <Heading mb={4}>California Residents</Heading>
+      <Text mb={4}>
         The California Consumer Privacy Act (CCPA) requires us to disclose
         categories of Personal Information we collect and how we use it, the
         categories of sources from whom we collect Personal Information, and the
         third parties with whom we share it, which we have explained above.
       </Text>
-      <Text>
+      <Text mb={4}>
         We are also required to communicate information about rights California
         residents have under California law. You may exercise the following
         rights:
@@ -729,20 +730,24 @@ export default function Privacy() {
           not sell the consumer&apos;s personal data.
         </ListItem>
       </UnorderedList>
-      <Text>
+      <Text mb={4}>
         If you make a request, we have one month to respond to you. If you would
         like to exercise any of these rights, please contact us.
       </Text>
-      <Text>We do not sell the Personal Information of our users.</Text>
-      <Text>For more information about these rights, please contact us.</Text>
-      <Text as={"h2"}>California Online Privacy Protection Act (CalOPPA)</Text>
-      <Text>
+      <Text mb={4}>We do not sell the Personal Information of our users.</Text>
+      <Text mb={4}>
+        For more information about these rights, please contact us.
+      </Text>
+      <Heading mb={4}>
+        California Online Privacy Protection Act (CalOPPA)
+      </Heading>
+      <Text mb={4}>
         CalOPPA requires us to disclose categories of Personal Information we
         collect and how we use it, the categories of sources from whom we
         collect Personal Information, and the third parties with whom we share
         it, which we have explained above.
       </Text>
-      <Text>CalOPPA users have the following rights:</Text>
+      <Text mb={4}>CalOPPA users have the following rights:</Text>
       <UnorderedList>
         <ListItem>
           Right to Know and Access. You may submit a verifiable request for
@@ -766,20 +771,21 @@ export default function Privacy() {
           data, not sell the consumer&apos;s personal data.
         </ListItem>
       </UnorderedList>
-      <Text>
+      <Text mb={4}>
         If you make a request, we have one month to respond to you. If you would
         like to exercise any of these rights, please contact us.
       </Text>
-      <Text>We do not sell the Personal Information of our users.</Text>
-      <Text>For more information about these rights, please contact us.</Text>
-      <Text as={"h2"}>Contact Us</Text>
-      <Text>Don&apos;t hesitate to contact us if you have any questions.</Text>
-      <UnorderedList>
-        <ListItem>
-          Via Email:{" "}
-          <a href="mailto:topher@getbessa.com">topher@getbessa.com</a>
-        </ListItem>
-      </UnorderedList>
+      <Text mb={4}>We do not sell the Personal Information of our users.</Text>
+      <Text mb={4}>
+        For more information about these rights, please contact us.
+      </Text>
+      <Heading mb={4}>Contact Us</Heading>
+      <Text mb={4}>
+        Have questions? Email{" "}
+        <Text as={"b"}>
+          <Link href={"mailto:topher@getbessa.com"}>topher@getbessa.com</Link>
+        </Text>
+      </Text>
     </Container>
   );
 }
