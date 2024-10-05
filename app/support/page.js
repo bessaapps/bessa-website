@@ -53,7 +53,7 @@ export default function Support() {
         <Heading id={"how-to-share-a-post"} mb={4}>
           How to Share a Post
         </Heading>
-        <Alert status={"info"} my={4}>
+        <Alert status={"info"} colorScheme={"primary"} my={4}>
           <AlertIcon />
           Posts must be approved by a moderator to appear to all members.
         </Alert>
@@ -119,7 +119,7 @@ export default function Support() {
         <Heading id={"how-to-share-an-lgbtq-event"} mb={4}>
           How to Share an LGBTQ Event
         </Heading>
-        <Alert status={"info"} my={4}>
+        <Alert status={"info"} colorScheme={"primary"} my={4}>
           <AlertIcon />
           After publishing an event, it will take a short period of time to
           appear in the app. Events must also be approved by a moderator to
