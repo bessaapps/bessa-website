@@ -315,8 +315,8 @@ export default function Home() {
             Shop LGBTQ Merch
           </Heading>
           <Text mb={4}>
-            Check out the shop for these and more! 30% of every purchas supports
-            Bessa!
+            Check out the shop for these and more! 30% of every purchase
+            supports Bessa!
           </Text>
           <SimpleGrid columns={[1, 4]} spacingX={4}>
             {products?.map((product) => (
