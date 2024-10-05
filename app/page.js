@@ -195,7 +195,7 @@ export default function Home() {
                   <Text as={"span"}>Don&apos;t have Google Play? </Text>
                   <Link
                     href={
-                      "https://zqnhqsnh0viqdijr.public.blob.vercel-storage.com/Bessa.apk"
+                      "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"
                     }
                     target="_blank"
                     fontWeight={"bold"}
