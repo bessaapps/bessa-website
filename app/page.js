@@ -1,4 +1,7 @@
+"use client";
+
 import {
+  chakra,
   Box,
   Button,
   Container,
@@ -11,7 +14,8 @@ import {
   SimpleGrid,
   Text,
   LinkBox,
-  LinkOverlay
+  LinkOverlay,
+  shouldForwardProp
 } from "@chakra-ui/react";
 import Logo from "@/images/logo.png";
 import Mockup1 from "../images/mockups/1.png";
@@ -21,32 +25,13 @@ import Mockup4 from "../images/mockups/4.png";
 import Mockup5 from "../images/mockups/5.png";
 import Image from "next/image";
 import { SiAppstore, SiGoogleplay } from "react-icons/si";
-import { description, title, url } from "@/utils/constants";
+import { url } from "@/utils/constants";
 import { FiStar } from "react-icons/fi";
 import IcedCoffeeGlass from "@/images/products/stereotypically-gay-iced-coffee-glass.png";
 import TruckerCap from "@/images/products/4465-422-66df241e4ae04__360.webp";
 import BoxerBriefs from "@/images/products/4465-428-66df235d413f3__360.webp";
 import ToteBag from "@/images/products/14321751-84-66e0714863637__360.webp";
-
-export const metadata = {
-  title,
-  description,
-  openGraph: {
-    title,
-    description,
-    url,
-    siteName: title,
-    images: [
-      {
-        url: `${url}/images/social.png`,
-        width: 800,
-        height: 600
-      }
-    ],
-    locale: "en_US",
-    type: "website"
-  }
-};
+import { motion, isValidMotionProp } from "framer-motion";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -147,6 +132,11 @@ export default function Home() {
     }
   ];
 
+  const ChakraBox = chakra(motion.div, {
+    shouldForwardProp: (prop) =>
+      isValidMotionProp(prop) || shouldForwardProp(prop)
+  });
+
   return (
     <section>
       <script
@@ -213,7 +203,27 @@ export default function Home() {
                 </Fade>
               </Flex>
               <Flex w={["100%", "50%"]}>
-                <Image src={Logo} alt={"The LGBTQ Social Media App Unicorn"} />
+                <Fade
+                  in={true}
+                  transition={{ enter: { duration: 0.66, delay: 1.98 } }}
+                >
+                  <ChakraBox
+                    animate={{
+                      rotate: [5, -5, 5]
+                    }}
+                    transition={{
+                      duration: 3,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                      repeatType: "loop"
+                    }}
+                  >
+                    <Image
+                      src={Logo}
+                      alt={"The LGBTQ Social Media App Unicorn"}
+                    />
+                  </ChakraBox>
+                </Fade>
               </Flex>
             </Flex>
           </Container>
