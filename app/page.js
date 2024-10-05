@@ -192,13 +192,15 @@ export default function Home() {
                       </Link>
                     ))}
                   </Flex>
-                  <Text as={"span"}>or </Text>
+                  <Text as={"span"}>Don&apos;t have Google Play? </Text>
                   <Link
-                    href={"https://www.upload-apk.com/en/1HAntdUaSIZK5Ts"}
+                    href={
+                      "https://zqnhqsnh0viqdijr.public.blob.vercel-storage.com/Bessa.apk"
+                    }
                     target="_blank"
                     fontWeight={"bold"}
                   >
-                    Sideload for Android
+                    Download Here
                   </Link>
                 </Fade>
               </Flex>
