@@ -15,7 +15,8 @@ import {
   Text,
   LinkBox,
   LinkOverlay,
-  shouldForwardProp
+  shouldForwardProp,
+  Tooltip
 } from "@chakra-ui/react";
 import Logo from "@/images/logo.png";
 import Mockup1 from "../images/mockups/1.png";
@@ -193,15 +194,16 @@ export default function Home() {
                     ))}
                   </Flex>
                   <Text as={"span"}>Don&apos;t have Google Play? </Text>
-                  <Link
-                    href={
-                      "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"
-                    }
-                    target="_blank"
-                    fontWeight={"bold"}
-                  >
-                    Download Here
-                  </Link>
+                  <Tooltip label={"Not Recommended"} placement={"top"}>
+                    <Link
+                      href={
+                        "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"
+                      }
+                      fontWeight={"bold"}
+                    >
+                      Download Here
+                    </Link>
+                  </Tooltip>
                 </Fade>
               </Flex>
               <Flex w={["100%", "50%"]}>
