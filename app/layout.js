@@ -4,6 +4,7 @@ import Providers from "@/app/providers";
 import Footer from "@/components/navigation/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { description, title, url } from "@/utils/constants";
+import "./global.css";
 
 export const metadata = {
   title,
