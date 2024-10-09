@@ -34,6 +34,10 @@ const jsonLd = {
 export default function WhatsNew() {
   const changes = [
     {
+      button: "1.6.31",
+      items: ["Re-added Member Location Sorting", "UI Fixes"]
+    },
+    {
       button: "1.6.22",
       items: [
         "Better Push and Email Notifications Customization",
