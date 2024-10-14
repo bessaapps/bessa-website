@@ -283,7 +283,7 @@ export default function Home() {
             Join your LGBTQ community and link with others online instantly with
             Bessa. It&apos;s totally free!
           </Text>
-          <Flex gap={4} flexWrap={"wrap"}>
+          <Flex gap={4} flexWrap={"wrap"} mb={4}>
             {appStores.map((store) => (
               <Link key={store.name} href={store.href}>
                 <Button
@@ -299,6 +299,17 @@ export default function Home() {
               </Link>
             ))}
           </Flex>
+          <Text as={"span"}>Don&apos;t have Google Play? </Text>
+          <Tooltip label={"Not Recommended"} placement={"top"}>
+            <Link
+              href={
+                "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"
+              }
+              fontWeight={"bold"}
+            >
+              Download Here
+            </Link>
+          </Tooltip>
         </Container>
         <Container maxW={"container.lg"} my={32}>
           <Heading as={"h2"} mb={4}>

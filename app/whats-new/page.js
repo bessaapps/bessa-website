@@ -34,6 +34,18 @@ const jsonLd = {
 export default function WhatsNew() {
   const changes = [
     {
+      button: "Coming Soon!",
+      items: ["New Icon", "Member Filter Fixes"]
+    },
+    {
+      button: "1.6.33",
+      items: [
+        "More Accurate Member Locations",
+        "Photo Location Detection",
+        "Optional Post Locations"
+      ]
+    },
+    {
       button: "1.6.31",
       items: ["Re-added Member Location Sorting", "UI Fixes"]
     },
