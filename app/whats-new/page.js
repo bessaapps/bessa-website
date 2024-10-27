@@ -33,6 +33,7 @@ const jsonLd = {
 
 export default function WhatsNew() {
   const changes = [
+    { button: "1.6.37", items: ["Achievements Fix"] },
     {
       button: "1.6.36",
       items: ["Achievements", "UI Updates", "LGBTQ Posts and Events Fixes"]
