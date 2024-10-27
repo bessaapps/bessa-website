@@ -28,7 +28,7 @@ export default function Top() {
 
   const links = [
     {
-      href: "https://gofund.me/4a63173e",
+      href: "https://cash.app/$getbessa",
       anchor: "Donate to LGBTQ communities"
     },
     {

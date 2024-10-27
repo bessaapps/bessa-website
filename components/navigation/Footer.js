@@ -32,7 +32,7 @@ export default function Footer() {
       margin: [0, 4]
     },
     {
-      href: "https://gofund.me/4a63173e",
+      href: "https://cash.app/$getbessa",
       anchor: "Donate to LGBTQ communities",
       icon: <FiHeart color={"white"} />
     },
