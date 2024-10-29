@@ -16,7 +16,10 @@ import {
   LinkBox,
   LinkOverlay,
   shouldForwardProp,
-  Tooltip
+  MenuItem,
+  MenuButton,
+  Menu,
+  MenuList
 } from "@chakra-ui/react";
 import Logo from "@/images/logo.png";
 import Mockup1 from "../images/mockups/1.png";
@@ -25,14 +28,19 @@ import Mockup3 from "../images/mockups/3.png";
 import Mockup4 from "../images/mockups/4.png";
 import Mockup5 from "../images/mockups/5.png";
 import Image from "next/image";
-import { SiAppstore, SiGoogleplay } from "react-icons/si";
+import {
+  // SiAmazon,
+  SiAppstore,
+  SiGoogleplay
+} from "react-icons/si";
 import { url } from "@/utils/constants";
-import { FiStar } from "react-icons/fi";
+import { FiDownload, FiMoreVertical, FiStar } from "react-icons/fi";
 import IcedCoffeeGlass from "@/images/products/stereotypically-gay-iced-coffee-glass.png";
 import TruckerCap from "@/images/products/4465-422-66df241e4ae04__360.webp";
 import BoxerBriefs from "@/images/products/4465-428-66df235d413f3__360.webp";
 import ToteBag from "@/images/products/14321751-84-66e0714863637__360.webp";
 import { motion, isValidMotionProp } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -50,6 +58,8 @@ const jsonLd = {
 };
 
 export default function Home() {
+  const router = useRouter();
+
   const appStores = [
     {
       name: "iOS",
@@ -62,6 +72,7 @@ export default function Home() {
       icon: <SiGoogleplay />
     }
   ];
+
   const mockups = [
     {
       heading: "Be Heard!",
@@ -89,6 +100,7 @@ export default function Home() {
       image: Mockup5
     }
   ];
+
   const memberships = [
     "Empower",
     "Royal",
@@ -106,6 +118,7 @@ export default function Home() {
     "Silver",
     "Ally"
   ];
+
   const products = [
     {
       image: IcedCoffeeGlass,
@@ -150,7 +163,6 @@ export default function Home() {
           align={"center"}
           justify={"center"}
           bg={"primary.500"}
-          color={"gray.100"}
         >
           <Container maxW={"container.lg"} py={16}>
             <Flex justify={"center"} direction={["column", "row"]}>
@@ -164,7 +176,7 @@ export default function Home() {
                   in={true}
                   transition={{ enter: { duration: 0.66, delay: 0.66 } }}
                 >
-                  <Text mb={[4, 8]}>
+                  <Text color={"gray.100"} mb={[4, 8]}>
                     Bessa is an inclusive LGBTQ community of all genders,
                     colors, shapes, and sizes who want to safely connect with
                     new and existing friends, family, and others.
@@ -174,10 +186,10 @@ export default function Home() {
                   in={true}
                   transition={{ enter: { duration: 0.66, delay: 1.32 } }}
                 >
-                  <Heading as={"h3"} mb={[2, 4]}>
+                  <Heading as={"h3"} color={"gray.100"} mb={[2, 4]}>
                     Join for FREE!
                   </Heading>
-                  <Flex gap={4} flexWrap={"wrap"} mb={4}>
+                  <Flex gap={4} flexWrap={"wrap"}>
                     {appStores.map((store) => (
                       <Link key={store.name} href={store.href}>
                         <Button
@@ -192,18 +204,33 @@ export default function Home() {
                         </Button>
                       </Link>
                     ))}
+                    <Menu>
+                      <MenuButton as={Box} cursor={"pointer"}>
+                        <Button
+                          colorScheme={"primary"}
+                          bg={"primary.800"}
+                          color={"white"}
+                          size={"lg"}
+                          w={["100%", "auto"]}
+                        >
+                          <FiMoreVertical />
+                        </Button>
+                      </MenuButton>
+                      <MenuList>
+                        {/*<MenuItem icon={<SiAmazon />}>Amazon</MenuItem>*/}
+                        <MenuItem
+                          icon={<FiDownload />}
+                          onClick={() =>
+                            router.push(
+                              "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"
+                            )
+                          }
+                        >
+                          Download
+                        </MenuItem>
+                      </MenuList>
+                    </Menu>
                   </Flex>
-                  <Text as={"span"}>Don&apos;t have Google Play? </Text>
-                  <Tooltip label={"Not Recommended"} placement={"top"}>
-                    <Link
-                      href={
-                        "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"
-                      }
-                      fontWeight={"bold"}
-                    >
-                      Download Here
-                    </Link>
-                  </Tooltip>
                 </Fade>
               </Flex>
               <Flex w={["100%", "50%"]}>
@@ -283,7 +310,7 @@ export default function Home() {
             Join your LGBTQ community and link with others online instantly with
             Bessa. It&apos;s totally free!
           </Text>
-          <Flex gap={4} flexWrap={"wrap"} mb={4}>
+          <Flex gap={4} flexWrap={"wrap"}>
             {appStores.map((store) => (
               <Link key={store.name} href={store.href}>
                 <Button
@@ -298,18 +325,33 @@ export default function Home() {
                 </Button>
               </Link>
             ))}
+            <Menu>
+              <MenuButton as={Box} cursor={"pointer"}>
+                <Button
+                  colorScheme={"primary"}
+                  bg={"primary.800"}
+                  color={"white"}
+                  size={"lg"}
+                  w={["100%", "auto"]}
+                >
+                  <FiMoreVertical />
+                </Button>
+              </MenuButton>
+              <MenuList>
+                {/*<MenuItem icon={<SiAmazon />}>Amazon</MenuItem>*/}
+                <MenuItem
+                  icon={<FiDownload />}
+                  onClick={() =>
+                    router.push(
+                      "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"
+                    )
+                  }
+                >
+                  Download
+                </MenuItem>
+              </MenuList>
+            </Menu>
           </Flex>
-          <Text as={"span"}>Don&apos;t have Google Play? </Text>
-          <Tooltip label={"Not Recommended"} placement={"top"}>
-            <Link
-              href={
-                "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"
-              }
-              fontWeight={"bold"}
-            >
-              Download Here
-            </Link>
-          </Tooltip>
         </Container>
         <Container maxW={"container.lg"} my={32}>
           <Heading as={"h2"} mb={4}>
