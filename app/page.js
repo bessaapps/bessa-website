@@ -36,9 +36,9 @@ import {
 import { url } from "@/utils/constants";
 import { FiDownload, FiMoreVertical, FiStar } from "react-icons/fi";
 import IcedCoffeeGlass from "@/images/products/stereotypically-gay-iced-coffee-glass.png";
-import TruckerCap from "@/images/products/4465-422-66df241e4ae04__360.webp";
-import BoxerBriefs from "@/images/products/4465-428-66df235d413f3__360.webp";
-import ToteBag from "@/images/products/14321751-84-66e0714863637__360.webp";
+import TruckerCap from "@/images/products/hat.png";
+import BoxerBriefs from "@/images/products/briefs.png";
+import ToteBag from "@/images/products/tote.png";
 import { motion, isValidMotionProp } from "framer-motion";
 import { useRouter } from "next/navigation";
 

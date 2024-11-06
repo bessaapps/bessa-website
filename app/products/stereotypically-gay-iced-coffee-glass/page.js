@@ -106,7 +106,7 @@ export default function StereotypicallyGayIcedCoffeeGlass() {
               <ListItem>Not dishwasher or microwave safe</ListItem>
             </List>
             <Text fontSize={"1.476rem"} fontWeight={"bold"} mb={2}>
-              From $12
+              $12
             </Text>
             <Link href={"https://bessa.printful.me/product/iced-coffee-glass"}>
               <Button colorScheme={"primary"}>Get yours Now!</Button>
