@@ -34,13 +34,14 @@ import {
   SiGoogleplay
 } from "react-icons/si";
 import { url } from "@/utils/constants";
-import { FiDownload, FiMoreVertical, FiStar } from "react-icons/fi";
+import { FiMoreVertical, FiStar } from "react-icons/fi";
 import IcedCoffeeGlass from "@/images/products/stereotypically-gay-iced-coffee-glass.png";
 import TruckerCap from "@/images/products/hat.png";
 import BoxerBriefs from "@/images/products/briefs.png";
 import ToteBag from "@/images/products/tote.png";
 import { motion, isValidMotionProp } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { FaAndroid } from "react-icons/fa";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -219,14 +220,14 @@ export default function Home() {
                       <MenuList>
                         {/*<MenuItem icon={<SiAmazon />}>Amazon</MenuItem>*/}
                         <MenuItem
-                          icon={<FiDownload />}
+                          icon={<FaAndroid />}
                           onClick={() =>
                             router.push(
                               "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"
                             )
                           }
                         >
-                          Download
+                          Direct Download (Not Recommended)
                         </MenuItem>
                       </MenuList>
                     </Menu>
@@ -340,14 +341,14 @@ export default function Home() {
               <MenuList>
                 {/*<MenuItem icon={<SiAmazon />}>Amazon</MenuItem>*/}
                 <MenuItem
-                  icon={<FiDownload />}
+                  icon={<FaAndroid />}
                   onClick={() =>
                     router.push(
                       "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"
                     )
                   }
                 >
-                  Download
+                  Direct Download (Not Recommended)
                 </MenuItem>
               </MenuList>
             </Menu>
