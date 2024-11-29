@@ -130,7 +130,8 @@ export default function Home() {
       .get("https://shop.getbessa.com/wp-json/wc/v3/products", {
         params: {
           consumer_key: "ck_b1289db949f857c6691168536a45f404398a41a0",
-          consumer_secret: "cs_a7a6439cc7e6150f3458be3d11937a6b11fd3a47"
+          consumer_secret: "cs_a7a6439cc7e6150f3458be3d11937a6b11fd3a47",
+          per_page: 12
         }
       })
       .then((response) => setProducts(response?.data));
@@ -349,7 +350,17 @@ export default function Home() {
             inclusive LGBTQ community operate without annoying ads. Memberships
             start at just $1 and you can cancel at anytime. ps: You&apos;ll
             receive a little extra flair on your profile and throughout the app
-            to show you care about your community. THANKS!
+            to show you care about your community. You can also donate directly
+            through Cash App{" "}
+            <Link
+              href={"https://cash.app/$getbessa"}
+              target={"_blank"}
+              color={"primary.500"}
+              fontWeight={"bold"}
+            >
+              here
+            </Link>
+            .THANKS!
           </Text>
           <SimpleGrid columns={[1, 3]} spacingX={4}>
             {memberships?.map((membership) => (
