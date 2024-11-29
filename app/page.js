@@ -19,7 +19,8 @@ import {
   MenuItem,
   MenuButton,
   Menu,
-  MenuList
+  MenuList,
+  AspectRatio
 } from "@chakra-ui/react";
 import Logo from "@/images/logo.png";
 import Mockup1 from "../images/mockups/1.png";
@@ -35,13 +36,11 @@ import {
 } from "react-icons/si";
 import { url } from "@/utils/constants";
 import { FiMoreVertical, FiStar } from "react-icons/fi";
-import IcedCoffeeGlass from "@/images/products/stereotypically-gay-iced-coffee-glass.png";
-import TruckerCap from "@/images/products/hat.png";
-import BoxerBriefs from "@/images/products/briefs.png";
-import ToteBag from "@/images/products/tote.png";
 import { motion, isValidMotionProp } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { FaAndroid } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -59,6 +58,7 @@ const jsonLd = {
 };
 
 export default function Home() {
+  const [products, setProducts] = useState([]);
   const router = useRouter();
 
   const appStores = [
@@ -120,37 +120,21 @@ export default function Home() {
     "Ally"
   ];
 
-  const products = [
-    {
-      image: IcedCoffeeGlass,
-      title: "Stereotypically Gay Iced Coffee Glass",
-      price: 12,
-      href: "/products/stereotypically-gay-iced-coffee-glass"
-    },
-    {
-      image: TruckerCap,
-      title: "Trucker Cap",
-      price: 23,
-      href: "https://bessa.printful.me/product/trucker-cap-66de3030ef230"
-    },
-    {
-      image: BoxerBriefs,
-      title: "Boxer Briefs",
-      price: 26,
-      href: "https://bessa.printful.me/product/boxer-briefs"
-    },
-    {
-      image: ToteBag,
-      title: "Tote Bag",
-      price: 18.5,
-      href: "https://bessa.printful.me/product/tote-bag"
-    }
-  ];
-
   const ChakraBox = chakra(motion.div, {
     shouldForwardProp: (prop) =>
       isValidMotionProp(prop) || shouldForwardProp(prop)
   });
+
+  useEffect(() => {
+    axios
+      .get("https://shop.getbessa.com/wp-json/wc/v3/products", {
+        params: {
+          consumer_key: "ck_b1289db949f857c6691168536a45f404398a41a0",
+          consumer_secret: "cs_a7a6439cc7e6150f3458be3d11937a6b11fd3a47"
+        }
+      })
+      .then((response) => setProducts(response?.data));
+  }, []);
 
   return (
     <section>
@@ -388,18 +372,27 @@ export default function Home() {
           </Text>
           <SimpleGrid columns={[1, 4]} spacingX={4}>
             {products?.map((product) => (
-              <GridItem key={product.title} mb={4}>
+              <GridItem key={product?.id} mb={4}>
                 <LinkBox>
-                  <Box borderRadius={8} overflow={"hidden"} mb={4}>
-                    <Image src={product.image} alt={product.title} />
-                  </Box>
+                  <AspectRatio
+                    ratio={1}
+                    borderRadius={8}
+                    overflow={"hidden"}
+                    mb={4}
+                  >
+                    <Image
+                      src={product?.images?.[0]?.src}
+                      alt={product?.name}
+                      fill
+                    />
+                  </AspectRatio>
                   <Text>
-                    <LinkOverlay href={product.href}>
-                      {product.title}
+                    <LinkOverlay href={product?.permalink}>
+                      {product?.name}
                     </LinkOverlay>
                   </Text>
                   <Text fontWeight={"bold"}>
-                    From ${product.price.toFixed(2)}
+                    From ${parseInt(product?.price)?.toFixed(2)}
                   </Text>
                 </LinkBox>
               </GridItem>
@@ -407,7 +400,7 @@ export default function Home() {
           </SimpleGrid>
           <Flex justify={"flex-end"}>
             <Button>
-              <Link href={"https://bessa.printful.me"}>Shop All</Link>
+              <Link href={"https://shop.getbessa.com"}>Shop All</Link>
             </Button>
           </Flex>
         </Container>

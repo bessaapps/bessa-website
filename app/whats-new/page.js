@@ -5,13 +5,7 @@ import {
   Heading,
   ListItem,
   Text,
-  UnorderedList,
-  Accordion,
-  AccordionPanel,
-  AccordionButton,
-  AccordionItem,
   Box,
-  AccordionIcon,
   List,
   ListIcon
 } from "@chakra-ui/react";
@@ -32,106 +26,106 @@ const jsonLd = {
 };
 
 export default function WhatsNew() {
-  const changes = [
-    { button: "1.6.37", items: ["Achievements Fix"] },
-    {
-      button: "1.6.36",
-      items: ["Achievements", "UI Updates", "LGBTQ Posts and Events Fixes"]
-    },
-    {
-      button: "1.6.35",
-      items: ["More Relevant Trending Feed"]
-    },
-    {
-      button: "1.6.34",
-      items: ["Challenges", "New Icon", "Member Filter Fixes", "UI Fixes"]
-    },
-    {
-      button: "1.6.33",
-      items: [
-        "More Accurate Member Locations",
-        "Photo Location Detection",
-        "Optional Post Locations"
-      ]
-    },
-    {
-      button: "1.6.31",
-      items: ["Re-added Member Location Sorting", "UI Fixes"]
-    },
-    {
-      button: "1.6.22",
-      items: [
-        "Better Push and Email Notifications Customization",
-        "Scroll Fixes"
-      ]
-    },
-    {
-      button: "1.6.21",
-      items: ["Profile Picture Loading Improvements"]
-    },
-    {
-      button: "1.6.20",
-      items: ["RSVP's for Specific Repeating LGBTQ Events"]
-    },
-    {
-      button: "1.6.19",
-      items: [
-        "Improved LGBTQ Place Listings",
-        "More Relevant LGBTQ content at the top of your Feed"
-      ]
-    },
-    {
-      button: "1.6.18",
-      items: ["LGTBQ Event RSVP's"]
-    },
-    {
-      button: "1.6.17",
-      items: ["Repeating LGBTQ Events"]
-    },
-    {
-      button: "1.6.16",
-      items: ["Profile Fix", "Add Post, Event, and Place Fix"]
-    },
-    {
-      button: "1.6.15",
-      items: [
-        "Post Pictures Directly from your Camera",
-        "On-Profile Member Reviews and Events",
-        "Ability to Flag Single Posts",
-        "Ability to Flag Places and Reviews",
-        "Birthday Fix"
-      ]
-    },
-    {
-      button: "1.6.14",
-      items: [
-        "Stronger Spam Prevention",
-        "Better Moderation",
-        "SF Symbols",
-        "Better Loading Indicators",
-        "Improved Likes Design"
-      ]
-    },
-    {
-      button: "1.6.13",
-      items: [
-        "Automatically Load More Members",
-        "Improved Data Security",
-        "Better Flagging Tools",
-        "Better Login and Registration Experiences"
-      ]
-    },
-    {
-      button: "1.6.12",
-      items: [
-        "New Flair Banner on your Profile",
-        "See Place Reviews in your Feed",
-        "Search Places in the Map",
-        "Birthdays!",
-        "Fixed Notifications Count"
-      ]
-    }
-  ];
+  // const changes = [
+  //   { button: "1.6.37", items: ["Achievements Fix"] },
+  //   {
+  //     button: "1.6.36",
+  //     items: ["Achievements", "UI Updates", "LGBTQ Posts and Events Fixes"]
+  //   },
+  //   {
+  //     button: "1.6.35",
+  //     items: ["More Relevant Trending Feed"]
+  //   },
+  //   {
+  //     button: "1.6.34",
+  //     items: ["Challenges", "New Icon", "Member Filter Fixes", "UI Fixes"]
+  //   },
+  //   {
+  //     button: "1.6.33",
+  //     items: [
+  //       "More Accurate Member Locations",
+  //       "Photo Location Detection",
+  //       "Optional Post Locations"
+  //     ]
+  //   },
+  //   {
+  //     button: "1.6.31",
+  //     items: ["Re-added Member Location Sorting", "UI Fixes"]
+  //   },
+  //   {
+  //     button: "1.6.22",
+  //     items: [
+  //       "Better Push and Email Notifications Customization",
+  //       "Scroll Fixes"
+  //     ]
+  //   },
+  //   {
+  //     button: "1.6.21",
+  //     items: ["Profile Picture Loading Improvements"]
+  //   },
+  //   {
+  //     button: "1.6.20",
+  //     items: ["RSVP's for Specific Repeating LGBTQ Events"]
+  //   },
+  //   {
+  //     button: "1.6.19",
+  //     items: [
+  //       "Improved LGBTQ Place Listings",
+  //       "More Relevant LGBTQ content at the top of your Feed"
+  //     ]
+  //   },
+  //   {
+  //     button: "1.6.18",
+  //     items: ["LGTBQ Event RSVP's"]
+  //   },
+  //   {
+  //     button: "1.6.17",
+  //     items: ["Repeating LGBTQ Events"]
+  //   },
+  //   {
+  //     button: "1.6.16",
+  //     items: ["Profile Fix", "Add Post, Event, and Place Fix"]
+  //   },
+  //   {
+  //     button: "1.6.15",
+  //     items: [
+  //       "Post Pictures Directly from your Camera",
+  //       "On-Profile Member Reviews and Events",
+  //       "Ability to Flag Single Posts",
+  //       "Ability to Flag Places and Reviews",
+  //       "Birthday Fix"
+  //     ]
+  //   },
+  //   {
+  //     button: "1.6.14",
+  //     items: [
+  //       "Stronger Spam Prevention",
+  //       "Better Moderation",
+  //       "SF Symbols",
+  //       "Better Loading Indicators",
+  //       "Improved Likes Design"
+  //     ]
+  //   },
+  //   {
+  //     button: "1.6.13",
+  //     items: [
+  //       "Automatically Load More Members",
+  //       "Improved Data Security",
+  //       "Better Flagging Tools",
+  //       "Better Login and Registration Experiences"
+  //     ]
+  //   },
+  //   {
+  //     button: "1.6.12",
+  //     items: [
+  //       "New Flair Banner on your Profile",
+  //       "See Place Reviews in your Feed",
+  //       "Search Places in the Map",
+  //       "Birthdays!",
+  //       "Fixed Notifications Count"
+  //     ]
+  //   }
+  // ];
 
   const comparisons = [
     {
@@ -232,28 +226,6 @@ export default function WhatsNew() {
           events near you and much more! Bessa 6 is packed full of fun ways to
           be a part of and interact with our LGBTQ community.
         </Text>
-        <Heading as={"h2"} mb={4}>
-          Change Log
-        </Heading>
-        <Accordion mb={8}>
-          {changes?.map((change, index) => (
-            <AccordionItem key={index}>
-              <AccordionButton>
-                <Box flex={1} textAlign={"left"}>
-                  {change?.button}
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-              <AccordionPanel pb={4}>
-                <UnorderedList spacing={2} mb={4}>
-                  {change?.items?.map((item, index) => (
-                    <ListItem key={index}>{item}</ListItem>
-                  ))}
-                </UnorderedList>
-              </AccordionPanel>
-            </AccordionItem>
-          ))}
-        </Accordion>
         <Heading as={"h2"} mb={4}>
           Bessa Costs Nothing!
         </Heading>

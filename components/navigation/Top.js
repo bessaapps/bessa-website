@@ -32,7 +32,7 @@ export default function Top() {
       anchor: "Donate to LGBTQ communities"
     },
     {
-      href: "https://bessa.printful.me",
+      href: "https://shop.getbessa.com",
       anchor: "Shop LGBTQ Merch"
     },
     {

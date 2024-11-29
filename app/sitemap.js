@@ -51,12 +51,6 @@ export default function sitemap() {
       };
     }),
     {
-      url: "https://getbessa.com/products/stereotypically-gay-iced-coffee-glass",
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.7
-    },
-    {
       url: "https://getbessa.com/blog-content-writer",
       lastModified: new Date(),
       changeFrequency: "daily",
@@ -70,12 +64,6 @@ export default function sitemap() {
     },
     {
       url: "https://getbessa.com/whats-new",
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.7
-    },
-    {
-      url: "https://getbessa.com/products/stereotypically-gay-iced-coffee-glass",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.7

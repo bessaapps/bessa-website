@@ -37,7 +37,7 @@ export default function Footer() {
       icon: <FiHeart color={"white"} />
     },
     {
-      href: "https://bessa.printful.me",
+      href: "https://shop.getbessa.com",
       anchor: "Shop LGBTQ Merch",
       icon: <FiShoppingBag color={"white"} />,
       margin: [0, 4]
