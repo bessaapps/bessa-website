@@ -53,7 +53,7 @@ export default function Footer() {
       icon: <FiSmartphone color={"white"} />
     },
     {
-      href: "/blog",
+      href: "https://blog.getbessa.com",
       anchor: "Blog",
       icon: <FiBookOpen color={"white"} />
     },

@@ -44,7 +44,7 @@ export default function Top() {
       anchor: "What's New in Version 6!"
     },
     {
-      href: "/blog",
+      href: "https://blog.getbessa.com",
       anchor: "Blog"
     },
     {
