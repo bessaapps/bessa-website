@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   ButtonGroup,
+  Container,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -55,58 +56,60 @@ export default function Top() {
 
   return (
     <>
-      <Flex align={"center"} justify={"space-between"}>
-        <Flex align={"center"}>
-          <Heading color={"white"} mr={4}>
-            <Link
-              as={NextLink}
-              href={"/"}
-              title={"Bessa | An LGBTQ Social Media App"}
-            >
-              Bessa
-            </Link>
-          </Heading>
+      <Container maxW={"container.lg"}>
+        <Flex align={"center"} justify={"space-between"}>
+          <Flex align={"center"}>
+            <Heading mr={4}>
+              <Link
+                as={NextLink}
+                href={"/"}
+                title={"Bessa | An LGBTQ Social Media App"}
+              >
+                Bessa
+              </Link>
+            </Heading>
+          </Flex>
+          <Flex align={"center"} gap={4}>
+            <ButtonGroup isAttached variant={"outline"}>
+              <Button size={"sm"} onClick={() => setColorMode("light")}>
+                <FiSun />
+              </Button>
+              <Button size={"sm"} onClick={() => setColorMode("dark")}>
+                <FiMoon />
+              </Button>
+            </ButtonGroup>
+            <ButtonGroup isAttached variant={"outline"}>
+              <Button
+                size={"sm"}
+                onClick={() =>
+                  router.push(
+                    "https://apps.apple.com/us/app/bessa/id6471383138?platform=iphone"
+                  )
+                }
+              >
+                <SiAppstore />
+              </Button>
+              <Button
+                size={"sm"}
+                onClick={() =>
+                  router.push(
+                    "https://play.google.com/store/apps/details?id=com.bessa.bessa"
+                  )
+                }
+              >
+                <SiGoogleplay />
+              </Button>
+            </ButtonGroup>
+            <Hide above={"md"}>
+              <FiMenu
+                color={"white"}
+                size={27}
+                onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+              />
+            </Hide>
+          </Flex>
         </Flex>
-        <Flex align={"center"} gap={4}>
-          <ButtonGroup isAttached variant={"outline"}>
-            <Button size={"sm"} onClick={() => setColorMode("light")}>
-              <FiSun color={"white"} />
-            </Button>
-            <Button size={"sm"} onClick={() => setColorMode("dark")}>
-              <FiMoon color={"white"} />
-            </Button>
-          </ButtonGroup>
-          <ButtonGroup isAttached variant={"outline"}>
-            <Button
-              size={"sm"}
-              onClick={() =>
-                router.push(
-                  "https://apps.apple.com/us/app/bessa/id6471383138?platform=iphone"
-                )
-              }
-            >
-              <SiAppstore color={"white"} />
-            </Button>
-            <Button
-              size={"sm"}
-              onClick={() =>
-                router.push(
-                  "https://play.google.com/store/apps/details?id=com.bessa.bessa"
-                )
-              }
-            >
-              <SiGoogleplay color={"white"} />
-            </Button>
-          </ButtonGroup>
-          <Hide above={"md"}>
-            <FiMenu
-              color={"white"}
-              size={27}
-              onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-            />
-          </Hide>
-        </Flex>
-      </Flex>
+      </Container>
       <Drawer isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
         <DrawerOverlay />
         <DrawerContent>

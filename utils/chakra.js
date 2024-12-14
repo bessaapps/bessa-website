@@ -115,7 +115,7 @@ const theme = extendTheme({
   styles: {
     global: (props) => ({
       "html, body": {
-        bg: mode("white", "gray.800")(props),
+        bg: mode("gray.50", "gray.800")(props),
         color: mode("gray.900", "gray.100")(props),
         overflowX: "hidden",
         lineHeight: 2
@@ -132,6 +132,7 @@ const theme = extendTheme({
     body: roboto.style.fontFamily
   },
   radii: {
+    sm: "4px",
     md: "8px"
   },
   components: {

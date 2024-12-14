@@ -94,12 +94,12 @@ export default function Home() {
       heading: "Find a Community",
       text: "Events can be a great way to find and involve yourself in LGBTQ communities. Find anything from groups, volunteer opportunities, or just fun things to do and meet new people at.",
       image: Mockup4
-    },
-    {
-      heading: "Build a Following",
-      text: "Share your LGBTQ thoughts, ideas, and other good stuff through updates, images, videos, and even audio to an LGBTQ audience and build a following of LGBTQ fans.",
-      image: Mockup5
     }
+    // {
+    //   heading: "Build a Following",
+    //   text: "Share your LGBTQ thoughts, ideas, and other good stuff through updates, images, videos, and even audio to an LGBTQ audience and build a following of LGBTQ fans.",
+    //   image: Mockup5
+    // }
   ];
 
   const memberships = [
@@ -144,107 +144,89 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Box>
-        <Flex
-          minH={"calc(100vh - 59px)"}
-          align={"center"}
-          justify={"center"}
-          bg={"primary.500"}
-        >
-          <Container maxW={"container.lg"} py={16}>
-            <Flex justify={"center"} direction={["column", "row"]}>
-              <Flex direction={"column"} w={["100%", "50%"]} justify={"center"}>
-                <Fade in={true} transition={{ enter: { duration: 0.66 } }}>
-                  <Heading as={"h1"} color={"white"} mb={[4, 8]}>
-                    An LGBTQ Social Media App
-                  </Heading>
-                </Fade>
-                <Fade
-                  in={true}
-                  transition={{ enter: { duration: 0.66, delay: 0.66 } }}
+        <Container maxW={"container.md"} py={16}>
+          <Fade in={true} transition={{ enter: { duration: 0.66 } }}>
+            <Heading as={"h1"} textAlign={"center"} mb={[4, 8]}>
+              An LGBTQ Social Media App
+            </Heading>
+          </Fade>
+          <Fade
+            in={true}
+            transition={{ enter: { duration: 0.66, delay: 0.66 } }}
+          >
+            <Text textAlign={"center"} mb={[4, 8]}>
+              Bessa is an inclusive LGBTQ community of all genders, colors,
+              shapes, and sizes who want to safely connect with new and existing
+              friends, family, and others.
+            </Text>
+          </Fade>
+          <Fade
+            in={true}
+            transition={{ enter: { duration: 0.66, delay: 1.32 } }}
+          >
+            <Heading as={"h3"} textAlign={"center"} mb={[2, 4]}>
+              Join for FREE!
+            </Heading>
+          </Fade>
+          <Flex gap={4} justify={"center"} flexWrap={"wrap"}>
+            {appStores.map((store) => (
+              <Link key={store.name} href={store.href}>
+                <Button
+                  colorScheme={"primary"}
+                  size={"lg"}
+                  w={["100%", "auto"]}
                 >
-                  <Text color={"gray.100"} mb={[4, 8]}>
-                    Bessa is an inclusive LGBTQ community of all genders,
-                    colors, shapes, and sizes who want to safely connect with
-                    new and existing friends, family, and others.
-                  </Text>
-                </Fade>
-                <Fade
-                  in={true}
-                  transition={{ enter: { duration: 0.66, delay: 1.32 } }}
+                  <Flex mr={2}>{store.icon}</Flex>
+                  {store.name}
+                </Button>
+              </Link>
+            ))}
+            <Menu>
+              <MenuButton as={Box} cursor={"pointer"}>
+                <Button
+                  colorScheme={"primary"}
+                  size={"lg"}
+                  w={["100%", "auto"]}
                 >
-                  <Heading as={"h3"} color={"gray.100"} mb={[2, 4]}>
-                    Join for FREE!
-                  </Heading>
-                  <Flex gap={4} flexWrap={"wrap"}>
-                    {appStores.map((store) => (
-                      <Link key={store.name} href={store.href}>
-                        <Button
-                          colorScheme={"primary"}
-                          bg={"primary.800"}
-                          color={"white"}
-                          size={"lg"}
-                          w={["100%", "auto"]}
-                        >
-                          <Flex mr={2}>{store.icon}</Flex>
-                          {store.name}
-                        </Button>
-                      </Link>
-                    ))}
-                    <Menu>
-                      <MenuButton as={Box} cursor={"pointer"}>
-                        <Button
-                          colorScheme={"primary"}
-                          bg={"primary.800"}
-                          color={"white"}
-                          size={"lg"}
-                          w={["100%", "auto"]}
-                        >
-                          <FiMoreVertical />
-                        </Button>
-                      </MenuButton>
-                      <MenuList>
-                        {/*<MenuItem icon={<SiAmazon />}>Amazon</MenuItem>*/}
-                        <MenuItem
-                          icon={<FaAndroid />}
-                          onClick={() =>
-                            router.push(
-                              "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"
-                            )
-                          }
-                        >
-                          Direct Download (Not Recommended)
-                        </MenuItem>
-                      </MenuList>
-                    </Menu>
-                  </Flex>
-                </Fade>
-              </Flex>
-              <Flex w={["100%", "50%"]}>
-                <Fade
-                  in={true}
-                  transition={{ enter: { duration: 0.66, delay: 1.98 } }}
+                  <FiMoreVertical />
+                </Button>
+              </MenuButton>
+              <MenuList>
+                {/*<MenuItem icon={<SiAmazon />}>Amazon</MenuItem>*/}
+                <MenuItem
+                  icon={<FaAndroid />}
+                  onClick={() =>
+                    router.push(
+                      "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"
+                    )
+                  }
                 >
-                  <ChakraBox
-                    animate={{
-                      rotate: [5, -5, 5]
-                    }}
-                    transition={{
-                      duration: 3,
-                      ease: "easeInOut",
-                      repeat: Infinity,
-                      repeatType: "loop"
-                    }}
-                  >
-                    <Image
-                      src={Logo}
-                      alt={"The LGBTQ Social Media App Unicorn"}
-                    />
-                  </ChakraBox>
-                </Fade>
-              </Flex>
-            </Flex>
-          </Container>
-        </Flex>
+                  Direct Download (Not Recommended)
+                </MenuItem>
+              </MenuList>
+            </Menu>
+          </Flex>
+          {/*<Flex justify={"center"} direction={["column", "row"]}>*/}
+          {/*  <Fade*/}
+          {/*    in={true}*/}
+          {/*    transition={{ enter: { duration: 0.66, delay: 1.98 } }}*/}
+          {/*  >*/}
+          {/*    <ChakraBox*/}
+          {/*      animate={{*/}
+          {/*        rotate: [5, -5, 5]*/}
+          {/*      }}*/}
+          {/*      transition={{*/}
+          {/*        duration: 3,*/}
+          {/*        ease: "easeInOut",*/}
+          {/*        repeat: Infinity,*/}
+          {/*        repeatType: "loop"*/}
+          {/*      }}*/}
+          {/*    >*/}
+          {/*      <Image src={Logo} alt={"The LGBTQ Social Media App Unicorn"} />*/}
+          {/*    </ChakraBox>*/}
+          {/*  </Fade>*/}
+          {/*</Flex>*/}
+        </Container>
         <Container maxW={"container.lg"} my={32}>
           <Heading lineHeight={"tall"}>
             <Highlight
@@ -259,7 +241,7 @@ export default function Home() {
                 py: "1",
                 bg: "primary.800",
                 color: "white",
-                rounded: "md"
+                rounded: "sm"
               }}
             >
               Through posting social media like updates, media, events, and
@@ -272,8 +254,8 @@ export default function Home() {
             </Highlight>
           </Heading>
         </Container>
-        <Container maxW={"container.xl"} my={32}>
-          <SimpleGrid columns={[1, 5]} gap={[4, 8]}>
+        <Container maxW={"container.lg"} my={32}>
+          <SimpleGrid columns={[1, 4]} gap={[4, 8]}>
             {mockups?.map((mockup, index) => (
               <GridItem key={index}>
                 <Box mb={[4, 8]}>

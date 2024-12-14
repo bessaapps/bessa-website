@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
             gridTemplateRows={"auto 1fr auto"}
             h={"100vh"}
           >
-            <GridItem area={"header"} bg={"primary.500"} px={4} py={4}>
+            <GridItem area={"header"} px={4} py={4}>
               <header>
                 <nav>
                   <Top />
