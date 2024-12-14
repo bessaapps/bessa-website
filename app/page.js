@@ -129,8 +129,8 @@ export default function Home() {
     axios
       .get("https://shop.getbessa.com/wp-json/wc/v3/products", {
         params: {
-          consumer_key: "ck_b1289db949f857c6691168536a45f404398a41a0",
-          consumer_secret: "cs_a7a6439cc7e6150f3458be3d11937a6b11fd3a47",
+          consumer_key: process.env.NEXT_PUBLIC_WOOCOMMERCE_CONSUMER_KEY,
+          consumer_secret: process.env.NEXT_PUBLIC_WOOCOMMERCE_CONSUMER_SECRET,
           per_page: 12
         }
       })
