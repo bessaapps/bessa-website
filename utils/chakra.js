@@ -10,7 +10,7 @@ const roboto = Roboto({
 });
 
 const theme = extendTheme({
-  config: { initialColorMode: "system", useSystemColorMode: true },
+  config: { initialColorMode: "light", useSystemColorMode: false },
   colors: {
     black: "#000000",
     gray: {
