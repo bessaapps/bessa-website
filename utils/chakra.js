@@ -131,6 +131,9 @@ const theme = extendTheme({
     heading: roboto.style.fontFamily,
     body: roboto.style.fontFamily
   },
+  container: {
+    sm: "620px"
+  },
   radii: {
     sm: "4px",
     md: "8px"
@@ -147,9 +150,7 @@ const theme = extendTheme({
       baseStyle: {
         container: {
           boxShadow: "none",
-          borderWidth: 1,
-          borderColor: "gray.100",
-          overflow: "hidden"
+          borderRadius: 16
         }
       }
     },

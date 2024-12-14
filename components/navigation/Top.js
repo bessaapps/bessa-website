@@ -56,7 +56,7 @@ export default function Top() {
 
   return (
     <>
-      <Container maxW={"container.lg"}>
+      <Container maxW={"container.xl"}>
         <Flex align={"center"} justify={"space-between"}>
           <Flex align={"center"}>
             <Heading mr={4}>
@@ -102,7 +102,6 @@ export default function Top() {
             </ButtonGroup>
             <Hide above={"md"}>
               <FiMenu
-                color={"white"}
                 size={27}
                 onClick={() => setIsDrawerOpen(!isDrawerOpen)}
               />

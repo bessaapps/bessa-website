@@ -20,7 +20,8 @@ import {
   MenuButton,
   Menu,
   MenuList,
-  AspectRatio
+  AspectRatio,
+  Card
 } from "@chakra-ui/react";
 import Logo from "@/images/logo.png";
 import Mockup1 from "../images/mockups/1.png";
@@ -144,7 +145,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Box>
-        <Container maxW={"container.md"} py={16}>
+        <Container maxW={"container.sm"} py={16}>
           <Fade in={true} transition={{ enter: { duration: 0.66 } }}>
             <Heading as={"h1"} textAlign={"center"} mb={[4, 8]}>
               An LGBTQ Social Media App
@@ -227,7 +228,7 @@ export default function Home() {
           {/*  </Fade>*/}
           {/*</Flex>*/}
         </Container>
-        <Container maxW={"container.lg"} my={32}>
+        <Container maxW={"container.xl"} my={32}>
           <Heading lineHeight={"tall"}>
             <Highlight
               query={[
@@ -237,11 +238,7 @@ export default function Home() {
                 "safe community"
               ]}
               styles={{
-                px: "2",
-                py: "1",
-                bg: "primary.800",
-                color: "white",
-                rounded: "sm"
+                color: "primary.500"
               }}
             >
               Through posting social media like updates, media, events, and
@@ -254,7 +251,7 @@ export default function Home() {
             </Highlight>
           </Heading>
         </Container>
-        <Container maxW={"container.lg"} my={32}>
+        <Container maxW={"container.xl"} my={32}>
           <SimpleGrid columns={[1, 4]} gap={[4, 8]}>
             {mockups?.map((mockup, index) => (
               <GridItem key={index}>
@@ -270,58 +267,62 @@ export default function Home() {
             ))}
           </SimpleGrid>
         </Container>
-        <Container maxW={"container.lg"} my={32}>
-          <Heading as={"h2"} mb={4}>
-            Be with Friends!
-          </Heading>
-          <Text mb={4}>
-            Join your LGBTQ community and link with others online instantly with
-            Bessa. It&apos;s totally free!
-          </Text>
-          <Flex gap={4} flexWrap={"wrap"}>
-            {appStores.map((store) => (
-              <Link key={store.name} href={store.href}>
-                <Button
-                  colorScheme={"primary"}
-                  bg={"primary.800"}
-                  color={"white"}
-                  size={"lg"}
-                  w={["100%", "auto"]}
-                >
-                  <Flex mr={2}>{store.icon}</Flex>
-                  {store.name}
-                </Button>
-              </Link>
-            ))}
-            <Menu>
-              <MenuButton as={Box} cursor={"pointer"}>
-                <Button
-                  colorScheme={"primary"}
-                  bg={"primary.800"}
-                  color={"white"}
-                  size={"lg"}
-                  w={["100%", "auto"]}
-                >
-                  <FiMoreVertical />
-                </Button>
-              </MenuButton>
-              <MenuList>
-                {/*<MenuItem icon={<SiAmazon />}>Amazon</MenuItem>*/}
-                <MenuItem
-                  icon={<FaAndroid />}
-                  onClick={() =>
-                    router.push(
-                      "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"
-                    )
-                  }
-                >
-                  Direct Download (Not Recommended)
-                </MenuItem>
-              </MenuList>
-            </Menu>
-          </Flex>
+        <Container maxW={"container.xl"} my={32}>
+          <Card>
+            <Container maxW={"container.sm"} my={16}>
+              <Heading textAlign={"center"} as={"h2"} mb={4}>
+                Be with Friends!
+              </Heading>
+              <Text textAlign={"center"} mb={4}>
+                Join your LGBTQ community and link with others online instantly
+                with Bessa. It&apos;s totally free!
+              </Text>
+              <Flex gap={4} justify={"center"} flexWrap={"wrap"}>
+                {appStores.map((store) => (
+                  <Link key={store.name} href={store.href}>
+                    <Button
+                      colorScheme={"primary"}
+                      bg={"primary.800"}
+                      color={"white"}
+                      size={"lg"}
+                      w={["100%", "auto"]}
+                    >
+                      <Flex mr={2}>{store.icon}</Flex>
+                      {store.name}
+                    </Button>
+                  </Link>
+                ))}
+                <Menu>
+                  <MenuButton as={Box} cursor={"pointer"}>
+                    <Button
+                      colorScheme={"primary"}
+                      bg={"primary.800"}
+                      color={"white"}
+                      size={"lg"}
+                      w={["100%", "auto"]}
+                    >
+                      <FiMoreVertical />
+                    </Button>
+                  </MenuButton>
+                  <MenuList>
+                    {/*<MenuItem icon={<SiAmazon />}>Amazon</MenuItem>*/}
+                    <MenuItem
+                      icon={<FaAndroid />}
+                      onClick={() =>
+                        router.push(
+                          "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"
+                        )
+                      }
+                    >
+                      Direct Download (Not Recommended)
+                    </MenuItem>
+                  </MenuList>
+                </Menu>
+              </Flex>
+            </Container>
+          </Card>
         </Container>
-        <Container maxW={"container.lg"} my={32}>
+        <Container maxW={"container.xl"} my={32}>
           <Heading as={"h2"} mb={4}>
             Become a Supporting Member
           </Heading>
@@ -355,7 +356,7 @@ export default function Home() {
             ))}
           </SimpleGrid>
         </Container>
-        <Container maxW={"container.lg"} my={32}>
+        <Container maxW={"container.xl"} my={32}>
           <Heading as={"h2"} mb={4}>
             Shop LGBTQ Merch
           </Heading>
@@ -397,44 +398,48 @@ export default function Home() {
             </Button>
           </Flex>
         </Container>
-        <Container maxW={"container.lg"} my={32}>
-          <Heading as={"h2"} mb={4}>
-            Like Bessa?
-          </Heading>
-          <Text mb={4}>
-            Help our LGBTQ community grow by lettings others know how much you
-            like Bessa with a review.
-          </Text>
-          <Flex gap={4} flexWrap={"wrap"}>
-            <Link
-              href={
-                "https://apps.apple.com/app/apple-store/id6471383138?action=write-review"
-              }
-            >
-              <Button
-                colorScheme={"primary"}
-                bg={"primary.800"}
-                color={"white"}
-                size={"lg"}
-              >
-                Review on App Store
-              </Button>
-            </Link>
-            <Link
-              href={
-                "https://play.google.com/store/apps/details?id=com.bessa.bessa"
-              }
-            >
-              <Button
-                colorScheme={"primary"}
-                bg={"primary.800"}
-                color={"white"}
-                size={"lg"}
-              >
-                Review on Google Play
-              </Button>
-            </Link>
-          </Flex>
+        <Container maxW={"container.xl"} my={32}>
+          <Card>
+            <Container maxW={"container.sm"} my={16}>
+              <Heading as={"h2"} textAlign={"center"} mb={4}>
+                Like Bessa?
+              </Heading>
+              <Text textAlign={"center"} mb={4}>
+                Help our LGBTQ community grow by lettings others know how much
+                you like Bessa with a review.
+              </Text>
+              <Flex gap={4} justify={"center"} flexWrap={"wrap"}>
+                <Link
+                  href={
+                    "https://apps.apple.com/app/apple-store/id6471383138?action=write-review"
+                  }
+                >
+                  <Button
+                    colorScheme={"primary"}
+                    bg={"primary.800"}
+                    color={"white"}
+                    size={"lg"}
+                  >
+                    Review on App Store
+                  </Button>
+                </Link>
+                <Link
+                  href={
+                    "https://play.google.com/store/apps/details?id=com.bessa.bessa"
+                  }
+                >
+                  <Button
+                    colorScheme={"primary"}
+                    bg={"primary.800"}
+                    color={"white"}
+                    size={"lg"}
+                  >
+                    Review on Google Play
+                  </Button>
+                </Link>
+              </Flex>
+            </Container>
+          </Card>
         </Container>
       </Box>
     </section>

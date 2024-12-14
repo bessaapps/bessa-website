@@ -74,7 +74,7 @@ export default function Footer() {
 
   return (
     <Box bg={"gray.900"}>
-      <Container maxW={"container.lg"} py={4}>
+      <Container maxW={"container.xl"} py={4}>
         <SimpleGrid columns={[1, 2]} spacing={4} mb={4}>
           <GridItem>
             {links.map((link) => (
