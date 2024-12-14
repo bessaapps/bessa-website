@@ -1,9 +1,8 @@
 "use client";
 
 import {
+  AspectRatio,
   Box,
-  Button,
-  ButtonGroup,
   Container,
   Drawer,
   DrawerBody,
@@ -11,21 +10,19 @@ import {
   DrawerContent,
   DrawerOverlay,
   Flex,
-  Heading,
   Hide,
-  Link,
-  useColorMode
+  Text
 } from "@chakra-ui/react";
-import NextLink from "next/link";
-import { FiMenu, FiMoon, FiSun } from "react-icons/fi";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { SiAppstore, SiGoogleplay } from "react-icons/si";
+import Image from "next/image";
+import Link from "next/link";
+import Logo from "@/images/logo.png";
+import { FiMenu } from "react-icons/fi";
 
 export default function Top() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const router = useRouter();
-  const { setColorMode } = useColorMode();
 
   const links = [
     {
@@ -56,57 +53,23 @@ export default function Top() {
 
   return (
     <>
-      <Container maxW={"container.xl"}>
+      <Container maxW={"container.xl"} py={4}>
         <Flex align={"center"} justify={"space-between"}>
-          <Flex align={"center"}>
-            <Heading mr={4}>
-              <Link
-                as={NextLink}
-                href={"/"}
-                title={"Bessa | An LGBTQ Social Media App"}
-              >
+          <Flex align={"center"} gap={4}>
+            <Link href={"/"} title={"Bessa | An LGBTQ Social Media App"}>
+              <AspectRatio ratio={1} w={16}>
+                <Image src={Logo} alt={"Bessa | An LGBTQ Social Media App"} />
+              </AspectRatio>
+            </Link>
+            <Text fontWeight={"bold"} mr={4}>
+              <Link href={"/"} title={"Bessa | An LGBTQ Social Media App"}>
                 Bessa
               </Link>
-            </Heading>
+            </Text>
           </Flex>
-          <Flex align={"center"} gap={4}>
-            <ButtonGroup isAttached variant={"outline"}>
-              <Button size={"sm"} onClick={() => setColorMode("light")}>
-                <FiSun />
-              </Button>
-              <Button size={"sm"} onClick={() => setColorMode("dark")}>
-                <FiMoon />
-              </Button>
-            </ButtonGroup>
-            <ButtonGroup isAttached variant={"outline"}>
-              <Button
-                size={"sm"}
-                onClick={() =>
-                  router.push(
-                    "https://apps.apple.com/us/app/bessa/id6471383138?platform=iphone"
-                  )
-                }
-              >
-                <SiAppstore />
-              </Button>
-              <Button
-                size={"sm"}
-                onClick={() =>
-                  router.push(
-                    "https://play.google.com/store/apps/details?id=com.bessa.bessa"
-                  )
-                }
-              >
-                <SiGoogleplay />
-              </Button>
-            </ButtonGroup>
-            <Hide above={"md"}>
-              <FiMenu
-                size={27}
-                onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-              />
-            </Hide>
-          </Flex>
+          <Hide above={"md"}>
+            <FiMenu size={27} onClick={() => setIsDrawerOpen(!isDrawerOpen)} />
+          </Hide>
         </Flex>
       </Container>
       <Drawer isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
@@ -129,7 +92,7 @@ export default function Top() {
                     router.push(link.href);
                   }}
                 >
-                  <Link color={"white"}>{link.anchor}</Link>
+                  <Text color={"white"}>{link.anchor}</Text>
                 </Flex>
               ))}
             </Box>

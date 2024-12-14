@@ -23,44 +23,44 @@ export default function Footer() {
     {
       anchor: "Bessa for iOS",
       href: "https://apps.apple.com/us/app/bessa/id6471383138?platform=iphone",
-      icon: <SiAppstore color={"white"} />
+      icon: <SiAppstore />
     },
     {
       anchor: "Bessa for Android",
       href: "https://play.google.com/store/apps/details?id=com.bessa.bessa",
-      icon: <SiGoogleplay color={"white"} />,
+      icon: <SiGoogleplay />,
       margin: [0, 4]
     },
     {
       href: "https://cash.app/$getbessa",
       anchor: "Donate to LGBTQ communities",
-      icon: <FiHeart color={"white"} />
+      icon: <FiHeart />
     },
     {
       href: "https://shop.getbessa.com",
       anchor: "Shop LGBTQ Merch",
-      icon: <FiShoppingBag color={"white"} />,
+      icon: <FiShoppingBag />,
       margin: [0, 4]
     },
     {
       href: "/support",
       anchor: "Help & Support",
-      icon: <FiHelpCircle color={"white"} />
+      icon: <FiHelpCircle />
     },
     {
       href: "/whats-new",
       anchor: "What's New in Version 6!",
-      icon: <FiSmartphone color={"white"} />
+      icon: <FiSmartphone />
     },
     {
       href: "https://blog.getbessa.com",
       anchor: "Blog",
-      icon: <FiBookOpen color={"white"} />
+      icon: <FiBookOpen />
     },
     {
       href: "/blog-content-writer",
       anchor: "Jobs",
-      icon: <FiBriefcase color={"white"} />
+      icon: <FiBriefcase />
     }
   ];
 
@@ -73,7 +73,7 @@ export default function Footer() {
   ];
 
   return (
-    <Box bg={"gray.900"}>
+    <Box>
       <Container maxW={"container.xl"} py={4}>
         <SimpleGrid columns={[1, 2]} spacing={4} mb={4}>
           <GridItem>
@@ -83,7 +83,6 @@ export default function Footer() {
                 <Link
                   href={link.href}
                   title={`${link.anchor} | Bessa | An LGBTQ Social Media App`}
-                  color={"white"}
                   mr={4}
                 >
                   {link.anchor}
@@ -97,7 +96,6 @@ export default function Footer() {
                 <Link
                   href={`/${link.href}`}
                   title={`${link.anchor} | Bessa | An LGBTQ Social Media App`}
-                  color={"white"}
                   mr={4}
                 >
                   {link.anchor}
@@ -106,7 +104,7 @@ export default function Footer() {
             ))}
           </GridItem>
         </SimpleGrid>
-        <Text color={"gray.500"}>
+        <Text color={"gray.600"}>
           Copyright &copy; 2024{" "}
           <Link
             as={NextLink}

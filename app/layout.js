@@ -1,4 +1,3 @@
-import { Grid, GridItem } from "@chakra-ui/react";
 import Top from "@/components/navigation/Top";
 import Providers from "@/app/providers";
 import Footer from "@/components/navigation/Footer";
@@ -31,33 +30,17 @@ export default function RootLayout({ children }) {
     <html lang={"en"}>
       <body>
         <Providers>
-          <Grid
-            templateAreas={`"header" "main"`}
-            gridTemplateRows={"auto 1fr auto"}
-            h={"100vh"}
-          >
-            <GridItem area={"header"} px={4} py={4}>
-              <header>
-                <nav>
-                  <Top />
-                </nav>
-              </header>
-            </GridItem>
-            <GridItem area={"main"} overflowY={"auto"}>
-              <Grid gridTemplateRows={"1fr auto"} h={"100%"}>
-                <GridItem>
-                  <main>{children}</main>
-                </GridItem>
-                <GridItem>
-                  <footer>
-                    <nav>
-                      <Footer />
-                    </nav>
-                  </footer>
-                </GridItem>
-              </Grid>
-            </GridItem>
-          </Grid>
+          <header>
+            <nav>
+              <Top />
+            </nav>
+          </header>
+          <main>{children}</main>
+          <footer>
+            <nav>
+              <Footer />
+            </nav>
+          </footer>
         </Providers>
       </body>
       {process.env.NODE_ENV !== "development" && (

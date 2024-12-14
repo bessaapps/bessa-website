@@ -208,14 +208,14 @@ export default function WhatsNew() {
         type={"application/ld+json"}
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Container maxW={"container.lg"} py={16}>
+      <Container maxW={"container.sm"} py={16}>
         <Image
           src={Article}
           alt={"What's New in Version 6!"}
           style={{ borderRadius: 8 }}
         />
       </Container>
-      <Container mb={8}>
+      <Container maxW={"container.sm"} mb={8}>
         <Heading as={"h1"} mb={4}>
           What&apos;s New in Version 6
         </Heading>

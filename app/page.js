@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  chakra,
   Box,
   Button,
   Container,
@@ -15,31 +14,19 @@ import {
   Text,
   LinkBox,
   LinkOverlay,
-  shouldForwardProp,
-  MenuItem,
-  MenuButton,
-  Menu,
-  MenuList,
   AspectRatio,
   Card
 } from "@chakra-ui/react";
-import Logo from "@/images/logo.png";
+import Hero from "@/images/hero.png";
 import Mockup1 from "../images/mockups/1.png";
 import Mockup2 from "../images/mockups/2.png";
 import Mockup3 from "../images/mockups/3.png";
 import Mockup4 from "../images/mockups/4.png";
 import Mockup5 from "../images/mockups/5.png";
 import Image from "next/image";
-import {
-  // SiAmazon,
-  SiAppstore,
-  SiGoogleplay
-} from "react-icons/si";
+import { SiAppstore, SiGoogleplay } from "react-icons/si";
 import { url } from "@/utils/constants";
-import { FiMoreVertical, FiStar } from "react-icons/fi";
-import { motion, isValidMotionProp } from "framer-motion";
-import { useRouter } from "next/navigation";
-import { FaAndroid } from "react-icons/fa";
+import { FiStar } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -60,7 +47,6 @@ const jsonLd = {
 
 export default function Home() {
   const [products, setProducts] = useState([]);
-  const router = useRouter();
 
   const appStores = [
     {
@@ -75,33 +61,7 @@ export default function Home() {
     }
   ];
 
-  const mockups = [
-    {
-      heading: "Be Heard!",
-      text: "Sharing your LGBTQ pride is now as fun as ever. By sharing updates, images, videos, and audio recordings, you can express yourself to the ones you love and make new queer friends as well.",
-      image: Mockup1
-    },
-    {
-      heading: "Make New Friends",
-      text: "Networking is a huge part of building queer community. Find LGBTQ members with shared interests near you and make queer friends, connections, and maybe more. Chat, upload a selfie, update your profile, and add flair to join the fun!",
-      image: Mockup2
-    },
-    {
-      heading: "Discover your Gayborhood",
-      text: "Find and support the best parts of your community. Use the map to find user-vetted, safe, and inclusive LGBTQ businesses, organizations, and resources around you. ",
-      image: Mockup3
-    },
-    {
-      heading: "Find a Community",
-      text: "Events can be a great way to find and involve yourself in LGBTQ communities. Find anything from groups, volunteer opportunities, or just fun things to do and meet new people at.",
-      image: Mockup4
-    }
-    // {
-    //   heading: "Build a Following",
-    //   text: "Share your LGBTQ thoughts, ideas, and other good stuff through updates, images, videos, and even audio to an LGBTQ audience and build a following of LGBTQ fans.",
-    //   image: Mockup5
-    // }
-  ];
+  const mockups = [Mockup2, Mockup3, Mockup4, Mockup5];
 
   const memberships = [
     "Empower",
@@ -120,11 +80,6 @@ export default function Home() {
     "Silver",
     "Ally"
   ];
-
-  const ChakraBox = chakra(motion.div, {
-    shouldForwardProp: (prop) =>
-      isValidMotionProp(prop) || shouldForwardProp(prop)
-  });
 
   useEffect(() => {
     axios
@@ -172,84 +127,128 @@ export default function Home() {
           <Flex gap={4} justify={"center"} flexWrap={"wrap"}>
             {appStores.map((store) => (
               <Link key={store.name} href={store.href}>
-                <Button
-                  colorScheme={"primary"}
-                  size={"lg"}
-                  w={["100%", "auto"]}
-                >
+                <Button colorScheme={"primary"} size={"lg"} w={["100%", 140]}>
                   <Flex mr={2}>{store.icon}</Flex>
                   {store.name}
                 </Button>
               </Link>
             ))}
-            <Menu>
-              <MenuButton as={Box} cursor={"pointer"}>
-                <Button
-                  colorScheme={"primary"}
-                  size={"lg"}
-                  w={["100%", "auto"]}
-                >
-                  <FiMoreVertical />
-                </Button>
-              </MenuButton>
-              <MenuList>
-                {/*<MenuItem icon={<SiAmazon />}>Amazon</MenuItem>*/}
-                <MenuItem
-                  icon={<FaAndroid />}
-                  onClick={() =>
-                    router.push(
-                      "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"
-                    )
-                  }
-                >
-                  Direct Download (Not Recommended)
-                </MenuItem>
-              </MenuList>
-            </Menu>
+            {/*<Menu>*/}
+            {/*  <MenuButton as={Box} cursor={"pointer"}>*/}
+            {/*    <Button*/}
+            {/*      colorScheme={"primary"}*/}
+            {/*      size={"lg"}*/}
+            {/*      w={["100%", "auto"]}*/}
+            {/*    >*/}
+            {/*      <FiMoreVertical />*/}
+            {/*    </Button>*/}
+            {/*  </MenuButton>*/}
+            {/*  <MenuList>*/}
+            {/*    /!*<MenuItem icon={<SiAmazon />}>Amazon</MenuItem>*!/*/}
+            {/*    <MenuItem*/}
+            {/*      icon={<FaAndroid />}*/}
+            {/*      onClick={() =>*/}
+            {/*        router.push(*/}
+            {/*          "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"*/}
+            {/*        )*/}
+            {/*      }*/}
+            {/*    >*/}
+            {/*      Direct Download (Not Recommended)*/}
+            {/*    </MenuItem>*/}
+            {/*  </MenuList>*/}
+            {/*</Menu>*/}
           </Flex>
-          {/*<Flex justify={"center"} direction={["column", "row"]}>*/}
-          {/*  <Fade*/}
-          {/*    in={true}*/}
-          {/*    transition={{ enter: { duration: 0.66, delay: 1.98 } }}*/}
-          {/*  >*/}
-          {/*    <ChakraBox*/}
-          {/*      animate={{*/}
-          {/*        rotate: [5, -5, 5]*/}
-          {/*      }}*/}
-          {/*      transition={{*/}
-          {/*        duration: 3,*/}
-          {/*        ease: "easeInOut",*/}
-          {/*        repeat: Infinity,*/}
-          {/*        repeatType: "loop"*/}
-          {/*      }}*/}
-          {/*    >*/}
-          {/*      <Image src={Logo} alt={"The LGBTQ Social Media App Unicorn"} />*/}
-          {/*    </ChakraBox>*/}
-          {/*  </Fade>*/}
-          {/*</Flex>*/}
         </Container>
+        <Container maxW={"container.xl"} pt={16} pb={32}>
+          <Image
+            src={Hero}
+            alt={"An LGBTQ Social Media App"}
+            style={{ width: "100%", borderRadius: 16 }}
+          />
+        </Container>
+        <Box bg={"gray.900"}>
+          <Container maxW={"container.sm"} py={32}>
+            <Heading as={"p"} fontSize={"2.074rem !important"} color={"white"}>
+              <Highlight
+                query={[
+                  "be proud",
+                  "share who you are",
+                  "build strong relationships",
+                  "safe community"
+                ]}
+                styles={{
+                  color: "primary.500"
+                }}
+              >
+                Through posting social media like updates, media, events, and
+                places, you can be proud to share who you are with your
+                community. Through likes, replies, direct messages, and a
+                directory of people, events, and places online and around your
+                area, you can find and build strong relationships within your
+                community. Bessa works hard, through moderation and dangerous
+                content filters, to make it a safe community.
+              </Highlight>
+            </Heading>
+          </Container>
+        </Box>
         <Container maxW={"container.xl"} my={32}>
-          <Heading lineHeight={"tall"}>
-            <Highlight
-              query={[
-                "be proud",
-                "share who you are",
-                "build strong relationships",
-                "safe community"
-              ]}
-              styles={{
-                color: "primary.500"
-              }}
-            >
-              Through posting social media like updates, media, events, and
-              places, you can be proud to share who you are with your community.
-              Through likes, replies, direct messages, and a directory of
-              people, events, and places online and around your area, you can
-              find and build strong relationships within your community. Bessa
-              works hard, through moderation and dangerous content filters, to
-              make it a safe community.
-            </Highlight>
-          </Heading>
+          <SimpleGrid columns={[1, 4]} gap={[4, 8]}>
+            <GridItem colSpan={[1, 2]}>
+              <Heading
+                as={"p"}
+                fontSize={["2.074rem !important", "2.986rem !important"]}
+                mb={4}
+              >
+                Sharing your LGBTQ pride is now as fun as ever. By sharing
+                updates, images, videos, and audio recordings, you can express
+                yourself to the ones you love and make new queer friends as
+                well.
+              </Heading>
+            </GridItem>
+            <GridItem colSpan={[1, 2]}>
+              <Flex justify={"right"}>
+                <Box w={["100%", "75%"]}>
+                  <Image
+                    src={Mockup1}
+                    alt={"Be Heard! | An LGBTQ Social Media App"}
+                  />
+                </Box>
+              </Flex>
+            </GridItem>
+            <GridItem colSpan={[1, 2]}>
+              <Text>
+                Networking is a huge part of building queer community. Find
+                LGBTQ members with shared interests near you and make queer
+                friends, connections, and maybe more. Chat, upload a selfie,
+                update your profile, and add flair to join the fun!
+              </Text>
+            </GridItem>
+            <GridItem colSpan={[1, 2]}>
+              <Heading
+                as={"p"}
+                fontSize={["2.074rem !important", "2.488rem !important"]}
+              >
+                Find and support the best parts of your community. Use the map
+                to find user-vetted, safe, and inclusive LGBTQ businesses,
+                organizations, and resources around you.
+              </Heading>
+            </GridItem>
+            <GridItem colSpan={[1, 2]} />
+            <GridItem>
+              <Text>
+                Events can be a great way to find and involve yourself in LGBTQ
+                communities. Find anything from groups, volunteer opportunities,
+                or just fun things to do and meet new people at.
+              </Text>
+            </GridItem>
+            <GridItem>
+              <Text>
+                Share your LGBTQ thoughts, ideas, and other good stuff through
+                updates, images, videos, and even audio to an LGBTQ audience and
+                build a following of LGBTQ fans.
+              </Text>
+            </GridItem>
+          </SimpleGrid>
         </Container>
         <Container maxW={"container.xl"} my={32}>
           <SimpleGrid columns={[1, 4]} gap={[4, 8]}>
@@ -257,12 +256,10 @@ export default function Home() {
               <GridItem key={index}>
                 <Box mb={[4, 8]}>
                   <Image
-                    src={mockup.image}
-                    alt={`${mockup.heading} | An LGBTQ Social Media App`}
+                    src={mockup}
+                    alt={`An LGBTQ Social Media App Mockup ${index}`}
                   />
                 </Box>
-                <Heading my={4}>{mockup.heading}</Heading>
-                <Text mb={4}>{mockup.text}</Text>
               </GridItem>
             ))}
           </SimpleGrid>
@@ -282,42 +279,14 @@ export default function Home() {
                   <Link key={store.name} href={store.href}>
                     <Button
                       colorScheme={"primary"}
-                      bg={"primary.800"}
-                      color={"white"}
                       size={"lg"}
-                      w={["100%", "auto"]}
+                      w={["100%", 140]}
                     >
                       <Flex mr={2}>{store.icon}</Flex>
                       {store.name}
                     </Button>
                   </Link>
                 ))}
-                <Menu>
-                  <MenuButton as={Box} cursor={"pointer"}>
-                    <Button
-                      colorScheme={"primary"}
-                      bg={"primary.800"}
-                      color={"white"}
-                      size={"lg"}
-                      w={["100%", "auto"]}
-                    >
-                      <FiMoreVertical />
-                    </Button>
-                  </MenuButton>
-                  <MenuList>
-                    {/*<MenuItem icon={<SiAmazon />}>Amazon</MenuItem>*/}
-                    <MenuItem
-                      icon={<FaAndroid />}
-                      onClick={() =>
-                        router.push(
-                          "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"
-                        )
-                      }
-                    >
-                      Direct Download (Not Recommended)
-                    </MenuItem>
-                  </MenuList>
-                </Menu>
               </Flex>
             </Container>
           </Card>
@@ -414,12 +383,7 @@ export default function Home() {
                     "https://apps.apple.com/app/apple-store/id6471383138?action=write-review"
                   }
                 >
-                  <Button
-                    colorScheme={"primary"}
-                    bg={"primary.800"}
-                    color={"white"}
-                    size={"lg"}
-                  >
+                  <Button colorScheme={"primary"} size={"lg"} w={240}>
                     Review on App Store
                   </Button>
                 </Link>
@@ -428,12 +392,7 @@ export default function Home() {
                     "https://play.google.com/store/apps/details?id=com.bessa.bessa"
                   }
                 >
-                  <Button
-                    colorScheme={"primary"}
-                    bg={"primary.800"}
-                    color={"white"}
-                    size={"lg"}
-                  >
+                  <Button colorScheme={"primary"} size={"lg"} w={240}>
                     Review on Google Play
                   </Button>
                 </Link>

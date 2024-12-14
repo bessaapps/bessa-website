@@ -71,14 +71,14 @@ export default function BlogContentWriter() {
         type={"application/ld+json"}
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Container maxW={"container.lg"} py={16}>
+      <Container maxW={"container.sm"} py={16}>
         <Image
           src={Article}
           alt={"Celebrating International Transgender Day of Visibility"}
           style={{ borderRadius: 8 }}
         />
       </Container>
-      <Container pb={16}>
+      <Container maxW={"container.sm"} pb={16}>
         <Heading as={"h1"} mb={4}>
           Blog Content Writer
         </Heading>

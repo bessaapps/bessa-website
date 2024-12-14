@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function Cookies() {
   return (
-    <Container maxW={"container.lg"} py={16}>
+    <Container maxW={"container.sm"} py={16}>
       <Heading as={"h1"} mb={4}>
         Cookie Policy
       </Heading>
