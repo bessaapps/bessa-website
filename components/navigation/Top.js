@@ -3,6 +3,7 @@
 import {
   AspectRatio,
   Box,
+  Button,
   Container,
   Drawer,
   DrawerBody,
@@ -11,6 +12,7 @@ import {
   DrawerOverlay,
   Flex,
   Hide,
+  Show,
   Text
 } from "@chakra-ui/react";
 import { useState } from "react";
@@ -19,6 +21,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/images/logo.png";
 import { FiMenu } from "react-icons/fi";
+import { SiAppstore, SiGoogleplay } from "react-icons/si";
 
 export default function Top() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -26,28 +29,37 @@ export default function Top() {
 
   const links = [
     {
-      href: "https://cash.app/$getbessa",
-      anchor: "Donate to LGBTQ communities"
-    },
-    {
-      href: "https://shop.getbessa.com",
-      anchor: "Shop LGBTQ Merch"
-    },
-    {
-      href: "/support",
-      anchor: "Help & Support"
-    },
-    {
-      href: "/whats-new",
-      anchor: "What's New in Version 6!"
-    },
-    {
       href: "https://blog.getbessa.com",
       anchor: "Blog"
     },
     {
+      href: "https://shop.getbessa.com",
+      anchor: "Shop"
+    },
+    {
+      href: "https://cash.app/$getbessa",
+      anchor: "Donate"
+    },
+    {
+      href: "/support",
+      anchor: "Support"
+    },
+    {
       href: "/blog-content-writer",
       anchor: "Jobs"
+    }
+  ];
+
+  const appStores = [
+    {
+      name: "iOS",
+      href: "https://apps.apple.com/us/app/bessa/id6471383138?platform=iphone",
+      icon: <SiAppstore />
+    },
+    {
+      name: "Android",
+      href: "https://play.google.com/store/apps/details?id=com.bessa.bessa",
+      icon: <SiGoogleplay />
     }
   ];
 
@@ -57,17 +69,38 @@ export default function Top() {
         <Flex align={"center"} justify={"space-between"}>
           <Flex align={"center"} gap={4}>
             <Link href={"/"} title={"Bessa | An LGBTQ Social Media App"}>
-              <AspectRatio ratio={1} w={16}>
+              <AspectRatio ratio={1} w={12}>
                 <Image src={Logo} alt={"Bessa | An LGBTQ Social Media App"} />
               </AspectRatio>
             </Link>
-            <Text fontWeight={"bold"} mr={4}>
+            <Text fontSize={"1.25rem"} fontWeight={800} mr={4}>
               <Link href={"/"} title={"Bessa | An LGBTQ Social Media App"}>
                 Bessa
               </Link>
             </Text>
+            <Flex>
+              {links.map((link) => (
+                <Link key={link.href} href={link.href}>
+                  <Button variant={"ghost"} fontWeight={500}>
+                    {link.anchor}
+                  </Button>
+                </Link>
+              ))}
+            </Flex>
           </Flex>
-          <Hide above={"md"}>
+          <Show above={"sm"}>
+            <Flex gap={4}>
+              {appStores.map((store) => (
+                <Link key={store.name} href={store.href}>
+                  <Button colorScheme={"primary"}>
+                    <Flex mr={2}>{store.icon}</Flex>
+                    {store.name}
+                  </Button>
+                </Link>
+              ))}
+            </Flex>
+          </Show>
+          <Hide above={"sm"}>
             <FiMenu size={27} onClick={() => setIsDrawerOpen(!isDrawerOpen)} />
           </Hide>
         </Flex>

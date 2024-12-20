@@ -15,14 +15,13 @@ import {
   LinkBox,
   LinkOverlay,
   AspectRatio,
-  Card
+  Card,
+  Tag
 } from "@chakra-ui/react";
-import Hero from "@/images/hero.png";
 import Mockup1 from "../images/mockups/1.png";
 import Mockup2 from "../images/mockups/2.png";
 import Mockup3 from "../images/mockups/3.png";
 import Mockup4 from "../images/mockups/4.png";
-import Mockup5 from "../images/mockups/5.png";
 import Image from "next/image";
 import { SiAppstore, SiGoogleplay } from "react-icons/si";
 import { url } from "@/utils/constants";
@@ -61,7 +60,7 @@ export default function Home() {
     }
   ];
 
-  const mockups = [Mockup2, Mockup3, Mockup4, Mockup5];
+  const mockups = [Mockup3, Mockup4];
 
   const memberships = [
     "Empower",
@@ -99,159 +98,67 @@ export default function Home() {
         type={"application/ld+json"}
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Box>
-        <Container maxW={"container.sm"} py={16}>
-          <Fade in={true} transition={{ enter: { duration: 0.66 } }}>
-            <Heading as={"h1"} textAlign={"center"} mb={[4, 8]}>
-              An LGBTQ Social Media App
-            </Heading>
-          </Fade>
-          <Fade
-            in={true}
-            transition={{ enter: { duration: 0.66, delay: 0.66 } }}
-          >
-            <Text textAlign={"center"} mb={[4, 8]}>
-              Bessa is an inclusive LGBTQ community of all genders, colors,
-              shapes, and sizes who want to safely connect with new and existing
-              friends, family, and others.
-            </Text>
-          </Fade>
-          <Fade
-            in={true}
-            transition={{ enter: { duration: 0.66, delay: 1.32 } }}
-          >
-            <Heading as={"h3"} textAlign={"center"} mb={[2, 4]}>
-              Join for FREE!
-            </Heading>
-          </Fade>
-          <Flex gap={4} justify={"center"} flexWrap={"wrap"}>
-            {appStores.map((store) => (
-              <Link key={store.name} href={store.href}>
-                <Button colorScheme={"primary"} size={"lg"} w={["100%", 140]}>
-                  <Flex mr={2}>{store.icon}</Flex>
-                  {store.name}
-                </Button>
-              </Link>
-            ))}
-            {/*<Menu>*/}
-            {/*  <MenuButton as={Box} cursor={"pointer"}>*/}
-            {/*    <Button*/}
-            {/*      colorScheme={"primary"}*/}
-            {/*      size={"lg"}*/}
-            {/*      w={["100%", "auto"]}*/}
-            {/*    >*/}
-            {/*      <FiMoreVertical />*/}
-            {/*    </Button>*/}
-            {/*  </MenuButton>*/}
-            {/*  <MenuList>*/}
-            {/*    /!*<MenuItem icon={<SiAmazon />}>Amazon</MenuItem>*!/*/}
-            {/*    <MenuItem*/}
-            {/*      icon={<FaAndroid />}*/}
-            {/*      onClick={() =>*/}
-            {/*        router.push(*/}
-            {/*          "https://kwguwhiidnroftep.public.blob.vercel-storage.com/latest.apk"*/}
-            {/*        )*/}
-            {/*      }*/}
-            {/*    >*/}
-            {/*      Direct Download (Not Recommended)*/}
-            {/*    </MenuItem>*/}
-            {/*  </MenuList>*/}
-            {/*</Menu>*/}
-          </Flex>
-        </Container>
-        <Container maxW={"container.xl"} pt={16} pb={32}>
-          <Image
-            src={Hero}
-            alt={"An LGBTQ Social Media App"}
-            style={{ width: "100%", borderRadius: 16 }}
-          />
-        </Container>
-        <Box bg={"gray.900"}>
-          <Container maxW={"container.sm"} py={32}>
-            <Heading as={"p"} fontSize={"2.074rem !important"} color={"white"}>
-              <Highlight
-                query={[
-                  "be proud",
-                  "share who you are",
-                  "build strong relationships",
-                  "safe community"
-                ]}
-                styles={{
-                  color: "primary.500"
-                }}
-              >
-                Through posting social media like updates, media, events, and
-                places, you can be proud to share who you are with your
-                community. Through likes, replies, direct messages, and a
-                directory of people, events, and places online and around your
-                area, you can find and build strong relationships within your
-                community. Bessa works hard, through moderation and dangerous
-                content filters, to make it a safe community.
-              </Highlight>
-            </Heading>
-          </Container>
-        </Box>
-        <Container maxW={"container.xl"} my={32}>
-          <SimpleGrid columns={[1, 4]} gap={[4, 8]}>
-            <GridItem colSpan={[1, 2]}>
-              <Heading
-                as={"p"}
-                fontSize={["2.074rem !important", "2.986rem !important"]}
-                mb={4}
-              >
-                Sharing your LGBTQ pride is now as fun as ever. By sharing
-                updates, images, videos, and audio recordings, you can express
-                yourself to the ones you love and make new queer friends as
-                well.
-              </Heading>
-            </GridItem>
-            <GridItem colSpan={[1, 2]}>
-              <Flex justify={"right"}>
-                <Box w={["100%", "75%"]}>
-                  <Image
-                    src={Mockup1}
-                    alt={"Be Heard! | An LGBTQ Social Media App"}
-                  />
-                </Box>
-              </Flex>
-            </GridItem>
-            <GridItem colSpan={[1, 2]}>
-              <Text>
-                Networking is a huge part of building queer community. Find
-                LGBTQ members with shared interests near you and make queer
-                friends, connections, and maybe more. Chat, upload a selfie,
-                update your profile, and add flair to join the fun!
-              </Text>
-            </GridItem>
-            <GridItem colSpan={[1, 2]}>
-              <Heading
-                as={"p"}
-                fontSize={["2.074rem !important", "2.488rem !important"]}
-              >
-                Find and support the best parts of your community. Use the map
-                to find user-vetted, safe, and inclusive LGBTQ businesses,
-                organizations, and resources around you.
-              </Heading>
-            </GridItem>
-            <GridItem colSpan={[1, 2]} />
-            <GridItem>
-              <Text>
-                Events can be a great way to find and involve yourself in LGBTQ
-                communities. Find anything from groups, volunteer opportunities,
-                or just fun things to do and meet new people at.
-              </Text>
+      <>
+        <Container maxW={"container.xl"} py={32}>
+          <SimpleGrid columns={4} alignItems={"center"} gap={8}>
+            <GridItem w={"80%"} colSpan={2}>
+              <Fade in={true} transition={{ enter: { duration: 0.66 } }}>
+                <Tag colorScheme={"primary"}>Join for FREE!</Tag>
+                <Heading as={"h1"} mb={4}>
+                  Your community is waiting for you.
+                </Heading>
+                <Text mb={4}>
+                  Bessa is an inclusive LGBTQ community of all genders, colors,
+                  shapes, and sizes who want to safely connect with new and
+                  existing friends, family, and others.
+                </Text>
+                <Flex gap={4}>
+                  {appStores.map((store) => (
+                    <Link key={store.name} href={store.href}>
+                      <Button colorScheme={"primary"} size={"lg"} w={140}>
+                        <Flex mr={2}>{store.icon}</Flex>
+                        {store.name}
+                      </Button>
+                    </Link>
+                  ))}
+                </Flex>
+              </Fade>
             </GridItem>
             <GridItem>
-              <Text>
-                Share your LGBTQ thoughts, ideas, and other good stuff through
-                updates, images, videos, and even audio to an LGBTQ audience and
-                build a following of LGBTQ fans.
-              </Text>
+              <Image src={Mockup1} alt={"An LGBTQ Social Media App"} />
+            </GridItem>
+            <GridItem>
+              <Image src={Mockup2} alt={"An LGBTQ Social Media App"} />
             </GridItem>
           </SimpleGrid>
         </Container>
+        <Box bg={"gray.900"}>
+          <Container maxW={"container.lg"} py={32}>
+            <Heading as={"h3"} color={"white"} textAlign={"center"} mb={4}>
+              <Highlight
+                query={[
+                  "proud",
+                  "share who you are",
+                  "build strong relationships"
+                ]}
+                styles={{
+                  color: "primary.500",
+                  fontWeight: 800
+                }}
+              >
+                Be proud of who you are by posting content. Through
+                communication and a directory of people, places, and events, you
+                can find and build strong relationships within your community.
+              </Highlight>
+            </Heading>
+            {/*<Text textAlign={"center"}>*/}
+            {/*  Bessa works hard, through moderation and dangerous content*/}
+            {/*  filters, to make it a safe community.*/}
+            {/*</Text>*/}
+          </Container>
+        </Box>
         <Container maxW={"container.xl"} my={32}>
-          <SimpleGrid columns={[1, 4]} gap={[4, 8]}>
+          <SimpleGrid columns={4} gap={8} alignItems={"center"}>
             {mockups?.map((mockup, index) => (
               <GridItem key={index}>
                 <Box mb={[4, 8]}>
@@ -262,17 +169,32 @@ export default function Home() {
                 </Box>
               </GridItem>
             ))}
+            <GridItem colSpan={2} w={"66.66%"}>
+              <Tag colorScheme={"primary"}>Places and Events</Tag>
+              <Heading mb={4}>Discover your Gayborhood</Heading>
+              <Text mb={4}>
+                Find and support the best parts of your community. Use the map
+                to find user-vetted, safe, and inclusive LGBTQ businesses,
+                organizations, and resources around you.
+              </Text>
+              <Text>
+                Events can be a great way to find and involve yourself in LGBTQ
+                communities. Find anything from groups, volunteer opportunities,
+                or just fun things to do and meet new people at.
+              </Text>
+            </GridItem>
           </SimpleGrid>
         </Container>
         <Container maxW={"container.xl"} my={32}>
           <Card>
             <Container maxW={"container.sm"} my={16}>
-              <Heading textAlign={"center"} as={"h2"} mb={4}>
+              <Heading color={"gray.900"} textAlign={"center"} mb={4}>
                 Be with Friends!
               </Heading>
-              <Text textAlign={"center"} mb={4}>
-                Join your LGBTQ community and link with others online instantly
-                with Bessa. It&apos;s totally free!
+              <Text textAlign={"center"} mb={8}>
+                Find LGBTQ members with shared interests near you. Make queer
+                friends, connections, and maybe more. Chat, upload a selfie, and
+                update your profile. Socialize and join the fun!
               </Text>
               <Flex gap={4} justify={"center"} flexWrap={"wrap"}>
                 {appStores.map((store) => (
@@ -370,10 +292,10 @@ export default function Home() {
         <Container maxW={"container.xl"} my={32}>
           <Card>
             <Container maxW={"container.sm"} my={16}>
-              <Heading as={"h2"} textAlign={"center"} mb={4}>
+              <Heading color={"gray.900"} textAlign={"center"} mb={4}>
                 Like Bessa?
               </Heading>
-              <Text textAlign={"center"} mb={4}>
+              <Text textAlign={"center"} mb={8}>
                 Help our LGBTQ community grow by lettings others know how much
                 you like Bessa with a review.
               </Text>
@@ -400,7 +322,7 @@ export default function Home() {
             </Container>
           </Card>
         </Container>
-      </Box>
+      </>
     </section>
   );
 }
