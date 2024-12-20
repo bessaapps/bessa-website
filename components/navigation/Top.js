@@ -78,15 +78,17 @@ export default function Top() {
                 Bessa
               </Link>
             </Text>
-            <Flex>
-              {links.map((link) => (
-                <Link key={link.href} href={link.href}>
-                  <Button variant={"ghost"} fontWeight={500}>
-                    {link.anchor}
-                  </Button>
-                </Link>
-              ))}
-            </Flex>
+            <Show above={"sm"}>
+              <Flex>
+                {links.map((link) => (
+                  <Link key={link.href} href={link.href}>
+                    <Button variant={"ghost"} fontWeight={500}>
+                      {link.anchor}
+                    </Button>
+                  </Link>
+                ))}
+              </Flex>
+            </Show>
           </Flex>
           <Show above={"sm"}>
             <Flex gap={4}>

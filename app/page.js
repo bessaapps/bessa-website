@@ -99,9 +99,9 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <>
-        <Container maxW={"container.xl"} py={32}>
-          <SimpleGrid columns={4} alignItems={"center"} gap={8}>
-            <GridItem w={"80%"} colSpan={2}>
+        <Container maxW={"container.xl"} my={[8, 32]}>
+          <SimpleGrid columns={[1, 4]} alignItems={"center"} gap={8}>
+            <GridItem w={["100%", "80%"]} colSpan={[1, 2]}>
               <Fade in={true} transition={{ enter: { duration: 0.66 } }}>
                 <Tag colorScheme={"primary"}>Join for FREE!</Tag>
                 <Heading as={"h1"} mb={4}>
@@ -133,7 +133,7 @@ export default function Home() {
           </SimpleGrid>
         </Container>
         <Box bg={"gray.900"}>
-          <Container maxW={"container.lg"} py={32}>
+          <Container maxW={"container.lg"} py={[8, 32]}>
             <Heading as={"h3"} color={"white"} textAlign={"center"} mb={4}>
               <Highlight
                 query={[
@@ -157,19 +157,17 @@ export default function Home() {
             {/*</Text>*/}
           </Container>
         </Box>
-        <Container maxW={"container.xl"} my={32}>
-          <SimpleGrid columns={4} gap={8} alignItems={"center"}>
+        <Container maxW={"container.xl"} my={[8, 32]}>
+          <SimpleGrid columns={[1, 4]} gap={8} alignItems={"center"}>
             {mockups?.map((mockup, index) => (
               <GridItem key={index}>
-                <Box mb={[4, 8]}>
-                  <Image
-                    src={mockup}
-                    alt={`An LGBTQ Social Media App Mockup ${index}`}
-                  />
-                </Box>
+                <Image
+                  src={mockup}
+                  alt={`An LGBTQ Social Media App Mockup ${index}`}
+                />
               </GridItem>
             ))}
-            <GridItem colSpan={2} w={"66.66%"}>
+            <GridItem colSpan={[1, 2]} w={["100%", "66.66%"]}>
               <Tag colorScheme={"primary"}>Places and Events</Tag>
               <Heading mb={4}>Discover your Gayborhood</Heading>
               <Text mb={4}>
@@ -185,9 +183,9 @@ export default function Home() {
             </GridItem>
           </SimpleGrid>
         </Container>
-        <Container maxW={"container.xl"} my={32}>
+        <Container maxW={"container.xl"} my={[8, 32]}>
           <Card>
-            <Container maxW={"container.sm"} my={16}>
+            <Container maxW={"container.sm"} my={[4, 16]}>
               <Heading color={"gray.900"} textAlign={"center"} mb={4}>
                 Be with Friends!
               </Heading>
@@ -213,7 +211,7 @@ export default function Home() {
             </Container>
           </Card>
         </Container>
-        <Container maxW={"container.xl"} my={32}>
+        <Container maxW={"container.xl"} my={[8, 32]}>
           <Heading as={"h2"} mb={4}>
             Become a Supporting Member
           </Heading>
@@ -247,7 +245,7 @@ export default function Home() {
             ))}
           </SimpleGrid>
         </Container>
-        <Container maxW={"container.xl"} my={32}>
+        <Container maxW={"container.xl"} my={[8, 32]}>
           <Heading as={"h2"} mb={4}>
             Shop LGBTQ Merch
           </Heading>
@@ -289,9 +287,9 @@ export default function Home() {
             </Button>
           </Flex>
         </Container>
-        <Container maxW={"container.xl"} my={32}>
+        <Container maxW={"container.xl"} my={[8, 32]}>
           <Card>
-            <Container maxW={"container.sm"} my={16}>
+            <Container maxW={"container.sm"} my={[4, 16]}>
               <Heading color={"gray.900"} textAlign={"center"} mb={4}>
                 Like Bessa?
               </Heading>
