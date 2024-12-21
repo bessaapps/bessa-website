@@ -10,57 +10,32 @@ import {
 import { appStores } from "@/utils/constants";
 import axios from "axios";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
-import dayjs from "dayjs";
 
 export async function generateMetadata({ params }) {
   return await axios
-    .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
+    .get("https://blog.getbessa.com/wp-json/wp/v2/categories", {
       params: {
-        slug: params?.postSlug,
-        _embed: ["wp:featuredmedia", "author"]
+        slug: params?.categorySlug
       }
     })
     .then((response) => {
-      const post = response?.data?.[0];
+      const category = response?.data?.[0];
 
       return {
-        title: `${post?.title?.rendered} | Bessa | An LGBTQ Social Media App`,
-        description: post?.excerpt?.rendered,
-        authors: [
-          {
-            name: post?._embedded?.author?.[0]?.name,
-            url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/authors/${post?._embedded?.author?.[0]?.name?.toLowerCase()?.replace(" ", "-")}`
-          }
-        ],
+        title: `${category?.name} | Bessa | An LGBTQ Social Media App`,
         openGraph: {
-          title: `${post?.title?.rendered} | Bessa | An LGBTQ Social Media App`,
-          description: post?.excerpt?.rendered,
-          url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/posts/${post?.slug}`,
-          siteName: "Bessa | An LGBTQ Social Media App",
-          images: [
-            {
-              url: post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url,
-              width: 800,
-              height: 600
-            }
-          ],
-          type: "article",
-          publishedTime: dayjs(post?.date)?.format(),
-          authors: [post?._embedded?.author?.[0]?.name]
+          title: `${category?.name} | Bessa | An LGBTQ Social Media App`,
+          url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/category/${params?.categorySlug}`,
+          siteName: "Bessa | An LGBTQ Social Media App"
         },
         twitter: {
-          title: `${post?.title?.rendered} | Bessa | An LGBTQ Social Media App`,
-          description: post?.excerpt?.rendered,
-          images: {
-            url: post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url,
-            alt: post?.title?.rendered
-          }
+          title: `${category?.name} | Bessa | An LGBTQ Social Media App`
         }
       };
     });
 }
 
-export default function PostLayout({ children }) {
+export default function CategoryLayout({ children }) {
   return (
     <>
       {children}

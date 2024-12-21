@@ -114,7 +114,10 @@ export default function Home({}) {
         <Container maxW={"container.xl"} my={[8, 32]}>
           <SimpleGrid columns={[1, 4]} alignItems={"center"} gap={8}>
             <GridItem w={["100%", "80%"]} colSpan={[1, 2]}>
-              <Fade in={true} transition={{ enter: { duration: 0.66 } }}>
+              <Fade
+                in={true}
+                transition={{ enter: { duration: 0.66, delay: 0.66 } }}
+              >
                 <Tag colorScheme={"primary"}>Join for FREE!</Tag>
                 <Heading as={"h1"} mb={4}>
                   Your community is waiting for you.
@@ -158,10 +161,14 @@ export default function Home({}) {
               </Fade>
             </GridItem>
             <GridItem>
-              <Image src={Mockup1} alt={"An LGBTQ Social Media App"} />
+              <Fade in={true} transition={{ enter: { duration: 0.66 } }}>
+                <Image src={Mockup1} alt={"An LGBTQ Social Media App"} />
+              </Fade>
             </GridItem>
             <GridItem>
-              <Image src={Mockup2} alt={"An LGBTQ Social Media App"} />
+              <Fade in={true} transition={{ enter: { duration: 0.66 } }}>
+                <Image src={Mockup2} alt={"An LGBTQ Social Media App"} />
+              </Fade>
             </GridItem>
           </SimpleGrid>
         </Container>
@@ -317,13 +324,14 @@ export default function Home({}) {
         </Container>
         <Container maxW={"container.xl"} my={[8, 32]}>
           {posts?.map((post) => (
-            <LinkBox key={post?.id} as={"article"}>
-              <SimpleGrid columns={4}>
-                <GridItem colSpan={3}>
+            <SimpleGrid key={post?.id} columns={4}>
+              <GridItem colSpan={3}>
+                <LinkBox as={"article"}>
                   <Text fontWeight={800}>
                     <Link
                       key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}
                       href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
+                      color={"primary.500"}
                     >
                       {post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
                     </Link>
@@ -340,8 +348,10 @@ export default function Home({}) {
                       </Link>
                     ))}
                   </Flex>
-                </GridItem>
-                <GridItem>
+                </LinkBox>
+              </GridItem>
+              <GridItem>
+                <Link href={`/posts/${post?.slug}`}>
                   <AspectRatio
                     ratio={1.75}
                     borderRadius={8}
@@ -355,9 +365,9 @@ export default function Home({}) {
                       fill
                     />
                   </AspectRatio>
-                </GridItem>
-              </SimpleGrid>
-            </LinkBox>
+                </Link>
+              </GridItem>
+            </SimpleGrid>
           ))}
         </Container>
         <Container maxW={"container.xl"} my={[8, 32]}>
