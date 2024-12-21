@@ -38,7 +38,7 @@ export async function generateMetadata({ params }) {
         openGraph: {
           title: `${post?.title?.rendered} | Bessa | An LGBTQ Social Media App`,
           description: post?.excerpt?.rendered,
-          url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}`,
+          url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/posts/${post?.slug}`,
           siteName: "Bessa | An LGBTQ Social Media App",
           images: [
             {

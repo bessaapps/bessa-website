@@ -1,14 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: { domains: ["blog.getbessa.com", "shop.getbessa.com"] },
-  async rewrites() {
-    return [
-      {
-        source: "/:path",
-        destination: "/blog/:path"
-      }
-    ];
-  }
+  images: { domains: ["blog.getbessa.com", "shop.getbessa.com"] }
 };
 
 export default nextConfig;
