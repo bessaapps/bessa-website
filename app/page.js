@@ -329,7 +329,7 @@ export default function Home({}) {
                     </Link>
                   </Text>
                   <Heading mb={4}>
-                    <LinkOverlay href={`/blog/${post?.slug}`}>
+                    <LinkOverlay href={`/${post?.slug}`}>
                       {post?.title?.rendered}
                     </LinkOverlay>
                   </Heading>

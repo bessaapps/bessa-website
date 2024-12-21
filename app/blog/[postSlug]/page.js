@@ -14,9 +14,11 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import dayjs from "dayjs";
+import Script from "next/script";
 
 export default function Post({ params }) {
   const [post, setPost] = useState({});
+  const [url, setUrl] = useState("");
 
   useEffect(() => {
     axios
@@ -27,10 +29,28 @@ export default function Post({ params }) {
         }
       })
       .then((response) => setPost(response?.data?.[0]));
+    setUrl(window.location.href);
   }, []);
 
   return (
     <>
+      <Script
+        id={"LDJSON"}
+        type={"application/ld+json"}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: `${post?.title?.rendered} | Bessa`,
+            url,
+            image: post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url,
+            datePublished: dayjs(post?.date)?.format(),
+            dateModified: dayjs(post?.modified)?.format(),
+            author: post?._embedded?.author?.[0]?.name
+          })
+        }}
+        strategy={"beforeInteractive"}
+      />
       <Container maxW={"container.xl"} my={[8, 32]}>
         <Flex justify={"center"}>
           <Tag size={"lg"} colorScheme={"primary"} mb={4}>
