@@ -11,35 +11,47 @@ import {
   LinkBox,
   LinkOverlay,
   SimpleGrid,
-  Tag
+  Tag,
+  Text
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Category({ params }) {
+export default function TagPage({ params }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     axios
       .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
         params: {
-          category: params?.categorySlug,
+          tag: params?.tagSlug,
           _embed: ["wp:term", "wp:featuredmedia"]
         }
       })
       .then((response) => setPosts(response?.data));
   }, []);
 
+  console.log(posts?.[0]);
+
   return (
     <>
       <Heading as={"h1"} textAlign={"center"} my={[8, 32]}>
-        {posts?.[0]?._embedded?.["wp:term"]?.[0]?.[0]?.name}
+        #{params?.tagSlug?.replace("-", "")}
       </Heading>
       <Container maxW={"container.xl"} my={[8, 32]}>
         {posts?.map((post) => (
           <SimpleGrid key={post?.id} columns={[1, 4]}>
             <GridItem colSpan={[1, 3]}>
               <LinkBox as={"article"}>
+                <Text fontWeight={800} color={"primary.500"}>
+                  <Link
+                    key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}
+                    href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
+                    color={"primary.500"}
+                  >
+                    {post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
+                  </Link>
+                </Text>
                 <Heading mb={4}>
                   <LinkOverlay href={`/posts/${post?.slug}`}>
                     {post?.title?.rendered}

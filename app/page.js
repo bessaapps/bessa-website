@@ -327,7 +327,7 @@ export default function Home({}) {
             <SimpleGrid key={post?.id} columns={[1, 4]}>
               <GridItem colSpan={[1, 3]}>
                 <LinkBox as={"article"}>
-                  <Text fontWeight={800}>
+                  <Text fontWeight={800} color={"primary.500"}>
                     <Link
                       key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}
                       href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}

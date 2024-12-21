@@ -77,8 +77,15 @@ export default function Post({ params }) {
         <Text
           dangerouslySetInnerHTML={{ __html: post?.content?.rendered }}
           sx={{ p: { mb: 4 }, a: { color: "primary.500", fontWeight: 800 } }}
-          mb={4}
+          mb={8}
         />
+        <Flex gap={2} flexWrap={"wrap"}>
+          {post?._embedded?.["wp:term"]?.[1]?.map((tag) => (
+            <Link key={tag?.id} href={`/tags/${tag?.slug}`}>
+              <Tag size={"lg"}>{tag?.name}</Tag>
+            </Link>
+          ))}
+        </Flex>
       </Container>
     </>
   );
