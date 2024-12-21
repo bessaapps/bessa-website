@@ -65,11 +65,13 @@ export default function LGBTQIACommunity() {
         <Flex align={"center"} gap={2} mb={6}>
           <Avatar name={post.author.name} src={post.author.image} size={"xs"} />
           <Text>
-            <Link href={`/blog/authors/${post.author.slug}`}>By Topher</Link>
+            <Link href={`/blog-bak/authors/${post.author.slug}`}>
+              By Topher
+            </Link>
           </Text>
         </Flex>
         <Text color="primary.500" fontWeight={"bold"}>
-          <Link href={`/blog/categories/${post.category.slug}`}>
+          <Link href={`/blog-bak/categories/${post.category.slug}`}>
             {post.category.name}
           </Link>
         </Text>
@@ -79,7 +81,7 @@ export default function LGBTQIACommunity() {
         <Flex gap={2} wrap={"wrap"} mb={4}>
           {postTags.map((tag) => (
             <Tag key={tag.slug}>
-              <Link href={`/blog/tags/${tag.slug}`}>{tag.name}</Link>
+              <Link href={`/blog-bak/tags/${tag.slug}`}>{tag.name}</Link>
             </Tag>
           ))}
         </Flex>

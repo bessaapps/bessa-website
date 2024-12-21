@@ -21,13 +21,13 @@ export default function BlogCard({ post, tags, isHidingCategory }) {
       <Flex align={"center"} gap={2} mb={6}>
         <Avatar name={post.author.name} src={post.author.image} size={"xs"} />
         <Text>
-          <Link href={`/blog/authors/${post.author.slug}`}>By Topher</Link>
+          <Link href={`/blog-bak/authors/${post.author.slug}`}>By Topher</Link>
         </Text>
       </Flex>
       {!isHidingCategory && (
         <Text color={"primary.500"} fontWeight={"bold"}>
           <Link
-            href={`/blog/categories/${post.category.slug}`}
+            href={`/blog-bak/categories/${post.category.slug}`}
             title={`${post.category.name} | ${title}`}
           >
             {post.category.name}
@@ -46,7 +46,7 @@ export default function BlogCard({ post, tags, isHidingCategory }) {
         {tags.map((tag) => (
           <Tag key={tag.slug}>
             <Link
-              href={`/blog/tags/${tag.slug}`}
+              href={`/blog-bak/tags/${tag.slug}`}
               title={`${tag.name} | ${title}`}
             >
               {tag.name}

@@ -49,7 +49,8 @@ const jsonLd = {
   operatingSystem: ["ANDROID", "iOS"]
 };
 
-export default function Home() {
+export default function Home({}) {
+  const [posts, setPosts] = useState([]);
   const [products, setProducts] = useState([]);
 
   const appStores = [
@@ -110,6 +111,11 @@ export default function Home() {
         }
       })
       .then((response) => setProducts(response?.data));
+    axios
+      .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
+        params: { _embed: ["wp:term", "wp:featuredmedia"] }
+      })
+      .then((response) => setPosts(response?.data));
   }, []);
 
   return (
@@ -322,6 +328,51 @@ export default function Home() {
               </Flex>
             </Container>
           </Card>
+        </Container>
+        <Container maxW={"container.xl"} my={[8, 32]}>
+          {posts?.map((post) => (
+            <LinkBox key={post?.id} as={"article"}>
+              <SimpleGrid columns={4}>
+                <GridItem colSpan={3}>
+                  <Text fontWeight={800}>
+                    <Link
+                      key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}
+                      href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
+                    >
+                      {post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
+                    </Link>
+                  </Text>
+                  <Heading mb={4}>
+                    <LinkOverlay href={`/blog/${post?.slug}`}>
+                      {post?.title?.rendered}
+                    </LinkOverlay>
+                  </Heading>
+                  <Flex gap={2}>
+                    {post?._embedded?.["wp:term"]?.[1]?.map((tag) => (
+                      <Link key={tag?.id} href={`/tags/${tag?.slug}`}>
+                        <Tag>{tag?.name}</Tag>
+                      </Link>
+                    ))}
+                  </Flex>
+                </GridItem>
+                <GridItem>
+                  <AspectRatio
+                    ratio={1.75}
+                    borderRadius={8}
+                    overflow={"hidden"}
+                  >
+                    <Image
+                      src={
+                        post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url
+                      }
+                      alt={post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
+                      fill
+                    />
+                  </AspectRatio>
+                </GridItem>
+              </SimpleGrid>
+            </LinkBox>
+          ))}
         </Container>
         <Container maxW={"container.xl"} my={[8, 32]}>
           <Tag colorScheme={"primary"}>Recent Swag</Tag>

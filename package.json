@@ -16,6 +16,7 @@
     "@emotion/styled": "^11.13.0",
     "@next/third-parties": "^14.1.1",
     "axios": "^1.7.8",
+    "dayjs": "^1.11.13",
     "framer-motion": "^11.3.31",
     "next": "^14.2.18",
     "react": "^18.3.1",
