@@ -16,7 +16,9 @@ import {
   LinkOverlay,
   AspectRatio,
   Card,
-  Tag
+  Tag,
+  Divider,
+  Center
 } from "@chakra-ui/react";
 import Mockup1 from "../images/mockups/1.png";
 import Mockup2 from "../images/mockups/2.png";
@@ -60,25 +62,7 @@ export default function Home() {
     }
   ];
 
-  const mockups = [Mockup3, Mockup4];
-
-  const memberships = [
-    "Empower",
-    "Royal",
-    "Champion",
-    "Pioneer",
-    "Pro",
-    "Ultimate",
-    "Ambassador",
-    "premier",
-    "VIP",
-    "Elite",
-    "Diamond",
-    "Platinum",
-    "Gold",
-    "Silver",
-    "Ally"
-  ];
+  const memberships = ["Empower", "Champion", "Pioneer", "Ambassador", "Ally"];
 
   useEffect(() => {
     axios
@@ -86,7 +70,7 @@ export default function Home() {
         params: {
           consumer_key: process.env.NEXT_PUBLIC_WOOCOMMERCE_CONSUMER_KEY,
           consumer_secret: process.env.NEXT_PUBLIC_WOOCOMMERCE_CONSUMER_SECRET,
-          per_page: 12
+          per_page: 4
         }
       })
       .then((response) => setProducts(response?.data));
@@ -107,12 +91,12 @@ export default function Home() {
                 <Heading as={"h1"} mb={4}>
                   Your community is waiting for you.
                 </Heading>
-                <Text mb={4}>
+                <Text mb={8}>
                   Bessa is an inclusive LGBTQ community of all genders, colors,
                   shapes, and sizes who want to safely connect with new and
                   existing friends, family, and others.
                 </Text>
-                <Flex gap={4}>
+                <Flex gap={4} mb={8}>
                   {appStores.map((store) => (
                     <Link key={store.name} href={store.href}>
                       <Button colorScheme={"primary"} size={"lg"} w={140}>
@@ -121,6 +105,27 @@ export default function Home() {
                       </Button>
                     </Link>
                   ))}
+                </Flex>
+                <Flex align={"center"} gap={8} h={"100px"}>
+                  <Box>
+                    <Heading as={"h3"} textAlign={"center"}>
+                      5
+                    </Heading>
+                    <Text textAlign={"center"}>Star Rating</Text>
+                  </Box>
+                  <Center height={"50px"}>
+                    <Divider
+                      orientation={"vertical"}
+                      borderColor={"gray.900"}
+                      borderWidth={1}
+                    />
+                  </Center>
+                  <Box>
+                    <Heading as={"h3"} textAlign={"center"}>
+                      700+
+                    </Heading>
+                    <Text textAlign={"center"}>Downloads</Text>
+                  </Box>
                 </Flex>
               </Fade>
             </GridItem>
@@ -159,15 +164,10 @@ export default function Home() {
         </Box>
         <Container maxW={"container.xl"} my={[8, 32]}>
           <SimpleGrid columns={[1, 4]} gap={8} alignItems={"center"}>
-            {mockups?.map((mockup, index) => (
-              <GridItem key={index}>
-                <Image
-                  src={mockup}
-                  alt={`An LGBTQ Social Media App Mockup ${index}`}
-                />
-              </GridItem>
-            ))}
-            <GridItem colSpan={[1, 2]} w={["100%", "66.66%"]}>
+            <GridItem>
+              <Image src={Mockup3} alt={"An LGBTQ Social Media App Mockup"} />
+            </GridItem>
+            <GridItem colSpan={[1, 2]} w={["100%", "75%"]}>
               <Tag colorScheme={"primary"}>Places and Events</Tag>
               <Heading mb={4}>Discover your Gayborhood</Heading>
               <Text mb={4}>
@@ -180,6 +180,48 @@ export default function Home() {
                 communities. Find anything from groups, volunteer opportunities,
                 or just fun things to do and meet new people at.
               </Text>
+            </GridItem>
+          </SimpleGrid>
+        </Container>
+        <Container maxW={"container.xl"} my={[8, 32]}>
+          <SimpleGrid columns={[1, 4]} gap={8} alignItems={"center"}>
+            <GridItem />
+            <GridItem colSpan={[1, 2]}>
+              <Flex justify={"flex-end"}>
+                <Box w={["100%", "75%"]}>
+                  <Tag colorScheme={"primary"}>Membership</Tag>
+                  <Heading mb={4}>Become a Supporting Member</Heading>
+                  <Text mb={4}>
+                    Bessa is about building community, not ad revenue. Consider
+                    becoming a supporting member to help! Tap the banner in your
+                    app to subscribe. Your memberships helps this inclusive
+                    LGBTQ community operate without ads.{" "}
+                    <Text as={"i"}>Thanks!</Text>
+                  </Text>
+                  <Text mb={4}>
+                    You can also donate directly through{" "}
+                    <Link
+                      href={"https://cash.app/$getbessa"}
+                      fontWeight={"bold"}
+                    >
+                      Cash App
+                    </Link>
+                  </Text>
+                  <SimpleGrid columns={[1, 2]} spacingX={4}>
+                    {memberships?.map((membership) => (
+                      <GridItem key={membership}>
+                        <Flex align={"center"} gap={2}>
+                          <FiStar color={"var(--chakra-colors-primary-500)"} />{" "}
+                          {membership}
+                        </Flex>
+                      </GridItem>
+                    ))}
+                  </SimpleGrid>
+                </Box>
+              </Flex>
+            </GridItem>
+            <GridItem>
+              <Image src={Mockup4} alt={"An LGBTQ Social Media App Mockup"} />
             </GridItem>
           </SimpleGrid>
         </Container>
@@ -212,40 +254,7 @@ export default function Home() {
           </Card>
         </Container>
         <Container maxW={"container.xl"} my={[8, 32]}>
-          <Heading as={"h2"} mb={4}>
-            Become a Supporting Member
-          </Heading>
-          <Text mb={4}>
-            Bessa is about building community, not ad revenue. If you&apos;d
-            like to help out, consider becoming a supporting member! You can tap
-            the banner in your app to subscribe. Your memberships helps this
-            inclusive LGBTQ community operate without annoying ads. Memberships
-            start at just $1 and you can cancel at anytime. ps: You&apos;ll
-            receive a little extra flair on your profile and throughout the app
-            to show you care about your community. You can also donate directly
-            through Cash App{" "}
-            <Link
-              href={"https://cash.app/$getbessa"}
-              target={"_blank"}
-              color={"primary.500"}
-              fontWeight={"bold"}
-            >
-              here
-            </Link>
-            .THANKS!
-          </Text>
-          <SimpleGrid columns={[1, 3]} spacingX={4}>
-            {memberships?.map((membership) => (
-              <GridItem key={membership}>
-                <Flex align={"center"} gap={2}>
-                  <FiStar color={"var(--chakra-colors-primary-500)"} />{" "}
-                  {membership}
-                </Flex>
-              </GridItem>
-            ))}
-          </SimpleGrid>
-        </Container>
-        <Container maxW={"container.xl"} my={[8, 32]}>
+          <Tag colorScheme={"primary"}>Recent Swag</Tag>
           <Heading as={"h2"} mb={4}>
             Shop LGBTQ Merch
           </Heading>
@@ -253,7 +262,7 @@ export default function Home() {
             Check out the shop for these and more! 30% of every purchase
             supports Bessa!
           </Text>
-          <SimpleGrid columns={[1, 4]} spacingX={4}>
+          <SimpleGrid columns={[2, 4]} spacingX={4}>
             {products?.map((product) => (
               <GridItem key={product?.id} mb={4}>
                 <LinkBox>
