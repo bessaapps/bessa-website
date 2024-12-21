@@ -29,7 +29,7 @@ export async function generateMetadata({ params }) {
         authors: [
           {
             name: post?.post?._embedded?.author?.[0]?.name,
-            url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/authors/${post?.post?._embedded?.author?.[0]?.name?.toLowerCase()?.replace(" ", "-")}`
+            url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/authors/${post?._embedded?.author?.[0]?.name?.toLowerCase()?.replace(" ", "-")}`
           }
         ],
         languages: {
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }) {
           locale: "en_US",
           type: "article",
           publishedTime: dayjs(post?.date)?.format(),
-          authors: [post?.post?._embedded?.author?.[0]?.name]
+          authors: [post?._embedded?.author?.[0]?.name]
         },
         twitter: {
           card: "summary_large_image",
