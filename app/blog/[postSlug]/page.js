@@ -43,7 +43,7 @@ export default function Post({ params }) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            headline: `${post?.title?.rendered} | Bessa`,
+            headline: `${post?.title?.rendered} | Bessa | An LGBTQ Social Media App`,
             url,
             image: post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url,
             datePublished: dayjs(post?.date)?.format(),
@@ -90,7 +90,7 @@ export default function Post({ params }) {
         <AspectRatio ratio={1.75} borderRadius={8} overflow={"hidden"} mb={8}>
           <Image
             src={post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url}
-            alt={post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
+            alt={post?.title?.rendered}
             fill
           />
         </AspectRatio>
