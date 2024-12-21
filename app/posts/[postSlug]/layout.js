@@ -32,9 +32,6 @@ export async function generateMetadata({ params }) {
             url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/authors/${post?._embedded?.author?.[0]?.name?.toLowerCase()?.replace(" ", "-")}`
           }
         ],
-        languages: {
-          "en-US": "/en-US"
-        },
         openGraph: {
           title: `${post?.title?.rendered} | Bessa | An LGBTQ Social Media App`,
           description: post?.excerpt?.rendered,
@@ -47,29 +44,16 @@ export async function generateMetadata({ params }) {
               height: 600
             }
           ],
-          locale: "en_US",
           type: "article",
           publishedTime: dayjs(post?.date)?.format(),
           authors: [post?._embedded?.author?.[0]?.name]
         },
         twitter: {
-          card: "summary_large_image",
           title: `${post?.title?.rendered} | Bessa | An LGBTQ Social Media App`,
           description: post?.excerpt?.rendered,
-          creator: "@getbessa",
           images: {
             url: post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url,
             alt: post?.title?.rendered
-          }
-        },
-        appLinks: {
-          ios: {
-            url: "https://apps.apple.com/us/app/bessa-lgbtq-social-media-app/id6471383138?platform=iphone",
-            app_store_id: 6471383138
-          },
-          android: {
-            package: "com.bessa.bessa",
-            app_name: "Bessa LGBTQ Social Media App"
           }
         }
       };
