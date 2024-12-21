@@ -232,7 +232,7 @@ export default function Home({}) {
               community for free.
             </Text>
           </Container>
-          <SimpleGrid columns={2} gap={8}>
+          <SimpleGrid columns={[1, 2]} gap={8}>
             {comparisons.map((comparison) => (
               <GridItem key={comparison.app}>
                 <Card h={"100%"} p={8}>
@@ -324,8 +324,8 @@ export default function Home({}) {
         </Container>
         <Container maxW={"container.xl"} my={[8, 32]}>
           {posts?.map((post) => (
-            <SimpleGrid key={post?.id} columns={4}>
-              <GridItem colSpan={3}>
+            <SimpleGrid key={post?.id} columns={[1, 4]}>
+              <GridItem colSpan={[1, 3]}>
                 <LinkBox as={"article"}>
                   <Text fontWeight={800}>
                     <Link
@@ -341,7 +341,7 @@ export default function Home({}) {
                       {post?.title?.rendered}
                     </LinkOverlay>
                   </Heading>
-                  <Flex gap={2}>
+                  <Flex gap={2} flexWrap={"wrap"}>
                     {post?._embedded?.["wp:term"]?.[1]?.map((tag) => (
                       <Link key={tag?.id} href={`/tags/${tag?.slug}`}>
                         <Tag>{tag?.name}</Tag>

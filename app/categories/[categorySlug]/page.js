@@ -37,15 +37,15 @@ export default function Post({ params }) {
       </Heading>
       <Container maxW={"container.xl"} my={[8, 32]}>
         {posts?.map((post) => (
-          <SimpleGrid key={post?.id} columns={4}>
-            <GridItem colSpan={3}>
+          <SimpleGrid key={post?.id} columns={[1, 4]}>
+            <GridItem colSpan={[1, 3]}>
               <LinkBox as={"article"}>
                 <Heading mb={4}>
                   <LinkOverlay href={`/posts/${post?.slug}`}>
                     {post?.title?.rendered}
                   </LinkOverlay>
                 </Heading>
-                <Flex gap={2}>
+                <Flex gap={2} flexWrap={"wrap"}>
                   {post?._embedded?.["wp:term"]?.[1]?.map((tag) => (
                     <Link key={tag?.id} href={`/tags/${tag?.slug}`}>
                       <Tag>{tag?.name}</Tag>

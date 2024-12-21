@@ -45,7 +45,7 @@ export default function Post({ params }) {
         <Heading as={"h1"} textAlign={"center"} mb={4}>
           {post?.title?.rendered}
         </Heading>
-        <Flex align={"center"} justify={"center"} gap={4}>
+        <Flex align={"center"} justify={"center"} gap={2}>
           <Avatar
             src={
               post?._embedded?.author?.[0]?.avatar_urls?.[
