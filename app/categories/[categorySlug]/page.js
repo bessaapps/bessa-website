@@ -40,11 +40,14 @@ export default function Category({ params }) {
           <SimpleGrid key={post?.id} columns={[1, 4]}>
             <GridItem colSpan={[1, 3]}>
               <LinkBox as={"article"}>
-                <Heading mb={4}>
-                  <LinkOverlay href={`/posts/${post?.slug}`}>
-                    {post?.title?.rendered}
-                  </LinkOverlay>
-                </Heading>
+                <LinkOverlay href={`/posts/${post?.slug}`}>
+                  <Heading
+                    dangerouslySetInnerHTML={{
+                      __html: post?.title?.rendered
+                    }}
+                    mb={4}
+                  />
+                </LinkOverlay>
                 <Flex gap={2} flexWrap={"wrap"}>
                   {post?._embedded?.["wp:term"]?.[1]?.map((tag) => (
                     <Link key={tag?.id} href={`/tags/${tag?.slug}`}>

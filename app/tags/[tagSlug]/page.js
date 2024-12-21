@@ -31,8 +31,6 @@ export default function TagPage({ params }) {
       .then((response) => setPosts(response?.data));
   }, []);
 
-  console.log(posts?.[0]);
-
   return (
     <>
       <Heading as={"h1"} textAlign={"center"} my={[8, 32]}>
@@ -52,11 +50,14 @@ export default function TagPage({ params }) {
                     {post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
                   </Link>
                 </Text>
-                <Heading mb={4}>
-                  <LinkOverlay href={`/posts/${post?.slug}`}>
-                    {post?.title?.rendered}
-                  </LinkOverlay>
-                </Heading>
+                <LinkOverlay href={`/posts/${post?.slug}`}>
+                  <Heading
+                    dangerouslySetInnerHTML={{
+                      __html: post?.title?.rendered
+                    }}
+                    mb={4}
+                  />
+                </LinkOverlay>
                 <Flex gap={2} flexWrap={"wrap"}>
                   {post?._embedded?.["wp:term"]?.[1]?.map((tag) => (
                     <Link key={tag?.id} href={`/tags/${tag?.slug}`}>

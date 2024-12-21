@@ -21,7 +21,8 @@ import {
   Center,
   List,
   ListItem,
-  ListIcon
+  ListIcon,
+  Stack
 } from "@chakra-ui/react";
 import Mockup1 from "../images/mockups/1.png";
 import Mockup2 from "../images/mockups/2.png";
@@ -323,52 +324,59 @@ export default function Home({}) {
           </Card>
         </Container>
         <Container maxW={"container.xl"} my={[8, 32]}>
-          {posts?.map((post) => (
-            <SimpleGrid key={post?.id} columns={[1, 4]}>
-              <GridItem colSpan={[1, 3]}>
-                <LinkBox as={"article"}>
-                  <Text fontWeight={800} color={"primary.500"}>
-                    <Link
-                      key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}
-                      href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
-                      color={"primary.500"}
-                    >
-                      {post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
-                    </Link>
-                  </Text>
-                  <Heading mb={4}>
-                    <LinkOverlay href={`/posts/${post?.slug}`}>
-                      {post?.title?.rendered}
-                    </LinkOverlay>
-                  </Heading>
-                  <Flex gap={2} flexWrap={"wrap"}>
-                    {post?._embedded?.["wp:term"]?.[1]?.map((tag) => (
-                      <Link key={tag?.id} href={`/tags/${tag?.slug}`}>
-                        <Tag>{tag?.name}</Tag>
+          <Heading mb={6}>From the Bessa Bulletin:</Heading>
+          <Stack gap={4}>
+            {posts?.map((post) => (
+              <SimpleGrid key={post?.id} columns={[1, 4]}>
+                <GridItem colSpan={[1, 3]}>
+                  <LinkBox as={"article"}>
+                    <Text fontWeight={800} color={"primary.500"}>
+                      <Link
+                        key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}
+                        href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
+                        color={"primary.500"}
+                      >
+                        {post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
                       </Link>
-                    ))}
-                  </Flex>
-                </LinkBox>
-              </GridItem>
-              <GridItem>
-                <Link href={`/posts/${post?.slug}`}>
-                  <AspectRatio
-                    ratio={1.75}
-                    borderRadius={8}
-                    overflow={"hidden"}
-                  >
-                    <Image
-                      src={
-                        post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url
-                      }
-                      alt={post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
-                      fill
-                    />
-                  </AspectRatio>
-                </Link>
-              </GridItem>
-            </SimpleGrid>
-          ))}
+                    </Text>
+                    <LinkOverlay href={`/posts/${post?.slug}`}>
+                      <Heading
+                        as={"h3"}
+                        dangerouslySetInnerHTML={{
+                          __html: post?.title?.rendered
+                        }}
+                        mb={4}
+                      />
+                    </LinkOverlay>
+                    <Flex gap={2} flexWrap={"wrap"}>
+                      {post?._embedded?.["wp:term"]?.[1]?.map((tag) => (
+                        <Link key={tag?.id} href={`/tags/${tag?.slug}`}>
+                          <Tag>{tag?.name}</Tag>
+                        </Link>
+                      ))}
+                    </Flex>
+                  </LinkBox>
+                </GridItem>
+                <GridItem>
+                  <Link href={`/posts/${post?.slug}`}>
+                    <AspectRatio
+                      ratio={1.75}
+                      borderRadius={8}
+                      overflow={"hidden"}
+                    >
+                      <Image
+                        src={
+                          post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url
+                        }
+                        alt={post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
+                        fill
+                      />
+                    </AspectRatio>
+                  </Link>
+                </GridItem>
+              </SimpleGrid>
+            ))}
+          </Stack>
         </Container>
         <Container maxW={"container.xl"} my={[8, 32]}>
           <Tag colorScheme={"primary"}>Recent Swag</Tag>
