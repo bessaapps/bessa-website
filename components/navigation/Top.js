@@ -21,17 +21,13 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/images/logo.png";
 import { FiMenu } from "react-icons/fi";
-import { SiAppstore, SiGoogleplay } from "react-icons/si";
+import { appStores } from "@/utils/constants";
 
 export default function Top() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const router = useRouter();
 
   const links = [
-    {
-      href: "https://blog.getbessa.com",
-      anchor: "Blog"
-    },
     {
       href: "https://shop.getbessa.com",
       anchor: "Shop"
@@ -47,19 +43,6 @@ export default function Top() {
     {
       href: "/blog-content-writer",
       anchor: "Jobs"
-    }
-  ];
-
-  const appStores = [
-    {
-      name: "iOS",
-      href: "https://apps.apple.com/us/app/bessa/id6471383138?platform=iphone",
-      icon: <SiAppstore />
-    },
-    {
-      name: "Android",
-      href: "https://play.google.com/store/apps/details?id=com.bessa.bessa",
-      icon: <SiGoogleplay />
     }
   ];
 

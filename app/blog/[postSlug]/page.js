@@ -29,8 +29,6 @@ export default function Post({ params }) {
       .then((response) => setPost(response?.data?.[0]));
   }, []);
 
-  console.log(post);
-
   return (
     <>
       <Container maxW={"container.xl"} my={[8, 32]}>
@@ -47,13 +45,6 @@ export default function Post({ params }) {
         <Heading as={"h1"} textAlign={"center"} mb={4}>
           {post?.title?.rendered}
         </Heading>
-        {/*<Flex justify={"center"} gap={2}>*/}
-        {/*  {post?._embedded?.["wp:term"]?.[1]?.map((tag) => (*/}
-        {/*    <Link key={tag?.id} href={`/tags/${tag?.slug}`}>*/}
-        {/*      <Tag>{tag?.name}</Tag>*/}
-        {/*    </Link>*/}
-        {/*  ))}*/}
-        {/*</Flex>*/}
         <Flex align={"center"} justify={"center"} gap={4}>
           <Avatar
             src={

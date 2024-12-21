@@ -28,8 +28,7 @@ import Mockup2 from "../images/mockups/2.png";
 import Mockup3 from "../images/mockups/3.png";
 import Mockup4 from "../images/mockups/4.png";
 import Image from "next/image";
-import { SiAppstore, SiGoogleplay } from "react-icons/si";
-import { url } from "@/utils/constants";
+import { appStores, url } from "@/utils/constants";
 import { FiCheckCircle, FiDollarSign, FiStar, FiXCircle } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -52,19 +51,6 @@ const jsonLd = {
 export default function Home({}) {
   const [posts, setPosts] = useState([]);
   const [products, setProducts] = useState([]);
-
-  const appStores = [
-    {
-      name: "iOS",
-      href: "https://apps.apple.com/us/app/bessa/id6471383138?platform=iphone",
-      icon: <SiAppstore />
-    },
-    {
-      name: "Android",
-      href: "https://play.google.com/store/apps/details?id=com.bessa.bessa",
-      icon: <SiGoogleplay />
-    }
-  ];
 
   const memberships = ["Empower", "Champion", "Pioneer", "Ambassador", "Ally"];
 

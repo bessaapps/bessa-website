@@ -10,7 +10,6 @@ import {
 import NextLink from "next/link";
 import { SiAppstore, SiGoogleplay } from "react-icons/si";
 import {
-  FiBookOpen,
   FiBriefcase,
   FiHeart,
   FiHelpCircle,
@@ -45,11 +44,6 @@ export default function Footer() {
       href: "/support",
       anchor: "Help & Support",
       icon: <FiHelpCircle />
-    },
-    {
-      href: "https://blog.getbessa.com",
-      anchor: "Blog",
-      icon: <FiBookOpen />
     },
     {
       href: "/blog-content-writer",
