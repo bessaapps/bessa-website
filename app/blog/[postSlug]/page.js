@@ -32,6 +32,8 @@ export default function Post({ params }) {
     setUrl(window.location.href);
   }, []);
 
+  if (!post?.id) return null;
+
   return (
     <>
       <Script
@@ -96,7 +98,7 @@ export default function Post({ params }) {
       <Container maxW={"container.sm"} my={[8, 32]}>
         <Text
           dangerouslySetInnerHTML={{ __html: post?.content?.rendered }}
-          sx={{ p: { mb: 4 } }}
+          sx={{ p: { mb: 4 }, a: { color: "primary.500", fontWeight: 800 } }}
           mb={4}
         />
       </Container>
