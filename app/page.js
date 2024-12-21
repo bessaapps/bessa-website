@@ -18,7 +18,10 @@ import {
   Card,
   Tag,
   Divider,
-  Center
+  Center,
+  List,
+  ListItem,
+  ListIcon
 } from "@chakra-ui/react";
 import Mockup1 from "../images/mockups/1.png";
 import Mockup2 from "../images/mockups/2.png";
@@ -27,7 +30,7 @@ import Mockup4 from "../images/mockups/4.png";
 import Image from "next/image";
 import { SiAppstore, SiGoogleplay } from "react-icons/si";
 import { url } from "@/utils/constants";
-import { FiStar } from "react-icons/fi";
+import { FiCheckCircle, FiDollarSign, FiStar, FiXCircle } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -63,6 +66,39 @@ export default function Home() {
   ];
 
   const memberships = ["Empower", "Champion", "Pioneer", "Ambassador", "Ally"];
+
+  const comparisons = [
+    {
+      app: "Other Apps",
+      features: [
+        { icon: FiXCircle, description: "Map", color: "red.500" },
+        { icon: FiXCircle, description: "Events", color: "red.500" },
+        {
+          icon: FiDollarSign,
+          description: "Read Receipts",
+          color: "red.500"
+        }
+      ]
+    },
+    {
+      app: "Bessa",
+      features: [
+        { icon: FiCheckCircle, description: "Map", color: "green.500" },
+        { icon: FiCheckCircle, description: "Events", color: "green.500" },
+        {
+          icon: FiCheckCircle,
+          description: "Read Receipts",
+          color: "green.500"
+        },
+        { icon: FiCheckCircle, description: "Social Feed", color: "green.500" },
+        {
+          icon: FiCheckCircle,
+          description: "Members Directory",
+          color: "green.500"
+        }
+      ]
+    }
+  ];
 
   useEffect(() => {
     axios
@@ -181,6 +217,40 @@ export default function Home() {
                 or just fun things to do and meet new people at.
               </Text>
             </GridItem>
+          </SimpleGrid>
+        </Container>
+        <Container maxW={"container.xl"} my={[8, 32]}>
+          <Container maxW={"container.sm"} textAlign={"center"}>
+            <Tag colorScheme={"primary"}>Bessa is Free!</Tag>
+            <Heading mb={4}>
+              Connect, share, discover, and engage for FREE!
+            </Heading>
+            <Text mb={4}>
+              Unlike other apps like Twitter, Grindr, HER, and OkCupid, Bessa
+              costs absolutely nothing. Additionally, Bessa is loaded with
+              community-building features Twitter and Grindr don&apos;t offer.
+              Here you can connect, share, discover, and engage with your LGBTQ
+              community for free.
+            </Text>
+          </Container>
+          <SimpleGrid columns={2} gap={8}>
+            {comparisons.map((comparison) => (
+              <GridItem key={comparison.app}>
+                <Card h={"100%"} p={8}>
+                  <Heading as={"h3"} mb={4}>
+                    {comparison.app}
+                  </Heading>
+                  <List spacing={2}>
+                    {comparison.features.map((feature) => (
+                      <ListItem key={feature.description}>
+                        <ListIcon as={feature.icon} color={feature.color} />
+                        {feature.description}
+                      </ListItem>
+                    ))}
+                  </List>
+                </Card>
+              </GridItem>
+            ))}
           </SimpleGrid>
         </Container>
         <Container maxW={"container.xl"} my={[8, 32]}>

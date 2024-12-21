@@ -14,8 +14,7 @@ import {
   FiBriefcase,
   FiHeart,
   FiHelpCircle,
-  FiShoppingBag,
-  FiSmartphone
+  FiShoppingBag
 } from "react-icons/fi";
 
 export default function Footer() {
@@ -46,11 +45,6 @@ export default function Footer() {
       href: "/support",
       anchor: "Help & Support",
       icon: <FiHelpCircle />
-    },
-    {
-      href: "/whats-new",
-      anchor: "What's New in Version 6!",
-      icon: <FiSmartphone />
     },
     {
       href: "https://blog.getbessa.com",
