@@ -22,13 +22,21 @@ export default function TagPage({ params }) {
 
   useEffect(() => {
     axios
-      .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
+      .get("https://blog.getbessa.com/wp-json/wp/v2/tags", {
         params: {
-          tag: params?.tagSlug,
-          _embed: ["wp:term", "wp:featuredmedia"]
+          slug: params?.tagSlug
         }
       })
-      .then((response) => setPosts(response?.data));
+      .then((response) =>
+        axios
+          .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
+            params: {
+              tags: response?.data?.[0]?.id,
+              _embed: ["wp:term", "wp:featuredmedia"]
+            }
+          })
+          .then((response) => setPosts(response?.data))
+      );
   }, []);
 
   return (

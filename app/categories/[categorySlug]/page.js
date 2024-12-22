@@ -21,13 +21,21 @@ export default function Category({ params }) {
 
   useEffect(() => {
     axios
-      .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
+      .get("https://blog.getbessa.com/wp-json/wp/v2/categories", {
         params: {
-          category: params?.categorySlug,
-          _embed: ["wp:term", "wp:featuredmedia"]
+          slug: params?.categorySlug
         }
       })
-      .then((response) => setPosts(response?.data));
+      .then((response) => {
+        axios
+          .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
+            params: {
+              categories: response?.data?.[0]?.id,
+              _embed: ["wp:term", "wp:featuredmedia"]
+            }
+          })
+          .then((response) => setPosts(response?.data));
+      });
   }, []);
 
   return (
