@@ -65,7 +65,7 @@ export default async function Post({ params }) {
           />
           <Text fontWeight={500}>{post?._embedded?.author?.[0]?.name}</Text>
           &middot;
-          <Text>{dayjs(post?.modified)?.format("MMM D, YYYY")}</Text>
+          <Text>{dayjs(post?.date)?.format("MMM D, YYYY")}</Text>
         </Flex>
       </Container>
       {post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
@@ -88,7 +88,7 @@ export default async function Post({ params }) {
         <Flex gap={2} flexWrap={"wrap"}>
           {post?._embedded?.["wp:term"]?.[1]?.map((tag) => (
             <Link key={tag?.id} href={`/tags/${tag?.slug}`}>
-              <Tag colorScheme={"primary"} size={"lg"}>
+              <Tag colorScheme={"blackAlpha"} size={"lg"}>
                 {tag?.name}
               </Tag>
             </Link>

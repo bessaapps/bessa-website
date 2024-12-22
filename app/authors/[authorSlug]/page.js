@@ -59,6 +59,7 @@ export default async function Category({ params }) {
                 ]
               ]
             }
+            name={author?.name}
             size={"xl"}
             mb={4}
           />
@@ -94,7 +95,7 @@ export default async function Category({ params }) {
                   <Flex gap={2} flexWrap={"wrap"}>
                     {post?._embedded?.["wp:term"]?.[1]?.map((tag) => (
                       <Link key={tag?.id} href={`/tags/${tag?.slug}`}>
-                        <Tag colorScheme={"primary"}>{tag?.name}</Tag>
+                        <Tag colorScheme={"blackAlpha"}>{tag?.name}</Tag>
                       </Link>
                     ))}
                   </Flex>
