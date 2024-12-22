@@ -12,37 +12,29 @@ import {
   LinkOverlay,
   SimpleGrid,
   Stack,
-  Tag
+  Tag,
+  Text
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Category({ params }) {
+export default function Blog({}) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     axios
-      .get("https://blog.getbessa.com/wp-json/wp/v2/categories", {
+      .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
         params: {
-          slug: params?.categorySlug
+          _embed: ["wp:term", "wp:featuredmedia"]
         }
       })
-      .then((response) => {
-        axios
-          .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
-            params: {
-              categories: response?.data?.[0]?.id,
-              _embed: ["wp:term", "wp:featuredmedia"]
-            }
-          })
-          .then((response) => setPosts(response?.data));
-      });
+      .then((response) => setPosts(response?.data));
   }, []);
 
   return (
     <>
       <Heading as={"h1"} textAlign={"center"} my={[8, 32]}>
-        {posts?.[0]?._embedded?.["wp:term"]?.[0]?.[0]?.name}
+        Bessa Bulletin
       </Heading>
       <Container maxW={"container.xl"} my={[8, 32]}>
         <Stack gap={4}>
@@ -50,6 +42,15 @@ export default function Category({ params }) {
             <SimpleGrid key={post?.id} columns={[1, 4]}>
               <GridItem colSpan={[1, 3]}>
                 <LinkBox as={"article"}>
+                  <Text fontWeight={800} color={"primary.500"}>
+                    <Link
+                      key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}
+                      href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
+                      color={"primary.500"}
+                    >
+                      {post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
+                    </Link>
+                  </Text>
                   <LinkOverlay href={`/posts/${post?.slug}`}>
                     <Heading
                       dangerouslySetInnerHTML={{
