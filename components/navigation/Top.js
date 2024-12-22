@@ -29,14 +29,6 @@ export default function Top() {
 
   const links = [
     {
-      href: "https://shop.getbessa.com",
-      anchor: "Shop"
-    },
-    {
-      href: "https://cash.app/$getbessa",
-      anchor: "Donate"
-    },
-    {
       href: "/support",
       anchor: "Support"
     },
@@ -48,48 +40,53 @@ export default function Top() {
 
   return (
     <>
-      <Container maxW={"container.xl"} py={4}>
-        <Flex align={"center"} justify={"space-between"}>
-          <Flex align={"center"} gap={4}>
-            <Link href={"/"} title={"Bessa | An LGBTQ Social Media App"}>
-              <AspectRatio ratio={1} w={12}>
-                <Image src={Logo} alt={"Bessa | An LGBTQ Social Media App"} />
-              </AspectRatio>
-            </Link>
-            <Text fontSize={"1.25rem"} fontWeight={800} mr={4}>
+      <Box bg={"gray.100"}>
+        <Container maxW={"container.xl"} py={4}>
+          <Flex align={"center"} justify={"space-between"}>
+            <Flex align={"center"} gap={4}>
               <Link href={"/"} title={"Bessa | An LGBTQ Social Media App"}>
-                Bessa
+                <AspectRatio ratio={1} w={12}>
+                  <Image src={Logo} alt={"Bessa | An LGBTQ Social Media App"} />
+                </AspectRatio>
               </Link>
-            </Text>
+              <Text fontSize={"1.25rem"} fontWeight={800} mr={4}>
+                <Link href={"/"} title={"Bessa | An LGBTQ Social Media App"}>
+                  Bessa
+                </Link>
+              </Text>
+              <Show above={"sm"}>
+                <Flex>
+                  {links.map((link) => (
+                    <Link key={link.href} href={link.href}>
+                      <Button variant={"ghost"} fontWeight={500}>
+                        {link.anchor}
+                      </Button>
+                    </Link>
+                  ))}
+                </Flex>
+              </Show>
+            </Flex>
             <Show above={"sm"}>
-              <Flex>
-                {links.map((link) => (
-                  <Link key={link.href} href={link.href}>
-                    <Button variant={"ghost"} fontWeight={500}>
-                      {link.anchor}
+              <Flex gap={4}>
+                {appStores.map((store) => (
+                  <Link key={store.name} href={store.href}>
+                    <Button colorScheme={"primary"}>
+                      <Flex mr={2}>{store.icon}</Flex>
+                      {store.name}
                     </Button>
                   </Link>
                 ))}
               </Flex>
             </Show>
+            <Hide above={"sm"}>
+              <FiMenu
+                size={27}
+                onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+              />
+            </Hide>
           </Flex>
-          <Show above={"sm"}>
-            <Flex gap={4}>
-              {appStores.map((store) => (
-                <Link key={store.name} href={store.href}>
-                  <Button colorScheme={"primary"}>
-                    <Flex mr={2}>{store.icon}</Flex>
-                    {store.name}
-                  </Button>
-                </Link>
-              ))}
-            </Flex>
-          </Show>
-          <Hide above={"sm"}>
-            <FiMenu size={27} onClick={() => setIsDrawerOpen(!isDrawerOpen)} />
-          </Hide>
-        </Flex>
-      </Container>
+        </Container>
+      </Box>
       <Drawer isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
         <DrawerOverlay />
         <DrawerContent>

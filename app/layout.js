@@ -4,6 +4,7 @@ import Footer from "@/components/navigation/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { description, title, url } from "@/utils/constants";
 import "./global.css";
+import TopBanner from "@/components/navigation/TopBanner";
 
 export const metadata = {
   title,
@@ -53,12 +54,15 @@ export default function RootLayout({ children }) {
     <html lang={"en"}>
       <body>
         <Providers>
-          <header>
+          <div style={{ position: "static" }}>
+            <TopBanner />
+          </div>
+          <header style={{ position: "sticky", top: 0, zIndex: 950 }}>
             <nav>
               <Top />
             </nav>
           </header>
-          <main>{children}</main>
+          <main style={{ overflowX: "hidden" }}>{children}</main>
           <footer>
             <nav>
               <Footer />

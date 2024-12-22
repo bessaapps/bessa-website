@@ -1,6 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
 import { Roboto } from "next/font/google";
-import { mode } from "@chakra-ui/theme-tools";
 
 // https://tintsshades.netlify.app (Weight 10)
 
@@ -51,11 +50,10 @@ const theme = extendTheme({
     }
   },
   styles: {
-    global: (props) => ({
+    global: () => ({
       "html, body": {
-        bg: mode("gray.50", "gray.800")(props),
-        color: mode("gray.900", "gray.100")(props),
-        overflowX: "hidden",
+        bg: "gray.100",
+        color: "gray.900",
         lineHeight: 2
       },
       // Minor Third
