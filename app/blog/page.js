@@ -1,7 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import axios from "axios";
 import {
   AspectRatio,
   Container,
@@ -17,19 +13,20 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
+import axios from "axios";
 
-export default function Blog({}) {
-  const [posts, setPosts] = useState([]);
+async function getData() {
+  return await axios
+    .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
+      params: {
+        _embed: ["wp:term", "wp:featuredmedia"]
+      }
+    })
+    .then((response) => response?.data);
+}
 
-  useEffect(() => {
-    axios
-      .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
-        params: {
-          _embed: ["wp:term", "wp:featuredmedia"]
-        }
-      })
-      .then((response) => setPosts(response?.data));
-  }, []);
+export default async function Blog({}) {
+  const posts = await getData();
 
   return (
     <>
