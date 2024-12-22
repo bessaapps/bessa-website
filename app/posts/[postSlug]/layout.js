@@ -11,6 +11,7 @@ import { appStores } from "@/utils/constants";
 import axios from "axios";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import dayjs from "dayjs";
+const { convert } = require("html-to-text");
 
 export async function generateMetadata({ params }) {
   return await axios
@@ -24,8 +25,8 @@ export async function generateMetadata({ params }) {
       const post = response?.data?.[0];
 
       return {
-        title: `${post?.title?.rendered} | Bessa | An LGBTQ Social Media App`,
-        description: post?.excerpt?.rendered,
+        title: `${convert(post?.title?.rendered)} | Bessa | An LGBTQ Social Media App`,
+        description: convert(post?.excerpt?.rendered),
         authors: [
           {
             name: post?._embedded?.author?.[0]?.name,
@@ -33,8 +34,8 @@ export async function generateMetadata({ params }) {
           }
         ],
         openGraph: {
-          title: `${post?.title?.rendered} | Bessa | An LGBTQ Social Media App`,
-          description: post?.excerpt?.rendered,
+          title: `${convert(post?.title?.rendered)} | Bessa | An LGBTQ Social Media App`,
+          description: convert(post?.excerpt?.rendered),
           url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/posts/${post?.slug}`,
           siteName: "Bessa | An LGBTQ Social Media App",
           images: [
@@ -49,12 +50,15 @@ export async function generateMetadata({ params }) {
           authors: [post?._embedded?.author?.[0]?.name]
         },
         twitter: {
-          title: `${post?.title?.rendered} | Bessa | An LGBTQ Social Media App`,
-          description: post?.excerpt?.rendered,
+          title: `${convert(post?.title?.rendered)} | Bessa | An LGBTQ Social Media App`,
+          description: convert(post?.excerpt?.rendered),
           images: {
             url: post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url,
-            alt: post?.title?.rendered
+            alt: convert(post?.title?.rendered)
           }
+        },
+        alternates: {
+          canonical: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/posts/${post?.slug}`
         }
       };
     });

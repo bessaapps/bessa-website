@@ -5,6 +5,7 @@ import axios from "axios";
 import {
   AspectRatio,
   Avatar,
+  Box,
   Container,
   Flex,
   Heading,
@@ -14,6 +15,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import dayjs from "dayjs";
+const { convert } = require("html-to-text");
 
 export default function Post({ params }) {
   const [post, setPost] = useState({});
@@ -42,9 +44,12 @@ export default function Post({ params }) {
             </Link>
           </Tag>
         </Flex>
-        <Heading as={"h1"} textAlign={"center"} mb={4}>
-          {post?.title?.rendered}
-        </Heading>
+        <Heading
+          as={"h1"}
+          textAlign={"center"}
+          mb={4}
+          dangerouslySetInnerHTML={{ __html: post?.title?.rendered }}
+        />
         <Flex align={"center"} justify={"center"} gap={2}>
           <Avatar
             src={
@@ -58,23 +63,26 @@ export default function Post({ params }) {
                 ]
               ]
             }
+            name={post?._embedded?.author?.[0]?.name}
           />
           <Text fontWeight={500}>{post?._embedded?.author?.[0]?.name}</Text>
           &middot;
           <Text>{dayjs(post?.modified)?.format("MMM D, YYYY")}</Text>
         </Flex>
       </Container>
-      <Container maxW={"container.xl"} my={[8, 32]}>
-        <AspectRatio ratio={1.75} borderRadius={8} overflow={"hidden"} mb={8}>
-          <Image
-            src={post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url}
-            alt={post?.title?.rendered}
-            fill
-          />
-        </AspectRatio>
-      </Container>
+      {post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
+        <Container maxW={"container.xl"} my={[8, 32]}>
+          <AspectRatio ratio={1.75} borderRadius={8} overflow={"hidden"} mb={8}>
+            <Image
+              src={post._embedded["wp:featuredmedia"][0].source_url}
+              alt={convert(post?.title?.rendered)}
+              fill
+            />
+          </AspectRatio>
+        </Container>
+      )}
       <Container maxW={"container.sm"} my={[8, 32]}>
-        <Text
+        <Box
           dangerouslySetInnerHTML={{ __html: post?.content?.rendered }}
           sx={{ p: { mb: 4 }, a: { color: "primary.500", fontWeight: 800 } }}
           mb={8}
@@ -82,7 +90,9 @@ export default function Post({ params }) {
         <Flex gap={2} flexWrap={"wrap"}>
           {post?._embedded?.["wp:term"]?.[1]?.map((tag) => (
             <Link key={tag?.id} href={`/tags/${tag?.slug}`}>
-              <Tag size={"lg"}>{tag?.name}</Tag>
+              <Tag colorScheme={"primary"} size={"lg"}>
+                {tag?.name}
+              </Tag>
             </Link>
           ))}
         </Flex>
