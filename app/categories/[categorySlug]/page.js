@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import axios from "axios";
 import {
   AspectRatio,
@@ -17,27 +14,29 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Category({ params }) {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("https://blog.getbessa.com/wp-json/wp/v2/categories", {
-        params: {
-          slug: params?.categorySlug
-        }
-      })
-      .then((response) => {
-        axios
+async function getData(slug) {
+  return await axios
+    .get("https://blog.getbessa.com/wp-json/wp/v2/categories", {
+      params: {
+        slug
+      }
+    })
+    .then(
+      async (response) =>
+        await axios
           .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
             params: {
               categories: response?.data?.[0]?.id,
               _embed: ["wp:term", "wp:featuredmedia"]
             }
           })
-          .then((response) => setPosts(response?.data));
-      });
-  }, []);
+          .then((response) => response?.data)
+    );
+}
+
+export default async function Category({ params }) {
+  const { categorySlug } = await params;
+  const posts = await getData(categorySlug);
 
   return (
     <>

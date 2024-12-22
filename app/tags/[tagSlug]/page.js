@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import axios from "axios";
 import {
   AspectRatio,
@@ -18,27 +15,29 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
-export default function TagPage({ params }) {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("https://blog.getbessa.com/wp-json/wp/v2/tags", {
-        params: {
-          slug: params?.tagSlug
-        }
-      })
-      .then((response) =>
-        axios
+async function getData(slug) {
+  return await axios
+    .get("https://blog.getbessa.com/wp-json/wp/v2/tags", {
+      params: {
+        slug
+      }
+    })
+    .then(
+      async (response) =>
+        await axios
           .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
             params: {
               tags: response?.data?.[0]?.id,
               _embed: ["wp:term", "wp:featuredmedia"]
             }
           })
-          .then((response) => setPosts(response?.data))
-      );
-  }, []);
+          .then((response) => response?.data)
+    );
+}
+
+export default async function TagPage({ params }) {
+  const { tagSlug } = await params;
+  const posts = await getData(tagSlug);
 
   return (
     <>
