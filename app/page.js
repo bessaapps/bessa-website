@@ -22,7 +22,10 @@ import {
   List,
   ListItem,
   ListIcon,
-  Stack
+  Table,
+  Td,
+  Tr,
+  Tbody
 } from "@chakra-ui/react";
 import Mockup1 from "../images/mockups/1.png";
 import Mockup2 from "../images/mockups/2.png";
@@ -33,6 +36,7 @@ import { appStores, url } from "@/utils/constants";
 import { FiCheckCircle, FiDollarSign, FiStar, FiXCircle } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import dayjs from "dayjs";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -100,7 +104,7 @@ export default function Home({}) {
       .then((response) => setProducts(response?.data));
     axios
       .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
-        params: { _embed: ["wp:term", "wp:featuredmedia"] }
+        params: { _embed: ["wp:term", "author"] }
       })
       .then((response) => setPosts(response?.data));
   }, []);
@@ -324,59 +328,46 @@ export default function Home({}) {
           </Card>
         </Container>
         <Container maxW={"container.xl"} my={[8, 32]}>
-          <Heading mb={6}>From the Bessa Bulletin:</Heading>
-          <Stack gap={4}>
-            {posts?.map((post) => (
-              <SimpleGrid key={post?.id} columns={[1, 4]}>
-                <GridItem colSpan={[1, 3]}>
-                  <LinkBox as={"article"}>
-                    <Text fontWeight={800} color={"primary.500"}>
-                      <Link
-                        key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}
-                        href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
-                        color={"primary.500"}
-                      >
-                        {post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
-                      </Link>
-                    </Text>
-                    <LinkOverlay href={`/posts/${post?.slug}`}>
+          <Heading mb={8}>From the Bessa Bulletin:</Heading>
+          <Table variant={"simple"} maxW={"100%"}>
+            <Tbody>
+              {posts?.map((post) => (
+                <Tr key={post?.id}>
+                  <Td
+                    borderTop={"solid 1px"}
+                    borderBottom={"none"}
+                    borderColor={"gray.900"}
+                    pl={0}
+                  >
+                    <Link href={`/posts/${post?.slug}`}>
                       <Heading
                         as={"h3"}
                         dangerouslySetInnerHTML={{
                           __html: post?.title?.rendered
                         }}
-                        mb={4}
+                        fontWeight={500}
                       />
-                    </LinkOverlay>
-                    <Flex gap={2} flexWrap={"wrap"}>
-                      {post?._embedded?.["wp:term"]?.[1]?.map((tag) => (
-                        <Link key={tag?.id} href={`/tags/${tag?.slug}`}>
-                          <Tag>{tag?.name}</Tag>
-                        </Link>
-                      ))}
-                    </Flex>
-                  </LinkBox>
-                </GridItem>
-                <GridItem>
-                  <Link href={`/posts/${post?.slug}`}>
-                    <AspectRatio
-                      ratio={1.75}
-                      borderRadius={8}
-                      overflow={"hidden"}
+                    </Link>
+                  </Td>
+                  <Td
+                    borderTop={"solid 1px"}
+                    borderBottom={"none"}
+                    borderColor={"gray.900"}
+                  >
+                    {dayjs(post?.date)?.format("MMM D, YYYY")} &middot; by{" "}
+                    {post?._embedded?.author?.[0]?.name} in{" "}
+                    <Link
+                      key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}
+                      href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
+                      color={"primary.500"}
                     >
-                      <Image
-                        src={
-                          post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url
-                        }
-                        alt={post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
-                        fill
-                      />
-                    </AspectRatio>
-                  </Link>
-                </GridItem>
-              </SimpleGrid>
-            ))}
-          </Stack>
+                      {post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
+                    </Link>
+                  </Td>
+                </Tr>
+              ))}
+            </Tbody>
+          </Table>
         </Container>
         <Container maxW={"container.xl"} my={[8, 32]}>
           <Tag colorScheme={"primary"}>Recent Swag</Tag>
