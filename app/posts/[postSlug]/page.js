@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import axios from "axios";
 import {
   AspectRatio,
@@ -17,19 +14,20 @@ import Image from "next/image";
 import dayjs from "dayjs";
 const { convert } = require("html-to-text");
 
-export default function Post({ params }) {
-  const [post, setPost] = useState({});
+async function getData(slug) {
+  return await axios
+    .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
+      params: {
+        slug,
+        _embed: ["wp:term", "wp:featuredmedia", "author"]
+      }
+    })
+    .then((response) => response?.data?.[0]);
+}
 
-  useEffect(() => {
-    axios
-      .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
-        params: {
-          slug: params?.postSlug,
-          _embed: ["wp:term", "wp:featuredmedia", "author"]
-        }
-      })
-      .then((response) => setPost(response?.data?.[0]));
-  }, []);
+export default async function Post({ params }) {
+  const { postSlug } = await params;
+  const post = await getData(postSlug);
 
   return (
     <>
