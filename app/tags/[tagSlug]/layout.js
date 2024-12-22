@@ -9,7 +9,6 @@ import {
 } from "@chakra-ui/react";
 import { appStores } from "@/utils/constants";
 import axios from "axios";
-import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
 export async function generateMetadata({ params }) {
   return await axios
@@ -25,7 +24,7 @@ export async function generateMetadata({ params }) {
         title: `#${tag?.name?.replace(" ", "")} | Bessa | An LGBTQ Social Media App`,
         openGraph: {
           title: `#${tag?.name?.replace(" ", "")} | Bessa | An LGBTQ Social Media App`,
-          url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/category/${params?.tagSlug}`,
+          url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/tags/${params?.tagSlug}`,
           siteName: "Bessa | An LGBTQ Social Media App"
         },
         twitter: {

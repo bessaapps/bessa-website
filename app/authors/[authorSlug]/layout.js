@@ -12,29 +12,29 @@ import axios from "axios";
 
 export async function generateMetadata({ params }) {
   return await axios
-    .get("https://blog.getbessa.com/wp-json/wp/v2/categories", {
+    .get("https://blog.getbessa.com/wp-json/wp/v2/users", {
       params: {
-        slug: params?.categorySlug
+        slug: params?.authorSlug
       }
     })
     .then((response) => {
-      const category = response?.data?.[0];
+      const author = response?.data?.[0];
 
       return {
-        title: `${category?.name} | Bessa | An LGBTQ Social Media App`,
+        title: `${author?.name} | Bessa | An LGBTQ Social Media App`,
         openGraph: {
-          title: `${category?.name} | Bessa | An LGBTQ Social Media App`,
-          url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/categories/${params?.categorySlug}`,
+          title: `${author?.name} | Bessa | An LGBTQ Social Media App`,
+          url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/authors/${params?.authorSlug}`,
           siteName: "Bessa | An LGBTQ Social Media App"
         },
         twitter: {
-          title: `${category?.name} | Bessa | An LGBTQ Social Media App`
+          title: `${author?.name} | Bessa | An LGBTQ Social Media App`
         }
       };
     });
 }
 
-export default function CategoryLayout({ children }) {
+export default function AuthorLayout({ children }) {
   return (
     <>
       {children}

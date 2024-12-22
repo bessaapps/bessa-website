@@ -355,11 +355,18 @@ export default function Home({}) {
                     borderColor={"gray.900"}
                   >
                     {dayjs(post?.date)?.format("MMM D, YYYY")} &middot; by{" "}
-                    {post?._embedded?.author?.[0]?.name} in{" "}
+                    <Link
+                      key={post?._embedded?.author?.[0]?.slug}
+                      href={`/authors/${post?._embedded?.author?.[0]?.slug}`}
+                      fontWeight={500}
+                    >
+                      {post?._embedded?.author?.[0]?.name}
+                    </Link>{" "}
+                    in{" "}
                     <Link
                       key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}
                       href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
-                      color={"primary.500"}
+                      fontWeight={"bold"}
                     >
                       {post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
                     </Link>
