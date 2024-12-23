@@ -54,15 +54,15 @@ export default function Footer() {
 
   const socialLinks = [
     {
-      href: "/blog-content-writer",
+      href: "https://www.linkedin.com/company/getbessa/about",
       icon: <FiLinkedin size={32} color={"white"} />
     },
     {
-      href: "/blog-content-writer",
+      href: "https://x.com/getbessa",
       icon: <FiTwitter size={32} color={"white"} />
     },
     {
-      href: "/blog-content-writer",
+      href: "https://www.instagram.com/getbessa",
       icon: <FiInstagram size={32} color={"white"} />
     }
   ];
