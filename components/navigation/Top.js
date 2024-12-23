@@ -30,7 +30,7 @@ export default function Top() {
   const links = [
     {
       href: "/support",
-      anchor: "Help & Support"
+      anchor: "Support"
     },
     {
       href: "/blog-content-writer",
@@ -42,11 +42,11 @@ export default function Top() {
     },
     {
       href: "https://cash.app/$getbessa",
-      anchor: "Donate to LGBTQ communities"
+      anchor: "Donate"
     },
     {
       href: "https://shop.getbessa.com",
-      anchor: "Shop LGBTQ Merch"
+      anchor: "Shop"
     }
   ];
 
