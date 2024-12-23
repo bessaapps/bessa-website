@@ -29,16 +29,16 @@ export default function Top() {
 
   const links = [
     {
-      href: "/blog",
-      anchor: "Blog"
-    },
-    {
       href: "/support",
       anchor: "Support"
     },
     {
       href: "/blog-content-writer",
       anchor: "Jobs"
+    },
+    {
+      href: "/blog",
+      anchor: "Blog"
     }
   ];
 

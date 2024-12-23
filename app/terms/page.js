@@ -14,11 +14,13 @@ export const metadata = {
 
 export default function Terms() {
   return (
-    <Container maxW={"container.sm"} py={16}>
+    <Container maxW={"container.xl"} py={16}>
       <Heading as={"h1"} mb={4}>
         Terms and Conditions
       </Heading>
-      <Tag mb={4}>Updated November, 21st, 2023</Tag>
+      <Tag colorScheme={"blackAlpha"} mb={4}>
+        Updated November, 21st, 2023
+      </Tag>
       <Heading mb={4}>General Terms</Heading>
       <Text mb={4}>
         By accessing and placing an order with Bessa, you confirm that you are

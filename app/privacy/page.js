@@ -14,11 +14,13 @@ export const metadata = {
 
 export default function Privacy() {
   return (
-    <Container maxW={"container.sm"} py={16}>
+    <Container maxW={"container.xl"} py={16}>
       <Heading as={"h1"} mb={4}>
         Privacy Policy
       </Heading>
-      <Tag mb={4}>Updated November, 21st, 2023</Tag>
+      <Tag colorScheme={"blackAlpha"} mb={4}>
+        Updated November, 21st, 2023
+      </Tag>
       <Text mb={4}>
         Bessa (“we,” “our,” or “us”) is committed to protecting your privacy.
         This Privacy Policy explains how your personal information is collected,

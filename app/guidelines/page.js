@@ -20,12 +20,12 @@ import Article from "@/images/guidelines.webp";
 export default function Guidelines() {
   return (
     <>
-      <Container maxW={"container.sm"} my={16}>
+      <Container maxW={"container.xl"} my={16}>
         <AspectRatio ratio={16 / 9}>
           <Image src={Article} alt={"Guidelines"} style={{ borderRadius: 8 }} />
         </AspectRatio>
       </Container>
-      <Container maxW={"container.sm"} my={16}>
+      <Container maxW={"container.xl"} my={16}>
         <Heading as={"h1"} mb={4}>
           Guidelines
         </Heading>

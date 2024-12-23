@@ -29,7 +29,7 @@ export default function Support() {
 
   return (
     <>
-      <Container maxW={"container.sm"} my={16}>
+      <Container maxW={"container.xl"} my={16}>
         <Heading as={"h1"} mb={4}>
           Help &amp; Support
         </Heading>
@@ -41,7 +41,7 @@ export default function Support() {
           </Link>
         </Text>
       </Container>
-      <Container maxW={"container.sm"} my={16}>
+      <Container maxW={"container.xl"} my={16}>
         <Heading mb={4}>Guides</Heading>
         <Box mb={8}>
           {guides.map((guide, index) => (

@@ -83,9 +83,9 @@ export default function BlogContentWriter() {
           Blog Content Writer
         </Heading>
         <Flex gap={4} mb={4}>
-          <Tag>Contract</Tag>
-          <Tag>$8-24/hr.</Tag>
-          <Tag>Remote</Tag>
+          <Tag colorScheme={"primary"}>Contract</Tag>
+          <Tag colorScheme={"primary"}>$8-24/hr.</Tag>
+          <Tag colorScheme={"primary"}>Remote</Tag>
         </Flex>
         <Text mb={4}>
           Are you deeply involved in the LGBTQ and/or BIPOC communities? Do you
