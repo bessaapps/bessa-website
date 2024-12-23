@@ -26,17 +26,6 @@ import { appStores } from "@/utils/constants";
 export default function Footer() {
   const links = [
     {
-      href: "https://cash.app/$getbessa",
-      anchor: "Donate to LGBTQ communities",
-      icon: <FiHeart color={"white"} />
-    },
-    {
-      href: "https://shop.getbessa.com",
-      anchor: "Shop LGBTQ Merch",
-      icon: <FiShoppingBag color={"white"} />,
-      margin: [0, 4]
-    },
-    {
       href: "/support",
       anchor: "Help & Support",
       icon: <FiHelpCircle color={"white"} />
@@ -50,6 +39,16 @@ export default function Footer() {
       href: "/blog",
       anchor: "Blog",
       icon: <FiBook color={"white"} />
+    },
+    {
+      href: "https://cash.app/$getbessa",
+      anchor: "Donate to LGBTQ communities",
+      icon: <FiHeart color={"white"} />
+    },
+    {
+      href: "https://shop.getbessa.com",
+      anchor: "Shop LGBTQ Merch",
+      icon: <FiShoppingBag color={"white"} />
     }
   ];
 
@@ -74,7 +73,7 @@ export default function Footer() {
   ];
 
   return (
-    <Card bg={"black"} minH={"calc(100vh - 96px)"} m={4}>
+    <Card bg={"black"} minH={"calc(100vh - 96px)"} m={4} py={4}>
       <Container maxW={"container.xl"} my={"auto"}>
         <SimpleGrid columns={[1, 4]} spacing={8}>
           <GridItem colSpan={[1, 2]} rowSpan={[1, 2]} w={["100%", "75%"]}>
@@ -106,7 +105,7 @@ export default function Footer() {
           </GridItem>
           <GridItem>
             {links.map((link) => (
-              <Flex key={link.href} align={"center"} gap={2} mb={link?.margin}>
+              <Flex key={link.href} align={"center"} gap={2}>
                 {link.icon}
                 <Text color={"white"}>
                   <Link
