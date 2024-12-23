@@ -1,10 +1,7 @@
-"use client";
-
 import {
   Box,
   Button,
   Container,
-  Fade,
   Flex,
   GridItem,
   Highlight,
@@ -21,7 +18,6 @@ import {
   Center,
   List,
   ListItem,
-  ListIcon,
   Table,
   Td,
   Tr,
@@ -34,7 +30,6 @@ import Mockup4 from "../images/mockups/4.png";
 import Image from "next/image";
 import { appStores, url } from "@/utils/constants";
 import { FiCheckCircle, FiDollarSign, FiStar, FiXCircle } from "react-icons/fi";
-import { useEffect, useState } from "react";
 import axios from "axios";
 import dayjs from "dayjs";
 
@@ -53,9 +48,30 @@ const jsonLd = {
   operatingSystem: ["ANDROID", "iOS"]
 };
 
-export default function Home({}) {
-  const [posts, setPosts] = useState([]);
-  const [products, setProducts] = useState([]);
+async function getData() {
+  return axios
+    .get("https://shop.getbessa.com/wp-json/wc/v3/products", {
+      params: {
+        consumer_key: process.env.NEXT_PUBLIC_WOOCOMMERCE_CONSUMER_KEY,
+        consumer_secret: process.env.NEXT_PUBLIC_WOOCOMMERCE_CONSUMER_SECRET,
+        per_page: 4
+      }
+    })
+    .then(async (response) => {
+      const products = response?.data;
+
+      return await axios
+        .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
+          params: { _embed: ["wp:term", "author"] }
+        })
+        .then((response) => {
+          return { products, posts: response?.data };
+        });
+    });
+}
+
+export default async function Home() {
+  const { products, posts } = await getData();
 
   const memberships = ["Empower", "Champion", "Pioneer", "Ambassador", "Ally"];
 
@@ -63,51 +79,37 @@ export default function Home({}) {
     {
       app: "Other Apps",
       features: [
-        { icon: FiXCircle, description: "Map", color: "red.500" },
-        { icon: FiXCircle, description: "Events", color: "red.500" },
         {
-          icon: FiDollarSign,
-          description: "Read Receipts",
-          color: "red.500"
+          icon: <FiXCircle />,
+          description: "Map"
+        },
+        { icon: <FiXCircle />, description: "Events" },
+        {
+          icon: <FiDollarSign />,
+          description: "Read Receipts"
         }
       ]
     },
     {
       app: "Bessa",
       features: [
-        { icon: FiCheckCircle, description: "Map", color: "green.500" },
-        { icon: FiCheckCircle, description: "Events", color: "green.500" },
+        { icon: <FiCheckCircle />, description: "Map" },
+        { icon: <FiCheckCircle />, description: "Events" },
         {
-          icon: FiCheckCircle,
-          description: "Read Receipts",
-          color: "green.500"
+          icon: <FiCheckCircle />,
+          description: "Read Receipts"
         },
-        { icon: FiCheckCircle, description: "Social Feed", color: "green.500" },
         {
-          icon: FiCheckCircle,
-          description: "Members Directory",
-          color: "green.500"
+          icon: <FiCheckCircle />,
+          description: "Social Feed"
+        },
+        {
+          icon: <FiCheckCircle />,
+          description: "Members Directory"
         }
       ]
     }
   ];
-
-  useEffect(() => {
-    axios
-      .get("https://shop.getbessa.com/wp-json/wc/v3/products", {
-        params: {
-          consumer_key: process.env.NEXT_PUBLIC_WOOCOMMERCE_CONSUMER_KEY,
-          consumer_secret: process.env.NEXT_PUBLIC_WOOCOMMERCE_CONSUMER_SECRET,
-          per_page: 4
-        }
-      })
-      .then((response) => setProducts(response?.data));
-    axios
-      .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
-        params: { _embed: ["wp:term", "author"] }
-      })
-      .then((response) => setPosts(response?.data));
-  }, []);
 
   return (
     <section>
@@ -119,61 +121,52 @@ export default function Home({}) {
         <Container maxW={"container.xl"} my={[8, 32]}>
           <SimpleGrid columns={[1, 4]} alignItems={"center"} gap={8}>
             <GridItem w={["100%", "80%"]} colSpan={[1, 2]}>
-              <Fade
-                in={true}
-                transition={{ enter: { duration: 0.66, delay: 0.66 } }}
-              >
-                <Tag colorScheme={"primary"}>Join for FREE!</Tag>
-                <Heading as={"h1"} mb={4}>
-                  Your community is waiting for you.
-                </Heading>
-                <Text mb={8}>
-                  Bessa is an inclusive LGBTQ community of all genders, colors,
-                  shapes, and sizes who want to safely connect with new and
-                  existing friends, family, and others.
-                </Text>
-                <Flex gap={4} mb={8}>
-                  {appStores.map((store) => (
-                    <Link key={store.name} href={store.href}>
-                      <Button colorScheme={"primary"} size={"lg"} w={140}>
-                        <Flex mr={2}>{store.icon}</Flex>
-                        {store.name}
-                      </Button>
-                    </Link>
-                  ))}
-                </Flex>
-                <Flex align={"center"} gap={8} h={"100px"}>
-                  <Box>
-                    <Heading as={"h3"} textAlign={"center"}>
-                      5
-                    </Heading>
-                    <Text textAlign={"center"}>Star Rating</Text>
-                  </Box>
-                  <Center height={"50px"}>
-                    <Divider
-                      orientation={"vertical"}
-                      borderColor={"gray.900"}
-                      borderWidth={1}
-                    />
-                  </Center>
-                  <Box>
-                    <Heading as={"h3"} textAlign={"center"}>
-                      700+
-                    </Heading>
-                    <Text textAlign={"center"}>Downloads</Text>
-                  </Box>
-                </Flex>
-              </Fade>
+              <Tag colorScheme={"primary"}>Join for FREE!</Tag>
+              <Heading as={"h1"} mb={4}>
+                Your community is waiting for you.
+              </Heading>
+              <Text mb={8}>
+                Bessa is an inclusive LGBTQ community of all genders, colors,
+                shapes, and sizes who want to safely connect with new and
+                existing friends, family, and others.
+              </Text>
+              <Flex gap={4} mb={8}>
+                {appStores.map((store) => (
+                  <Link key={store.name} href={store.href}>
+                    <Button colorScheme={"primary"} size={"lg"} w={140}>
+                      <Flex mr={2}>{store.icon}</Flex>
+                      {store.name}
+                    </Button>
+                  </Link>
+                ))}
+              </Flex>
+              <Flex align={"center"} gap={8} h={"100px"}>
+                <Box>
+                  <Heading as={"h3"} textAlign={"center"}>
+                    5
+                  </Heading>
+                  <Text textAlign={"center"}>Star Rating</Text>
+                </Box>
+                <Center height={"50px"}>
+                  <Divider
+                    orientation={"vertical"}
+                    borderColor={"gray.900"}
+                    borderWidth={1}
+                  />
+                </Center>
+                <Box>
+                  <Heading as={"h3"} textAlign={"center"}>
+                    700+
+                  </Heading>
+                  <Text textAlign={"center"}>Downloads</Text>
+                </Box>
+              </Flex>
             </GridItem>
             <GridItem>
-              <Fade in={true} transition={{ enter: { duration: 0.66 } }}>
-                <Image src={Mockup1} alt={"An LGBTQ Social Media App"} />
-              </Fade>
+              <Image src={Mockup1} alt={"An LGBTQ Social Media App"} />
             </GridItem>
             <GridItem>
-              <Fade in={true} transition={{ enter: { duration: 0.66 } }}>
-                <Image src={Mockup2} alt={"An LGBTQ Social Media App"} />
-              </Fade>
+              <Image src={Mockup2} alt={"An LGBTQ Social Media App"} />
             </GridItem>
           </SimpleGrid>
         </Container>
@@ -247,8 +240,10 @@ export default function Home({}) {
                   <List spacing={2}>
                     {comparison.features.map((feature) => (
                       <ListItem key={feature.description}>
-                        <ListIcon as={feature.icon} color={feature.color} />
-                        {feature.description}
+                        <Flex align={"center"} gap={2}>
+                          {feature.icon}
+                          {feature.description}
+                        </Flex>
                       </ListItem>
                     ))}
                   </List>
