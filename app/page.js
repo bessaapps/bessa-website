@@ -62,7 +62,7 @@ async function getData() {
 
       return await axios
         .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
-          params: { _embed: ["wp:term", "author"] }
+          params: { _embed: ["wp:term", "author"], per_page: 5 }
         })
         .then((response) => {
           return { products, posts: response?.data };
