@@ -133,13 +133,16 @@ export default function Footer() {
           <GridItem colSpan={[1, 2]} />
           <GridItem colSpan={[1, 2]}>
             <Text color={"gray.800"}>
-              Copyright &copy; 2024{" "}
+              Proudly created by{" "}
               <Link
                 as={NextLink}
-                href={"/"}
-                title={"Bessa | An LGBTQ Social Media App"}
+                href={"https://bessaapps.com"}
+                title={
+                  "Bessa Community Apps | Mobile Application Development Service"
+                }
+                color={"gray.600"}
               >
-                Bessa Community Apps LLC
+                Bessa Community Apps
               </Link>
             </Text>
           </GridItem>
