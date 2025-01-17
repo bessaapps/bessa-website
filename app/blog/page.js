@@ -38,7 +38,7 @@ export default async function Blog({}) {
       <Container maxW={"container.xl"} my={[8, 32]}>
         <Stack gap={4}>
           {posts?.map((post) => (
-            <SimpleGrid key={post?.id} columns={[1, 4]}>
+            <SimpleGrid key={post?.id} columns={[1, 4]} gap={4}>
               <GridItem colSpan={[1, 3]}>
                 <LinkBox as={"article"}>
                   <Text fontWeight={800} color={"primary.500"}>

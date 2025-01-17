@@ -82,7 +82,11 @@ export default async function Post({ params }) {
       <Container maxW={"container.sm"} my={[8, 32]}>
         <Box
           dangerouslySetInnerHTML={{ __html: post?.content?.rendered }}
-          sx={{ p: { mb: 4 }, a: { color: "primary.500", fontWeight: 800 } }}
+          sx={{
+            p: { mb: 4 },
+            h2: { lineHeight: 1.2, mb: 4 },
+            a: { color: "primary.500", fontWeight: 800 }
+          }}
           mb={8}
         />
         <Flex gap={2} flexWrap={"wrap"}>
