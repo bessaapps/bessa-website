@@ -32,7 +32,6 @@ export default function Top() {
       href: "/about",
       anchor: "Story"
     },
-
     {
       href: "/blog",
       anchor: "Blog"

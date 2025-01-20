@@ -28,6 +28,12 @@ export default async function sitemap() {
       changeFrequency: "daily",
       priority: 1
     },
+    {
+      url: "https://getbessa.com/about",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.8
+    },
     ...posts?.map((post) => {
       return {
         url: `https://getbessa.com/posts/${post?.slug}`,
