@@ -19,21 +19,17 @@ import {
   FiInstagram,
   FiLinkedin,
   FiShoppingBag,
-  FiTwitter
+  FiTwitter,
+  FiUser
 } from "react-icons/fi";
 import { appStores } from "@/utils/constants";
 
 export default function Footer() {
   const links = [
     {
-      href: "/support",
-      anchor: "Help & Support",
-      icon: <FiHelpCircle color={"white"} />
-    },
-    {
-      href: "/blog-content-writer",
-      anchor: "Jobs",
-      icon: <FiBriefcase color={"white"} />
+      href: "/about",
+      anchor: "Story",
+      icon: <FiUser color={"white"} />
     },
     {
       href: "/blog",
@@ -49,6 +45,16 @@ export default function Footer() {
       href: "https://shop.getbessa.com",
       anchor: "Shop LGBTQ Merch",
       icon: <FiShoppingBag color={"white"} />
+    },
+    {
+      href: "/blog-content-writer",
+      anchor: "Jobs",
+      icon: <FiBriefcase color={"white"} />
+    },
+    {
+      href: "/support",
+      anchor: "Help & Support",
+      icon: <FiHelpCircle color={"white"} />
     }
   ];
 

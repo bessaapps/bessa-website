@@ -29,13 +29,10 @@ export default function Top() {
 
   const links = [
     {
-      href: "/support",
-      anchor: "Support"
+      href: "/about",
+      anchor: "Story"
     },
-    {
-      href: "/blog-content-writer",
-      anchor: "Jobs"
-    },
+
     {
       href: "/blog",
       anchor: "Blog"
@@ -47,6 +44,10 @@ export default function Top() {
     {
       href: "https://shop.getbessa.com",
       anchor: "Shop"
+    },
+    {
+      href: "/blog-content-writer",
+      anchor: "Jobs"
     }
   ];
 
