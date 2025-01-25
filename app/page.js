@@ -9,9 +9,6 @@ import {
   Link,
   SimpleGrid,
   Text,
-  LinkBox,
-  LinkOverlay,
-  AspectRatio,
   Card,
   Tag,
   Divider,
@@ -49,29 +46,17 @@ const jsonLd = {
 };
 
 async function getData() {
-  return axios
-    .get("https://shop.getbessa.com/wp-json/wc/v3/products", {
-      params: {
-        consumer_key: process.env.NEXT_PUBLIC_WOOCOMMERCE_CONSUMER_KEY,
-        consumer_secret: process.env.NEXT_PUBLIC_WOOCOMMERCE_CONSUMER_SECRET,
-        per_page: 4
-      }
+  return await axios
+    .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
+      params: { _embed: ["wp:term", "author"], per_page: 5 }
     })
-    .then(async (response) => {
-      const products = response?.data;
-
-      return await axios
-        .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
-          params: { _embed: ["wp:term", "author"], per_page: 5 }
-        })
-        .then((response) => {
-          return { products, posts: response?.data };
-        });
+    .then((response) => {
+      return { posts: response?.data };
     });
 }
 
 export default async function Home() {
-  const { products, posts } = await getData();
+  const { posts } = await getData();
 
   const memberships = ["Empower", "Champion", "Pioneer", "Ambassador", "Ally"];
 
@@ -370,49 +355,6 @@ export default async function Home() {
               ))}
             </Tbody>
           </Table>
-        </Container>
-        <Container maxW={"container.xl"} my={[8, 32]}>
-          <Tag colorScheme={"primary"}>Recent Swag</Tag>
-          <Heading as={"h2"} mb={4}>
-            Shop LGBTQ Merch
-          </Heading>
-          <Text mb={4}>
-            Check out the shop for these and more! 30% of every purchase
-            supports Bessa!
-          </Text>
-          <SimpleGrid columns={[2, 4]} spacingX={4}>
-            {products?.map((product) => (
-              <GridItem key={product?.id} mb={4}>
-                <LinkBox>
-                  <AspectRatio
-                    ratio={1}
-                    borderRadius={8}
-                    overflow={"hidden"}
-                    mb={4}
-                  >
-                    <Image
-                      src={product?.images?.[0]?.src}
-                      alt={product?.name}
-                      fill
-                    />
-                  </AspectRatio>
-                  <Text>
-                    <LinkOverlay href={product?.permalink}>
-                      {product?.name}
-                    </LinkOverlay>
-                  </Text>
-                  <Text fontWeight={"bold"}>
-                    From ${parseInt(product?.price)?.toFixed(2)}
-                  </Text>
-                </LinkBox>
-              </GridItem>
-            ))}
-          </SimpleGrid>
-          <Flex justify={"flex-end"}>
-            <Button>
-              <Link href={"https://shop.getbessa.com"}>Shop All</Link>
-            </Button>
-          </Flex>
         </Container>
         <Container maxW={"container.xl"} my={[8, 32]}>
           <Card>

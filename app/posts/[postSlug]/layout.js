@@ -72,12 +72,13 @@ export default function PostLayout({ children }) {
         <Card>
           <Container maxW={"container.sm"} my={[4, 16]}>
             <Heading color={"gray.900"} textAlign={"center"} mb={4}>
-              Be with Friends!
+              Read More!
             </Heading>
             <Text textAlign={"center"} mb={8}>
-              Find LGBTQ members with shared interests near you. Make queer
-              friends, connections, and maybe more. Chat, upload a selfie, and
-              update your profile. Socialize and join the fun!
+              Find more LGBTQ content like this on Bessa. Connect with other
+              LGBTQ members with shared interests near you by posting content of
+              your own. Stay up to date, socialize, and join the fun right now
+              for FREE!
             </Text>
             <Flex gap={4} justify={"center"} flexWrap={"wrap"}>
               {appStores.map((store) => (

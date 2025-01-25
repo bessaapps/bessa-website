@@ -12,15 +12,14 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import {
-  FiBook,
+  FiBookOpen,
   FiBriefcase,
   FiHeart,
   FiHelpCircle,
   FiInstagram,
   FiLinkedin,
-  FiShoppingBag,
-  FiTwitter,
-  FiUser
+  FiMessageCircle,
+  FiTwitter
 } from "react-icons/fi";
 import { appStores } from "@/utils/constants";
 
@@ -29,22 +28,17 @@ export default function Footer() {
     {
       href: "/about",
       anchor: "Story",
-      icon: <FiUser color={"white"} />
+      icon: <FiMessageCircle color={"white"} />
     },
     {
       href: "/blog",
       anchor: "Blog",
-      icon: <FiBook color={"white"} />
+      icon: <FiBookOpen color={"white"} />
     },
     {
       href: "https://cash.app/$getbessa",
-      anchor: "Donate to LGBTQ communities",
+      anchor: "Donate",
       icon: <FiHeart color={"white"} />
-    },
-    {
-      href: "https://shop.getbessa.com",
-      anchor: "Shop LGBTQ Merch",
-      icon: <FiShoppingBag color={"white"} />
     },
     {
       href: "/blog-content-writer",

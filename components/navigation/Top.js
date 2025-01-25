@@ -41,10 +41,6 @@ export default function Top() {
       anchor: "Donate"
     },
     {
-      href: "https://shop.getbessa.com",
-      anchor: "Shop"
-    },
-    {
       href: "/blog-content-writer",
       anchor: "Jobs"
     }
