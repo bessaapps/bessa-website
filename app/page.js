@@ -112,8 +112,8 @@ export default async function Home() {
               </Heading>
               <Text mb={8}>
                 Bessa is an inclusive LGBTQ community of all genders, colors,
-                shapes, and sizes who want to safely connect with new and
-                existing friends, family, and others.
+                shapes, sizes, and abilities who want to safely connect with new
+                and existing friends, family, and others.
               </Text>
               <Flex gap={4} mb={8}>
                 {appStores.map((store) => (
