@@ -248,9 +248,8 @@ export default async function Home() {
                   <Text mb={4}>
                     Bessa is about building community, not ad revenue. Consider
                     becoming a supporting member to help! Tap the banner in your
-                    app to subscribe. Your memberships helps this inclusive
-                    LGBTQ community operate without ads.{" "}
-                    <Text as={"i"}>Thanks!</Text>
+                    app to subscribe. Your membership helps this inclusive LGBTQ
+                    community operate without ads. <Text as={"i"}>Thanks!</Text>
                   </Text>
                   <Text mb={4}>
                     You can also donate directly through{" "}
