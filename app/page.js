@@ -194,9 +194,9 @@ export default async function Home() {
                 organizations, and resources around you.
               </Text>
               <Text>
-                Events can be a great way to find and involve yourself in LGBTQ
-                communities. Find anything from groups, volunteer opportunities,
-                or just fun things to do and meet new people at.
+                Find and involve yourself in LGBTQ communities with events. Find
+                anything from groups, volunteer opportunities, or just fun
+                things to do and meet new people at.
               </Text>
             </GridItem>
           </SimpleGrid>
@@ -205,7 +205,7 @@ export default async function Home() {
           <Container maxW={"container.sm"} textAlign={"center"}>
             <Tag colorScheme={"primary"}>Bessa is Free!</Tag>
             <Heading mb={4}>
-              Connect, share, discover, and engage for FREE!
+              Connect, Share, Discover, and Engage for FREE!
             </Heading>
             <Text mb={4}>
               Unlike other apps like Twitter, Grindr, HER, and OkCupid, Bessa
