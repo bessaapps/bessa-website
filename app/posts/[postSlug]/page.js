@@ -70,13 +70,25 @@ export default async function Post({ params }) {
       </Container>
       {post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
         <Container maxW={"container.xl"} my={[8, 32]}>
-          <AspectRatio ratio={1.75} borderRadius={8} overflow={"hidden"} mb={8}>
+          <AspectRatio ratio={1.75} borderRadius={8} overflow={"hidden"} mb={1}>
             <Image
               src={post._embedded["wp:featuredmedia"][0].source_url}
               alt={convert(post?.title?.rendered)}
               fill
             />
           </AspectRatio>
+          {post?._embedded?.["wp:featuredmedia"]?.[0]?.caption?.rendered && (
+            <Text
+              as={"span"}
+              dangerouslySetInnerHTML={{
+                __html:
+                  post?._embedded?.["wp:featuredmedia"]?.[0]?.caption?.rendered
+              }}
+              color={"gray.800"}
+              fontSize={12}
+              mb={8}
+            />
+          )}
         </Container>
       )}
       <Container maxW={"container.sm"} my={[8, 32]}>
