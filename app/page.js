@@ -103,15 +103,16 @@ export default async function Home() {
       <>
         <Container maxW={"container.xl"} my={[8, 32]}>
           <SimpleGrid columns={[1, 4]} alignItems={"center"} gap={8}>
-            <GridItem w={["100%", "80%"]} colSpan={[1, 2]}>
+            <GridItem w={["100%", "90%"]} colSpan={[1, 2]}>
               <Tag colorScheme={"primary"}>Join for FREE!</Tag>
               <Heading as={"h1"} mb={4}>
-                Your community is waiting for you.
+                Your LGBTQ Community is Waiting for You.
               </Heading>
               <Text mb={8}>
-                Bessa is an inclusive LGBTQ community of all genders, colors,
-                shapes, sizes, and abilities who want to safely connect with new
-                and existing friends, family, and others.
+                Bessa is an LGBTQ social media app and inclusive community of
+                all genders, colors, shapes, sizes, and abilities. Here people
+                can safely engage with other queer people and discover new super
+                gay things.
               </Text>
               <Flex gap={4} mb={8}>
                 {appStores.map((store) => (
@@ -157,25 +158,18 @@ export default async function Home() {
           <Container maxW={"container.lg"} py={[8, 32]}>
             <Heading as={"h3"} color={"white"} textAlign={"center"} mb={4}>
               <Highlight
-                query={[
-                  "proud",
-                  "share who you are",
-                  "build strong relationships"
-                ]}
+                query={["proud", "community", "strong relationships"]}
                 styles={{
                   color: "primary.500",
                   fontWeight: 800
                 }}
               >
-                Be proud of who you are by posting content. Through
-                communication and a directory of people, places, and events, you
-                can find and build strong relationships within your community.
+                Be proud and share your voice. Express yourself with posts and
+                other media. Build community and strong relationships through
+                chat and a directory of people, places, and events on Bessa, an
+                LGBTQ social media app.
               </Highlight>
             </Heading>
-            {/*<Text textAlign={"center"}>*/}
-            {/*  Bessa works hard, through moderation and dangerous content*/}
-            {/*  filters, to make it a safe community.*/}
-            {/*</Text>*/}
           </Container>
         </Box>
         <Container maxW={"container.xl"} my={[8, 32]}>
@@ -189,23 +183,22 @@ export default async function Home() {
               <Text mb={4}>
                 Find and support the best parts of your community. Use the map
                 to find user-vetted, safe, and inclusive LGBTQ businesses,
-                organizations, and resources around you.
+                organizations, and resources around you on Bessa, an LGBTQ
+                social media app.
               </Text>
             </GridItem>
           </SimpleGrid>
         </Container>
         <Container maxW={"container.xl"} my={[8, 32]}>
           <Container maxW={"container.sm"} textAlign={"center"}>
-            <Tag colorScheme={"primary"}>Bessa is Free!</Tag>
-            <Heading mb={4}>
-              Connect, Share, Discover, and Engage for FREE!
-            </Heading>
+            <Tag colorScheme={"primary"}>Download for Free!</Tag>
+            <Heading mb={4}>Start to discover and engage for FREE!</Heading>
             <Text mb={4}>
-              Unlike other apps like Twitter, Grindr, HER, and OkCupid, Bessa
-              costs absolutely nothing. Additionally, Bessa is loaded with
-              community-building features Twitter and Grindr don&apos;t offer.
-              Here you can connect, share, discover, and engage with your LGBTQ
-              community for free.
+              Unlike other apps like Twitter, Grindr, HER, and OkCupid, you can
+              get this LGBTQ social media app for absolutely nothing.
+              Additionally, Bessa is loaded with community-building features
+              Twitter and Grindr don&apos;t offer. On Bessa you can begin to
+              connect with others and discover new things for free.
             </Text>
           </Container>
           <SimpleGrid columns={[1, 2]} gap={8}>
@@ -239,9 +232,10 @@ export default async function Home() {
                   <Tag colorScheme={"primary"}>Events</Tag>
                   <Heading mb={4}>Where&apos;s the Party At?!</Heading>
                   <Text>
-                    Find and involve yourself in LGBTQ communities with events.
-                    Find anything from groups, volunteer opportunities, or just
-                    fun things to do and meet new people at.
+                    Find and involve yourself in queer, gay, and trans
+                    communities on this LGBTQ social media app. Find anything
+                    from groups, volunteer opportunities, or just fun things to
+                    do and meet new people at around you.
                   </Text>
                 </Box>
               </Flex>
@@ -258,9 +252,10 @@ export default async function Home() {
                 Be with Friends!
               </Heading>
               <Text textAlign={"center"} mb={8}>
-                Find LGBTQ members with shared interests near you. Make queer
-                friends, connections, and maybe more. Chat, upload a selfie, and
-                update your profile. Socialize and join the fun!
+                Find other gay members with shared interests near you on this
+                LGBTQ social media app. Make queer friends, connections, and
+                maybe more. Upload a selfie, update your profile, and start
+                chatting. Join the fun today!
               </Text>
               <Flex gap={4} justify={"center"} flexWrap={"wrap"}>
                 {appStores.map((store) => (
@@ -335,8 +330,8 @@ export default async function Home() {
                 Like Bessa?
               </Heading>
               <Text textAlign={"center"} mb={8}>
-                Help our LGBTQ community grow by lettings others know how much
-                you like Bessa with a review.
+                Help this LGBTQ social media app grow by lettings others know
+                how much you like the Bessa community by writing a review.
               </Text>
               <Flex gap={4} justify={"center"} flexWrap={"wrap"}>
                 <Link
