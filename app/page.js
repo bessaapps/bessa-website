@@ -26,7 +26,7 @@ import Mockup3 from "../images/mockups/3.png";
 import Mockup4 from "../images/mockups/4.png";
 import Image from "next/image";
 import { appStores, url } from "@/utils/constants";
-import { FiCheckCircle, FiDollarSign, FiStar, FiXCircle } from "react-icons/fi";
+import { FiCheckCircle, FiDollarSign, FiXCircle } from "react-icons/fi";
 import axios from "axios";
 import dayjs from "dayjs";
 
@@ -57,8 +57,6 @@ async function getData() {
 
 export default async function Home() {
   const { posts } = await getData();
-
-  const memberships = ["Empower", "Champion", "Pioneer", "Ambassador", "Ally"];
 
   const comparisons = [
     {
@@ -141,7 +139,7 @@ export default async function Home() {
                 </Center>
                 <Box>
                   <Heading as={"h3"} textAlign={"center"}>
-                    700+
+                    800+
                   </Heading>
                   <Text textAlign={"center"}>Downloads</Text>
                 </Box>
@@ -186,17 +184,12 @@ export default async function Home() {
               <Image src={Mockup3} alt={"An LGBTQ Social Media App Mockup"} />
             </GridItem>
             <GridItem colSpan={[1, 2]} w={["100%", "75%"]}>
-              <Tag colorScheme={"primary"}>Places and Events</Tag>
+              <Tag colorScheme={"primary"}>Places</Tag>
               <Heading mb={4}>Discover your Gayborhood</Heading>
               <Text mb={4}>
                 Find and support the best parts of your community. Use the map
                 to find user-vetted, safe, and inclusive LGBTQ businesses,
                 organizations, and resources around you.
-              </Text>
-              <Text>
-                Find and involve yourself in LGBTQ communities with events. Find
-                anything from groups, volunteer opportunities, or just fun
-                things to do and meet new people at.
               </Text>
             </GridItem>
           </SimpleGrid>
@@ -243,33 +236,13 @@ export default async function Home() {
             <GridItem colSpan={[1, 2]}>
               <Flex justify={"flex-end"}>
                 <Box w={["100%", "75%"]}>
-                  <Tag colorScheme={"primary"}>Membership</Tag>
-                  <Heading mb={4}>Become a Supporting Member</Heading>
-                  <Text mb={4}>
-                    Bessa is about building community, not ad revenue. Consider
-                    becoming a supporting member to help! Tap the banner in your
-                    app to subscribe. Your membership helps this inclusive LGBTQ
-                    community operate without ads. <Text as={"i"}>Thanks!</Text>
+                  <Tag colorScheme={"primary"}>Events</Tag>
+                  <Heading mb={4}>Where&apos;s the Party At?!</Heading>
+                  <Text>
+                    Find and involve yourself in LGBTQ communities with events.
+                    Find anything from groups, volunteer opportunities, or just
+                    fun things to do and meet new people at.
                   </Text>
-                  <Text mb={4}>
-                    You can also donate directly through{" "}
-                    <Link
-                      href={"https://cash.app/$getbessa"}
-                      fontWeight={"bold"}
-                    >
-                      Cash App
-                    </Link>
-                  </Text>
-                  <SimpleGrid columns={[1, 2]} spacingX={4}>
-                    {memberships?.map((membership) => (
-                      <GridItem key={membership}>
-                        <Flex align={"center"} gap={2}>
-                          <FiStar color={"var(--chakra-colors-primary-500)"} />{" "}
-                          {membership}
-                        </Flex>
-                      </GridItem>
-                    ))}
-                  </SimpleGrid>
                 </Box>
               </Flex>
             </GridItem>
