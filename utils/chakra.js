@@ -1,11 +1,11 @@
 import { extendTheme } from "@chakra-ui/react";
-import { Roboto } from "next/font/google";
+import { Inter } from "next/font/google";
 
 // https://tintsshades.netlify.app (Weight 10)
 
-const roboto = Roboto({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"]
+  weight: ["100", "200", "300", "400", "500", "700", "900"]
 });
 
 const theme = extendTheme({
@@ -25,6 +25,18 @@ const theme = extendTheme({
       900: "#2c2c2d"
     },
     primary: {
+      50: "#b0b0b3",
+      100: "#b0b0b3",
+      200: "#b0b0b3",
+      300: "#848486",
+      400: "#58585a",
+      500: "#2c2c2d",
+      600: "#2c2c2d",
+      700: "#2c2c2d",
+      800: "#2c2c2d",
+      900: "#2c2c2d"
+    },
+    secondary: {
       50: "#f7ecfc",
       100: "#eed9f9",
       200: "#ddb2f2",
@@ -35,18 +47,6 @@ const theme = extendTheme({
       700: "#672686",
       800: "#441959",
       900: "#220d2d"
-    },
-    secondary: {
-      50: "#fcecfc",
-      100: "#f9d9f9",
-      200: "#f3b2f3",
-      300: "#ec8cec",
-      400: "#e665e6",
-      500: "#e03fe0",
-      600: "#b332b3",
-      700: "#862686",
-      800: "#5a195a",
-      900: "#2d0d2d"
     }
   },
   styles: {
@@ -64,8 +64,8 @@ const theme = extendTheme({
     })
   },
   fonts: {
-    heading: roboto.style.fontFamily,
-    body: roboto.style.fontFamily
+    heading: inter.style.fontFamily,
+    body: inter.style.fontFamily
   },
   container: {
     sm: "620px"

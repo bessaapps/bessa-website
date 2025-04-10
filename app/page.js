@@ -10,7 +10,6 @@ import {
   SimpleGrid,
   Text,
   Card,
-  Tag,
   Divider,
   Center,
   List,
@@ -104,7 +103,7 @@ export default async function Home() {
         <Container maxW={"container.xl"} my={[8, 32]}>
           <SimpleGrid columns={[1, 4]} alignItems={"center"} gap={8}>
             <GridItem w={["100%", "90%"]} colSpan={[1, 2]}>
-              <Tag colorScheme={"primary"}>Join for FREE!</Tag>
+              <Text fontWeight={"bold"}>Join for FREE!</Text>
               <Heading as={"h1"} mb={4}>
                 Your LGBTQ Community is Waiting for You.
               </Heading>
@@ -156,18 +155,18 @@ export default async function Home() {
         </Container>
         <Box bg={"gray.900"}>
           <Container maxW={"container.lg"} py={[8, 32]}>
-            <Heading as={"h3"} color={"white"} textAlign={"center"} mb={4}>
+            <Heading as={"h3"} color={"primary.50"} textAlign={"center"} mb={4}>
               <Highlight
-                query={["proud", "community", "strong relationships"]}
+                query={["inclusive", "community!", "share"]}
                 styles={{
-                  color: "primary.500",
+                  color: "white",
                   fontWeight: 800
                 }}
               >
-                Be proud and share your voice. Express yourself with posts and
-                other media. Build community and strong relationships through
-                chat and a directory of people, places, and events on Bessa, an
-                LGBTQ social media app.
+                Bessa is a vibrant, inclusive social media app for the LGBTQ
+                community! Whether you&apos;re looking to share your thoughts,
+                find new friends, or discover gay-friendly places and events,
+                Bessa has everything you need in one safe and welcoming space.
               </Highlight>
             </Heading>
           </Container>
@@ -178,7 +177,7 @@ export default async function Home() {
               <Image src={Mockup3} alt={"An LGBTQ Social Media App Mockup"} />
             </GridItem>
             <GridItem colSpan={[1, 2]} w={["100%", "75%"]}>
-              <Tag colorScheme={"primary"}>Places</Tag>
+              <Text fontWeight={"bold"}>Places</Text>
               <Heading mb={4}>Discover your Gayborhood</Heading>
               <Text mb={4}>
                 Find and support the best parts of your community. Use the map
@@ -191,7 +190,7 @@ export default async function Home() {
         </Container>
         <Container maxW={"container.xl"} my={[8, 32]}>
           <Container maxW={"container.sm"} textAlign={"center"}>
-            <Tag colorScheme={"primary"}>Download for Free!</Tag>
+            <Text fontWeight={"bold"}>Download for Free!</Text>
             <Heading mb={4}>Start to discover and engage for FREE!</Heading>
             <Text mb={4}>
               Unlike other apps like Twitter, Grindr, HER, and OkCupid, you can
@@ -229,7 +228,7 @@ export default async function Home() {
             <GridItem colSpan={[1, 2]}>
               <Flex justify={"flex-end"}>
                 <Box w={["100%", "75%"]}>
-                  <Tag colorScheme={"primary"}>Events</Tag>
+                  <Text fontWeight={"bold"}>Events</Text>
                   <Heading mb={4}>Where&apos;s the Party At?!</Heading>
                   <Text>
                     Find and involve yourself in queer, gay, and trans
