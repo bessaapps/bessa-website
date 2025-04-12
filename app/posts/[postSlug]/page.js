@@ -33,14 +33,14 @@ export default async function Post({ params }) {
     <>
       <Container maxW={"container.xl"} my={[8, 32]}>
         <Flex justify={"center"}>
-          <Tag size={"lg"} colorScheme={"primary"} mb={4}>
+          <Heading as={"h3"} mb={4}>
             <Link
               key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}
               href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
             >
               {post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
             </Link>
-          </Tag>
+          </Heading>
         </Flex>
         <Heading
           as={"h1"}
@@ -97,7 +97,9 @@ export default async function Post({ params }) {
           sx={{
             p: { mb: 4 },
             h2: { lineHeight: 1.2, mb: 4 },
-            a: { color: "primary.500", fontWeight: 800 }
+            a: { color: "primary.500", fontWeight: 800 },
+            figure: { mb: 4 },
+            figcaption: { color: "gray.800", fontSize: 12 }
           }}
           mb={8}
         />

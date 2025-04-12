@@ -7,7 +7,6 @@ import {
   Card,
   Flex,
   Heading,
-  Tag,
   Button
 } from "@chakra-ui/react";
 import NextLink from "next/link";
@@ -77,16 +76,18 @@ export default function Footer() {
       <Container maxW={"container.xl"} my={"auto"}>
         <SimpleGrid columns={[1, 4]} spacing={8}>
           <GridItem colSpan={[1, 2]} rowSpan={[1, 2]} w={["100%", "75%"]}>
-            <Tag bg={"primary.900"} color={"primary.100"}>
-              Bessa is Free!
-            </Tag>
+            <Text color={"gray.100"}>Bessa is Free!</Text>
             <Heading as={"p"} color={"gray.50"} size={"4xl"} mb={8}>
               Join your Tribe Today
             </Heading>
             <Flex gap={4} flexWrap={"wrap"}>
               {appStores.map((store) => (
                 <Link key={store.name} href={store.href}>
-                  <Button colorScheme={"primary"} size={"lg"} w={["100%", 140]}>
+                  <Button
+                    colorScheme={"secondary"}
+                    size={"lg"}
+                    w={["100%", 140]}
+                  >
                     <Flex mr={2}>{store.icon}</Flex>
                     {store.name}
                   </Button>
