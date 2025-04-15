@@ -11,7 +11,7 @@ export default function TopBanner() {
       <Container maxW={"container.xl"} py={2}>
         <Flex align={"center"} justify={"center"} gap={2}>
           <Show above={"sm"}>
-            <Text fontWeight={"bold"} color={"white"}>
+            <Text fontWeight={"bold"} color={"gray.50"}>
               Help this inclusive LGBTQ community operate without ads.
             </Text>
           </Show>

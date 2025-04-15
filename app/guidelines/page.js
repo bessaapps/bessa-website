@@ -37,7 +37,7 @@ export default function Guidelines() {
           respectful! And, don&apos;t be a troll! But here are a few more tips
           and tricks to help keep this a fun, diverse, and safe community.
         </Text>
-        <Alert status={"info"} colorScheme={"primary"} mb={4}>
+        <Alert status={"info"} colorScheme={"secondary"} mb={4}>
           <AlertIcon />
           <AlertDescription>
             If you think any of the content you share may be sensitive to

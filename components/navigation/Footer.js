@@ -27,42 +27,42 @@ export default function Footer() {
     {
       href: "/about",
       anchor: "Story",
-      icon: <FiMessageCircle color={"white"} />
+      icon: <FiMessageCircle color={"#f2f2f2"} />
     },
     {
       href: "/blog",
       anchor: "Blog",
-      icon: <FiBookOpen color={"white"} />
+      icon: <FiBookOpen color={"#f2f2f2"} />
     },
     {
       href: "https://cash.app/$getbessa",
       anchor: "Donate",
-      icon: <FiHeart color={"white"} />
+      icon: <FiHeart color={"#f2f2f2"} />
     },
     {
       href: "/blog-content-writer",
       anchor: "Jobs",
-      icon: <FiBriefcase color={"white"} />
+      icon: <FiBriefcase color={"#f2f2f2"} />
     },
     {
       href: "/support",
       anchor: "Help & Support",
-      icon: <FiHelpCircle color={"white"} />
+      icon: <FiHelpCircle color={"#f2f2f2"} />
     }
   ];
 
   const socialLinks = [
     {
       href: "https://www.linkedin.com/company/getbessa/about",
-      icon: <FiLinkedin size={32} color={"white"} />
+      icon: <FiLinkedin size={32} color={"#f2f2f2"} />
     },
     {
       href: "https://x.com/getbessa",
-      icon: <FiTwitter size={32} color={"white"} />
+      icon: <FiTwitter size={32} color={"#f2f2f2"} />
     },
     {
       href: "https://www.instagram.com/getbessa",
-      icon: <FiInstagram size={32} color={"white"} />
+      icon: <FiInstagram size={32} color={"#f2f2f2"} />
     }
   ];
 
@@ -72,7 +72,7 @@ export default function Footer() {
   ];
 
   return (
-    <Card bg={"black"} minH={"calc(100vh - 96px)"} m={4} py={4}>
+    <Card bg={"gray.900"} minH={"calc(100vh - 96px)"} m={4} py={4}>
       <Container maxW={"container.xl"} my={"auto"}>
         <SimpleGrid columns={[1, 4]} spacing={8}>
           <GridItem colSpan={[1, 2]} rowSpan={[1, 2]} w={["100%", "75%"]}>
@@ -84,7 +84,8 @@ export default function Footer() {
               {appStores.map((store) => (
                 <Link key={store.name} href={store.href}>
                   <Button
-                    colorScheme={"secondary"}
+                    bg={"gray.50"}
+                    color={"gray.900"}
                     size={"lg"}
                     w={["100%", 140]}
                   >
@@ -108,7 +109,7 @@ export default function Footer() {
             {links.map((link) => (
               <Flex key={link.href} align={"center"} gap={2}>
                 {link.icon}
-                <Text color={"white"}>
+                <Text color={"gray.50"}>
                   <Link
                     href={link.href}
                     title={`${link.anchor} | Bessa | An LGBTQ Social Media App`}
@@ -121,7 +122,7 @@ export default function Footer() {
           </GridItem>
           <GridItem>
             {legalLinks.map((link) => (
-              <Text key={link.href} color={"white"}>
+              <Text key={link.href} color={"gray.50"}>
                 <Link
                   href={`/${link.href}`}
                   title={`${link.anchor} | Bessa | An LGBTQ Social Media App`}
@@ -133,7 +134,7 @@ export default function Footer() {
           </GridItem>
           <GridItem colSpan={[1, 2]} />
           <GridItem colSpan={[1, 2]}>
-            <Text color={"gray.800"}>
+            <Text color={"gray.500"}>
               Proudly created by{" "}
               <Link
                 as={NextLink}
@@ -141,7 +142,7 @@ export default function Footer() {
                 title={
                   "Bessa Community Apps | Mobile Application Development Service"
                 }
-                color={"gray.600"}
+                color={"gray.300"}
               >
                 Bessa Community Apps
               </Link>

@@ -32,7 +32,7 @@ export default function DeepLinkPost({ searchParams }) {
         <Container maxW={"container.lg"} py={16}>
           <Flex justify={"center"} direction={["column", "row"]}>
             <Flex direction={"column"} w={["100%", "50%"]} justify={"center"}>
-              <Heading as={"h1"} color={"white"} mb={4}>
+              <Heading as={"h1"} color={"gray.50"} mb={4}>
                 @{searchParams?.username}
               </Heading>
               {searchParams?.description && (
@@ -46,7 +46,7 @@ export default function DeepLinkPost({ searchParams }) {
                 <Button
                   colorScheme={"primary"}
                   bg={"primary.800"}
-                  color={"white"}
+                  color={"gray.50"}
                   size={"lg"}
                   w={["100%", "auto"]}
                 >

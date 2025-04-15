@@ -48,7 +48,7 @@ export default function Top() {
 
   return (
     <>
-      <Box bg={"gray.100"}>
+      <Box bg={"gray.50"}>
         <Container maxW={"container.xl"} py={4}>
           <Flex align={"center"} justify={"space-between"}>
             <Flex align={"center"} gap={4}>
@@ -98,7 +98,7 @@ export default function Top() {
       <Drawer isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton color={"white"} />
+          <DrawerCloseButton color={"#f2f2f2"} />
           <DrawerBody
             bg={"primary.500"}
             display={"flex"}
@@ -115,7 +115,7 @@ export default function Top() {
                     router.push(link.href);
                   }}
                 >
-                  <Text color={"white"}>{link.anchor}</Text>
+                  <Text color={"gray.50"}>{link.anchor}</Text>
                 </Flex>
               ))}
             </Box>

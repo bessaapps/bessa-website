@@ -116,7 +116,7 @@ export default async function Home() {
               <Flex gap={4} mb={8}>
                 {appStores.map((store) => (
                   <Link key={store.name} href={store.href}>
-                    <Button colorScheme={"primary"} size={"lg"} w={140}>
+                    <Button colorScheme={"secondary"} size={"lg"} w={140}>
                       <Flex mr={2}>{store.icon}</Flex>
                       {store.name}
                     </Button>
@@ -159,8 +159,7 @@ export default async function Home() {
               <Highlight
                 query={["inclusive", "community!", "share"]}
                 styles={{
-                  color: "white",
-                  fontWeight: 800
+                  color: "secondary.300"
                 }}
               >
                 Bessa is a vibrant, inclusive social media app for the LGBTQ
