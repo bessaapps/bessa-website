@@ -100,7 +100,7 @@ const theme = extendTheme({
   styles: {
     global: () => ({
       "html, body": {
-        bg: "gray.50",
+        bg: "gray.100",
         color: "gray.800",
         lineHeight: 2
       },
