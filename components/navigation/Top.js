@@ -48,7 +48,7 @@ export default function Top() {
 
   return (
     <>
-      <Box bg={"gray.100"}>
+      <Box bg={"gray.50"}>
         <Container maxW={"container.xl"} py={4}>
           <Flex align={"center"} justify={"space-between"}>
             <Flex align={"center"} gap={4}>
