@@ -17,7 +17,8 @@ import {
   Table,
   Td,
   Tr,
-  Tbody
+  Tbody,
+  Tag
 } from "@chakra-ui/react";
 import Mockup1 from "../images/mockups/1.png";
 import Mockup2 from "../images/mockups/2.png";
@@ -103,7 +104,7 @@ export default async function Home() {
         <Container maxW={"container.xl"} my={[8, 32]}>
           <SimpleGrid columns={[1, 4]} alignItems={"center"} gap={8}>
             <GridItem w={["100%", "90%"]} colSpan={[1, 2]}>
-              <Text fontWeight={"bold"}>Join for FREE!</Text>
+              <Tag mb={2}>Join for FREE!</Tag>
               <Heading as={"h1"} mb={4}>
                 Your LGBTQ Community is Waiting for You.
               </Heading>
@@ -159,7 +160,7 @@ export default async function Home() {
               <Highlight
                 query={["inclusive", "community!", "share"]}
                 styles={{
-                  color: "secondary.300"
+                  color: "secondary.400"
                 }}
               >
                 Bessa is a vibrant, inclusive social media app for the LGBTQ
@@ -176,7 +177,7 @@ export default async function Home() {
               <Image src={Mockup3} alt={"An LGBTQ Social Media App Mockup"} />
             </GridItem>
             <GridItem colSpan={[1, 2]} w={["100%", "75%"]}>
-              <Text fontWeight={"bold"}>Places</Text>
+              <Tag mb={2}>Places</Tag>
               <Heading mb={4}>Discover your Gayborhood</Heading>
               <Text mb={4}>
                 Find and support the best parts of your community. Use the map
@@ -189,7 +190,7 @@ export default async function Home() {
         </Container>
         <Container maxW={"container.xl"} my={[8, 32]}>
           <Container maxW={"container.sm"} textAlign={"center"}>
-            <Text fontWeight={"bold"}>Download for Free!</Text>
+            <Tag mb={2}>Download for FREE!</Tag>
             <Heading mb={4}>Start to discover and engage for FREE!</Heading>
             <Text mb={4}>
               Unlike other apps like Twitter, Grindr, HER, and OkCupid, you can
@@ -227,7 +228,7 @@ export default async function Home() {
             <GridItem colSpan={[1, 2]}>
               <Flex justify={"flex-end"}>
                 <Box w={["100%", "75%"]}>
-                  <Text fontWeight={"bold"}>Events</Text>
+                  <Tag mb={2}>Events</Tag>
                   <Heading mb={4}>Where&apos;s the Party At?!</Heading>
                   <Text>
                     Find and involve yourself in queer, gay, and trans

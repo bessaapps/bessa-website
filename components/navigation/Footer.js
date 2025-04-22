@@ -4,65 +4,64 @@ import {
   Container,
   SimpleGrid,
   GridItem,
-  Card,
   Flex,
   Heading,
   Button
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import {
-  FiBookOpen,
-  FiBriefcase,
-  FiHeart,
-  FiHelpCircle,
-  FiInstagram,
-  FiLinkedin,
-  FiMessageCircle,
-  FiTwitter
-} from "react-icons/fi";
 import { appStores } from "@/utils/constants";
+import {
+  BookOpen,
+  BriefcaseBusiness,
+  CircleHelp,
+  Heart,
+  Instagram,
+  Linkedin,
+  Rss,
+  Twitter
+} from "lucide-react";
 
 export default function Footer() {
   const links = [
     {
       href: "/about",
       anchor: "Story",
-      icon: <FiMessageCircle color={"#f2f2f2"} />
+      icon: <BookOpen size={"1rem"} color={"#f2f2f2"} />
     },
     {
       href: "/blog",
       anchor: "Blog",
-      icon: <FiBookOpen color={"#f2f2f2"} />
+      icon: <Rss size={"1rem"} color={"#f2f2f2"} />
     },
     {
       href: "https://cash.app/$getbessa",
       anchor: "Donate",
-      icon: <FiHeart color={"#f2f2f2"} />
+      icon: <Heart size={"1rem"} color={"#f2f2f2"} />
     },
     {
       href: "/blog-content-writer",
       anchor: "Jobs",
-      icon: <FiBriefcase color={"#f2f2f2"} />
+      icon: <BriefcaseBusiness size={"1rem"} color={"#f2f2f2"} />
     },
     {
       href: "/support",
       anchor: "Help & Support",
-      icon: <FiHelpCircle color={"#f2f2f2"} />
+      icon: <CircleHelp size={"1rem"} color={"#f2f2f2"} />
     }
   ];
 
   const socialLinks = [
     {
       href: "https://www.linkedin.com/company/getbessa/about",
-      icon: <FiLinkedin size={32} color={"#f2f2f2"} />
+      icon: <Linkedin size={32} color={"#f2f2f2"} />
     },
     {
       href: "https://x.com/getbessa",
-      icon: <FiTwitter size={32} color={"#f2f2f2"} />
+      icon: <Twitter size={32} color={"#f2f2f2"} />
     },
     {
       href: "https://www.instagram.com/getbessa",
-      icon: <FiInstagram size={32} color={"#f2f2f2"} />
+      icon: <Instagram size={32} color={"#f2f2f2"} />
     }
   ];
 
@@ -72,13 +71,18 @@ export default function Footer() {
   ];
 
   return (
-    <Card bg={"gray.900"} minH={"calc(100vh - 96px)"} m={4} py={4}>
+    <Flex
+      bgImage={"url('/images/gradients/mesh-8.png')"}
+      bgPosition={"center"}
+      bgSize={"cover"}
+      minH={"calc(100vh - 5rem)"}
+      py={4}
+    >
       <Container maxW={"container.xl"} my={"auto"}>
-        <SimpleGrid columns={[1, 4]} spacing={8}>
-          <GridItem colSpan={[1, 2]} rowSpan={[1, 2]} w={["100%", "75%"]}>
-            <Text color={"gray.100"}>Bessa is Free!</Text>
+        <SimpleGrid columns={[1, 4]} spacing={8} minW={"100%"}>
+          <GridItem colSpan={[1, 2]} w={["100%", "75%"]}>
             <Heading as={"p"} color={"gray.50"} size={"4xl"} mb={8}>
-              Join your Tribe Today
+              Join your Tribe Today for FREE!
             </Heading>
             <Flex gap={4} flexWrap={"wrap"}>
               {appStores.map((store) => (
@@ -96,16 +100,7 @@ export default function Footer() {
               ))}
             </Flex>
           </GridItem>
-          <GridItem colSpan={[1, 2]}>
-            <Flex justify={"right"} gap={4} mb={4}>
-              {socialLinks?.map((link) => (
-                <Link href={link.href} key={"link.href"}>
-                  {link.icon}
-                </Link>
-              ))}
-            </Flex>
-          </GridItem>
-          <GridItem>
+          <GridItem colSpan={[1, 1]}>
             {links.map((link) => (
               <Flex key={link.href} align={"center"} gap={2}>
                 {link.icon}
@@ -120,7 +115,7 @@ export default function Footer() {
               </Flex>
             ))}
           </GridItem>
-          <GridItem>
+          <GridItem colSpan={[1, 1]}>
             {legalLinks.map((link) => (
               <Text key={link.href} color={"gray.50"}>
                 <Link
@@ -132,24 +127,32 @@ export default function Footer() {
               </Text>
             ))}
           </GridItem>
-          <GridItem colSpan={[1, 2]} />
-          <GridItem colSpan={[1, 2]}>
-            <Text color={"gray.500"}>
-              Proudly created by{" "}
-              <Link
-                as={NextLink}
-                href={"https://bessaapps.com"}
-                title={
-                  "Bessa Community Apps | Mobile Application Development Service"
-                }
-                color={"gray.300"}
-              >
-                Bessa Community Apps
-              </Link>
+          <GridItem colSpan={[1, 4]}>
+            <Flex justify={"right"} gap={4} mb={4}>
+              {socialLinks?.map((link) => (
+                <Link href={link.href} key={link.href}>
+                  {link.icon}
+                </Link>
+              ))}
+            </Flex>
+            <Text color={"gray.100"} textAlign={"right"}>
+              Bessa is proudly created by{" "}
+              <Text as={"strong"}>
+                <Link
+                  as={NextLink}
+                  href={"https://bessaapps.com"}
+                  title={
+                    "Bessa Community Apps | Mobile Application Development Service"
+                  }
+                  color={"gray.50"}
+                >
+                  Bessa Community Apps
+                </Link>
+              </Text>
             </Text>
           </GridItem>
         </SimpleGrid>
       </Container>
-    </Card>
+    </Flex>
   );
 }
