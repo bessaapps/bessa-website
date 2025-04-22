@@ -126,10 +126,11 @@ const theme = extendTheme({
     sm: "620px"
   },
   radii: {
-    sm: "4px",
-    md: "8px"
+    md: "0px"
   },
   components: {
+    Button: { baseStyle: { borderRadius: "full" } },
+    Tag: { baseStyle: { container: { borderRadius: "full" } } },
     Link: {
       baseStyle: {
         _hover: {
@@ -140,15 +141,7 @@ const theme = extendTheme({
     Card: {
       baseStyle: {
         container: {
-          boxShadow: "none",
-          borderRadius: 16
-        }
-      }
-    },
-    Alert: {
-      baseStyle: {
-        container: {
-          borderRadius: 8
+          boxShadow: "none"
         }
       }
     }

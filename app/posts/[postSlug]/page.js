@@ -33,14 +33,12 @@ export default async function Post({ params }) {
     <>
       <Container maxW={"container.xl"} my={[8, 32]}>
         <Flex justify={"center"}>
-          <Heading as={"h3"} mb={4}>
-            <Link
-              key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}
-              href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
-            >
-              {post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
-            </Link>
-          </Heading>
+          <Link
+            key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}
+            href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
+          >
+            <Tag>{post?._embedded?.["wp:term"]?.[0]?.[0]?.name}</Tag>
+          </Link>
         </Flex>
         <Heading
           as={"h1"}
@@ -70,7 +68,7 @@ export default async function Post({ params }) {
       </Container>
       {post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
         <Container maxW={"container.xl"} my={[8, 32]}>
-          <AspectRatio ratio={1.75} borderRadius={8} overflow={"hidden"} mb={1}>
+          <AspectRatio ratio={1.75} overflow={"hidden"} mb={1}>
             <Image
               src={post._embedded["wp:featuredmedia"][0].source_url}
               alt={convert(post?.title?.rendered)}

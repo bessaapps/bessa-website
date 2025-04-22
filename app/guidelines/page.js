@@ -22,7 +22,7 @@ export default function Guidelines() {
     <>
       <Container maxW={"container.xl"} my={16}>
         <AspectRatio ratio={16 / 9}>
-          <Image src={Article} alt={"Guidelines"} style={{ borderRadius: 8 }} />
+          <Image src={Article} alt={"Guidelines"} />
         </AspectRatio>
       </Container>
       <Container maxW={"container.xl"} my={16}>

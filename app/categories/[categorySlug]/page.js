@@ -101,11 +101,7 @@ export default async function Category({ params }) {
               </GridItem>
               <GridItem>
                 <Link href={`/posts/${post?.slug}`}>
-                  <AspectRatio
-                    ratio={1.75}
-                    borderRadius={8}
-                    overflow={"hidden"}
-                  >
+                  <AspectRatio ratio={1.75} overflow={"hidden"}>
                     <Image
                       src={
                         post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url

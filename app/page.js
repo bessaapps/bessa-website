@@ -116,7 +116,7 @@ export default async function Home() {
               <Flex gap={4} mb={8}>
                 {appStores.map((store) => (
                   <Link key={store.name} href={store.href}>
-                    <Button colorScheme={"secondary"} size={"lg"} w={140}>
+                    <Button colorScheme={"primary"} size={"lg"} w={140}>
                       <Flex mr={2}>{store.icon}</Flex>
                       {store.name}
                     </Button>
@@ -139,7 +139,7 @@ export default async function Home() {
                 </Center>
                 <Box>
                   <Heading as={"h3"} textAlign={"center"}>
-                    800+
+                    900+
                   </Heading>
                   <Text textAlign={"center"}>Downloads</Text>
                 </Box>
