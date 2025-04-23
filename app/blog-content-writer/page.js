@@ -9,7 +9,7 @@ import {
   Link
 } from "@chakra-ui/react";
 import Image from "next/image";
-import Article from "/images/blog-content-writer.png";
+import Hero from "@/images/ai/Firefly happy young black woman writing on their laptop, artistic black and white sketchy grainy cha.jpg";
 
 export const metadata = {
   title: "Blog Content Writer | Bessa | An LGBTQ Social Media App",
@@ -72,10 +72,7 @@ export default function BlogContentWriter() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Container maxW={"container.sm"} py={16}>
-        <Image
-          src={Article}
-          alt={"Celebrating International Transgender Day of Visibility"}
-        />
+        <Image src={Hero} alt={"Black Woman Writing on Her Laptop"} />
       </Container>
       <Container maxW={"container.sm"} pb={16}>
         <Heading as={"h1"} mb={4}>
