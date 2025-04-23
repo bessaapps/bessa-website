@@ -26,9 +26,9 @@ import Mockup3 from "../images/mockups/3.png";
 import Mockup4 from "../images/mockups/4.png";
 import Image from "next/image";
 import { appStores, url } from "@/utils/constants";
-import { FiCheckCircle, FiDollarSign, FiXCircle } from "react-icons/fi";
 import axios from "axios";
 import dayjs from "dayjs";
+import { Ban, Check, CircleDollarSign } from "lucide-react";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -63,12 +63,12 @@ export default async function Home() {
       app: "Other Apps",
       features: [
         {
-          icon: <FiXCircle />,
+          icon: <Ban />,
           description: "Map"
         },
-        { icon: <FiXCircle />, description: "Events" },
+        { icon: <Ban />, description: "Events" },
         {
-          icon: <FiDollarSign />,
+          icon: <CircleDollarSign />,
           description: "Read Receipts"
         }
       ]
@@ -76,18 +76,24 @@ export default async function Home() {
     {
       app: "Bessa",
       features: [
-        { icon: <FiCheckCircle />, description: "Map" },
-        { icon: <FiCheckCircle />, description: "Events" },
         {
-          icon: <FiCheckCircle />,
+          icon: <Check color={"var(--chakra-colors-success-500)"} />,
+          description: "Map"
+        },
+        {
+          icon: <Check color={"var(--chakra-colors-success-500)"} />,
+          description: "Events"
+        },
+        {
+          icon: <Check color={"var(--chakra-colors-success-500)"} />,
           description: "Read Receipts"
         },
         {
-          icon: <FiCheckCircle />,
+          icon: <Check color={"var(--chakra-colors-success-500)"} />,
           description: "Social Feed"
         },
         {
-          icon: <FiCheckCircle />,
+          icon: <Check color={"var(--chakra-colors-success-500)"} />,
           description: "Members Directory"
         }
       ]
