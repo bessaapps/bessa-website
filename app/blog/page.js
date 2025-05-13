@@ -1,3 +1,5 @@
+"use client";
+
 import {
   AspectRatio,
   Avatar,
@@ -14,22 +16,30 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
-import axios from "axios";
 import dayjs from "dayjs";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
-async function getData() {
-  return await axios
-    .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
-      params: {
-        _embed: ["wp:term", "wp:featuredmedia", "author"],
-        per_page: 20
-      }
-    })
-    .then((response) => response?.data);
-}
+// async function getData() {
+//   return await axios
+//     .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
+//       params: {
+//         _embed: ["wp:term", "wp:featuredmedia", "author"],
+//         per_page: 20
+//       }
+//     })
+//     .then((response) => response?.data);
+// }
 
-export default async function Blog({}) {
-  const posts = await getData();
+export default function Blog({}) {
+  // const posts = await getData();
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/");
+  }, [router]);
+
+  return null;
 
   return (
     <>

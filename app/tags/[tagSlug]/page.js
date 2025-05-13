@@ -1,4 +1,5 @@
-import axios from "axios";
+"use client";
+
 import {
   AspectRatio,
   Avatar,
@@ -16,30 +17,39 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import dayjs from "dayjs";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
-async function getData(slug) {
-  return await axios
-    .get("https://blog.getbessa.com/wp-json/wp/v2/tags", {
-      params: {
-        slug
-      }
-    })
-    .then(
-      async (response) =>
-        await axios
-          .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
-            params: {
-              tags: response?.data?.[0]?.id,
-              _embed: ["wp:term", "wp:featuredmedia", "author"]
-            }
-          })
-          .then((response) => response?.data)
-    );
-}
+// async function getData(slug) {
+//   return await axios
+//     .get("https://blog.getbessa.com/wp-json/wp/v2/tags", {
+//       params: {
+//         slug
+//       }
+//     })
+//     .then(
+//       async (response) =>
+//         await axios
+//           .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
+//             params: {
+//               tags: response?.data?.[0]?.id,
+//               _embed: ["wp:term", "wp:featuredmedia", "author"]
+//             }
+//           })
+//           .then((response) => response?.data)
+//     );
+// }
 
-export default async function TagPage({ params }) {
-  const { tagSlug } = await params;
-  const posts = await getData(tagSlug);
+export default function TagPage({}) {
+  // const { tagSlug } = await params;
+  // const posts = await getData(tagSlug);
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/");
+  }, [router]);
+
+  return null;
 
   return (
     <>

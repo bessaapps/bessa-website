@@ -1,4 +1,5 @@
-import axios from "axios";
+"use client";
+
 import {
   AspectRatio,
   Avatar,
@@ -12,22 +13,32 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import dayjs from "dayjs";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+
 const { convert } = require("html-to-text");
 
-async function getData(slug) {
-  return await axios
-    .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
-      params: {
-        slug,
-        _embed: ["wp:term", "wp:featuredmedia", "author"]
-      }
-    })
-    .then((response) => response?.data?.[0]);
-}
+// async function getData(slug) {
+//   return await axios
+//     .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
+//       params: {
+//         slug,
+//         _embed: ["wp:term", "wp:featuredmedia", "author"]
+//       }
+//     })
+//     .then((response) => response?.data?.[0]);
+// }
 
-export default async function Post({ params }) {
-  const { postSlug } = await params;
-  const post = await getData(postSlug);
+export default function Post({}) {
+  // const { postSlug } = await params;
+  // const post = await getData(postSlug);
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/");
+  }, [router]);
+
+  return null;
 
   return (
     <>

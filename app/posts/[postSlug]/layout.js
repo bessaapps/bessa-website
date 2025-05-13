@@ -8,61 +8,58 @@ import {
   Text
 } from "@chakra-ui/react";
 import { appStores } from "@/utils/constants";
-import axios from "axios";
-import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
-import dayjs from "dayjs";
-const { convert } = require("html-to-text");
+// const { convert } = require("html-to-text");
 
-export async function generateMetadata({ params }) {
-  return await axios
-    .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
-      params: {
-        slug: params?.postSlug,
-        _embed: ["wp:featuredmedia", "author"]
-      }
-    })
-    .then((response) => {
-      const post = response?.data?.[0];
-
-      return {
-        title: `${convert(post?.title?.rendered)} | Bessa | An LGBTQ Social Media App`,
-        description: convert(post?.excerpt?.rendered),
-        authors: [
-          {
-            name: post?._embedded?.author?.[0]?.name,
-            url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/authors/${post?._embedded?.author?.[0]?.name?.toLowerCase()?.replace(" ", "-")}`
-          }
-        ],
-        openGraph: {
-          title: `${convert(post?.title?.rendered)} | Bessa | An LGBTQ Social Media App`,
-          description: convert(post?.excerpt?.rendered),
-          url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/posts/${post?.slug}`,
-          siteName: "Bessa | An LGBTQ Social Media App",
-          images: [
-            {
-              url: post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url,
-              width: 800,
-              height: 600
-            }
-          ],
-          type: "article",
-          publishedTime: dayjs(post?.date)?.format(),
-          authors: [post?._embedded?.author?.[0]?.name]
-        },
-        twitter: {
-          title: `${convert(post?.title?.rendered)} | Bessa | An LGBTQ Social Media App`,
-          description: convert(post?.excerpt?.rendered),
-          images: {
-            url: post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url,
-            alt: convert(post?.title?.rendered)
-          }
-        },
-        alternates: {
-          canonical: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/posts/${post?.slug}`
-        }
-      };
-    });
-}
+// export async function generateMetadata({ params }) {
+//   return await axios
+//     .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
+//       params: {
+//         slug: params?.postSlug,
+//         _embed: ["wp:featuredmedia", "author"]
+//       }
+//     })
+//     .then((response) => {
+//       const post = response?.data?.[0];
+//
+//       return {
+//         title: `${convert(post?.title?.rendered)} | Bessa | An LGBTQ Social Media App`,
+//         description: convert(post?.excerpt?.rendered),
+//         authors: [
+//           {
+//             name: post?._embedded?.author?.[0]?.name,
+//             url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/authors/${post?._embedded?.author?.[0]?.name?.toLowerCase()?.replace(" ", "-")}`
+//           }
+//         ],
+//         openGraph: {
+//           title: `${convert(post?.title?.rendered)} | Bessa | An LGBTQ Social Media App`,
+//           description: convert(post?.excerpt?.rendered),
+//           url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/posts/${post?.slug}`,
+//           siteName: "Bessa | An LGBTQ Social Media App",
+//           images: [
+//             {
+//               url: post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url,
+//               width: 800,
+//               height: 600
+//             }
+//           ],
+//           type: "article",
+//           publishedTime: dayjs(post?.date)?.format(),
+//           authors: [post?._embedded?.author?.[0]?.name]
+//         },
+//         twitter: {
+//           title: `${convert(post?.title?.rendered)} | Bessa | An LGBTQ Social Media App`,
+//           description: convert(post?.excerpt?.rendered),
+//           images: {
+//             url: post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url,
+//             alt: convert(post?.title?.rendered)
+//           }
+//         },
+//         alternates: {
+//           canonical: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/posts/${post?.slug}`
+//         }
+//       };
+//     });
+// }
 
 export default function PostLayout({ children }) {
   return (

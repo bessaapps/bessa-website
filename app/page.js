@@ -14,10 +14,6 @@ import {
   Center,
   List,
   ListItem,
-  Table,
-  Td,
-  Tr,
-  Tbody,
   Tag
 } from "@chakra-ui/react";
 import Mockup1 from "../images/mockups/1.png";
@@ -26,8 +22,6 @@ import Mockup3 from "../images/mockups/3.png";
 import Mockup4 from "../images/mockups/4.png";
 import Image from "next/image";
 import { appStores, url } from "@/utils/constants";
-import axios from "axios";
-import dayjs from "dayjs";
 import { Ban, Check, CircleDollarSign } from "lucide-react";
 
 const jsonLd = {
@@ -45,18 +39,18 @@ const jsonLd = {
   operatingSystem: ["ANDROID", "iOS"]
 };
 
-async function getData() {
-  return await axios
-    .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
-      params: { _embed: ["wp:term", "author"], per_page: 5 }
-    })
-    .then((response) => {
-      return { posts: response?.data };
-    });
-}
+// async function getData() {
+//   return await axios
+//     .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
+//       params: { _embed: ["wp:term", "author"], per_page: 5 }
+//     })
+//     .then((response) => {
+//       return { posts: response?.data };
+//     });
+// }
 
 export default async function Home() {
-  const { posts } = await getData();
+  // const { posts } = await getData();
 
   const comparisons = [
     {
@@ -199,11 +193,12 @@ export default async function Home() {
             <Tag mb={2}>Download for FREE!</Tag>
             <Heading mb={4}>Start to discover and engage for FREE!</Heading>
             <Text mb={4}>
-              Unlike other apps like Twitter, Grindr, HER, and OkCupid, you can
-              get this LGBTQ social media app for absolutely nothing.
-              Additionally, Bessa is loaded with community-building features
-              Twitter and Grindr don&apos;t offer. On Bessa you can begin to
-              connect with others and discover new things for free.
+              Unlike other apps like Grindr, Twitter, Scruff, HER, Taimi, Walla,
+              Tinder, Hinge, and Jack&apos;d, you can get this LGBTQ social
+              media app for absolutely nothing. Additionally, Bessa is loaded
+              with community-building features Twitter and Grindr don&apos;t
+              offer. On Bessa you can begin to connect with others and discover
+              new things for free.
             </Text>
           </Container>
           <SimpleGrid columns={[1, 2]} gap={8}>
@@ -279,55 +274,55 @@ export default async function Home() {
             </Container>
           </Card>
         </Container>
-        <Container maxW={"container.xl"} my={[8, 32]}>
-          <Heading mb={8}>From the Bessa Bulletin:</Heading>
-          <Table variant={"simple"} maxW={"100%"}>
-            <Tbody>
-              {posts?.map((post) => (
-                <Tr key={post?.id}>
-                  <Td
-                    borderTop={"solid 1px"}
-                    borderBottom={"none"}
-                    borderColor={"gray.900"}
-                    pl={0}
-                  >
-                    <Link href={`/posts/${post?.slug}`}>
-                      <Heading
-                        as={"h3"}
-                        dangerouslySetInnerHTML={{
-                          __html: post?.title?.rendered
-                        }}
-                        fontWeight={500}
-                      />
-                    </Link>
-                  </Td>
-                  <Td
-                    borderTop={"solid 1px"}
-                    borderBottom={"none"}
-                    borderColor={"gray.900"}
-                  >
-                    {dayjs(post?.date)?.format("MMM D, YYYY")} &middot; by{" "}
-                    <Link
-                      key={post?._embedded?.author?.[0]?.slug}
-                      href={`/authors/${post?._embedded?.author?.[0]?.slug}`}
-                      fontWeight={500}
-                    >
-                      {post?._embedded?.author?.[0]?.name}
-                    </Link>{" "}
-                    in{" "}
-                    <Link
-                      key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}
-                      href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
-                      fontWeight={"bold"}
-                    >
-                      {post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
-                    </Link>
-                  </Td>
-                </Tr>
-              ))}
-            </Tbody>
-          </Table>
-        </Container>
+        {/*<Container maxW={"container.xl"} my={[8, 32]}>*/}
+        {/*  <Heading mb={8}>From the Bessa Bulletin:</Heading>*/}
+        {/*  <Table variant={"simple"} maxW={"100%"}>*/}
+        {/*    <Tbody>*/}
+        {/*      {posts?.map((post) => (*/}
+        {/*        <Tr key={post?.id}>*/}
+        {/*          <Td*/}
+        {/*            borderTop={"solid 1px"}*/}
+        {/*            borderBottom={"none"}*/}
+        {/*            borderColor={"gray.900"}*/}
+        {/*            pl={0}*/}
+        {/*          >*/}
+        {/*            <Link href={`/posts/${post?.slug}`}>*/}
+        {/*              <Heading*/}
+        {/*                as={"h3"}*/}
+        {/*                dangerouslySetInnerHTML={{*/}
+        {/*                  __html: post?.title?.rendered*/}
+        {/*                }}*/}
+        {/*                fontWeight={500}*/}
+        {/*              />*/}
+        {/*            </Link>*/}
+        {/*          </Td>*/}
+        {/*          <Td*/}
+        {/*            borderTop={"solid 1px"}*/}
+        {/*            borderBottom={"none"}*/}
+        {/*            borderColor={"gray.900"}*/}
+        {/*          >*/}
+        {/*            {dayjs(post?.date)?.format("MMM D, YYYY")} &middot; by{" "}*/}
+        {/*            <Link*/}
+        {/*              key={post?._embedded?.author?.[0]?.slug}*/}
+        {/*              href={`/authors/${post?._embedded?.author?.[0]?.slug}`}*/}
+        {/*              fontWeight={500}*/}
+        {/*            >*/}
+        {/*              {post?._embedded?.author?.[0]?.name}*/}
+        {/*            </Link>{" "}*/}
+        {/*            in{" "}*/}
+        {/*            <Link*/}
+        {/*              key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}*/}
+        {/*              href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}*/}
+        {/*              fontWeight={"bold"}*/}
+        {/*            >*/}
+        {/*              {post?._embedded?.["wp:term"]?.[0]?.[0]?.name}*/}
+        {/*            </Link>*/}
+        {/*          </Td>*/}
+        {/*        </Tr>*/}
+        {/*      ))}*/}
+        {/*    </Tbody>*/}
+        {/*  </Table>*/}
+        {/*</Container>*/}
         <Container maxW={"container.xl"} my={[8, 32]}>
           <Card>
             <Container maxW={"container.sm"} my={[4, 16]}>

@@ -8,31 +8,30 @@ import {
   Text
 } from "@chakra-ui/react";
 import { appStores } from "@/utils/constants";
-import axios from "axios";
 
-export async function generateMetadata({ params }) {
-  return await axios
-    .get("https://blog.getbessa.com/wp-json/wp/v2/users", {
-      params: {
-        slug: params?.authorSlug
-      }
-    })
-    .then((response) => {
-      const author = response?.data?.[0];
-
-      return {
-        title: `${author?.name} | Bessa | An LGBTQ Social Media App`,
-        openGraph: {
-          title: `${author?.name} | Bessa | An LGBTQ Social Media App`,
-          url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/authors/${params?.authorSlug}`,
-          siteName: "Bessa | An LGBTQ Social Media App"
-        },
-        twitter: {
-          title: `${author?.name} | Bessa | An LGBTQ Social Media App`
-        }
-      };
-    });
-}
+// export async function generateMetadata({ params }) {
+//   return await axios
+//     .get("https://blog.getbessa.com/wp-json/wp/v2/users", {
+//       params: {
+//         slug: params?.authorSlug
+//       }
+//     })
+//     .then((response) => {
+//       const author = response?.data?.[0];
+//
+//       return {
+//         title: `${author?.name} | Bessa | An LGBTQ Social Media App`,
+//         openGraph: {
+//           title: `${author?.name} | Bessa | An LGBTQ Social Media App`,
+//           url: `https://${process.env?.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}/authors/${params?.authorSlug}`,
+//           siteName: "Bessa | An LGBTQ Social Media App"
+//         },
+//         twitter: {
+//           title: `${author?.name} | Bessa | An LGBTQ Social Media App`
+//         }
+//       };
+//     });
+// }
 
 export default function AuthorLayout({ children }) {
   return (

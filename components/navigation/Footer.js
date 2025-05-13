@@ -12,12 +12,10 @@ import NextLink from "next/link";
 import { appStores } from "@/utils/constants";
 import {
   BookOpen,
-  BriefcaseBusiness,
   CircleHelp,
   Heart,
   Instagram,
   Linkedin,
-  Rss,
   Twitter
 } from "lucide-react";
 
@@ -28,21 +26,21 @@ export default function Footer() {
       anchor: "Story",
       icon: <BookOpen size={"1rem"} color={"#f2f2f2"} />
     },
-    {
-      href: "/blog",
-      anchor: "Blog",
-      icon: <Rss size={"1rem"} color={"#f2f2f2"} />
-    },
+    // {
+    //   href: "/blog",
+    //   anchor: "Blog",
+    //   icon: <Rss size={"1rem"} color={"#f2f2f2"} />
+    // },
     {
       href: "https://cash.app/$getbessa",
       anchor: "Donate",
       icon: <Heart size={"1rem"} color={"#f2f2f2"} />
     },
-    {
-      href: "/blog-content-writer",
-      anchor: "Jobs",
-      icon: <BriefcaseBusiness size={"1rem"} color={"#f2f2f2"} />
-    },
+    // {
+    //   href: "/blog-content-writer",
+    //   anchor: "Jobs",
+    //   icon: <BriefcaseBusiness size={"1rem"} color={"#f2f2f2"} />
+    // },
     {
       href: "/support",
       anchor: "Help & Support",

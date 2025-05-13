@@ -1,4 +1,5 @@
-import axios from "axios";
+"use client";
+
 import {
   AspectRatio,
   Avatar,
@@ -15,36 +16,45 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
-async function getData(slug) {
-  return await axios
-    .get("https://blog.getbessa.com/wp-json/wp/v2/users", {
-      params: {
-        slug
-      }
-    })
-    .then(async (response) => {
-      const author = response?.data?.[0];
+// async function getData(slug) {
+//   return await axios
+//     .get("https://blog.getbessa.com/wp-json/wp/v2/users", {
+//       params: {
+//         slug
+//       }
+//     })
+//     .then(async (response) => {
+//       const author = response?.data?.[0];
+//
+//       return await axios
+//         .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
+//           params: {
+//             author: author?.id,
+//             _embed: ["wp:term", "wp:featuredmedia", "author"]
+//           }
+//         })
+//         .then((response) => {
+//           return {
+//             author,
+//             posts: response?.data
+//           };
+//         });
+//     });
+// }
 
-      return await axios
-        .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
-          params: {
-            author: author?.id,
-            _embed: ["wp:term", "wp:featuredmedia", "author"]
-          }
-        })
-        .then((response) => {
-          return {
-            author,
-            posts: response?.data
-          };
-        });
-    });
-}
+export default function Category({}) {
+  // const { authorSlug } = await params;
+  // const { author, posts } = await getData(authorSlug);
+  const router = useRouter();
 
-export default async function Category({ params }) {
-  const { authorSlug } = await params;
-  const { author, posts } = await getData(authorSlug);
+  useEffect(() => {
+    router.push("/");
+  }, [router]);
+
+  return null;
 
   return (
     <>
