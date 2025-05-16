@@ -32,8 +32,8 @@ export default function Footer() {
     //   icon: <Rss size={"1rem"} color={"#f2f2f2"} />
     // },
     {
-      href: "https://cash.app/$getbessa",
-      anchor: "Donate",
+      href: "/become-a-sponsor",
+      anchor: "Become a Sponsor",
       icon: <Heart size={"1rem"} color={"#f2f2f2"} />
     },
     // {

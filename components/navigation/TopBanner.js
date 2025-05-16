@@ -11,9 +11,9 @@ export default function TopBanner() {
       <Container maxW={"container.xl"} py={2}>
         <Flex align={"center"} justify={"center"} gap={2}>
           <Text fontWeight={"bold"} color={"gray.50"}>
-            Help this inclusive LGBTQ community operate without ads.
+            Support safe and inclusive LGBTQ communities.
           </Text>
-          <Link href={"https://cash.app/$getbessa"} target={"_blank"}>
+          <Link href={"/become-a-sponsor"}>
             <Button colorScheme={"primary"} size={"sm"}>
               Donate
             </Button>

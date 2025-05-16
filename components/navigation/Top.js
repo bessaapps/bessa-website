@@ -36,10 +36,14 @@ export default function Top() {
     //   href: "/blog",
     //   anchor: "Blog"
     // },
+    // {
+    //   href: "https://cash.app/$getbessa",
+    //   anchor: "Donate"
+    // },
     {
-      href: "https://cash.app/$getbessa",
-      anchor: "Donate"
-    },
+      href: "/become-a-sponsor",
+      anchor: "Become a Sponsor"
+    }
     // {
     //   href: "/blog-content-writer",
     //   anchor: "Jobs"

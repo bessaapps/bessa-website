@@ -1,4 +1,4 @@
-import DeepLinkPost from "@/app/deep-links/posts/post";
+import DeepLinkPost from "@/app/(main)/deep-links/posts/post";
 
 export async function generateMetadata({ searchParams }) {
   return {

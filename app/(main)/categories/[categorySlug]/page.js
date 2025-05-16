@@ -22,7 +22,7 @@ import { useRouter } from "next/navigation";
 
 // async function getData(slug) {
 //   return await axios
-//     .get("https://blog.getbessa.com/wp-json/wp/v2/tags", {
+//     .get("https://blog.getbessa.com/wp-json/wp/v2/categories", {
 //       params: {
 //         slug
 //       }
@@ -32,7 +32,7 @@ import { useRouter } from "next/navigation";
 //         await axios
 //           .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
 //             params: {
-//               tags: response?.data?.[0]?.id,
+//               categories: response?.data?.[0]?.id,
 //               _embed: ["wp:term", "wp:featuredmedia", "author"]
 //             }
 //           })
@@ -40,9 +40,9 @@ import { useRouter } from "next/navigation";
 //     );
 // }
 
-export default function TagPage({}) {
-  // const { tagSlug } = await params;
-  // const posts = await getData(tagSlug);
+export default function Category({}) {
+  // const { categorySlug } = await params;
+  // const posts = await getData(categorySlug);
   const router = useRouter();
 
   useEffect(() => {
@@ -54,7 +54,7 @@ export default function TagPage({}) {
   return (
     <>
       <Heading as={"h1"} textAlign={"center"} my={[8, 32]}>
-        #{params?.tagSlug?.replace("-", "")}
+        {posts?.[0]?._embedded?.["wp:term"]?.[0]?.[0]?.name}
       </Heading>
       <Container maxW={"container.xl"} my={[8, 32]}>
         <Stack gap={4}>
@@ -62,15 +62,6 @@ export default function TagPage({}) {
             <SimpleGrid key={post?.id} columns={[1, 4]} gap={4}>
               <GridItem colSpan={[1, 3]}>
                 <LinkBox as={"article"}>
-                  <Text fontWeight={800} color={"primary.500"}>
-                    <Link
-                      key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}
-                      href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
-                      color={"primary.500"}
-                    >
-                      {post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
-                    </Link>
-                  </Text>
                   <LinkOverlay href={`/posts/${post?.slug}`}>
                     <Heading
                       dangerouslySetInnerHTML={{
@@ -81,7 +72,7 @@ export default function TagPage({}) {
                   </LinkOverlay>
                   <Flex align={"center"} gap={2} mb={4}>
                     <Link
-                      href={`/authors/${post?._embedded?.author?.[0]?.slug}`}
+                      href={`/app/(main)/authors/${post?._embedded?.author?.[0]?.slug}`}
                     >
                       <Avatar
                         src={
@@ -101,7 +92,7 @@ export default function TagPage({}) {
                     </Link>
                     <Text fontWeight={500}>
                       <Link
-                        href={`/authors/${post?._embedded?.author?.[0]?.slug}`}
+                        href={`/app/(main)/authors/${post?._embedded?.author?.[0]?.slug}`}
                       >
                         {post?._embedded?.author?.[0]?.name}
                       </Link>
@@ -111,7 +102,10 @@ export default function TagPage({}) {
                   </Flex>
                   <Flex gap={2} flexWrap={"wrap"}>
                     {post?._embedded?.["wp:term"]?.[1]?.map((tag) => (
-                      <Link key={tag?.id} href={`/tags/${tag?.slug}`}>
+                      <Link
+                        key={tag?.id}
+                        href={`/app/(main)/tags/${tag?.slug}`}
+                      >
                         <Tag colorScheme={"blackAlpha"}>{tag?.name}</Tag>
                       </Link>
                     ))}
@@ -119,7 +113,7 @@ export default function TagPage({}) {
                 </LinkBox>
               </GridItem>
               <GridItem>
-                <Link href={`/posts/${post?.slug}`}>
+                <Link href={`/app/(main)/posts/${post?.slug}`}>
                   <AspectRatio ratio={1.75} overflow={"hidden"}>
                     <Image
                       src={

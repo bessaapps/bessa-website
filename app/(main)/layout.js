@@ -1,9 +1,6 @@
-import Top from "@/components/navigation/Top";
-import Providers from "@/app/providers";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import Footer from "@/components/navigation/Footer";
 import { description, title, url } from "@/utils/constants";
-import "./global.css";
-import TopBanner from "@/components/navigation/TopBanner";
+import "../global.css";
 
 export const metadata = {
   title,
@@ -50,23 +47,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang={"en"}>
-      <body>
-        <Providers>
-          <div style={{ position: "static" }}>
-            <TopBanner />
-          </div>
-          <header style={{ position: "sticky", top: 0, zIndex: 950 }}>
-            <nav>
-              <Top />
-            </nav>
-          </header>
-          {children}
-        </Providers>
-      </body>
-      {process.env.NODE_ENV !== "development" && (
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
-      )}
-    </html>
+    <>
+      <main style={{ overflowX: "hidden" }}>{children}</main>
+      <footer>
+        <nav>
+          <Footer />
+        </nav>
+      </footer>
+    </>
   );
 }

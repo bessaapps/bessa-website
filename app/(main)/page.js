@@ -16,10 +16,10 @@ import {
   ListItem,
   Tag
 } from "@chakra-ui/react";
-import Mockup1 from "../images/mockups/1.png";
-import Mockup2 from "../images/mockups/2.png";
-import Mockup3 from "../images/mockups/3.png";
-import Mockup4 from "../images/mockups/4.png";
+import Mockup1 from "../../images/mockups/1.png";
+import Mockup2 from "../../images/mockups/2.png";
+import Mockup3 from "../../images/mockups/3.png";
+import Mockup4 from "../../images/mockups/4.png";
 import Image from "next/image";
 import { appStores, url } from "@/utils/constants";
 import { Ban, Check, CircleDollarSign } from "lucide-react";

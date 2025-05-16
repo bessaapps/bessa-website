@@ -46,7 +46,7 @@ export default function Post({}) {
         <Flex justify={"center"}>
           <Link
             key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}
-            href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
+            href={`/app/(main)/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
           >
             <Tag>{post?._embedded?.["wp:term"]?.[0]?.[0]?.name}</Tag>
           </Link>
@@ -114,7 +114,7 @@ export default function Post({}) {
         />
         <Flex gap={2} flexWrap={"wrap"}>
           {post?._embedded?.["wp:term"]?.[1]?.map((tag) => (
-            <Link key={tag?.id} href={`/tags/${tag?.slug}`}>
+            <Link key={tag?.id} href={`/app/(main)/tags/${tag?.slug}`}>
               <Tag colorScheme={"blackAlpha"} size={"lg"}>
                 {tag?.name}
               </Tag>

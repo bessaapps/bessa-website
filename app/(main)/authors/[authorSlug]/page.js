@@ -88,7 +88,7 @@ export default function Category({}) {
                   <Text fontWeight={800} color={"primary.500"}>
                     <Link
                       key={post?._embedded?.["wp:term"]?.[0]?.[0]?.id}
-                      href={`/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
+                      href={`/app/(main)/categories/${post?._embedded?.["wp:term"]?.[0]?.[0]?.slug}`}
                       color={"primary.500"}
                     >
                       {post?._embedded?.["wp:term"]?.[0]?.[0]?.name}
@@ -104,7 +104,10 @@ export default function Category({}) {
                   </LinkOverlay>
                   <Flex gap={2} flexWrap={"wrap"}>
                     {post?._embedded?.["wp:term"]?.[1]?.map((tag) => (
-                      <Link key={tag?.id} href={`/tags/${tag?.slug}`}>
+                      <Link
+                        key={tag?.id}
+                        href={`/app/(main)/tags/${tag?.slug}`}
+                      >
                         <Tag colorScheme={"blackAlpha"}>{tag?.name}</Tag>
                       </Link>
                     ))}
@@ -112,7 +115,7 @@ export default function Category({}) {
                 </LinkBox>
               </GridItem>
               <GridItem>
-                <Link href={`/posts/${post?.slug}`}>
+                <Link href={`/app/(main)/posts/${post?.slug}`}>
                   <AspectRatio ratio={1.75} overflow={"hidden"}>
                     <Image
                       src={
