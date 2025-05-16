@@ -90,11 +90,16 @@ export default function BecomeASponsor() {
               create a space where queer people can be seen, celebrated, and
               truly belong.
             </Text>
-            <Link href={"https://givebutter.com/getbessa"} target={"_blank"}>
-              <Button colorScheme={"primary"} size={"lg"} mb={12}>
-                Donate Now
-              </Button>
-            </Link>
+            <Flex w={"100%"} gap={2} flexWrap={"wrap"} mb={12}>
+              <Link href={"https://givebutter.com/getbessa"} target={"_blank"}>
+                <Button colorScheme={"primary"} size={"lg"}>
+                  Join as a Sponsor Now!
+                </Button>
+              </Link>
+              <Link href={"https://givebutter.com/q6A9A5"} target={"_blank"}>
+                <Button size={"lg"}>Make a One-Time Donation</Button>
+              </Link>
+            </Flex>
             <Heading mb={2}>The Problem</Heading>
             <Text mb={4}>
               Mainstream social apps often lack the safety and inclusivity that

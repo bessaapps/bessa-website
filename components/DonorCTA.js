@@ -7,7 +7,7 @@ import {
   Button,
   Box
 } from "@chakra-ui/react";
-import { Heart, Instagram, Linkedin, Send, Twitter } from "lucide-react";
+import { Instagram, Linkedin, Send, Twitter } from "lucide-react";
 
 export default function DonorCTA() {
   const socialLinks = [
@@ -39,14 +39,18 @@ export default function DonorCTA() {
               For just $190 a month, your donation will help Bessa become a home
               for thousands of LGBTQ people who need safe, inclusive connection.
             </Heading>
-            <Link href={"https://givebutter.com/getbessa"} target={"_blank"}>
-              <Button bg={"gray.50"} color={"gray.900"} size={"lg"}>
-                <Flex mr={2}>
-                  <Heart />
-                </Flex>
-                Start Now!
-              </Button>
-            </Link>
+            <Flex w={"100%"} gap={2} flexWrap={"wrap"} mb={12}>
+              <Link href={"https://givebutter.com/getbessa"} target={"_blank"}>
+                <Button colorScheme={"primary"} size={"lg"}>
+                  Join Now
+                </Button>
+              </Link>
+              <Link href={"https://givebutter.com/q6A9A5"} target={"_blank"}>
+                <Button colorScheme={"whiteAlpha"} size={"lg"}>
+                  Donate
+                </Button>
+              </Link>
+            </Flex>
           </Box>
           <Box minW={[0, 440]} />
         </Flex>
