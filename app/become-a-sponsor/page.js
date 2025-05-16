@@ -15,11 +15,11 @@ import DonorCTA from "@/components/DonorCTA";
 import Image from "next/image";
 import Hero from "@/images/ai/Firefly_two people shaking hands, one is black and the other one is caucasian. the black one  585686.jpg";
 import Script from "next/script";
+import { url } from "@/utils/constants";
 
 const title = "Become a Sponsor | Bessa | An LGBTQ Social Media App";
 const description =
   "Support Bessa, the LGBTQ social app creating safe, inclusive spaces for queer people to connect, share, and find community.";
-const url = "";
 
 export const metadata = {
   title,
