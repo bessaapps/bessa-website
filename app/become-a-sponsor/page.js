@@ -16,10 +16,42 @@ import Image from "next/image";
 import Hero from "@/images/ai/Firefly_two people shaking hands, one is black and the other one is caucasian. the black one  585686.jpg";
 import Script from "next/script";
 
+const title = "Become a Sponsor | Bessa | An LGBTQ Social Media App";
+const description =
+  "Support Bessa, the LGBTQ social app creating safe, inclusive spaces for queer people to connect, share, and find community.";
+const url = "";
+
 export const metadata = {
-  title: "Become a Sponsor | Bessa | An LGBTQ Social Media App",
-  description:
-    "Support Bessa, the LGBTQ social app creating safe, inclusive spaces for queer people to connect, share, and find community."
+  title,
+  description,
+  languages: {
+    "en-US": "/en-US"
+  },
+  openGraph: {
+    title,
+    description,
+    url,
+    siteName: title,
+    images: [
+      {
+        url: `${url}/images/become-a-donor.png`,
+        width: 800,
+        height: 600
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    creator: "@getbessa",
+    images: {
+      url: `${url}/images/become-a-donor.png`,
+      alt: title
+    }
+  }
 };
 
 export default function BecomeASponsor() {
