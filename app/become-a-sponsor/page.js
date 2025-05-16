@@ -17,7 +17,9 @@ import Hero from "@/images/ai/Firefly_two people shaking hands, one is black and
 import Script from "next/script";
 
 export const metadata = {
-  title: "Story | Bessa | An LGBTQ Social Media App"
+  title: "Become a Sponsor | Bessa | An LGBTQ Social Media App",
+  description:
+    "Support Bessa, the LGBTQ social app creating safe, inclusive spaces for queer people to connect, share, and find community."
 };
 
 export default function BecomeASponsor() {
