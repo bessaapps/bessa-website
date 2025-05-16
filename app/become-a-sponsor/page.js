@@ -34,7 +34,7 @@ export const metadata = {
     siteName: title,
     images: [
       {
-        url: `${url}/images/become-a-donor.png`,
+        url: `${url}/images/become-a-sponsor.png`,
         width: 800,
         height: 600
       }
@@ -48,7 +48,7 @@ export const metadata = {
     description,
     creator: "@getbessa",
     images: {
-      url: `${url}/images/become-a-donor.png`,
+      url: `${url}/images/become-a-sponsor.png`,
       alt: title
     }
   }
