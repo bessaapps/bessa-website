@@ -36,16 +36,26 @@ export default function DonorCTA() {
         <Flex gap={8} mb={8}>
           <Box>
             <Heading as={"p"} color={"gray.50"} size={"3xl"} mb={8}>
-              For just $190 a month, your donation will help Bessa become a home
+              For just $200 a month, your donation will help Bessa become a home
               for thousands of LGBTQ people who need safe, inclusive connection.
             </Heading>
             <Flex w={"100%"} gap={2} flexWrap={"wrap"} mb={12}>
-              <Link href={"https://givebutter.com/getbessa"} target={"_blank"}>
+              <Link
+                href={
+                  "https://www.indiegogo.com/projects/the-social-app-that-puts-queer-community-first"
+                }
+                target={"_blank"}
+              >
                 <Button colorScheme={"primary"} size={"lg"}>
                   Join Now
                 </Button>
               </Link>
-              <Link href={"https://givebutter.com/q6A9A5"} target={"_blank"}>
+              <Link
+                href={
+                  "https://www.indiegogo.com/projects/the-social-app-that-puts-queer-community-first"
+                }
+                target={"_blank"}
+              >
                 <Button colorScheme={"whiteAlpha"} size={"lg"}>
                   Donate
                 </Button>
