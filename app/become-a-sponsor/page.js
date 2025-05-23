@@ -133,74 +133,144 @@ export default function BecomeASponsor() {
             </Link>
           </GridItem>
         </SimpleGrid>
-        <Heading mb={2}>The Problem</Heading>
+      </Container>
+      <Container py={[8, 32]}>
+        <Tag mb={2}>The Problem</Tag>
+        <Heading mb={4}>The Issues LGBTQ People Face on Social</Heading>
         <Text mb={4}>
-          Mainstream social apps often lack the safety and inclusivity that
-          LGBTQ people need. As a result, many queer individuals feel isolated
-          and disconnected, especially online. Finding LGBTQ-friendly places and
-          events remains a challenge without dedicated, affirming platforms.
+          Mainstream social media platforms are&apos;t built with LGBTQ people
+          in mind and the cracks show. From the start, these spaces have
+          prioritized scale, ad revenue, and mass appeal over meaningful
+          inclusion. For queer users, that often means navigating environments
+          where harassment is common, content moderation is inconsistent, and
+          community guidelines seem to shift without warning. Even
+          well-intentioned platforms frequently miss the mark, failing to
+          understand the specific needs and voices within LGBTQ communities. As
+          a result, many queer users find themselves tiptoeing around language,
+          reporting abuse that goes unanswered, or even watching their content
+          disappear through shadowbanning and censorship.
+        </Text>
+        <Text mb={4}>
+          These issues go deeper than just bugs or bad policy; they reflect a
+          lack of representation and investment at every level. Queer creators
+          struggle to gain traction in algorithms that suppress
+          &quot;non-mainstream&quot; content, while LGBTQ stories are too often
+          filtered, flagged, or hidden under vague standards. Platforms profit
+          from Pride campaigns one month, then go silent the next. For LGBTQ
+          people and the people who love and support them, this creates a
+          dissonant, exhausting digital experience&mdash;one that feels more
+          disapproving than protective and more interested in monetizing
+          identity than honoring it.
         </Text>
         <UnorderedList mb={4}>
-          <ListItem>Mainstream social apps aren’t inclusive or safe.</ListItem>
-          <ListItem>Queer people feel isolated.</ListItem>
           <ListItem>
-            Too many LGBTQ people lack access to safe and inclusive spaces
-            online.
+            Censorship of LGBTQ content, especially around identity, sex
+            education, and advocacy
           </ListItem>
           <ListItem>
-            It&apos;s difficult to find LGBTQ-friendly places and LGBTQ-related
-            events.
+            Inconsistent or inadequate moderation that fails to address
+            harassment, hate speech, and targeted attacks
+          </ListItem>
+          <ListItem>
+            Lack of meaningful representation in platform design, policies, and
+            leadership
+          </ListItem>
+          <ListItem>
+            Algorithmic bias that deprioritizes queer content in favor of
+            &quot;brand-safe&quot; material
+          </ListItem>
+          <ListItem>
+            Exploitation of identity for profit, without real reinvestment in
+            LGBTQ communities
           </ListItem>
         </UnorderedList>
-        <Heading mb={2}>The Solution</Heading>
+      </Container>
+      <Container py={[8, 32]}>
+        <Tag mb={2}>The Solution</Tag>
+        <Heading mb={4}>Bessa Stands Apart</Heading>
         <Text mb={4}>
-          Bessa is a social media app created specifically for the LGBTQ
-          community to foster both online and real-world connections. It
-          empowers users to express pride in their identity while sharing posts,
-          building profiles, and connecting with others. Bessa also features
-          user-vetted, queer-friendly places and local LGBTQ events to help
-          users find safe, inclusive spaces.
+          Bessa is a space designed from the ground up to reflect queer lives
+          and their communities. Built by LGBTQ people, Bessa prioritizes
+          authenticity and connection. Here, queer content isn&apos;t hidden or
+          deprioritized. It&apos;s celebrated. Whether you&apos;re sharing your
+          story or finding others who understand you, Bessa is built to honor
+          who you are.
         </Text>
-        <UnorderedList mb={4}>
-          <ListItem>
-            Bessa is a social media app built specifically for the LGBTQ
-            community.
-          </ListItem>
-          <ListItem>
-            Bessa is designed to encourage both online and real-world
-            connections.
-          </ListItem>
-          <ListItem>
-            Bessa enables people to be proud of their identity.
-          </ListItem>
-          <ListItem>
-            Users can complete a profile, make posts, and connect with other
-            users.
-          </ListItem>
-          <ListItem>
-            Bessa is a list of local, user-vetted, queer-friendly places.
-          </ListItem>
-          <ListItem>Bessa is a list of local LGBTQ events.</ListItem>
-        </UnorderedList>
-        <Heading mb={2}>Who Bessa Serves</Heading>
-        <UnorderedList mb={4}>
-          <ListItem>Queer people needing affirming online space</ListItem>
-          <ListItem>LGBTQ folks in rural or underrepresented regions</ListItem>
-          <ListItem>Travelers seeking inclusive locations</ListItem>
-          <ListItem>Anyone craving meaningful queer connection</ListItem>
-        </UnorderedList>
-        <Heading mb={2}>Why I&apos;m Building This</Heading>
-        <UnorderedList mb={4}>
-          <ListItem>
-            I want to build an inclusive LGBTQ community without sacrificing its
-            safety or culture.
-          </ListItem>
-          <ListItem>
-            As a queer bisexual man, I want Bessa to be open to a variety of
-            sexual orientations, genders, ethnicities, body types, ages,
-            abilities, and more.
-          </ListItem>
-        </UnorderedList>
+        <Text mb={4}>
+          Supporting Bessa means supporting visibility without compromise,
+          creativity without censorship, and community without a corporate
+          filter. It&apos;s a place where LGBTQ people can connect meaningfully
+          and contribute to something that uplifts, reflects, and grows with us.
+        </Text>
+        <Text>🎤 Queer-led and community-driven</Text>
+        <Text>📣 No shadowbanning or suppression</Text>
+        <Text>🌈 Representation of LGBTQ voices</Text>
+        <Text>🔍 Transparent moderation policies</Text>
+        <Text>🌍 Real connections online and offline</Text>
+        <Text>💬 Creative and social freedom</Text>
+      </Container>
+      <Container py={[8, 32]}>
+        <Tag mb={2}>The People</Tag>
+        <Heading mb={4}>Who Bessa Serves</Heading>
+        <Text mb={4}>
+          Bessa is built for LGBTQ people who are searching for more — more
+          connection, more visibility, and more community, both online and off.
+          Whether you&apos;re looking for friends, support, or a sense of
+          belonging, Bessa offers a space where queer identity is the
+          foundation, not a side note. From discovering local LGBTQ-friendly
+          places and events to joining conversations that reflect real lived
+          experience, Bessa helps users build meaningful relationships in ways
+          that mainstream platforms often overlook.
+        </Text>
+        <Text mb={4}>
+          But Bessa isn&apos;t just for individuals — it&apos;s for creators
+          too. It serves queer content creators who want to share without being
+          censored or buried by censorship. Bessa is a platform for anyone who
+          believes LGBTQ lives deserve to be celebrated, not just tolerated.
+          Whether you&apos;re here to find community or uplift others, Bessa is
+          for you.
+        </Text>
+        <Text>🏳️‍🌈 LGBTQ people</Text>
+        <Text>📍 People looking for LGBTQ-friendly places</Text>
+        <Text>🎉 Those wanting to discover LGBTQ events</Text>
+        <Text>🎥 Queer content creators</Text>
+        <Text>✨ Anyone tired of mainstream platforms</Text>
+      </Container>
+      <Container py={[8, 32]}>
+        <Tag mb={2}>The Story</Tag>
+        <Heading mb={4}>Why I&apos;m Building This</Heading>
+        <Text mb={4}>
+          I&apos;m Topher — a queer bisexual man, software engineer, and the
+          creator of Bessa. I built Bessa myself: every line of code, every
+          design decision, every intention behind it reflects my hope to help
+          LGBTQ people connect, grow, and thrive. The idea started years ago
+          while living in Oakland, CA, where I experienced many kinds of
+          communities&mdash;some wide open, some closely guarded. I became
+          fascinated by the balance between the two, and how the best spaces
+          create room for people to show up fully as themselves. Bessa is my
+          attempt to bring that idea online to create a vibrant and inclusive
+          LGBTQ community that respects culture, values connection, and welcomes
+          a broad spectrum of people.
+        </Text>
+        <Text mb={4}>
+          Bessa isn&apos;t backed by a big company or investor. It&apos;s a
+          personal project, maintained outside my full-time work as a software
+          engineer, and sustained by those who believe in it. If you&apos;re
+          LGBTQ, or someone who loves and supports us, I invite you to donate or
+          become a sponsor. You&apos;ll be helping keep a living, growing
+          platform alive&mdash;one that celebrates diverse genders, ethnicities,
+          ages, abilities, and bodies without compromising what makes LGBTQ
+          community so powerful. Together, we can build something that truly
+          reflects us.
+        </Text>
+        <Text>🌈 Built by LGBTQ, for LGBTQ</Text>
+        <Text>🔌 Connect with real LGBTQ people</Text>
+        <Text>📍 Share LGBTQ places and events</Text>
+        <Text>🫶 An experiment in radical inclusivity</Text>
+        <Text>🔧 Thoughtful, accessible design</Text>
+        <Text>💬 Guided by community engagement</Text>
+      </Container>
+      <Container py={[8, 32]}>
         <Heading mb={2}>What $200/mo. will Fund</Heading>
         <UnorderedList mb={4}>
           <ListItem>Software and subscriptions ($1,600/yr.)</ListItem>
