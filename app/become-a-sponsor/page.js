@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import DonorCTA from "@/components/DonorCTA";
 import Image from "next/image";
-import Hero from "@/images/ai/Firefly_two people shaking hands, one is black and the other one is caucasian. the black one  585686.jpg";
+import Hero from "@/images/ai/firefly-1.jpg";
 import { url } from "@/utils/constants";
 
 const title = "Become a Sponsor | Bessa | An LGBTQ Social Media App";
