@@ -80,7 +80,7 @@ export default function Footer() {
         <SimpleGrid columns={[1, 4]} spacing={8} minW={"100%"}>
           <GridItem colSpan={[1, 2]} w={["100%", "75%"]}>
             <Heading as={"p"} color={"gray.50"} size={"4xl"} mb={8}>
-              Join your Tribe Today for FREE!
+              Join your Tribe <Text as={"i"}>and</Text> your Vibe now for FREE!
             </Heading>
             <Flex gap={4} flexWrap={"wrap"}>
               {appStores.map((store) => (
