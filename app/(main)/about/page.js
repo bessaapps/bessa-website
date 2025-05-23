@@ -1,7 +1,7 @@
 import { Container, Heading, Text, Tag } from "@chakra-ui/react";
 
 export const metadata = {
-  title: "Story | Bessa | An LGBTQ Social Media App"
+  title: "Story | Bessa | LGBTQ Social Networking App"
 };
 
 export default function Story() {

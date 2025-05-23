@@ -56,13 +56,16 @@ export default function Top() {
         <Container maxW={"container.xl"} py={4}>
           <Flex align={"center"} justify={"space-between"}>
             <Flex align={"center"} gap={4}>
-              <Link href={"/"} title={"Bessa | An LGBTQ Social Media App"}>
+              <Link href={"/"} title={"Bessa | LGBTQ Social Networking App"}>
                 <AspectRatio ratio={1} w={12}>
-                  <Image src={Logo} alt={"Bessa | An LGBTQ Social Media App"} />
+                  <Image
+                    src={Logo}
+                    alt={"Bessa | LGBTQ Social Networking App"}
+                  />
                 </AspectRatio>
               </Link>
               <Text fontSize={"1.25rem"} fontWeight={800} mr={4}>
-                <Link href={"/"} title={"Bessa | An LGBTQ Social Media App"}>
+                <Link href={"/"} title={"Bessa | LGBTQ Social Networking App"}>
                   Bessa
                 </Link>
               </Text>

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Blog | Bessa | An LGBTQ Social Media App"
+  title: "Blog | Bessa | LGBTQ Social Networking App"
 };
 
 export default function BlogLayout({ children }) {

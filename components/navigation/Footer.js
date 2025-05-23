@@ -105,7 +105,7 @@ export default function Footer() {
                 <Text color={"gray.50"}>
                   <Link
                     href={link.href}
-                    title={`${link.anchor} | Bessa | An LGBTQ Social Media App`}
+                    title={`${link.anchor} | Bessa | LGBTQ Social Networking App`}
                   >
                     {link.anchor}
                   </Link>
@@ -118,7 +118,7 @@ export default function Footer() {
               <Text key={link.href} color={"gray.50"}>
                 <Link
                   href={`/${link.href}`}
-                  title={`${link.anchor} | Bessa | An LGBTQ Social Media App`}
+                  title={`${link.anchor} | Bessa | LGBTQ Social Networking App`}
                 >
                   {link.anchor}
                 </Link>

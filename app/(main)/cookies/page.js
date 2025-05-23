@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 
 export const metadata = {
-  title: "Cookie Policy | Bessa | An LGBTQ Social Media App"
+  title: "Cookie Policy | Bessa | LGBTQ Social Networking App"
 };
 
 export default function Cookies() {

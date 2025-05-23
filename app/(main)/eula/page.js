@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 
 export const metadata = {
-  title: "End-User License Agreement | Bessa | An LGBTQ Social Media App"
+  title: "End-User License Agreement | Bessa | LGBTQ Social Networking App"
 };
 
 export default function EULA() {
@@ -244,7 +244,8 @@ export default function EULA() {
       </Text>
       <Heading mb={4}>Term and Termination</Heading>
       <Text mb={4}>
-        This Agreement shall remain in effect until terminated by you or Bessa.{" "}
+        This Agreement shall remain in effect until terminated by you or
+        Bessa.{" "}
       </Text>
       <Text mb={4}>
         Bessa may, in its sole discretion, at any time and for any or no reason,

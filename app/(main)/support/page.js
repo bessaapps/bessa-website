@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 
 export const metadata = {
-  title: "Help & Support | Bessa | An LGBTQ Social Media App"
+  title: "Help & Support | Bessa | LGBTQ Social Networking App"
 };
 
 export default function Support() {

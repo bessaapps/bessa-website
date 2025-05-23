@@ -14,7 +14,7 @@ import Image from "next/image";
 import Hero from "@/images/ai/firefly-1.jpg";
 import { url } from "@/utils/constants";
 
-const title = "Become a Sponsor | Bessa | An LGBTQ Social Media App";
+const title = "Become a Sponsor | Bessa | LGBTQ Social Networking App";
 const description =
   "Support Bessa, the LGBTQ social app creating safe, inclusive spaces for queer people to connect, share, and find community.";
 
