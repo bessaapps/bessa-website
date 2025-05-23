@@ -1,4 +1,12 @@
-import { Container, Heading, Text, Tag } from "@chakra-ui/react";
+import {
+  Container,
+  Heading,
+  Text,
+  Tag,
+  Link,
+  Button,
+  Flex
+} from "@chakra-ui/react";
 
 export const metadata = {
   title: "Story | Bessa | LGBTQ Social Networking App"
@@ -51,6 +59,26 @@ export default function Story() {
         hope that Bessa will grow into the most inclusive online LGBTQ community
         and reach people all across the globe.
       </Text>
+      <Flex w={"100%"} gap={2} flexWrap={"wrap"} my={12}>
+        <Link
+          href={"/"}
+          title={"Bessa LGBTQ Social Networking App"}
+          target={"_blank"}
+        >
+          <Button colorScheme={"primary"} size={"lg"}>
+            Learn More
+          </Button>
+        </Link>
+        <Link
+          href={"/become-a-sponsor"}
+          title={"Become a Sponsor | Bessa | LGBTQ Social Networking App"}
+          target={"_blank"}
+        >
+          <Button colorScheme={"primary"} size={"lg"}>
+            Sponsor & Donate
+          </Button>
+        </Link>
+      </Flex>
     </Container>
   );
 }

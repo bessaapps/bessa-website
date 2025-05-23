@@ -32,22 +32,14 @@ export default function Top() {
       href: "/about",
       anchor: "Story"
     },
-    // {
-    //   href: "/blog",
-    //   anchor: "Blog"
-    // },
-    // {
-    //   href: "https://cash.app/$getbessa",
-    //   anchor: "Donate"
-    // },
     {
       href: "/become-a-sponsor",
-      anchor: "Sponsor or Donate"
+      anchor: "Sponsor & Donate"
+    },
+    {
+      href: "/support",
+      anchor: "Help & Support"
     }
-    // {
-    //   href: "/blog-content-writer",
-    //   anchor: "Jobs"
-    // }
   ];
 
   return (
