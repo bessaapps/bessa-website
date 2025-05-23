@@ -7,13 +7,17 @@ import {
   Button,
   Box
 } from "@chakra-ui/react";
-import { Instagram, Linkedin, Send, Twitter } from "lucide-react";
+import { Instagram, Linkedin, Send, Twitter, Youtube } from "lucide-react";
 
 export default function DonorCTA() {
   const socialLinks = [
     {
       href: "https://www.linkedin.com/company/getbessa/about",
       icon: <Linkedin size={32} color={"#f2f2f2"} />
+    },
+    {
+      href: "https://www.youtube.com/@getbessa",
+      icon: <Youtube size={32} color={"#f2f2f2"} />
     },
     {
       href: "https://x.com/getbessa",

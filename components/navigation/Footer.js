@@ -16,7 +16,8 @@ import {
   Heart,
   Instagram,
   Linkedin,
-  Twitter
+  Twitter,
+  Youtube
 } from "lucide-react";
 
 export default function Footer() {
@@ -26,21 +27,11 @@ export default function Footer() {
       anchor: "Story",
       icon: <BookOpen size={"1rem"} color={"#f2f2f2"} />
     },
-    // {
-    //   href: "/blog",
-    //   anchor: "Blog",
-    //   icon: <Rss size={"1rem"} color={"#f2f2f2"} />
-    // },
     {
       href: "/become-a-sponsor",
       anchor: "Sponsor or Donate",
       icon: <Heart size={"1rem"} color={"#f2f2f2"} />
     },
-    // {
-    //   href: "/blog-content-writer",
-    //   anchor: "Jobs",
-    //   icon: <BriefcaseBusiness size={"1rem"} color={"#f2f2f2"} />
-    // },
     {
       href: "/support",
       anchor: "Help & Support",
@@ -50,8 +41,8 @@ export default function Footer() {
 
   const socialLinks = [
     {
-      href: "https://www.linkedin.com/company/getbessa/about",
-      icon: <Linkedin size={32} color={"#f2f2f2"} />
+      href: "https://www.youtube.com/@getbessa",
+      icon: <Youtube size={32} color={"#f2f2f2"} />
     },
     {
       href: "https://x.com/getbessa",
@@ -60,6 +51,10 @@ export default function Footer() {
     {
       href: "https://www.instagram.com/getbessa",
       icon: <Instagram size={32} color={"#f2f2f2"} />
+    },
+    {
+      href: "https://www.linkedin.com/company/getbessa/about",
+      icon: <Linkedin size={32} color={"#f2f2f2"} />
     }
   ];
 

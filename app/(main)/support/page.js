@@ -40,6 +40,13 @@ export default function Support() {
             topher@getbessa.com
           </Link>
         </Text>
+        <Text>
+          Check out the new{" "}
+          <Link href={"https://www.youtube.com/@getbessa"} fontWeight={"bold"}>
+            YouTube channel
+          </Link>{" "}
+          for more help and tutorials.
+        </Text>
       </Container>
       <Container maxW={"container.xl"} my={16}>
         <Heading mb={4}>Guides</Heading>
@@ -66,15 +73,8 @@ export default function Support() {
             &quot;
           </ListItem>
           <ListItem>
-            Select{" "}
-            <Text as={"span"} fontWeight={"bold"}>
-              Post
-            </Text>
-            .
-          </ListItem>
-          <ListItem>
-            You can optionally add a picture, video, or audio with the icons at
-            the top.
+            You can optionally add a picture or video with the icons at the
+            bottom.
           </ListItem>
           <ListItem>
             Fill out the filed with something you&apos;d like to share.
@@ -90,20 +90,23 @@ export default function Support() {
         <Heading id={"how-to-share-an-lgbtq-friendly-place"} mb={4}>
           How to Share an LGBTQ-Friendly Place
         </Heading>
+        <Alert status={"error"} colorScheme={"danger"} my={4}>
+          <AlertIcon />A paid subscription is required to share places.
+        </Alert>
+        <Alert status={"info"} colorScheme={"primary"} my={4}>
+          <AlertIcon />
+          Places must be approved by a moderator to appear to all members.
+        </Alert>
         <OrderedList mb={8}>
           <ListItem>
-            From the home screen, press the &quot;
-            <Text as={"span"} fontWeight={"bold"}>
-              +
-            </Text>
-            &quot;
+            From the places screen, press the button at the top
           </ListItem>
           <ListItem>
-            Select{" "}
+            Tap the box that says{" "}
             <Text as={"span"} fontWeight={"bold"}>
-              Place
-            </Text>
-            .
+              Select an image
+            </Text>{" "}
+            to add an image from your library.
           </ListItem>
           <ListItem>
             Fill out all the required fields. Optional fields are marked.
@@ -119,26 +122,16 @@ export default function Support() {
         <Heading id={"how-to-share-an-lgbtq-event"} mb={4}>
           How to Share an LGBTQ Event
         </Heading>
+        <Alert status={"error"} colorScheme={"danger"} my={4}>
+          <AlertIcon />A paid subscription is required to share events.
+        </Alert>
         <Alert status={"info"} colorScheme={"primary"} my={4}>
           <AlertIcon />
-          After publishing an event, it will take a short period of time to
-          appear in the app. Events must also be approved by a moderator to
-          appear to all members.
+          Events must be approved by a moderator to appear to all members.
         </Alert>
         <OrderedList mb={8}>
           <ListItem>
-            From the home screen, press the &quot;
-            <Text as={"span"} fontWeight={"bold"}>
-              +
-            </Text>
-            &quot;
-          </ListItem>
-          <ListItem>
-            Select{" "}
-            <Text as={"span"} fontWeight={"bold"}>
-              Event
-            </Text>
-            .
+            From the events screen, press the button at the top
           </ListItem>
           <ListItem>
             Tap the box that says{" "}
