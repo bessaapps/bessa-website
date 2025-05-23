@@ -42,7 +42,7 @@ export default function Top() {
     // },
     {
       href: "/become-a-sponsor",
-      anchor: "Become a Sponsor"
+      anchor: "Sponsor or Donate"
     }
     // {
     //   href: "/blog-content-writer",

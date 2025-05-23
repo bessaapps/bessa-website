@@ -33,7 +33,7 @@ export default function Footer() {
     // },
     {
       href: "/become-a-sponsor",
-      anchor: "Become a Sponsor",
+      anchor: "Sponsor or Donate",
       icon: <Heart size={"1rem"} color={"#f2f2f2"} />
     },
     // {

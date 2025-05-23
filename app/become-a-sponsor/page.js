@@ -7,7 +7,9 @@ import {
   AspectRatio,
   Link,
   Button,
-  Flex
+  Tag,
+  SimpleGrid,
+  GridItem
 } from "@chakra-ui/react";
 import DonorCTA from "@/components/DonorCTA";
 import Image from "next/image";
@@ -59,51 +61,78 @@ export default function BecomeASponsor() {
           <Image src={Hero} alt={"Bessa Guidelines"} />
         </AspectRatio>
       </Container>
-      <Container maxW={"container.xl"} my={16}>
-        <Heading as={"h1"} mb={4}>
-          Become a Sponsor
+      <Container maxW={"container.lg"} py={[8, 32]}>
+        <Heading as={"h3"} textAlign={"center"} mb={4}>
+          Bessa is an LGBTQ social networking app created for real community and
+          you&apos;re invited to be a part of it. Whether you&apos;re LGBTQ, an
+          ally, a parent, a creator, or an advocate, your support can keep Bessa
+          alive. Sponsor or donate today and help us keep the space we&apos;ve
+          all been waiting for.
         </Heading>
-        <Text mb={4}>
-          Too often, LGBTQ people are forced to navigate digital spaces that
-          weren&apos;t made with them in mind. Mainstream social platforms lack
-          the safety, inclusivity, and cultural understanding that the LGBTQ
-          community deserves. This leads to isolation, especially for those in
-          rural or underrepresented areas, and makes it difficult to find
-          meaningful connections. Bessa is the solution&mdash;a social media app
-          built <i>by and for</i> LGBTQ people that offers a safe, affirming
-          space to connect, share, and discover queer-friendly events and
-          places.
-        </Text>
-        <Text mb={4}>
-          By becoming a monthly donor, you&apos;re helping build more than just
-          an app&mdash;you’re helping build a sanctuary. With just $200 a month,
-          Bessa can cover essential tech costs, promote the app to those who
-          need it most, and stay up and running. In return, you&apos;ll be
-          recognized monthly on our site, app store listings, and newsletters as
-          well as receive a personalized thank-you video and donor badge as a
-          sign of appreciation. Your support helps create a space where queer
-          people can be seen, celebrated, and truly belong.
-        </Text>
-        <Flex w={"100%"} gap={2} flexWrap={"wrap"} mb={12}>
-          <Link
-            href={
-              "https://www.indiegogo.com/projects/the-social-app-that-puts-queer-community-first"
-            }
-            target={"_blank"}
-          >
-            <Button colorScheme={"primary"} size={"lg"}>
-              Join as a Sponsor Now!
-            </Button>
-          </Link>
-          <Link
-            href={
-              "https://www.indiegogo.com/projects/the-social-app-that-puts-queer-community-first"
-            }
-            target={"_blank"}
-          >
-            <Button size={"lg"}>Make a One-Time Donation</Button>
-          </Link>
-        </Flex>
+      </Container>
+      <Container maxW={"container.xl"} my={16}>
+        <SimpleGrid columns={[1, 2]} gap={4} mb={4}>
+          <GridItem>
+            <Tag mb={2}>Become a Sponsor</Tag>
+            <Heading mb={4}>Partner with Purpose</Heading>
+            <Text mb={4}>
+              Bessa is a new kind of social platform&mdash;one built with LGBTQ
+              people in mind from the start. It&apos;s a place for connection,
+              creativity, celebration, and community. It&apos;s designed to
+              reflect the full spectrum of queer experience, shaped by the
+              voices and values of those who live it every day. Sponsoring Bessa
+              means supporting a platform that centers LGBTQ people.
+            </Text>
+            <Text mb={4}>
+              Whether you&apos;re LGBTQ yourself, an ally, a parent, a friend,
+              or a creator who uplifts community, by sponsoring, you&apos;re
+              partnering with purpose. You’re not just helping fund an app;
+              you&apos;re keeping a space that brings people together, shares
+              real stories, and grows with the people who use it alive. Join
+              something meaningful and be part of what comes next.
+            </Text>
+            <Link
+              href={
+                "https://www.indiegogo.com/projects/the-social-app-that-puts-queer-community-first"
+              }
+              target={"_blank"}
+            >
+              <Button colorScheme={"primary"} size={"lg"} my={8}>
+                Join as a Sponsor Now!
+              </Button>
+            </Link>
+          </GridItem>
+          <GridItem>
+            <Tag mb={2}>Make a Donation</Tag>
+            <Heading mb={4}>Help Fund Community</Heading>
+            <Text mb={4}>
+              Bessa is intended to bring LGBTQ people together, share, connect,
+              and celebrate who we are. It&apos;s not just another social app;
+              it&apos;s a platform shaped by the community, for the community.
+              It&apos;s a space that reflects the richness of queer life, and we
+              need your help to keep it that way. Every donation, no matter the
+              size, helps us grow something that truly belongs to all of us.
+            </Text>
+            <Text mb={4}>
+              If you&apos;re LGBTQ, if you love someone who is, or if you
+              believe in the power of community-driven change, this is your
+              chance to make a real impact. Your support helps bring this
+              project to life and shows that platforms centered around care,
+              creativity, and authenticity are worth keeping. Donate today, and
+              be part of something bigger.
+            </Text>
+            <Link
+              href={
+                "https://www.indiegogo.com/projects/the-social-app-that-puts-queer-community-first"
+              }
+              target={"_blank"}
+            >
+              <Button colorScheme={"primary"} size={"lg"} my={8}>
+                Make a One-Time Donation
+              </Button>
+            </Link>
+          </GridItem>
+        </SimpleGrid>
         <Heading mb={2}>The Problem</Heading>
         <Text mb={4}>
           Mainstream social apps often lack the safety and inclusivity that
