@@ -307,8 +307,8 @@ export default async function Home() {
                 Bessa is the free LGBTQ social networking app built by and for
                 our community. Find friends, discover queer-friendly spots, and
                 show up for events. Whether you&quot;re looking for chosen fam,
-                a new hangout, or a reason to get out and connect, Bessa's got
-                you. Download Bessa today and start building the community
+                a new hangout, or a reason to get out and connect, Bessa&quot;s
+                got you. Download Bessa today and start building the community
                 you&quot;ve always wanted.
               </Text>
               <Flex gap={4} justify={"center"} flexWrap={"wrap"}>
