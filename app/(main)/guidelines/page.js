@@ -14,7 +14,7 @@ import {
   Alert
 } from "@chakra-ui/react";
 import Image from "next/image";
-import Hero from "@/images/ai/Firefly happy, gay, black, male adult holding hands with a happy, gay, asian, male adult, artistic b.jpg";
+import Hero from "@/images/ai/firefly-2.jpg";
 import { Ban, Check } from "lucide-react";
 
 export default function Guidelines() {
