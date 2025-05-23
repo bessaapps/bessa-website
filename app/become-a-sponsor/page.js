@@ -9,7 +9,8 @@ import {
   Button,
   Tag,
   SimpleGrid,
-  GridItem
+  GridItem,
+  Box
 } from "@chakra-ui/react";
 import DonorCTA from "@/components/DonorCTA";
 import Image from "next/image";
@@ -73,64 +74,70 @@ export default function BecomeASponsor() {
       <Container maxW={"container.xl"} my={16}>
         <SimpleGrid columns={[1, 2]} gap={4} mb={4}>
           <GridItem>
-            <Tag mb={2}>Become a Sponsor</Tag>
-            <Heading mb={4}>Partner with Purpose</Heading>
-            <Text mb={4}>
-              Bessa is a new kind of social platform&mdash;one built with LGBTQ
-              people in mind from the start. It&apos;s a place for connection,
-              creativity, celebration, and community. It&apos;s designed to
-              reflect the full spectrum of queer experience, shaped by the
-              voices and values of those who live it every day. Sponsoring Bessa
-              means supporting a platform that centers LGBTQ people.
-            </Text>
-            <Text mb={4}>
-              Whether you&apos;re LGBTQ yourself, an ally, a parent, a friend,
-              or a creator who uplifts community, by sponsoring, you&apos;re
-              partnering with purpose. You’re not just helping fund an app;
-              you&apos;re keeping a space that brings people together, shares
-              real stories, and grows with the people who use it alive. Join
-              something meaningful and be part of what comes next.
-            </Text>
-            <Link
-              href={
-                "https://www.indiegogo.com/projects/the-social-app-that-puts-queer-community-first"
-              }
-              target={"_blank"}
-            >
-              <Button colorScheme={"primary"} size={"lg"} my={8}>
-                Join as a Sponsor Now!
-              </Button>
-            </Link>
+            <Box w={["100%", "75%"]}>
+              <Tag mb={2}>Become a Sponsor</Tag>
+              <Heading mb={4}>Partner with Purpose</Heading>
+              <Text mb={4}>
+                Bessa is a new kind of social platform&mdash;one built with
+                LGBTQ people in mind from the start. It&apos;s a place for
+                connection, creativity, celebration, and community. It&apos;s
+                designed to reflect the full spectrum of queer experience,
+                shaped by the voices and values of those who live it every day.
+                Sponsoring Bessa means supporting a platform that centers LGBTQ
+                people.
+              </Text>
+              <Text mb={4}>
+                Whether you&apos;re LGBTQ yourself, an ally, a parent, a friend,
+                or a creator who uplifts community, by sponsoring, you&apos;re
+                partnering with purpose. You’re not just helping fund an app;
+                you&apos;re keeping a space that brings people together, shares
+                real stories, and grows with the people who use it alive. Join
+                something meaningful and be part of what comes next.
+              </Text>
+              <Link
+                href={
+                  "https://www.indiegogo.com/projects/the-social-app-that-puts-queer-community-first"
+                }
+                target={"_blank"}
+              >
+                <Button colorScheme={"primary"} size={"lg"} my={8}>
+                  Join as a Sponsor Now!
+                </Button>
+              </Link>
+            </Box>
           </GridItem>
           <GridItem>
-            <Tag mb={2}>Make a Donation</Tag>
-            <Heading mb={4}>Help Fund Community</Heading>
-            <Text mb={4}>
-              Bessa is intended to bring LGBTQ people together, share, connect,
-              and celebrate who we are. It&apos;s not just another social app;
-              it&apos;s a platform shaped by the community, for the community.
-              It&apos;s a space that reflects the richness of queer life, and we
-              need your help to keep it that way. Every donation, no matter the
-              size, helps us grow something that truly belongs to all of us.
-            </Text>
-            <Text mb={4}>
-              If you&apos;re LGBTQ, if you love someone who is, or if you
-              believe in the power of community-driven change, this is your
-              chance to make a real impact. Your support helps bring this
-              project to life and shows that platforms centered around care,
-              creativity, and authenticity are worth keeping. Donate today, and
-              be part of something bigger.
-            </Text>
-            <Link
-              href={
-                "https://www.indiegogo.com/projects/the-social-app-that-puts-queer-community-first"
-              }
-              target={"_blank"}
-            >
-              <Button colorScheme={"primary"} size={"lg"} my={8}>
-                Make a One-Time Donation
-              </Button>
-            </Link>
+            <Box w={["100%", "75%"]}>
+              <Tag mb={2}>Make a Donation</Tag>
+              <Heading mb={4}>Help Fund Community</Heading>
+              <Text mb={4}>
+                Bessa is intended to bring LGBTQ people together, share,
+                connect, and celebrate who we are. It&apos;s not just another
+                social app; it&apos;s a platform shaped by the community, for
+                the community. It&apos;s a space that reflects the richness of
+                queer life, and we need your help to keep it that way. Every
+                donation, no matter the size, helps us grow something that truly
+                belongs to all of us.
+              </Text>
+              <Text mb={4}>
+                If you&apos;re LGBTQ, if you love someone who is, or if you
+                believe in the power of community-driven change, this is your
+                chance to make a real impact. Your support helps bring this
+                project to life and shows that platforms centered around care,
+                creativity, and authenticity are worth keeping. Donate today,
+                and be part of something bigger.
+              </Text>
+              <Link
+                href={
+                  "https://www.indiegogo.com/projects/the-social-app-that-puts-queer-community-first"
+                }
+                target={"_blank"}
+              >
+                <Button colorScheme={"primary"} size={"lg"} my={8}>
+                  Make a One-Time Donation
+                </Button>
+              </Link>
+            </Box>
           </GridItem>
         </SimpleGrid>
       </Container>
@@ -270,21 +277,35 @@ export default function BecomeASponsor() {
         <Text>🔧 Thoughtful, accessible design</Text>
         <Text>💬 Guided by community engagement</Text>
       </Container>
-      <Container py={[8, 32]}>
-        <Heading mb={2}>What $200/mo. will Fund</Heading>
-        <UnorderedList mb={4}>
-          <ListItem>Software and subscriptions ($1,600/yr.)</ListItem>
-          <ListItem>Advertising and Marketing ($520/yr.)</ListItem>
-          <ListItem>Business licenses and permits ($160/yr.)</ListItem>
-        </UnorderedList>
-        <Heading mb={2}>Donor Appreciation</Heading>
-        <UnorderedList>
-          <ListItem>Monthly recognition and link on website</ListItem>
-          <ListItem>Monthly recognition on app store listings</ListItem>
-          <ListItem>Monthly recognition in the members newsletter</ListItem>
-          <ListItem>Personalized thank-you video</ListItem>
-          <ListItem>Personalized donor badge</ListItem>
-        </UnorderedList>
+      <Container maxW={"container.xl"} my={16}>
+        <SimpleGrid columns={[1, 2]} gap={4} mb={4}>
+          <GridItem>
+            <Box w={["100%", "75%"]}>
+              <Tag mb={2}>The Numbers</Tag>
+              <Heading mb={4}>What your Donation Helps to Fund</Heading>
+              <UnorderedList mb={4}>
+                <ListItem>Software and subscriptions ($1,600/yr.)</ListItem>
+                <ListItem>Advertising and Marketing ($520/yr.)</ListItem>
+                <ListItem>Business licenses and permits ($160/yr.)</ListItem>
+              </UnorderedList>
+            </Box>
+          </GridItem>
+          <GridItem>
+            <Box w={["100%", "75%"]}>
+              <Tag mb={2}>The Benefits</Tag>
+              <Heading mb={4}>Sponsorship Packages</Heading>
+              <UnorderedList>
+                <ListItem>Monthly recognition and link on website</ListItem>
+                <ListItem>Monthly recognition on app store listings</ListItem>
+                <ListItem>
+                  Monthly recognition in the members newsletter
+                </ListItem>
+                <ListItem>Personalized thank-you video</ListItem>
+                <ListItem>Personalized donor badge</ListItem>
+              </UnorderedList>
+            </Box>
+          </GridItem>
+        </SimpleGrid>
       </Container>
       <DonorCTA />
     </>

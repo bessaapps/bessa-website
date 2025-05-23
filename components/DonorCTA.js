@@ -30,14 +30,14 @@ export default function DonorCTA() {
       bgImage={"url('/images/gradients/mesh-8.png')"}
       bgPosition={"center"}
       bgSize={"cover"}
+      minH={"calc(100vh - 5rem)"}
       py={16}
     >
       <Container maxW={"container.xl"} my={"auto"}>
         <Flex gap={8} mb={8}>
           <Box>
             <Heading as={"p"} color={"gray.50"} size={"3xl"} mb={8}>
-              For just $200 a month, your donation will help Bessa become a home
-              for thousands of LGBTQ people who need safe, inclusive connection.
+              Support the space where we show up as our full selves today
             </Heading>
             <Flex w={"100%"} gap={2} flexWrap={"wrap"} mb={12}>
               <Link
@@ -47,7 +47,7 @@ export default function DonorCTA() {
                 target={"_blank"}
               >
                 <Button colorScheme={"primary"} size={"lg"}>
-                  Join Now
+                  Sponsor
                 </Button>
               </Link>
               <Link
