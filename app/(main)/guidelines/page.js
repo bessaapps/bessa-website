@@ -1,21 +1,39 @@
-"use client";
-
 import {
   Container,
   Heading,
   Text,
-  ListItem,
-  List,
-  ListIcon,
   Link,
   AspectRatio,
   AlertDescription,
   AlertIcon,
-  Alert
+  Alert,
+  Box
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Hero from "@/images/ai/firefly-2.jpg";
-import { Ban, Check } from "lucide-react";
+import { title, url } from "@/utils/constants";
+
+export const metadata = {
+  title: `Guidelines | ${title}`,
+  description:
+    "It's important to work together to keep this LGBTQ community both diverse, and safe. Bessa is fun and open-minded, some lines are drawn to specifically to weed out harmful and dangerous interactions. To keep things simple, be respectful! And don&apos;t be a troll.",
+  openGraph: {
+    title: `Guidelines | ${title}`,
+    description:
+      "It's important to work together to keep this LGBTQ community both diverse, and safe. Bessa is fun and open-minded, some lines are drawn to specifically to weed out harmful and dangerous interactions. To keep things simple, be respectful! And don&apos;t be a troll.",
+    url: `${url}/guidelines`,
+    siteName: title,
+    images: [
+      {
+        url: `${url}/images/social.png`,
+        width: 800,
+        height: 600
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  }
+};
 
 export default function Guidelines() {
   return (
@@ -55,26 +73,23 @@ export default function Guidelines() {
           discrimination, bullying, and harm. Bessa also does not condone
           illegal activity or spam.
         </Text>
-        <List spacing={2} mb={4}>
-          <ListItem>
-            <ListIcon as={Ban} color={"red.500"} />
-            Your account will be deleted immediately if you express
+        <Box spacing={2} mb={4}>
+          <Text>
+            🚫 Your account will be deleted immediately if you express
             discrimination, bullying, or harm against anyone regarding their
             sex, gender, sexual orientation, race, ethnicity, HIV status, age,
             nationality, or religion.
-          </ListItem>
-          <ListItem>
-            <ListIcon as={Ban} color={"red.500"} />
-            The promotion of illegal drugs, illegal sexual acts, including
+          </Text>
+          <Text>
+            🚫 The promotion of illegal drugs, illegal sexual acts, including
             escorting and massage, and any other illegal activity is not
             allowed.
-          </ListItem>
-          <ListItem>
-            <ListIcon as={Ban} color={"red.500"} />
-            Excessive promotional content, including posts of any kind, or
+          </Text>
+          <Text>
+            🚫 Excessive promotional content, including posts of any kind, or
             messages or the creation of new accounts is not allowed.
-          </ListItem>
-        </List>
+          </Text>
+        </Box>
         <Heading mb={2}>Profile Pictures and Text</Heading>
         <Text mb={4}>
           Your profile and profile picture gives you an identity on the app.
@@ -82,43 +97,30 @@ export default function Guidelines() {
           your likeness, are clear, and are recent, help you stand out on the
           app allowing you build LGBTQ connections.
         </Text>
-        <List spacing={2} mb={4}>
-          <ListItem>
-            <ListIcon as={Check} color={"green.500"} />
-            Show us your face; not your pets!
-          </ListItem>
-          <ListItem>
-            <ListIcon as={Check} color={"green.500"} />
-            Use a clear and recent profile picture.
-          </ListItem>
-          <ListItem>
-            <ListIcon as={Check} color={"green.500"} />
-            Update your profile text accurately and regularly.
-          </ListItem>
-          <ListItem>
-            <ListIcon as={Ban} color={"red.500"} />
-            Your profile picture should not be sexually suggestive or depict
+        <Box spacing={2} mb={4}>
+          <Text>✅ Show us your face; not your pets!</Text>
+          <Text>✅ Use a clear and recent profile picture.</Text>
+          <Text>✅ Update your profile text accurately and regularly.</Text>
+          <Text>
+            🚫 Your profile picture should not be sexually suggestive or depict
             genitalia.
-          </ListItem>
-          <ListItem>
-            <ListIcon as={Ban} color={"red.500"} />
-            Your profile picture or text should not depict or describe violence
-            towards anyone.
-          </ListItem>
-          <ListItem>
-            <ListIcon as={Ban} color={"red.500"} />
-            Your profile picture or text should not impersonate anyone.
-          </ListItem>
-          <ListItem>
-            <ListIcon as={Ban} color={"red.500"} />
-            Symbols, text, or images of racism, intolerance, or bigotry are not
-            allowed.
-          </ListItem>
-          <ListItem>
-            <ListIcon as={Ban} color={"red.500"} />
-            Ads or any sort of advertising is not allowed as a profile picture.
-          </ListItem>
-        </List>
+          </Text>
+          <Text>
+            🚫 Your profile picture or text should not depict or describe
+            violence towards anyone.
+          </Text>
+          <Text>
+            🚫 Your profile picture or text should not impersonate anyone.
+          </Text>
+          <Text>
+            🚫 Symbols, text, or images of racism, intolerance, or bigotry are
+            not allowed.
+          </Text>
+          <Text>
+            🚫 Ads or any sort of advertising is not allowed as a profile
+            picture.
+          </Text>
+        </Box>
         <Heading mb={4}>Posts, Places, Events, and Reviews</Heading>
         <Text mb={4}>
           Bessa gives you plenty of opportunity to share interesting content for
@@ -128,28 +130,19 @@ export default function Guidelines() {
           and beneficial LGBTQ resources. This included user-generated text,
           audio, images, and videos.
         </Text>
-        <List spacing={2} mb={4}>
-          <ListItem>
-            <ListIcon as={Check} color={"green.500"} />
-            Post content that&apos;s fun and interesting to LGBTQ people!
-          </ListItem>
-          <ListItem>
-            <ListIcon as={Ban} color={"red.500"} />
-            Your content should not express violence towards anyone.
-          </ListItem>
-          <ListItem>
-            <ListIcon as={Ban} color={"red.500"} />
-            Violent, racist, or intolerant material is not allowed.
-          </ListItem>
-          <ListItem>
-            <ListIcon as={Ban} color={"red.500"} />
-            Your content should not be false or misleading.
-          </ListItem>
-          <ListItem>
-            <ListIcon as={Ban} color={"red.500"} />
-            Copyrighted content is not allowed.
-          </ListItem>
-        </List>
+        <Box spacing={2} mb={4}>
+          <Text>
+            ✅ Post content that&apos;s fun and interesting to LGBTQ people!
+          </Text>
+          <Text>
+            🚫 Your content should not express violence towards anyone.
+          </Text>
+          <Text>
+            🚫 Violent, racist, or intolerant material is not allowed.
+          </Text>
+          <Text>🚫 Your content should not be false or misleading.</Text>
+          <Text>🚫 Copyrighted content is not allowed.</Text>
+        </Box>
         <Text>
           Have questions? Email{" "}
           <Text as={"b"}>

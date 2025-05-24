@@ -9,9 +9,10 @@ import {
   OrderedList,
   Text
 } from "@chakra-ui/react";
+import { title } from "@/utils/constants";
 
 export const metadata = {
-  title: "Help & Support | Bessa | LGBTQ Social Networking App"
+  title: `Help & Support | ${title}`
 };
 
 export default function Support() {

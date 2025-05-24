@@ -7,9 +7,10 @@ import {
   ListItem,
   Link
 } from "@chakra-ui/react";
+import { title } from "@/utils/constants";
 
 export const metadata = {
-  title: "Privacy Policy | Bessa | LGBTQ Social Networking App"
+  title: `Privacy Policy | ${title}`
 };
 
 export default function Privacy() {

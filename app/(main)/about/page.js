@@ -7,9 +7,10 @@ import {
   Button,
   Flex
 } from "@chakra-ui/react";
+import { title } from "@/utils/constants";
 
 export const metadata = {
-  title: "Story | Bessa | LGBTQ Social Networking App"
+  title: `Story | ${title}`
 };
 
 export default function Story() {

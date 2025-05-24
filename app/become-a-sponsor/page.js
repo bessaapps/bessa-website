@@ -15,23 +15,22 @@ import {
 import DonorCTA from "@/components/DonorCTA";
 import Image from "next/image";
 import Hero from "@/images/ai/firefly-1.jpg";
-import { url } from "@/utils/constants";
+import { url, title } from "@/utils/constants";
 
-const title = "Become a Sponsor | Bessa | LGBTQ Social Networking App";
 const description =
   "Support Bessa, the LGBTQ social app creating safe, inclusive spaces for queer people to connect, share, and find community.";
 
 export const metadata = {
-  title,
+  title: `Become a Sponsor | ${title}`,
   description,
   languages: {
     "en-US": "/en-US"
   },
   openGraph: {
-    title,
+    title: `Become a Sponsor | ${title}`,
     description,
     url,
-    siteName: title,
+    siteName: `Become a Sponsor | ${title}`,
     images: [
       {
         url: `${url}/images/become-a-sponsor.png`,
@@ -44,12 +43,12 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title,
+    title: `Become a Sponsor | ${title}`,
     description,
     creator: "@getbessa",
     images: {
       url: `${url}/images/become-a-sponsor.png`,
-      alt: title
+      alt: `Become a Sponsor | ${title}`
     }
   }
 };
