@@ -7,7 +7,9 @@ import {
   AlertDescription,
   AlertIcon,
   Alert,
-  Box
+  Box,
+  SimpleGrid,
+  GridItem
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Hero from "@/images/ai/firefly-2.jpg";
@@ -66,83 +68,92 @@ export default function Guidelines() {
         </Alert>
         <Heading mb={4}>Conduct</Heading>
         <Text mb={4}>
-          Bessa is about creating a fun, safe, and healthy online community for
-          LGBTQ people. Bessa values diversity, strength and wellbeing inside
-          our communities, and spaces free of closed-minded corporations and
-          marketing. Because of this, Bessa has a no-tolerance rule for
-          discrimination, bullying, and harm. Bessa also does not condone
-          illegal activity or spam.
+          Bessa is a vibrant online community built to foster fun, safety, and
+          wellbeing for LGBTQ people. We stand for diversity and inclusivity,
+          steering clear of corporate marketing spaces and upholding a strict
+          no-tolerance policy for any form of discrimination, bullying, or harm.
+          Illegal activity and spam are not condoned, ensuring that Bessa
+          remains a secure and supportive environment for everyone.
         </Text>
         <Box spacing={2} mb={4}>
           <Text>
-            🚫 Your account will be deleted immediately if you express
-            discrimination, bullying, or harm against anyone regarding their
-            sex, gender, sexual orientation, race, ethnicity, HIV status, age,
-            nationality, or religion.
+            🚫 Accounts will be deleted immediately for any discriminatory or
+            harmful behavior based on sex, gender, sexual orientation, race,
+            ethnicity, HIV status, age, nationality, or religion.
           </Text>
           <Text>
-            🚫 The promotion of illegal drugs, illegal sexual acts, including
-            escorting and massage, and any other illegal activity is not
-            allowed.
+            🚫 Illegal drugs, illegal sexual acts (including escorting and
+            massage), and any other unlawful activities are strictly prohibited.
           </Text>
           <Text>
-            🚫 Excessive promotional content, including posts of any kind, or
-            messages or the creation of new accounts is not allowed.
+            🚫 Excessive self-promotion, spam, or repeated creation of new
+            accounts is not allowed.
           </Text>
         </Box>
-        <Heading mb={2}>Profile Pictures and Text</Heading>
+        <Heading mb={2}>Profile Pictures</Heading>
         <Text mb={4}>
-          Your profile and profile picture gives you an identity on the app.
-          Text that is descriptive and accurate, and pictures that represent
-          your likeness, are clear, and are recent, help you stand out on the
-          app allowing you build LGBTQ connections.
+          Profile pictures should be clear and recent images that show your
+          face, helping to foster a genuine and trustworthy community. However,
+          pictures that promote hate, violence, or the use of illegal drugs are
+          not allowed, as well as any sexually explicit content. Impersonation
+          of others is also strictly prohibited to ensure a safe and authentic
+          environment for all members.
         </Text>
-        <Box spacing={2} mb={4}>
-          <Text>✅ Show us your face; not your pets!</Text>
-          <Text>✅ Use a clear and recent profile picture.</Text>
-          <Text>✅ Update your profile text accurately and regularly.</Text>
-          <Text>
-            🚫 Your profile picture should not be sexually suggestive or depict
-            genitalia.
-          </Text>
-          <Text>
-            🚫 Your profile picture or text should not depict or describe
-            violence towards anyone.
-          </Text>
-          <Text>
-            🚫 Your profile picture or text should not impersonate anyone.
-          </Text>
-          <Text>
-            🚫 Symbols, text, or images of racism, intolerance, or bigotry are
-            not allowed.
-          </Text>
-          <Text>
-            🚫 Ads or any sort of advertising is not allowed as a profile
-            picture.
-          </Text>
-        </Box>
-        <Heading mb={4}>Posts, Places, Events, and Reviews</Heading>
+        <SimpleGrid columns={[1, 2]} gap={4} mb={4}>
+          <GridItem>
+            <Text>✅ A face; not your pet!</Text>
+            <Text>✅ Clear and recent</Text>
+          </GridItem>
+          <GridItem>
+            <Text>🚫 Hate</Text>
+            <Text>🚫 Violence</Text>
+            <Text>🚫 Sexually explicit content</Text>
+            <Text>🚫 Drugs</Text>
+            <Text>🚫 Impersonation</Text>
+          </GridItem>
+        </SimpleGrid>
+        <Heading mb={2}>Posts, Places, Events, and Reviews</Heading>
         <Text mb={4}>
-          Bessa gives you plenty of opportunity to share interesting content for
-          other members. Posts you make should be in the interest of having fun
-          and building a social and safe LGBTQ community. List your places,
-          events, and reviews in the interest of helping other find safe, fun,
-          and beneficial LGBTQ resources. This included user-generated text,
-          audio, images, and videos.
+          To keep Bessa a fun and engaging space for LGBTQ people, posts should
+          never contain hateful or violent content. Impersonating others,
+          spreading misleading or false information, and sharing copyrighted
+          content without proper rights are also strictly not allowed.
+          Let&apos;s keep our posts positive, creative, and authentic for
+          everyone!
         </Text>
-        <Box spacing={2} mb={4}>
-          <Text>
-            ✅ Post content that&apos;s fun and interesting to LGBTQ people!
-          </Text>
-          <Text>
-            🚫 Your content should not express violence towards anyone.
-          </Text>
-          <Text>
-            🚫 Violent, racist, or intolerant material is not allowed.
-          </Text>
-          <Text>🚫 Your content should not be false or misleading.</Text>
-          <Text>🚫 Copyrighted content is not allowed.</Text>
-        </Box>
+        <SimpleGrid columns={[1, 2]} gap={4} mb={4}>
+          <GridItem>
+            <Text>✅ Positivity</Text>
+            <Text>✅ Creativity</Text>
+            <Text>✅ Authenticity</Text>
+          </GridItem>
+          <GridItem>
+            <Text>🚫 Hate</Text>
+            <Text>🚫 Violence</Text>
+            <Text>🚫 Impersonation</Text>
+            <Text>🚫 Misleading</Text>
+            <Text>🚫 Copyright content</Text>
+          </GridItem>
+        </SimpleGrid>
+        <Heading mb={2}>Direct Messages</Heading>
+        <Text mb={4}>
+          Bessa prohibits the following types of content to ensure a safe and
+          inclusive community: hate speech or expressions of hate, violent
+          content or threats, harassment of any kind, promotion or encouragement
+          of self-harm, and any illegal activities. These rules are in place to
+          protect the wellbeing of all users and maintain a healthy, supportive
+          environment.
+        </Text>
+        <SimpleGrid columns={[1, 2]} gap={4} mb={4}>
+          <GridItem />
+          <GridItem>
+            <Text>🚫 Hate</Text>
+            <Text>🚫 Violence</Text>
+            <Text>🚫 Harassment</Text>
+            <Text>🚫 Self-Harm</Text>
+            <Text>🚫 Illegal</Text>
+          </GridItem>
+        </SimpleGrid>
         <Text>
           Have questions? Email{" "}
           <Text as={"b"}>
