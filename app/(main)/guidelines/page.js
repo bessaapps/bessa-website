@@ -4,9 +4,6 @@ import {
   Text,
   Link,
   AspectRatio,
-  AlertDescription,
-  AlertIcon,
-  Alert,
   Box,
   SimpleGrid,
   GridItem
@@ -40,33 +37,29 @@ export const metadata = {
 export default function Guidelines() {
   return (
     <>
-      <Container maxW={"container.xl"} my={16}>
+      <Container maxW={"container.xl"} mb={[8, 32]} mt={16}>
+        <Heading as={"h1"} mb={8}>
+          Guidelines
+        </Heading>
+        <Heading as={"h3"}>
+          Community-building isn&apos;t easy, but it&apos;s vital! Let&apos;s
+          work together to keep Bessa&apos;s LGBTQ community safer and
+          inclusive. Respect each other and don&apos;t feed the trolls. Here are
+          a few quick tips to help create a fun, diverse, and safe space for
+          everyone.
+        </Heading>
+      </Container>
+      <Container maxW={"container.xl"} my={[8, 32]}>
         <AspectRatio ratio={16 / 9}>
           <Image src={Hero} alt={"Bessa Guidelines"} />
         </AspectRatio>
       </Container>
       <Container maxW={"container.xl"} my={16}>
-        <Heading as={"h1"} mb={4}>
-          Guidelines
-        </Heading>
-        <Text mb={4}>
-          Community-building isn&apos;t easy! But, it&apos;s important to work
-          together to keep this LGBTQ community both diverse, and safe. Bessa is
-          fun and open-minded, but some lines are drawn specifically to weed out
-          harmful and dangerous interactions. To keep things simple, be
-          respectful! And, don&apos;t be a troll! But here are a few more tips
-          and tricks to help keep this a fun, diverse, and safe community.
-        </Text>
-        <Alert status={"info"} colorScheme={"secondary"} mb={4}>
-          <AlertIcon />
-          <AlertDescription>
-            If you think any of the content you share may be sensitive to
-            others, update your settings accordingly! Bessa reserves the right
-            to remove your content or your profile from the app at any time
-            under any circumstance.
-          </AlertDescription>
-        </Alert>
         <Heading mb={4}>Conduct</Heading>
+        <Text fontWeight={700} mb={4}>
+          Bessa reserves the right to remove your content or your profile from
+          the app at any time under any circumstance.
+        </Text>
         <Text mb={4}>
           Bessa is a vibrant online community built to foster fun, safety, and
           wellbeing for LGBTQ people. We stand for diversity and inclusivity,

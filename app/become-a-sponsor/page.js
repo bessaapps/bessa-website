@@ -16,6 +16,8 @@ import DonorCTA from "@/components/DonorCTA";
 import Image from "next/image";
 import Hero from "@/images/ai/firefly-1.jpg";
 import { url, title } from "@/utils/constants";
+import Mockup1 from "../../images/mockups/1.png";
+import Mockup2 from "../../images/mockups/2.png";
 
 const description =
   "Support Bessa, the LGBTQ social app creating safe, inclusive spaces for queer people to connect, share, and find community.";
@@ -56,19 +58,22 @@ export const metadata = {
 export default function BecomeASponsor() {
   return (
     <>
-      <Container maxW={"container.xl"} my={16}>
-        <AspectRatio ratio={16 / 9}>
-          <Image src={Hero} alt={"Bessa Guidelines"} />
-        </AspectRatio>
-      </Container>
-      <Container maxW={"container.lg"} py={[8, 32]}>
-        <Heading as={"h3"} textAlign={"center"} mb={4}>
+      <Container maxW={"container.xl"} mb={[8, 32]} mt={16}>
+        <Heading as={"h1"} mb={8}>
+          Sponsor & Donate
+        </Heading>
+        <Heading as={"h3"}>
           Bessa is an LGBTQ social networking app created for real community and
           you&apos;re invited to be a part of it. Whether you&apos;re LGBTQ, an
           ally, a parent, a creator, or an advocate, your support can keep Bessa
           alive. Sponsor or donate today and help us keep the space we&apos;ve
           all been waiting for.
         </Heading>
+      </Container>
+      <Container maxW={"container.xl"} my={[8, 32]}>
+        <AspectRatio ratio={16 / 9}>
+          <Image src={Hero} alt={"Bessa Guidelines"} />
+        </AspectRatio>
       </Container>
       <Container maxW={"container.xl"} my={16}>
         <SimpleGrid columns={[1, 2]} gap={4} mb={4}>
@@ -191,56 +196,71 @@ export default function BecomeASponsor() {
           </ListItem>
         </UnorderedList>
       </Container>
-      <Container py={[8, 32]}>
-        <Tag mb={2}>The Solution</Tag>
-        <Heading mb={4}>Bessa Stands Apart</Heading>
-        <Text mb={4}>
-          Bessa is a space designed from the ground up to reflect queer lives
-          and their communities. Built by LGBTQ people, Bessa prioritizes
-          authenticity and connection. Here, queer content isn&apos;t hidden or
-          deprioritized. It&apos;s celebrated. Whether you&apos;re sharing your
-          story or finding others who understand you, Bessa is built to honor
-          who you are.
-        </Text>
-        <Text mb={4}>
-          Supporting Bessa means supporting visibility without compromise,
-          creativity without censorship, and community without a corporate
-          filter. It&apos;s a place where LGBTQ people can connect meaningfully
-          and contribute to something that uplifts, reflects, and grows with us.
-        </Text>
-        <Text>🎤 Queer-led and community-driven</Text>
-        <Text>📣 No shadowbanning or suppression</Text>
-        <Text>🌈 Representation of LGBTQ voices</Text>
-        <Text>🔍 Transparent moderation policies</Text>
-        <Text>🌍 Real connections online and offline</Text>
-        <Text>💬 Creative and social freedom</Text>
+      <Container maxW={"container.xl"} my={[8, 32]}>
+        <SimpleGrid columns={[1, 4]} gap={8} alignItems={"center"}>
+          <GridItem>
+            <Image src={Mockup1} alt={"LGBTQ Social Networking App Mockup"} />
+          </GridItem>
+          <GridItem colSpan={[1, 3]}>
+            <Tag mb={2}>The Solution</Tag>
+            <Heading mb={4}>Bessa Stands Apart</Heading>
+            <Text mb={4}>
+              Bessa is a space designed from the ground up to reflect queer
+              lives and their communities. Built by LGBTQ people, Bessa
+              prioritizes authenticity and connection. Here, queer content
+              isn&apos;t hidden or deprioritized. It&apos;s celebrated. Whether
+              you&apos;re sharing your story or finding others who understand
+              you, Bessa is built to honor who you are.
+            </Text>
+            <Text mb={4}>
+              Supporting Bessa means supporting visibility without compromise,
+              creativity without censorship, and community without a corporate
+              filter. It&apos;s a place where LGBTQ people can connect
+              meaningfully and contribute to something that uplifts, reflects,
+              and grows with us.
+            </Text>
+            <Text>🎤 Queer-led and community-driven</Text>
+            <Text>📣 No shadowbanning or suppression</Text>
+            <Text>🌈 Representation of LGBTQ voices</Text>
+            <Text>🔍 Transparent moderation policies</Text>
+            <Text>🌍 Real connections online and offline</Text>
+            <Text>💬 Creative and social freedom</Text>
+          </GridItem>
+        </SimpleGrid>
       </Container>
-      <Container py={[8, 32]}>
-        <Tag mb={2}>The People</Tag>
-        <Heading mb={4}>Who Bessa Serves</Heading>
-        <Text mb={4}>
-          Bessa is built for LGBTQ people who are searching for more — more
-          connection, more visibility, and more community, both online and off.
-          Whether you&apos;re looking for friends, support, or a sense of
-          belonging, Bessa offers a space where queer identity is the
-          foundation, not a side note. From discovering local LGBTQ-friendly
-          places and events to joining conversations that reflect real lived
-          experience, Bessa helps users build meaningful relationships in ways
-          that mainstream platforms often overlook.
-        </Text>
-        <Text mb={4}>
-          But Bessa isn&apos;t just for individuals — it&apos;s for creators
-          too. It serves queer content creators who want to share without being
-          censored or buried by censorship. Bessa is a platform for anyone who
-          believes LGBTQ lives deserve to be celebrated, not just tolerated.
-          Whether you&apos;re here to find community or uplift others, Bessa is
-          for you.
-        </Text>
-        <Text>🏳️‍🌈 LGBTQ people</Text>
-        <Text>📍 People looking for LGBTQ-friendly places</Text>
-        <Text>🎉 Those wanting to discover LGBTQ events</Text>
-        <Text>🎥 Queer content creators</Text>
-        <Text>✨ Anyone tired of mainstream platforms</Text>
+      <Container maxW={"container.xl"} my={[8, 32]}>
+        <SimpleGrid columns={[1, 4]} gap={8} alignItems={"center"}>
+          <GridItem colSpan={[1, 3]}>
+            <Tag mb={2}>The People</Tag>
+            <Heading mb={4}>Who Bessa Serves</Heading>
+            <Text mb={4}>
+              Bessa is built for LGBTQ people who are searching for more — more
+              connection, more visibility, and more community, both online and
+              off. Whether you&apos;re looking for friends, support, or a sense
+              of belonging, Bessa offers a space where queer identity is the
+              foundation, not a side note. From discovering local LGBTQ-friendly
+              places and events to joining conversations that reflect real lived
+              experience, Bessa helps users build meaningful relationships in
+              ways that mainstream platforms often overlook.
+            </Text>
+            <Text mb={4}>
+              But Bessa isn&apos;t just for individuals — it&apos;s for creators
+              too. It serves queer content creators who want to share without
+              being censored or buried by censorship. Bessa is a platform for
+              anyone who believes LGBTQ lives deserve to be celebrated, not just
+              tolerated. Whether you&apos;re here to find community or uplift
+              others, Bessa is for you.
+            </Text>
+            <Text>🏳️‍🌈 LGBTQ people</Text>
+            <Text>📍 People looking for LGBTQ-friendly places</Text>
+            <Text>🎉 Those wanting to discover LGBTQ events</Text>
+            <Text>🎥 Queer content creators</Text>
+            <Text>✨ Anyone tired of mainstream platforms</Text>
+          </GridItem>
+          <GridItem>
+            <Image src={Mockup2} alt={"LGBTQ Social Networking App Mockup"} />
+          </GridItem>
+        </SimpleGrid>
       </Container>
       <Container py={[8, 32]}>
         <Tag mb={2}>The Story</Tag>

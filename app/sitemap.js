@@ -69,7 +69,7 @@ export default async function sitemap() {
     //   priority: 0.8
     // },
     {
-      url: "https://getbessa.com/raodmap",
+      url: "https://getbessa.com/roadmap",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.8

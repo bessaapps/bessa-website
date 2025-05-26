@@ -61,10 +61,6 @@ export default function Support() {
         <Heading id={"how-to-share-a-post"} mb={4}>
           How to Share a Post
         </Heading>
-        <Alert status={"info"} colorScheme={"primary"} my={4}>
-          <AlertIcon />
-          Posts must be approved by a moderator to appear to all members.
-        </Alert>
         <OrderedList mb={8}>
           <ListItem>
             From the home screen, press the &quot;
@@ -91,12 +87,8 @@ export default function Support() {
         <Heading id={"how-to-share-an-lgbtq-friendly-place"} mb={4}>
           How to Share an LGBTQ-Friendly Place
         </Heading>
-        <Alert status={"error"} colorScheme={"danger"} my={4}>
+        <Alert status={"info"} colorScheme={"secondary"} my={4}>
           <AlertIcon />A paid subscription is required to share places.
-        </Alert>
-        <Alert status={"info"} colorScheme={"primary"} my={4}>
-          <AlertIcon />
-          Places must be approved by a moderator to appear to all members.
         </Alert>
         <OrderedList mb={8}>
           <ListItem>
@@ -123,12 +115,8 @@ export default function Support() {
         <Heading id={"how-to-share-an-lgbtq-event"} mb={4}>
           How to Share an LGBTQ Event
         </Heading>
-        <Alert status={"error"} colorScheme={"danger"} my={4}>
+        <Alert status={"info"} colorScheme={"secondary"} my={4}>
           <AlertIcon />A paid subscription is required to share events.
-        </Alert>
-        <Alert status={"info"} colorScheme={"primary"} my={4}>
-          <AlertIcon />
-          Events must be approved by a moderator to appear to all members.
         </Alert>
         <OrderedList mb={8}>
           <ListItem>
