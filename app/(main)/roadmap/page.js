@@ -3,6 +3,7 @@ import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/post
 import { Container, Flex, Heading, Tag, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { title, url } from "@/utils/constants";
+import { unstable_cache } from "next/cache";
 
 export const metadata = {
   title: `Roadmap | ${title}`,
@@ -26,15 +27,18 @@ export const metadata = {
   }
 };
 
-async function getData() {
-  return await axios
-    .get("https://api.github.com/repos/bessaapps/bessa/issues", {
-      headers: {
-        Authorization: `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`
-      }
-    })
-    .then((response) => response?.data);
-}
+const getData = unstable_cache(
+  async () =>
+    await axios
+      .get("https://api.github.com/repos/bessaapps/bessa/issues", {
+        headers: {
+          Authorization: `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`
+        }
+      })
+      .then((response) => response?.data),
+  ["issues"],
+  { revalidate: 3600, tags: ["issues"] }
+);
 
 export default async function Roadmap() {
   const issues = await getData();
