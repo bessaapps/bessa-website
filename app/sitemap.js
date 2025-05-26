@@ -69,6 +69,12 @@ export default async function sitemap() {
     //   priority: 0.8
     // },
     {
+      url: "https://getbessa.com/raodmap",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.8
+    },
+    {
       url: "https://getbessa.com/support",
       lastModified: new Date(),
       changeFrequency: "daily",

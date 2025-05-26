@@ -37,6 +37,10 @@ export default function Top() {
       anchor: "Sponsor & Donate"
     },
     {
+      href: "/roadmap",
+      anchor: "Roadmap"
+    },
+    {
       href: "/support",
       anchor: "Help & Support"
     }

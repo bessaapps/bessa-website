@@ -16,6 +16,7 @@ import {
   Heart,
   Instagram,
   Linkedin,
+  Map,
   Twitter,
   Youtube
 } from "lucide-react";
@@ -31,6 +32,11 @@ export default function Footer() {
       href: "/become-a-sponsor",
       anchor: "Sponsor or Donate",
       icon: <Heart size={"1rem"} color={"#f2f2f2"} />
+    },
+    {
+      href: "/roadmap",
+      anchor: "Roadmap",
+      icon: <Map size={"1rem"} color={"#f2f2f2"} />
     },
     {
       href: "/support",
