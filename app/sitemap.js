@@ -69,13 +69,19 @@ export default async function sitemap() {
     //   priority: 0.8
     // },
     {
+      url: "https://getbessa.com/support",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.8
+    },
+    {
       url: "https://getbessa.com/roadmap",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.8
     },
     {
-      url: "https://getbessa.com/support",
+      url: "https://getbessa.com/faq",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.8

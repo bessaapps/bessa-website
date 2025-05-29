@@ -1,32 +1,19 @@
-"use client";
-
 import {
   AspectRatio,
   Box,
   Button,
   Container,
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerOverlay,
   Flex,
-  Hide,
   Show,
   Text
 } from "@chakra-ui/react";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/images/logo.png";
-import { FiMenu } from "react-icons/fi";
 import { appStores } from "@/utils/constants";
+import DrawerNavigation from "@/components/navigation/DrawerNavigation";
 
 export default function Top() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const router = useRouter();
-
   const links = [
     {
       href: "/about",
@@ -35,14 +22,6 @@ export default function Top() {
     {
       href: "/become-a-sponsor",
       anchor: "Sponsor & Donate"
-    },
-    {
-      href: "/roadmap",
-      anchor: "Roadmap"
-    },
-    {
-      href: "/support",
-      anchor: "Help & Support"
     }
   ];
 
@@ -67,64 +46,34 @@ export default function Top() {
               </Text>
               <Show above={"sm"}>
                 <Flex>
-                  {links.map((link) => (
-                    <Link key={link.href} href={link.href}>
+                  {links.map(({ href, anchor }) => (
+                    <Link key={href} href={href}>
                       <Button variant={"ghost"} fontWeight={500}>
-                        {link.anchor}
+                        {anchor}
                       </Button>
                     </Link>
                   ))}
                 </Flex>
               </Show>
             </Flex>
-            <Show above={"sm"}>
-              <Flex gap={4}>
-                {appStores.map((store) => (
-                  <Link key={store.name} href={store.href}>
-                    <Button colorScheme={"primary"}>
-                      <Flex mr={2}>{store.icon}</Flex>
-                      {store.name}
-                    </Button>
-                  </Link>
-                ))}
-              </Flex>
-            </Show>
-            <Hide above={"sm"}>
-              <FiMenu
-                size={27}
-                onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-              />
-            </Hide>
+            <Flex align={"center"} gap={8}>
+              <Show above={"sm"}>
+                <Flex gap={4}>
+                  {appStores.map(({ name, href, icon }) => (
+                    <Link key={name} href={href}>
+                      <Button colorScheme={"primary"}>
+                        <Flex mr={2}>{icon}</Flex>
+                        {name}
+                      </Button>
+                    </Link>
+                  ))}
+                </Flex>
+              </Show>
+              <DrawerNavigation />
+            </Flex>
           </Flex>
         </Container>
       </Box>
-      <Drawer isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton color={"#f2f2f2"} />
-          <DrawerBody
-            bg={"primary.500"}
-            display={"flex"}
-            alignItems={"center"}
-            h={"100%"}
-          >
-            <Box>
-              {links.map((link) => (
-                <Flex
-                  key={link.href}
-                  alignItems={"center"}
-                  onClick={() => {
-                    setIsDrawerOpen(false);
-                    router.push(link.href);
-                  }}
-                >
-                  <Text color={"gray.50"}>{link.anchor}</Text>
-                </Flex>
-              ))}
-            </Box>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
     </>
   );
 }

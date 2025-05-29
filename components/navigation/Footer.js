@@ -15,6 +15,7 @@ import {
   CircleHelp,
   Heart,
   Instagram,
+  LifeBuoy,
   Linkedin,
   Map,
   Twitter,
@@ -34,14 +35,19 @@ export default function Footer() {
       icon: <Heart size={"1rem"} color={"#f2f2f2"} />
     },
     {
+      href: "/support",
+      anchor: "Help & Support",
+      icon: <LifeBuoy size={"1rem"} color={"#f2f2f2"} />
+    },
+    {
+      href: "/faq",
+      anchor: "FAQ's",
+      icon: <CircleHelp size={"1rem"} color={"#f2f2f2"} />
+    },
+    {
       href: "/roadmap",
       anchor: "Roadmap",
       icon: <Map size={"1rem"} color={"#f2f2f2"} />
-    },
-    {
-      href: "/support",
-      anchor: "Help & Support",
-      icon: <CircleHelp size={"1rem"} color={"#f2f2f2"} />
     }
   ];
 
