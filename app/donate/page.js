@@ -20,11 +20,11 @@ import Mockup1 from "../../images/mockups/1.png";
 import Mockup2 from "../../images/mockups/2.png";
 
 export const metadata = {
-  title: `Sponsor or Donate | ${title}`,
+  title: `Sponsor & Donate | ${title}`,
   description:
     "Support Bessa, the LGBTQ social app creating safe, inclusive spaces for queer people to connect, share, and find community.",
   openGraph: {
-    title: `Become a Sponsor | ${title}`,
+    title: `Sponsor & Donate | ${title}`,
     description:
       "Support Bessa, the LGBTQ social app creating safe, inclusive spaces for queer people to connect, share, and find community.",
     url,
@@ -37,12 +37,12 @@ export const metadata = {
     ]
   },
   twitter: {
-    title: `Sponsor or Donate | ${title}`,
+    title: `Sponsor & Donate | ${title}`,
     description:
       "Support Bessa, the LGBTQ social app creating safe, inclusive spaces for queer people to connect, share, and find community.",
     images: {
       url: `${url}/images/become-a-sponsor.png`,
-      alt: `Sponsor or Donate | ${title}`
+      alt: `Sponsor & Donate | ${title}`
     }
   }
 };

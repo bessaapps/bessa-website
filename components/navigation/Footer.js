@@ -30,8 +30,8 @@ export default function Footer() {
       icon: <BookOpen size={"1rem"} color={"#f2f2f2"} />
     },
     {
-      href: "/become-a-sponsor",
-      anchor: "Sponsor or Donate",
+      href: "/donate",
+      anchor: "Sponsor & Donate",
       icon: <Heart size={"1rem"} color={"#f2f2f2"} />
     },
     {

@@ -95,7 +95,11 @@ export default function FAQ() {
       <Text mb={4}>
         Bessa is an independent LGBTQ social networking app, and community
         support helps it grow. You can{" "}
-        <Link href={"/become-a-sponsor"} fontWeight={800}>
+        <Link
+          href={"/donate"}
+          title={`Sponsor & Donate | ${title}`}
+          fontWeight={800}
+        >
           donate or become a sponsor
         </Link>{" "}
         to help keep the app running, fund new features, and support queer

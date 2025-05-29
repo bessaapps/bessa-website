@@ -20,7 +20,7 @@ export default function Top() {
       anchor: "Story"
     },
     {
-      href: "/become-a-sponsor",
+      href: "/donate",
       anchor: "Sponsor & Donate"
     }
   ];

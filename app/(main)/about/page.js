@@ -79,10 +79,7 @@ export default function About() {
             Learn More
           </Button>
         </Link>
-        <Link
-          href={"/become-a-sponsor"}
-          title={"Become a Sponsor | Bessa | LGBTQ Social Networking App"}
-        >
+        <Link href={"/donate"} title={`Sponsor & Donate | ${title}`}>
           <Button colorScheme={"primary"} size={"lg"}>
             Sponsor & Donate
           </Button>
