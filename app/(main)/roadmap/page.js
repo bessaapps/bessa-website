@@ -13,17 +13,12 @@ export const metadata = {
     title: `Roadmap | ${title}`,
     description:
       "Explore Bessa's LGBTQ social media roadmap! See what's next, share your ideas, and help shape the future of our inclusive queer community.",
-    url: `${url}/roadmap`,
-    siteName: title,
-    images: [
-      {
-        url: `${url}/images/social.png`,
-        width: 800,
-        height: 600
-      }
-    ],
-    locale: "en_US",
-    type: "website"
+    url: `${url}/roadmap`
+  },
+  twitter: {
+    title: `Roadmap | ${title}`,
+    description:
+      "Explore Bessa's LGBTQ social media roadmap! See what's next, share your ideas, and help shape the future of our inclusive queer community."
   }
 };
 

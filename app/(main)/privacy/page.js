@@ -7,10 +7,17 @@ import {
   ListItem,
   Link
 } from "@chakra-ui/react";
-import { title } from "@/utils/constants";
+import { title, url } from "@/utils/constants";
 
 export const metadata = {
-  title: `Privacy Policy | ${title}`
+  title: `Privacy Policy | ${title}`,
+  openGraph: {
+    title: `Privacy Policy | ${title}`,
+    url: `${url}/cookies`
+  },
+  twitter: {
+    title: `Privacy Policy | ${title}`
+  }
 };
 
 export default function Privacy() {

@@ -5,9 +5,6 @@ export const metadata = {
   title: `FAQ | ${title}`,
   description:
     "Get answers about Bessa, the LGBTQ Social Networking App. Learn how to connect, share, and discover queer-friendly features and community support.",
-  languages: {
-    "en-US": "/en-US"
-  },
   openGraph: {
     title: `FAQ | ${title}`,
     description:
@@ -15,7 +12,6 @@ export const metadata = {
     url: `${url}/faq`
   },
   twitter: {
-    card: "summary_large_image",
     title: `FAQ | ${title}`,
     description:
       "Get answers about Bessa, the LGBTQ Social Networking App. Learn how to connect, share, and discover queer-friendly features and community support."

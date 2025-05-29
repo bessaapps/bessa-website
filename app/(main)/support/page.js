@@ -9,10 +9,23 @@ import {
   OrderedList,
   Text
 } from "@chakra-ui/react";
-import { title } from "@/utils/constants";
+import { title, url } from "@/utils/constants";
 
 export const metadata = {
-  title: `Help & Support | ${title}`
+  title: `Help & Support | ${title}`,
+  description:
+    "Get help with Bessa, the LGBTQ Social Networking App. Find answers to common questions and explore how to connect, post, and share in a queer-friendly space.",
+  openGraph: {
+    title: `Help & Support | ${title}`,
+    description:
+      "Get help with Bessa, the LGBTQ Social Networking App. Find answers to common questions and explore how to connect, post, and share in a queer-friendly space.",
+    url: `${url}/support`
+  },
+  twitter: {
+    title: `Help & Support | ${title}`,
+    description:
+      "Get help with Bessa, the LGBTQ Social Networking App. Find answers to common questions and explore how to connect, post, and share in a queer-friendly space."
+  }
 };
 
 export default function Support() {

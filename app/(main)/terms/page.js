@@ -7,9 +7,17 @@ import {
   Text,
   UnorderedList
 } from "@chakra-ui/react";
+import { title, url } from "@/utils/constants";
 
 export const metadata = {
-  title: "Terms and Conditions | Bessa | LGBTQ Social Networking App"
+  title: `Terms & Conditions | ${title}`,
+  openGraph: {
+    title: `Terms & Conditions | ${title}`,
+    url: `${url}/terms`
+  },
+  twitter: {
+    title: `Terms & Conditions | ${title}`
+  }
 };
 
 export default function Terms() {

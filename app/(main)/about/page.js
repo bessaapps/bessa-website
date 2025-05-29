@@ -7,13 +7,26 @@ import {
   Button,
   Flex
 } from "@chakra-ui/react";
-import { title } from "@/utils/constants";
+import { title, url } from "@/utils/constants";
 
 export const metadata = {
-  title: `Story | ${title}`
+  title: `About ${title}`,
+  description:
+    "Learn about Bessa, the LGBTQ Social Networking App built for queer connection. A community-first platform for gay, lesbian, trans, and nonbinary people to share and thrive.",
+  openGraph: {
+    title: `About ${title}`,
+    description:
+      "Learn about Bessa, the LGBTQ Social Networking App built for queer connection. A community-first platform for gay, lesbian, trans, and nonbinary people to share and thrive.",
+    url: `${url}/about`
+  },
+  twitter: {
+    title: `About ${title}`,
+    description:
+      "Learn about Bessa, the LGBTQ Social Networking App built for queer connection. A community-first platform for gay, lesbian, trans, and nonbinary people to share and thrive."
+  }
 };
 
-export default function Story() {
+export default function About() {
   return (
     <Container maxW={"container.xl"} my={16}>
       <Heading as={"h1"} mb={4}>

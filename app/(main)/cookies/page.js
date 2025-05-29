@@ -7,9 +7,17 @@ import {
   Text,
   UnorderedList
 } from "@chakra-ui/react";
+import { title, url } from "@/utils/constants";
 
 export const metadata = {
-  title: "Cookie Policy | Bessa | LGBTQ Social Networking App"
+  title: `Cookies Policy | ${title}`,
+  openGraph: {
+    title: `Cookies Policy | ${title}`,
+    url: `${url}/cookies`
+  },
+  twitter: {
+    title: `Cookies Policy | ${title}`
+  }
 };
 
 export default function Cookies() {

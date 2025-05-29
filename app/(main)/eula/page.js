@@ -7,9 +7,17 @@ import {
   Text,
   UnorderedList
 } from "@chakra-ui/react";
+import { title, url } from "@/utils/constants";
 
 export const metadata = {
-  title: "End-User License Agreement | Bessa | LGBTQ Social Networking App"
+  title: `End-User License Agreement | ${title}`,
+  openGraph: {
+    title: `End-User License Agreement | ${title}`,
+    url: `${url}/eula`
+  },
+  twitter: {
+    title: `End-User License Agreement | ${title}`
+  }
 };
 
 export default function EULA() {
