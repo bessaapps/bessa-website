@@ -61,11 +61,7 @@ export default function Story() {
         and reach people all across the globe.
       </Text>
       <Flex w={"100%"} gap={2} flexWrap={"wrap"} my={12}>
-        <Link
-          href={"/"}
-          title={"Bessa LGBTQ Social Networking App"}
-          target={"_blank"}
-        >
+        <Link href={"/"} title={"Bessa LGBTQ Social Networking App"}>
           <Button colorScheme={"primary"} size={"lg"}>
             Learn More
           </Button>
@@ -73,7 +69,6 @@ export default function Story() {
         <Link
           href={"/become-a-sponsor"}
           title={"Become a Sponsor | Bessa | LGBTQ Social Networking App"}
-          target={"_blank"}
         >
           <Button colorScheme={"primary"} size={"lg"}>
             Sponsor & Donate
