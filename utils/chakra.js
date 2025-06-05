@@ -104,11 +104,9 @@ const theme = extendTheme({
         color: "gray.800",
         lineHeight: 2
       },
-      // Minor Third
-      // https://typescale.com
-      h1: { fontSize: "2.986rem !important" },
-      h2: { fontSize: "2.488rem !important" },
-      h3: { fontSize: "2.074rem !important" }
+      h1: { fontSize: "3rem !important" },
+      h2: { fontSize: "1.5rem !important" },
+      h3: { fontSize: "1.25rem !important" }
     })
   },
   fonts: {
