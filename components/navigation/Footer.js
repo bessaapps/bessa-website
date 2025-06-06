@@ -26,12 +26,12 @@ export default function Footer() {
   const links = [
     {
       href: "/about",
-      anchor: "Story",
+      anchor: "About",
       icon: <BookOpen size={"1rem"} color={"#f2f2f2"} />
     },
     {
       href: "/donate",
-      anchor: "Sponsor & Donate",
+      anchor: "Donate",
       icon: <Heart size={"1rem"} color={"#f2f2f2"} />
     },
     {

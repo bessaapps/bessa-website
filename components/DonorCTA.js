@@ -45,23 +45,19 @@ export default function DonorCTA() {
             </Heading>
             <Flex w={"100%"} gap={2} flexWrap={"wrap"} mb={12}>
               <Link
-                href={
-                  "https://www.indiegogo.com/projects/the-social-app-that-puts-queer-community-first"
-                }
+                href={"https://buymeacoffee.com/getbessa"}
                 target={"_blank"}
               >
                 <Button colorScheme={"primary"} size={"lg"}>
-                  Sponsor
+                  Donate
                 </Button>
               </Link>
               <Link
-                href={
-                  "https://www.indiegogo.com/projects/the-social-app-that-puts-queer-community-first"
-                }
+                href={"https://buymeacoffee.com/getbessa/membership"}
                 target={"_blank"}
               >
                 <Button colorScheme={"whiteAlpha"} size={"lg"}>
-                  Donate
+                  Sponsor
                 </Button>
               </Link>
             </Flex>

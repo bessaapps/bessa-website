@@ -21,11 +21,11 @@ export default function DrawerNavigation() {
   const links = [
     {
       href: "/about",
-      anchor: "Story"
+      anchor: "About"
     },
     {
       href: "/donate",
-      anchor: "Sponsor & Donate"
+      anchor: "Donate"
     },
     {
       href: "/support",

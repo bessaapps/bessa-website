@@ -17,11 +17,11 @@ export default function Top() {
   const links = [
     {
       href: "/about",
-      anchor: "Story"
+      anchor: "About"
     },
     {
       href: "/donate",
-      anchor: "Sponsor & Donate"
+      anchor: "Donate"
     }
   ];
 

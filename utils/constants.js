@@ -18,3 +18,5 @@ export const appStores = [
     icon: <SiGoogleplay />
   }
 ];
+
+export const sectionHeight = "calc(100vh - 80px)";
