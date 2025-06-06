@@ -1,9 +1,7 @@
-import axios from "axios";
-import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import { Container, Flex, Heading, Tag, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { title, url } from "@/utils/constants";
-import { unstable_cache } from "next/cache";
+import { LinearClient } from "@linear/sdk";
 
 export const metadata = {
   title: `Roadmap | ${title}`,
@@ -22,21 +20,12 @@ export const metadata = {
   }
 };
 
-const getData = unstable_cache(
-  async () =>
-    await axios
-      .get("https://api.github.com/repos/bessaapps/bessa/issues", {
-        headers: {
-          Authorization: `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`
-        }
-      })
-      .then((response) => response?.data),
-  ["issues"],
-  { revalidate: 3600, tags: ["issues"] }
-);
-
 export default async function Roadmap() {
-  const issues = await getData();
+  const linearClient = new LinearClient({
+    apiKey: process.env.NEXT_PUBLIC_LINEAR_API_KEY
+  });
+
+  const issues = await linearClient.issues();
 
   return (
     <Container maxW={"container.xl"} my={16}>
@@ -60,18 +49,24 @@ export default async function Roadmap() {
         </Text>
         .
       </Text>
-      {issues?.map(({ id, title, labels }) => (
-        <Flex key={id} align={"center"} gap={2}>
-          <Text fontWeight={700} mr={2}>
-            {title}
-          </Text>
-          {labels?.map(({ id, name, color }) => (
-            <Tag key={id} bg={`#${color}`} color={"whiteAlpha.900"}>
-              {name?.toLowerCase()}
+      {issues?.nodes?.map(async ({ id, title, labelIds, _state }) => {
+        const state = await linearClient.workflowState(_state?.id);
+        const label = await linearClient.issueLabel(labelIds?.[0]);
+
+        return (
+          <Flex key={id} align={"center"} gap={2}>
+            <Text fontWeight={700} mr={2}>
+              {title}
+            </Text>
+            <Tag bg={label?.color} color={"whiteAlpha.900"}>
+              {label?.name}
             </Tag>
-          ))}
-        </Flex>
-      ))}
+            <Tag bg={state?.color} color={"whiteAlpha.900"}>
+              {state?.name}
+            </Tag>
+          </Flex>
+        );
+      })}
     </Container>
   );
 }
