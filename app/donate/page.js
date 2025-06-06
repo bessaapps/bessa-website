@@ -77,7 +77,7 @@ export default function Donate() {
           </>
         }
         bottomContent={
-          <Flex w={"100%"} gap={2} flexWrap={"wrap"} mb={12}>
+          <Flex w={"100%"} gap={2} flexWrap={"wrap"}>
             <Link href={"https://buymeacoffee.com/getbessa"} target={"_blank"}>
               <Button colorScheme={"primary"} size={"lg"}>
                 Donate
