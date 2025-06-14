@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "eslint": "^8.57.1",
-    "eslint-config-next": "^14.2.29"
+    "eslint-config-next": "^14.2.30"
   },
   "prettier": {
     "trailingComma": "none"
