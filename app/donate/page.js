@@ -9,11 +9,11 @@ import {
   Stack,
   Center
 } from "@chakra-ui/react";
-import DonorCTA from "@/components/DonorCTA";
 import { url, title, sectionHeight } from "@/utils/constants";
 import Hero from "@/components/Hero";
 import MediaRight from "@/components/MediaRight";
 import Link from "next/link";
+import Footer from "@/components/navigation/Footer";
 
 export const metadata = {
   title: `Sponsor & Donate | ${title}`,
@@ -185,7 +185,20 @@ export default function Donate() {
           </Stack>
         </Center>
       </Container>
-      <DonorCTA />
+      <Footer
+        buttons={[
+          {
+            anchor: "Donate",
+            href: "https://buymeacoffee.com/getbessa"
+          },
+          {
+            anchor: "Sponsor",
+            href: "https://buymeacoffee.com/getbessa/membership"
+          }
+        ]}
+      >
+        Support the space where we show up as our full selves today
+      </Footer>
     </>
   );
 }

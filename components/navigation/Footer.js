@@ -9,7 +9,6 @@ import {
   Button
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { appStores } from "@/utils/constants";
 import {
   BookOpen,
   CircleHelp,
@@ -22,7 +21,7 @@ import {
   Youtube
 } from "lucide-react";
 
-export default function Footer() {
+export default function Footer({ buttons, children }) {
   const links = [
     {
       href: "/about",
@@ -87,19 +86,19 @@ export default function Footer() {
         <SimpleGrid columns={[1, 4]} spacing={8} minW={"100%"}>
           <GridItem colSpan={[1, 2]} w={["100%", "75%"]}>
             <Heading as={"p"} color={"gray.50"} size={"2xl"} mb={8}>
-              Join your Tribe <Text as={"i"}>and</Text> your Vibe now for FREE!
+              {children}
             </Heading>
             <Flex gap={4} flexWrap={"wrap"}>
-              {appStores.map((store) => (
-                <Link key={store.name} href={store.href}>
+              {buttons.map((button) => (
+                <Link key={button.anchor} href={button.href}>
                   <Button
                     bg={"gray.50"}
                     color={"gray.900"}
                     size={"lg"}
                     w={["100%", 140]}
                   >
-                    <Flex mr={2}>{store.icon}</Flex>
-                    {store.name}
+                    {button?.icon && <Flex mr={2}>{button.icon}</Flex>}
+                    {button.anchor}
                   </Button>
                 </Link>
               ))}
