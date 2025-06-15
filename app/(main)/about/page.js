@@ -11,7 +11,12 @@ export const metadata = {
     title: `About ${title}`,
     description:
       "Learn about Bessa, the LGBTQ Social Networking App built for queer connection. A community-first platform for gay, lesbian, trans, and nonbinary people to share and thrive.",
-    url: `${url}/about`
+    url: `${url}/about`,
+    images: [
+      {
+        url: `${url}/images/stock/gay-community.jpg`
+      }
+    ]
   },
   twitter: {
     title: `About ${title}`,
