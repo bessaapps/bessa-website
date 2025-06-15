@@ -16,29 +16,27 @@ import Link from "next/link";
 import Footer from "@/components/navigation/Footer";
 
 export const metadata = {
-  title: `Sponsor & Donate | ${title}`,
+  title: `Donate | ${title}`,
   description:
     "Join the movement to support queer community apps like Bessa. Fund queer apps and help build LGBTQ social platforms made for connection, not clicks.",
   openGraph: {
-    title: `Sponsor & Donate | ${title}`,
+    title: `Donate | ${title}`,
     description:
       "Join the movement to support queer community apps like Bessa. Fund queer apps and help build LGBTQ social platforms made for connection, not clicks.",
     url,
     images: [
       {
-        url: `${url}/images/become-a-sponsor.png`,
-        width: 800,
-        height: 600
+        url: `${url}/images/stock/pride-flag.jpg`
       }
     ]
   },
   twitter: {
-    title: `Sponsor & Donate | ${title}`,
+    title: `Donate | ${title}`,
     description:
       "Join the movement to support queer community apps like Bessa. Fund queer apps and help build LGBTQ social platforms made for connection, not clicks.",
     images: {
-      url: `${url}/images/become-a-sponsor.png`,
-      alt: `Sponsor & Donate | ${title}`
+      url: `${url}/images/stock/pride-flag.jpg`,
+      alt: `Donate | ${title}`
     }
   }
 };
