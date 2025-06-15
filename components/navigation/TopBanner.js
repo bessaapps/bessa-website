@@ -11,7 +11,7 @@ export default function TopBanner() {
       <Container maxW={"container.xl"} py={2}>
         <Flex align={"center"} justify={"center"} gap={2}>
           <Text fontWeight={"bold"} color={"gray.50"}>
-            Support safe and inclusive LGBTQ communities.
+            Support LGBTQ communities.
           </Text>
           <Link href={"/donate"}>
             <Button colorScheme={"primary"} size={"sm"}>

@@ -134,7 +134,7 @@ export default function Footer({ buttons, children }) {
           <GridItem colSpan={[1, 4]}>
             <Flex justify={"right"} gap={4} mb={4}>
               {socialLinks?.map((link) => (
-                <Link href={link.href} key={link.href}>
+                <Link key={link.href} href={link.href} target={"_blank"}>
                   {link.icon}
                 </Link>
               ))}
@@ -144,11 +144,12 @@ export default function Footer({ buttons, children }) {
               <Text as={"strong"}>
                 <Link
                   as={NextLink}
+                  color={"gray.50"}
                   href={"https://bessaapps.com"}
                   title={
                     "Bessa Community Apps | Mobile Application Development Service"
                   }
-                  color={"gray.50"}
+                  target={"_blank"}
                 >
                   Bessa Community Apps
                 </Link>
