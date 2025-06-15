@@ -20,14 +20,19 @@ export const metadata = {
     title: `Guidelines | ${title}`,
     description:
       "Read the Bessa community guidelines to learn what’s allowed on our LGBTQ social networking app. Help build a respectful, queer-friendly social app by following a few simple rules.",
-    url: `${url}/guidelines`
+    url: `${url}/guidelines`,
+    images: [
+      {
+        url: `${url}/images/stock/guidelines-1.jpg`
+      }
+    ]
   },
   twitter: {
     title: `Guidelines | ${title}`,
     description:
       "Read the Bessa community guidelines to learn what’s allowed on our LGBTQ social networking app. Help build a respectful, queer-friendly social app by following a few simple rules.",
     images: {
-      url: `${url}/images/stock/guidelines-1.png`,
+      url: `${url}/images/stock/guidelines-1.jpg`,
       alt: `Guidelines | ${title}`
     }
   }
