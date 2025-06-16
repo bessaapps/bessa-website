@@ -26,6 +26,31 @@ export const jsonLd = {
   operatingSystem: ["ANDROID", "iOS"]
 };
 
+export const customMetadata = ({ title, description, path, imagePath }) => {
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `${url}${path}`,
+      images: [
+        {
+          url: `${url}${imagePath}`
+        }
+      ]
+    },
+    twitter: {
+      title,
+      description,
+      images: {
+        url: `${url}${imagePath}`,
+        alt: title
+      }
+    }
+  };
+};
+
 export const appStores = [
   {
     name: "iOS",

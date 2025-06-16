@@ -8,38 +8,28 @@ import {
   Heading,
   Container
 } from "@chakra-ui/react";
-import { jsonLd, sectionHeight, title, url } from "@/utils/constants";
+import {
+  customMetadata,
+  jsonLd,
+  sectionHeight,
+  title
+} from "@/utils/constants";
 import Hero from "@/components/Hero";
 import MediaRight from "@/components/MediaRight";
 import MediaLeft from "@/components/MediaLeft";
 import LeftImage from "@/images/stock/about.jpg";
 import Image from "next/image";
 
-export const metadata = {
-  title: "Bessa | A Gay Social Media App for Inclusive LGBTQ Connection",
+const pageTitle =
+  "Bessa | A Gay Social Media App for Inclusive LGBTQ Connection";
+
+export const metadata = customMetadata({
+  title: pageTitle,
   description:
     "Discover Bessa, a gay social media app designed for real LGBTQ connection. Built by a queer developer, Bessa is an inclusive social platform where you can post, message, and share with a diverse global community.",
-  openGraph: {
-    title: "Bessa | A Gay Social Media App for Inclusive LGBTQ Connection",
-    description:
-      "Discover Bessa, a gay social media app designed for real LGBTQ connection. Built by a queer developer, Bessa is an inclusive social platform where you can post, message, and share with a diverse global community.",
-    url: `${url}/about`,
-    images: [
-      {
-        url: `${url}/images/stock/gay-community.jpg`
-      }
-    ]
-  },
-  twitter: {
-    title: "Bessa | A Gay Social Media App for Inclusive LGBTQ Connection",
-    description:
-      "Discover Bessa, a gay social media app designed for real LGBTQ connection. Built by a queer developer, Bessa is an inclusive social platform where you can post, message, and share with a diverse global community.",
-    images: {
-      url: `${url}/images/stock/gay-community.jpg`,
-      alt: `About ${title}`
-    }
-  }
-};
+  path: "/about",
+  imagePath: "/images/stock/gay-community.jpg"
+});
 
 export default function About() {
   return (
