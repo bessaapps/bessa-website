@@ -6,6 +6,21 @@ export const description =
   "Bessa is an LGBTQ social networking app and inclusive community of all genders, colors, shapes, sizes, and abilities. Bessa is a hub for queer connections, places, and events.";
 export const url = "https://getbessa.com";
 
+export const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: title,
+  applicationCategory: "SocialNetworkingApplication",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    ratingCount: "3"
+  },
+  url,
+  image: `${url}/images/social.png`,
+  operatingSystem: ["ANDROID", "iOS"]
+};
+
 export const appStores = [
   {
     name: "iOS",

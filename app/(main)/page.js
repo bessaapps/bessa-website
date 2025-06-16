@@ -21,7 +21,7 @@ import Mockup2 from "../../images/mockups/2.png";
 import Mockup3 from "../../images/mockups/3.png";
 import Mockup4 from "../../images/mockups/4.png";
 import Image from "next/image";
-import { appStores, description, title, url } from "@/utils/constants";
+import { appStores, description, jsonLd, title, url } from "@/utils/constants";
 import { Ban, Check, CircleDollarSign } from "lucide-react";
 
 export const metadata = {
@@ -65,21 +65,6 @@ export const metadata = {
       app_name: "Bessa LGBTQ Social Media App"
     }
   }
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: title,
-  applicationCategory: "SocialNetworkingApplication",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5",
-    ratingCount: "3"
-  },
-  url,
-  image: `${url}/images/social.png`,
-  operatingSystem: ["ANDROID", "iOS"]
 };
 
 export default async function Home() {
@@ -136,7 +121,9 @@ export default async function Home() {
     <section>
       <script
         type={"application/ld+json"}
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c")
+        }}
       />
       <>
         <Container maxW={"container.xl"} my={[8, 32]}>

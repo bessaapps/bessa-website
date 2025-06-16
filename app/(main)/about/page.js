@@ -8,7 +8,7 @@ import {
   Heading,
   Container
 } from "@chakra-ui/react";
-import { sectionHeight, title, url } from "@/utils/constants";
+import { jsonLd, sectionHeight, title, url } from "@/utils/constants";
 import Hero from "@/components/Hero";
 import MediaRight from "@/components/MediaRight";
 
@@ -40,7 +40,13 @@ export const metadata = {
 
 export default function About() {
   return (
-    <>
+    <section>
+      <script
+        type={"application/ld+json"}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c")
+        }}
+      />
       <Hero
         heading={"Gay Social Media for Real LGBTQ Community Building"}
         lead={"About Bessa"}
@@ -117,6 +123,6 @@ export default function About() {
           </Stack>
         </Center>
       </Container>
-    </>
+    </section>
   );
 }
