@@ -11,6 +11,9 @@ import {
 import { jsonLd, sectionHeight, title, url } from "@/utils/constants";
 import Hero from "@/components/Hero";
 import MediaRight from "@/components/MediaRight";
+import MediaLeft from "@/components/MediaLeft";
+import LeftImage from "@/images/stock/about.jpg";
+import Image from "next/image";
 
 export const metadata = {
   title: "Bessa | A Gay Social Media App for Inclusive LGBTQ Connection",
@@ -123,6 +126,42 @@ export default function About() {
           </Stack>
         </Center>
       </Container>
+      <MediaLeft
+        heading={"Building Inclusive Communities Through Gay Social Media"}
+        image={
+          <Image
+            src={LeftImage}
+            alt={"Gay Social Media for Real LGBTQ Community Building"}
+          />
+        }
+      >
+        <Text>
+          Bessa is a gay social media app where LGBTQ members can post and share
+          content that reflects their true selves. Whether it’s a casual update,
+          a creative photo, or a thought-provoking moment, the platform is built
+          to make self-expression feel easy and meaningful. As an LGBTQ
+          community app, Bessa gives users the space to connect through shared
+          stories, reactions, and conversations without the pressure of hookup
+          culture.
+        </Text>
+        <Text>
+          In addition to content sharing, Bessa lets members highlight and
+          explore LGBTQ-friendly places. From queer-owned coffee shops to
+          inclusive bookstores and nightlife, users can recommend local spots
+          and browse what others have shared. This feature turns Bessa into more
+          than just a queer-friendly social app. It becomes a tool to help you
+          connect with local LGBTQ people and support safe, welcoming spaces.
+        </Text>
+        <Text>
+          Events are a key part of building real connections on gay social
+          media, and Bessa makes it simple to discover and share them. Whether
+          it&apos;s a grassroots gathering, a virtual hangout, or a major pride
+          celebration, members can post upcoming events that matter to the
+          community. This helps Bessa grow as an inclusive social platform where
+          people don’t just scroll; they show up, participate, and co-create a
+          vibrant, connected queer future.
+        </Text>
+      </MediaLeft>
     </section>
   );
 }
