@@ -16,6 +16,11 @@ export const jsonLd = {
     ratingValue: "5",
     ratingCount: "3"
   },
+  offers: {
+    "@type": "Offer",
+    price: 0,
+    priceCurrency: "USD"
+  },
   url,
   image: `${url}/images/social.png`,
   operatingSystem: ["ANDROID", "iOS"]
