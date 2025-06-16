@@ -9,7 +9,7 @@ import {
   Stack,
   Center
 } from "@chakra-ui/react";
-import { title, sectionHeight, customMetadata } from "@/utils/constants";
+import { sectionHeight, customMetadata } from "@/utils/constants";
 import Hero from "@/components/Hero";
 import MediaRight from "@/components/MediaRight";
 import Link from "next/link";
@@ -18,11 +18,11 @@ import MediaLeft from "@/components/MediaLeft";
 import LeftImage from "@/images/stock/donate.webp";
 import Image from "next/image";
 
-const pageTitle = `Donate | ${title}`;
+const pageTitle = "Fuel the Next Generation of Gay Social Media";
 
 export const metadata = customMetadata({
-  title: pageTitle,
-  description:
+  metadataTitle: pageTitle,
+  metadataDescription:
     "Join the movement to support queer community apps like Bessa. Fund queer apps and help build LGBTQ social platforms made for connection, not clicks.",
   path: "/donate",
   imagePath: "/images/stock/pride-flag.jpg"

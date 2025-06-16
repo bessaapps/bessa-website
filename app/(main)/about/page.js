@@ -20,12 +20,11 @@ import MediaLeft from "@/components/MediaLeft";
 import LeftImage from "@/images/stock/about.jpg";
 import Image from "next/image";
 
-const pageTitle =
-  "Bessa | A Gay Social Media App for Inclusive LGBTQ Connection";
+const pageTitle = "Gay Social Media for Real LGBTQ Community Building";
 
 export const metadata = customMetadata({
-  title: pageTitle,
-  description:
+  metadataTitle: pageTitle,
+  metadataDescription:
     "Discover Bessa, a gay social media app designed for real LGBTQ connection. Built by a queer developer, Bessa is an inclusive social platform where you can post, message, and share with a diverse global community.",
   path: "/about",
   imagePath: "/images/stock/gay-community.jpg"
@@ -47,7 +46,7 @@ export default function About() {
       />
       <MediaRight
         lead={
-          "Bessa is a gay social media app that helps you connect with both new and familiar faces in LGBTQ communities. As an inclusive social platform, it’s built to make discovering, posting, and interacting feel effortless and welcoming. Members can share updates, send messages, and highlight LGBTQ-friendly events and places. This LGBTQ social media app also includes community guidelines to keep the vibe respectful and engaging. Bessa is where queer connection, content, and community come together."
+          "Bessa is a gay social media app where you can post updates, message others, and share LGBTQ-friendly places and events. It’s an inclusive platform designed to make queer connection easy, welcoming, and community-driven."
         }
         content={
           <>
