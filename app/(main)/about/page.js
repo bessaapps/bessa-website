@@ -48,19 +48,6 @@ export default function About() {
         lead={
           "Bessa is a gay social media app where you can post updates, message others, and share LGBTQ-friendly places and events. It’s an inclusive platform designed to make queer connection easy, welcoming, and community-driven."
         }
-        content={
-          <>
-            <Text>
-              I&apos;m Topher; I&apos;m the creator behind Bessa, a gay social
-              media app built with community at its core. As a queer software
-              engineer based in Las Vegas, I&apos;m focused on building an
-              inclusive social platform where LGBTQ people of all genders,
-              ethnicities, ages, and abilities can feel seen and connected.
-              Bessa is more than just an LGBTQ community app. It&apos;s a space
-              for real connection, thoughtful design, and queer tech done right.
-            </Text>
-          </>
-        }
         bottomContent={
           <Flex w={"100%"} gap={2} flexWrap={"wrap"}>
             <Link href={"/"} title={title}>
@@ -76,7 +63,17 @@ export default function About() {
           </Flex>
         }
         bgImage={"/images/stock/oakland.jpg"}
-      />
+      >
+        <Text>
+          I&apos;m Topher; I&apos;m the creator behind Bessa, a gay social media
+          app built with community at its core. As a queer software engineer
+          based in Las Vegas, I&apos;m focused on building an inclusive social
+          platform where LGBTQ people of all genders, ethnicities, ages, and
+          abilities can feel seen and connected. Bessa is more than just an
+          LGBTQ community app. It&apos;s a space for real connection, thoughtful
+          design, and queer tech done right.
+        </Text>
+      </MediaRight>
       <Container maxW={"container.xl"}>
         <Center minH={sectionHeight} py={[16, 32, 64]}>
           <Stack gap={4}>

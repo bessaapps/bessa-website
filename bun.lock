@@ -11,7 +11,7 @@
         "@emotion/styled": "^11.14.0",
         "@linear/sdk": "^43.0.0",
         "@next/third-parties": "^15.3.3",
-        "axios": "^1.9.0",
+        "axios": "^1.10.0",
         "dayjs": "^1.11.13",
         "framer-motion": "^11.18.2",
         "html-to-text": "^9.0.5",

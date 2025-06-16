@@ -26,9 +26,11 @@ import {
   customMetadata,
   description,
   jsonLd,
+  sectionHeight,
   title
 } from "@/utils/constants";
 import { Ban, Check, CircleDollarSign } from "lucide-react";
+import MediaRight from "@/components/MediaRight";
 
 export const metadata = customMetadata({
   metadataTitle: title,
@@ -101,8 +103,7 @@ export default async function Home() {
                 Building Queer Community and Connection
               </Heading>
               <Text mb={8}>
-                Bessa is an{" "}
-                <Text as={"strong"}>LGBTQ social networking app</Text> and
+                Bessa is a <Text as={"strong"}>gay social media app</Text> and
                 inclusive community of all genders, colors, shapes, sizes, and
                 abilities. Bessa is a hub for queer connections, places, and
                 events.
@@ -147,45 +148,50 @@ export default async function Home() {
             </GridItem>
           </SimpleGrid>
         </Container>
-        <Box bg={"gray.900"}>
-          <Container maxW={"container.lg"} py={[8, 32]}>
-            <Heading as={"h3"} color={"primary.50"} textAlign={"center"} mb={4}>
+        <Box bg={"gray.900"} minH={sectionHeight}>
+          <Center minH={"calc(100vh - 129px)"} p={[8, 32]}>
+            <Heading
+              as={"h3"}
+              lineHeight={1.5}
+              color={"primary.50"}
+              textAlign={"center"}
+              mb={4}
+            >
               <Highlight
-                query={["connections", "social", "community"]}
+                query={["connections", "community"]}
                 styles={{
                   color: "secondary.400"
                 }}
               >
-                Welcome to Bessa, the LGBTQ social networking app built by LGBTQ
-                people for LGBTQ people. Bessa&apos;s all about real
-                connections, queer-friendly locations, and showing up for
-                community events that matter. It&apos;s more than just an app;
-                it&apos;s your space to be seen, be heard, and be yourself.
+                Welcome to Bessa, the gay social media app built by LGBTQ people
+                for the LGBTQ community. Bessa helps you make real connections,
+                discover queer-friendly places, and find events that truly
+                matter. It’s more than just an LGBTQ social media app. It’s your
+                space to be seen, be heard, and be yourself.
               </Highlight>
             </Heading>
-          </Container>
-        </Box>
-        <Container maxW={"container.md"} my={[8, 32]}>
-          <Center>
-            <Box w={["100%", "75%"]}>
-              <Tag mb={2}>People</Tag>
-              <Heading mb={4}>Find your Tribe</Heading>
-              <Text mb={4}>
-                Bessa is more than just a place to scroll; it&apos;s where real
-                connections happen. Whether you&apos;re looking for friends,
-                chosen family, or community you can count on, Bessa helps you
-                find your people.
-              </Text>
-              <Text>
-                As an LGBTQ social networking app, Bessa is designed to bring
-                queer people together in meaningful, authentic ways. Bessa makes
-                it easier to find your people. It&apos;s not just about likes
-                and followers, it&apos;s about shared experiences and building
-                lasting connections with others who get you.
-              </Text>
-            </Box>
           </Center>
-        </Container>
+        </Box>
+        <MediaRight
+          lead={
+            "Bessa is a gay social media app designed for real connection, not just endless scrolling. As an LGBTQ social media app, it helps you find friends, chosen family, and a supportive community through shared experiences and authentic interaction."
+          }
+          bgImage={"/images/stock/main.jpg"}
+        >
+          <Text>
+            Bessa is more than just a place to scroll. It&apos;s a gay social
+            media app where real connections happen. Whether you&apos;re looking
+            for friends, chosen family, or a supportive queer community, Bessa
+            helps you find your people and feel at home.
+          </Text>
+          <Text>
+            As an LGBTQ social media app, Bessa is built to bring queer folks
+            together in meaningful, authentic ways. It&apos;s not about chasing
+            likes or followers; it’s about shared experiences and lasting
+            connections through an inclusive social platform designed with
+            community in mind.
+          </Text>
+        </MediaRight>
         <Container maxW={"container.xl"} my={[8, 32]}>
           <SimpleGrid columns={[1, 4]} gap={8} alignItems={"center"}>
             <GridItem>

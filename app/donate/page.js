@@ -40,27 +40,6 @@ export default function Donate() {
         lead={
           "Bessa is an LGBTQ social networking app for real connection instead of clicks or swipes. Your support helps fund queer apps made by and for our community."
         }
-        content={
-          <>
-            <Text>
-              Bessa is a queer-led LGBTQ social networking app built for
-              connection, creativity, and community. It&apos;s a place to post
-              and share LGBTQ content, find LGBTQ friends online, and connect
-              with local queer people all in one inclusive social platform.
-              Instead of swipes, Bessa centers real interaction and celebrates
-              the full spectrum of queer life.
-            </Text>
-            <Text>
-              When you support Bessa, you{" "}
-              <strong>support queer community apps</strong> that reflect our
-              values. Your membership helps fund queer apps that prioritize
-              people over profit and visibility over virality. Together, we can
-              help build LGBTQ social apps that uplift our stories, amplify
-              queer creators, and carve out space for joy, belonging, and
-              collaboration in the digital world.
-            </Text>
-          </>
-        }
         bottomContent={
           <Flex w={"100%"} gap={2} flexWrap={"wrap"}>
             <Link href={"https://buymeacoffee.com/getbessa"} target={"_blank"}>
@@ -79,7 +58,24 @@ export default function Donate() {
           </Flex>
         }
         bgImage={"/images/stock/photo-of-a-man-carrying-another-man.jpg"}
-      />
+      >
+        <Text>
+          Bessa is a queer-led LGBTQ social networking app built for connection,
+          creativity, and community. It&apos;s a place to post and share LGBTQ
+          content, find LGBTQ friends online, and connect with local queer
+          people all in one inclusive social platform. Instead of swipes, Bessa
+          centers real interaction and celebrates the full spectrum of queer
+          life.
+        </Text>
+        <Text>
+          When you support Bessa, you{" "}
+          <strong>support queer community apps</strong> that reflect our values.
+          Your membership helps fund queer apps that prioritize people over
+          profit and visibility over virality. Together, we can help build LGBTQ
+          social apps that uplift our stories, amplify queer creators, and carve
+          out space for joy, belonging, and collaboration in the digital world.
+        </Text>
+      </MediaRight>
       <Container maxW={"container.xl"}>
         <Center minH={sectionHeight} py={[16, 32, 64]}>
           <Stack gap={4}>

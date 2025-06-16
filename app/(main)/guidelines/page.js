@@ -52,41 +52,36 @@ export default function Guidelines() {
         lead={
           "Community-building isn't easy, but it's vital! Let's work together to keep Bessa's LGBTQ community safer and inclusive. Respect each other and don't feed the trolls. Here are a few quick tips to help create a fun, diverse, and safe space for everyone."
         }
-        content={
-          <>
-            <Text>
-              Bessa reserves the right to remove your content or your profile
-              from the app at any time under any circumstance.
-            </Text>
-            <Text>
-              Bessa is a vibrant online community built to foster fun, safety,
-              and wellbeing for LGBTQ people. We stand for diversity and
-              inclusivity, steering clear of corporate marketing spaces and
-              upholding a strict no-tolerance policy for any form of
-              discrimination, bullying, or harm. Illegal activity and spam are
-              not condoned, ensuring that Bessa remains a secure and supportive
-              environment for everyone.
-            </Text>
-            <Box spacing={2}>
-              <Text>
-                🚫 Accounts will be deleted immediately for any discriminatory
-                or harmful behavior based on sex, gender, sexual orientation,
-                race, ethnicity, HIV status, age, nationality, or religion.
-              </Text>
-              <Text>
-                🚫 Illegal drugs, illegal sexual acts (including escorting and
-                massage), and any other unlawful activities are strictly
-                prohibited.
-              </Text>
-              <Text>
-                🚫 Excessive self-promotion, spam, or repeated creation of new
-                accounts is not allowed.
-              </Text>
-            </Box>
-          </>
-        }
         bgImage={"/images/stock/guidelines-2.avif"}
-      />
+      >
+        <Text>
+          Bessa reserves the right to remove your content or your profile from
+          the app at any time under any circumstance.
+        </Text>
+        <Text>
+          Bessa is a vibrant online community built to foster fun, safety, and
+          wellbeing for LGBTQ people. We stand for diversity and inclusivity,
+          steering clear of corporate marketing spaces and upholding a strict
+          no-tolerance policy for any form of discrimination, bullying, or harm.
+          Illegal activity and spam are not condoned, ensuring that Bessa
+          remains a secure and supportive environment for everyone.
+        </Text>
+        <Box spacing={2}>
+          <Text>
+            🚫 Accounts will be deleted immediately for any discriminatory or
+            harmful behavior based on sex, gender, sexual orientation, race,
+            ethnicity, HIV status, age, nationality, or religion.
+          </Text>
+          <Text>
+            🚫 Illegal drugs, illegal sexual acts (including escorting and
+            massage), and any other unlawful activities are strictly prohibited.
+          </Text>
+          <Text>
+            🚫 Excessive self-promotion, spam, or repeated creation of new
+            accounts is not allowed.
+          </Text>
+        </Box>
+      </MediaRight>
       <Container maxW={"container.xl"}>
         <Center minH={sectionHeight} py={[16, 32, 64]}>
           <Stack gap={4}>

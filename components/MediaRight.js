@@ -1,6 +1,6 @@
 import { Flex, GridItem, Heading, SimpleGrid, Stack } from "@chakra-ui/react";
 
-export default function MediaRight({ lead, content, bottomContent, bgImage }) {
+export default function MediaRight({ lead, bottomContent, bgImage, children }) {
   return (
     <SimpleGrid columns={[1, 2]}>
       <GridItem px={[8, 16, 32]} py={[16, 32, 64]}>
@@ -14,7 +14,7 @@ export default function MediaRight({ lead, content, bottomContent, bgImage }) {
             <Heading as={"p"} fontSize={"1.5rem"} mb={4}>
               {lead}
             </Heading>
-            {content}
+            {children}
           </Stack>
           {bottomContent}
         </Flex>
