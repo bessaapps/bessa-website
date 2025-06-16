@@ -52,7 +52,7 @@ export default function About() {
       />
       <Hero
         heading={"Gay Social Media for Real LGBTQ Community Building"}
-        lead={"About Bessa"}
+        lead={"Building Belonging with Gay Social Media"}
         bgImage={"/images/stock/gay-community.jpg"}
       />
       <MediaRight
@@ -127,7 +127,7 @@ export default function About() {
         </Center>
       </Container>
       <MediaLeft
-        heading={"Building Inclusive Communities Through Gay Social Media"}
+        heading={"Explore Places, Events, and Community on Gay Social Media"}
         image={
           <Image
             src={LeftImage}

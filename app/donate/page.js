@@ -14,6 +14,9 @@ import Hero from "@/components/Hero";
 import MediaRight from "@/components/MediaRight";
 import Link from "next/link";
 import Footer from "@/components/navigation/Footer";
+import MediaLeft from "@/components/MediaLeft";
+import LeftImage from "@/images/stock/donate.webp";
+import Image from "next/image";
 
 export const metadata = {
   title: `Donate | ${title}`,
@@ -45,8 +48,8 @@ export default function Donate() {
   return (
     <>
       <Hero
-        heading={"Help Build the LGBTQ Social Network People Deserve"}
-        lead={"Support Queer Community Apps"}
+        heading={"Fuel the Next Generation of Gay Social Media"}
+        lead={"Uplift LGBTQ Voices on Gay Social Media"}
         bgImage={"/images/stock/pride-flag.jpg"}
       />
       <MediaRight
@@ -157,32 +160,34 @@ export default function Donate() {
           </Stack>
         </Center>
       </Container>
-      <Container maxW={"container.xl"}>
-        <Center minH={sectionHeight} py={[16, 32, 64]}>
-          <Stack gap={4}>
-            <Heading>
-              Ready to Support Queer Community Apps? Bessa isn&apos;t backed by
-              big tech — it&apos;s powered by people like you.
-            </Heading>
-            <Text>
-              When you become a member, you&apos;re not just donating;
-              you&apos;re helping fund queer apps that center real stories,
-              meaningful connection, and the future of LGBTQ digital life. Your
-              support helps us build new features, expand visibility for queer
-              creators, and create more intentional spaces for community to
-              thrive online. Every membership directly contributes to our
-              mission to help build LGBTQ social apps that reflect who we are.
-            </Text>
-            <Text>
-              This is your chance to be part of something bigger. Whether you
-              join as a Supporter, Member, or Trailblazer, you&apos;re
-              co-creating queer tech from the ground up. If you believe in the
-              power of LGBTQ connection, visibility, and storytelling,
-              now&apos;s the time to show it.
-            </Text>
-          </Stack>
-        </Center>
-      </Container>
+      <MediaLeft
+        heading={
+          "Ready to Support Queer Community Apps? Bessa isn't backed by big tech — it's powered by people like you."
+        }
+        image={
+          <Image
+            src={LeftImage}
+            alt={"Fuel the Next Generation of Gay Social Media"}
+          />
+        }
+      >
+        <Text>
+          When you become a member, you&apos;re not just donating; you&apos;re
+          helping fund queer apps that center real stories, meaningful
+          connection, and the future of LGBTQ digital life. Your support helps
+          us build new features, expand visibility for queer creators, and
+          create more intentional spaces for community to thrive online. Every
+          membership directly contributes to our mission to help build LGBTQ
+          social apps that reflect who we are.
+        </Text>
+        <Text>
+          This is your chance to be part of something bigger. Whether you join
+          as a Supporter, Member, or Trailblazer, you&apos;re co-creating queer
+          tech from the ground up. If you believe in the power of LGBTQ
+          connection, visibility, and storytelling, now&apos;s the time to show
+          it.
+        </Text>
+      </MediaLeft>
       <Footer
         buttons={[
           {
