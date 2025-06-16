@@ -9,7 +9,7 @@ import {
   Stack,
   Center
 } from "@chakra-ui/react";
-import { url, title, sectionHeight } from "@/utils/constants";
+import { title, sectionHeight, customMetadata } from "@/utils/constants";
 import Hero from "@/components/Hero";
 import MediaRight from "@/components/MediaRight";
 import Link from "next/link";
@@ -18,31 +18,15 @@ import MediaLeft from "@/components/MediaLeft";
 import LeftImage from "@/images/stock/donate.webp";
 import Image from "next/image";
 
-export const metadata = {
-  title: `Donate | ${title}`,
+const pageTitle = `Donate | ${title}`;
+
+export const metadata = customMetadata({
+  title: pageTitle,
   description:
     "Join the movement to support queer community apps like Bessa. Fund queer apps and help build LGBTQ social platforms made for connection, not clicks.",
-  openGraph: {
-    title: `Donate | ${title}`,
-    description:
-      "Join the movement to support queer community apps like Bessa. Fund queer apps and help build LGBTQ social platforms made for connection, not clicks.",
-    url,
-    images: [
-      {
-        url: `${url}/images/stock/pride-flag.jpg`
-      }
-    ]
-  },
-  twitter: {
-    title: `Donate | ${title}`,
-    description:
-      "Join the movement to support queer community apps like Bessa. Fund queer apps and help build LGBTQ social platforms made for connection, not clicks.",
-    images: {
-      url: `${url}/images/stock/pride-flag.jpg`,
-      alt: `Donate | ${title}`
-    }
-  }
-};
+  path: "/donate",
+  imagePath: "/images/stock/pride-flag.jpg"
+});
 
 export default function Donate() {
   return (
@@ -162,7 +146,7 @@ export default function Donate() {
       </Container>
       <MediaLeft
         heading={
-          "Ready to Support Queer Community Apps? Bessa isn't backed by big tech — it's powered by people like you."
+          "Support Gay Social Media Built by the Queer Community, Not Big Tech"
         }
         image={
           <Image
