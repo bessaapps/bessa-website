@@ -1,12 +1,6 @@
 export default async function sitemap() {
   return [
     {
-      url: "https://getbessa.com",
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 1
-    },
-    {
       url: "https://getbessa.com/about",
       lastModified: new Date(),
       changeFrequency: "daily",
@@ -44,24 +38,6 @@ export default async function sitemap() {
     },
     {
       url: "https://getbessa.com/privacy",
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.5
-    },
-    {
-      url: "https://getbessa.com/cookies",
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.5
-    },
-    {
-      url: "https://getbessa.com/eula",
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.5
-    },
-    {
-      url: "https://getbessa.com/terms",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.5
