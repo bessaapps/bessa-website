@@ -1,16 +1,25 @@
-import { Text, Link, Button, Flex } from "@chakra-ui/react";
-import { title, url } from "@/utils/constants";
+import {
+  Text,
+  Link,
+  Button,
+  Flex,
+  Center,
+  Stack,
+  Heading,
+  Container
+} from "@chakra-ui/react";
+import { sectionHeight, title, url } from "@/utils/constants";
 import Hero from "@/components/Hero";
 import MediaRight from "@/components/MediaRight";
 
 export const metadata = {
-  title: `About ${title}`,
+  title: "Bessa | A Gay Social Media App for Inclusive LGBTQ Connection",
   description:
-    "Learn about Bessa, the LGBTQ Social Networking App built for queer connection. A community-first platform for gay, lesbian, trans, and nonbinary people to share and thrive.",
+    "Discover Bessa, a gay social media app designed for real LGBTQ connection. Built by a queer developer, Bessa is an inclusive social platform where you can post, message, and share with a diverse global community.",
   openGraph: {
-    title: `About ${title}`,
+    title: "Bessa | A Gay Social Media App for Inclusive LGBTQ Connection",
     description:
-      "Learn about Bessa, the LGBTQ Social Networking App built for queer connection. A community-first platform for gay, lesbian, trans, and nonbinary people to share and thrive.",
+      "Discover Bessa, a gay social media app designed for real LGBTQ connection. Built by a queer developer, Bessa is an inclusive social platform where you can post, message, and share with a diverse global community.",
     url: `${url}/about`,
     images: [
       {
@@ -19,9 +28,9 @@ export const metadata = {
     ]
   },
   twitter: {
-    title: `About ${title}`,
+    title: "Bessa | A Gay Social Media App for Inclusive LGBTQ Connection",
     description:
-      "Learn about Bessa, the LGBTQ Social Networking App built for queer connection. A community-first platform for gay, lesbian, trans, and nonbinary people to share and thrive.",
+      "Discover Bessa, a gay social media app designed for real LGBTQ connection. Built by a queer developer, Bessa is an inclusive social platform where you can post, message, and share with a diverse global community.",
     images: {
       url: `${url}/images/stock/gay-community.jpg`,
       alt: `About ${title}`
@@ -33,47 +42,24 @@ export default function About() {
   return (
     <>
       <Hero
-        heading={`About ${title}`}
-        lead={"Our Story"}
+        heading={"Gay Social Media for Real LGBTQ Community Building"}
+        lead={"About Bessa"}
         bgImage={"/images/stock/gay-community.jpg"}
       />
       <MediaRight
         lead={
-          "Bessa connects you with new and existing people in LGBTQ communities. Everything is designed to encourage discovering and interacting with members. You can post updates, comments, reactions, and message members directly. You can also share LGBTQ-friendly events and places with others. Guidelines and rules help to create a safer space for Bessa members."
+          "Bessa is a gay social media app that helps you connect with both new and familiar faces in LGBTQ communities. As an inclusive social platform, it’s built to make discovering, posting, and interacting feel effortless and welcoming. Members can share updates, send messages, and highlight LGBTQ-friendly events and places. This LGBTQ social media app also includes community guidelines to keep the vibe respectful and engaging. Bessa is where queer connection, content, and community come together."
         }
         content={
           <>
             <Text>
-              Hello, I&apos;m Topher. Bessa is owned, designed, and developed by
-              me, a queer man doing his best to build strong LGBTQ communities
-              open to all genders, ethnicities, ages, and abilities. I&apos;m a
-              full-time software engineer in Las Vegas, NV. I studied
-              application development at Colorado State University. I create
-              user-centric products using sound programming, strong design
-              principles, and accessibility guidelines.
-            </Text>
-            <Text>
-              What is inclusivity and just how inclusive should our communities
-              be? Bessa is an experiment to see how inclusive a community can be
-              without sacrificing the safety and culture of the group.
-            </Text>
-            <Text>
-              I became infatuated with the idea of communities while living in
-              Oakland, CA where I was witness to a wide range of communities.
-              Each of them created a safe space for its members to grow, be
-              themselves, and embrace their culture. I realized that some were
-              very accepting to newcomers and some were more restricted. Toying
-              with the pros and cons of both, I began to think about which style
-              of community is better: a tight-knit community, completely
-              inclusive, or somewhere in between.
-            </Text>
-            <Text>
-              As a queer bisexual man, I decided to start with the LGBTQ
-              community. I created Bessa to see how inclusive to a variety of
-              genders, ethnicities, body types, ages, and more it could be.
-              While its members remain safe, I hope that Bessa will grow into
-              the most inclusive online LGBTQ community and reach people all
-              across the globe.
+              I&apos;m Topher; I&apos;m the creator behind Bessa, a gay social
+              media app built with community at its core. As a queer software
+              engineer based in Las Vegas, I&apos;m focused on building an
+              inclusive social platform where LGBTQ people of all genders,
+              ethnicities, ages, and abilities can feel seen and connected.
+              Bessa is more than just an LGBTQ community app. It&apos;s a space
+              for real connection, thoughtful design, and queer tech done right.
             </Text>
           </>
         }
@@ -93,6 +79,44 @@ export default function About() {
         }
         bgImage={"/images/stock/oakland.jpg"}
       />
+      <Container maxW={"container.xl"}>
+        <Center minH={sectionHeight} py={[16, 32, 64]}>
+          <Stack gap={4}>
+            <Heading>
+              Building Inclusive Communities Through Gay Social Media
+            </Heading>
+            <Text>
+              What does inclusivity really mean, and how far can it go without
+              diluting the heart of a community? Bessa is a gay social media app
+              built as an experiment to find out just how inclusive an online
+              space can be while still preserving the culture, values, and
+              identity of the group. It’s a platform designed to balance
+              openness with authenticity, and to ask important questions about
+              how communities grow and evolve.
+            </Text>
+            <Text>
+              The inspiration for Bessa came while I was living in Oakland, CA,
+              surrounded by an incredible variety of communities. I saw
+              firsthand how some groups created deeply rooted spaces where
+              members could thrive, express themselves, and celebrate their
+              culture. Some communities welcomed everyone with open arms, while
+              others protected their identity by staying more closed. Both
+              approaches have value, and I became fascinated by the tension
+              between being inclusive and staying grounded.
+            </Text>
+            <Text>
+              As a queer bisexual man, I chose to begin with the LGBTQ
+              community. Bessa is an LGBTQ community app built for all genders,
+              body types, ethnicities, and ages; an inclusive social platform
+              where diversity isn’t just welcomed, it’s central to the mission.
+              My hope is that Bessa continues to grow into one of the most
+              inclusive LGBTQ social media apps out there, connecting people
+              around the world who are ready to show up, speak out, and be
+              themselves.
+            </Text>
+          </Stack>
+        </Center>
+      </Container>
     </>
   );
 }

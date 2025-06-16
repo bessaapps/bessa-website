@@ -1,6 +1,6 @@
 import { SiAppstore, SiGoogleplay } from "react-icons/si";
 
-export const keyword = "LGBTQ Social Networking App";
+export const keyword = "Gay Social Media";
 export const title = `Bessa ${keyword}`;
 export const description =
   "Bessa is an LGBTQ social networking app and inclusive community of all genders, colors, shapes, sizes, and abilities. Bessa is a hub for queer connections, places, and events.";

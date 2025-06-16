@@ -70,7 +70,7 @@ export const metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "Bessa LGBTQ Social Networking App",
+  name: title,
   applicationCategory: "SocialNetworkingApplication",
   aggregateRating: {
     "@type": "AggregateRating",
@@ -81,16 +81,6 @@ const jsonLd = {
   image: `${url}/images/social.png`,
   operatingSystem: ["ANDROID", "iOS"]
 };
-
-// async function getData() {
-//   return await axios
-//     .get("https://blog.getbessa.com/wp-json/wp/v2/posts", {
-//       params: { _embed: ["wp:term", "author"], per_page: 5 }
-//     })
-//     .then((response) => {
-//       return { posts: response?.data };
-//     });
-// }
 
 export default async function Home() {
   // const { posts } = await getData();
