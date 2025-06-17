@@ -40,7 +40,7 @@ export default function About() {
         }}
       />
       <Hero
-        heading={"Gay Social Media for Real LGBTQ Community Building"}
+        heading={pageTitle}
         lead={"Building Belonging with Gay Social Media"}
         bgImage={"/images/stock/gay-community.jpg"}
       />

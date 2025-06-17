@@ -32,7 +32,7 @@ export default function Donate() {
   return (
     <>
       <Hero
-        heading={"Fuel the Next Generation of Gay Social Media"}
+        heading={pageTitle}
         lead={"Uplift LGBTQ Voices on Gay Social Media"}
         bgImage={"/images/stock/pride-flag.jpg"}
       />
