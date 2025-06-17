@@ -3,12 +3,12 @@ import { Flex, GridItem, Heading, SimpleGrid, Stack } from "@chakra-ui/react";
 export default function MediaRight({ lead, bottomContent, bgImage, children }) {
   return (
     <SimpleGrid columns={[1, 2]}>
-      <GridItem px={[8, 16, 32]} py={[16, 32, 64]}>
+      <GridItem p={[8, 16, 32]}>
         <Flex
           direction={"column"}
           h={"100%"}
           justify={"space-between"}
-          gap={32}
+          gap={[8, 16, 32]}
         >
           <Stack>
             <Heading as={"p"} fontSize={"1.5rem"} mb={4}>
