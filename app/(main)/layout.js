@@ -1,7 +1,6 @@
 import Footer from "@/components/navigation/Footer";
 import "../global.css";
 import { SiAppstore, SiGoogleplay } from "react-icons/si";
-import { Text } from "@chakra-ui/react";
 
 export default function RootLayout({ children }) {
   return (
@@ -23,7 +22,7 @@ export default function RootLayout({ children }) {
               }
             ]}
           >
-            Join your Tribe <Text as={"i"}>and</Text> your Vibe now for FREE!
+            Find your people. Share your story. Be part of something real.
           </Footer>
         </nav>
       </footer>

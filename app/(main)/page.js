@@ -49,7 +49,7 @@ export default async function Home() {
           <SimpleGrid columns={[1, 4]} alignItems={"center"} gap={8}>
             <GridItem w={["100%", "90%"]} colSpan={[1, 2]}>
               <Heading as={"h1"} mb={4}>
-                Building Queer Community and Connection
+                Your New Favorite Queer Community
               </Heading>
               <Text mb={8}>
                 Bessa is a <Text as={"strong"}>gay social media app</Text> and
@@ -105,8 +105,8 @@ export default async function Home() {
                 Welcome to Bessa, the gay social media app built by LGBTQ people
                 for the LGBTQ community. Bessa helps you make real connections,
                 discover queer-friendly places, and find events that truly
-                matter. It’s more than just an LGBTQ social media app. It’s your
-                space to be seen, be heard, and be yourself.
+                matter. It&apos;s more than just an LGBTQ social media app.
+                It&apos;s your space to be seen, be heard, and be yourself.
               </Highlight>
             </Heading>
           </Center>
@@ -138,7 +138,7 @@ export default async function Home() {
           <Text>
             As an LGBTQ social media app, Bessa is built to bring queer folks
             together in meaningful, authentic ways. It&apos;s not about chasing
-            likes or followers; it’s about shared experiences and lasting
+            likes or followers; it&apos;s about shared experiences and lasting
             connections through an inclusive social platform designed with
             community in mind.
           </Text>
@@ -148,83 +148,72 @@ export default async function Home() {
           image={<Image src={Mockup3} alt={title} />}
         >
           <Text>
-            Bessa, the LGBTQ social networking app, helps you discover
-            queer-friendly places wherever you are such as laid-back coffee
-            shops, lively nightlife, and community centers. Every location is
-            recommended and reviewed by LGBTQ people who know what it means to
-            feel welcome.
+            Bessa is the gay social media app that makes it easy to find
+            queer-friendly places wherever you go. Whether you&apos;re looking
+            for a chill café, a lively bar, or a welcoming community space,
+            Bessa has listings recommended and reviewed by LGBTQ people
+            who&apos;ve actually been there. It&apos;s all about finding spots
+            where you can relax, connect, and feel like you belong.
           </Text>
           <Text>
-            You can easily find new hangouts or share your own favorite spots to
-            help others explore their communities with confidence. It&apos;s
-            more than just a list; it&apos;s a living map built by the
-            community, for the community. Whether you&apos;re traveling or
-            looking for a new local favorite, Bessa connects you to spaces that
-            celebrate all identities and experiences.
+            With Bessa, the gay social media app, you can easily discover new
+            hangouts or share your favorite queer-friendly spots to help others
+            explore their communities with confidence. It&apos;s more than just
+            a directory—it&apos;s a living map shaped by LGBTQ people, for LGBTQ
+            people. Whether you&apos;re traveling or searching for a new local
+            favorite, Bessa connects you to inclusive spaces that celebrate
+            queer identities and lived experiences.
           </Text>
         </MediaLeft>
         <Section>
-          <Heading mb={4}>Discover More, Connect Deeper, Pay Nothing!</Heading>
+          <Heading mb={4}>Free, Fun, and Full of Queer Community</Heading>
           <Text>
-            Bessa is the LGBTQ social networking app that lets you get started
-            exploring and building real connections without paying a dime.
-            Unlike Grindr, Twitter, Scruff, HER, Taimi, Walla, Tinder, Hinge, or
-            Jack&apos;d, Bessa is free. There aren&apos;t even any annoying ads!
+            Bessa is the gay social media app that&apos;s completely free to
+            use, with no forced subscriptions. Unlike many platforms that
+            prioritize dating, hookups, or ads, Bessa is all about community.
+            It&apos;s a space to post and share LGBTQ content, connect with
+            local LGBTQ people, and build lasting friendships without swiping or
+            algorithms getting in the way.
           </Text>
           <Text>
-            But Bessa isn&apos;t just another app to scroll through; i&apos;s
-            packed with unique community-building features that apps like
-            Twitter and Grindr don&apos;t offer. Here, you can truly engage with
-            others and discover queer-friendly spaces and events, all while
-            connecting with people who genuinely get you.
+            What makes Bessa different from Grindr, Twitter, Scruff, HER, Taimi,
+            Walla, Tinder, Hinge, or Jack&apos;d is its focus on genuine queer
+            connection. Bessa isn&apos;t a dating app; it&apos;s an LGBTQ social
+            media app designed to help you find LGBTQ friends online, discover
+            queer events, and explore LGBTQ-vetted places. It&apos;s a
+            queer-friendly social app where everyone can show up as their full
+            self and actually feel seen.
           </Text>
         </Section>
         <MediaLeft
-          heading={"Find your Vibe"}
+          heading={"Party with your People"}
           image={<Image src={Mockup4} alt={title} />}
         >
           <Text>
-            Bessa, the LGBTQ social networking app, lets you browse upcoming
-            queer events near you so you never miss out on community gatherings,
-            parties, or activism. You can also post your own events to invite
-            others and help build a stronger, more connected community.
+            Bessa is the gay social media app that helps you stay connected to
+            the LGBTQ community by browsing upcoming queer events near you. From
+            parties to protests, Bessa makes it easy to find gatherings that
+            matter and even post your own to invite others. It&apos;s all about
+            building a stronger, more connected LGBTQ social network, one event
+            at a time.
           </Text>
           <Text>
-            With Bessa&apos;s events listings, organizing and discovering
-            inclusive spaces has never been easier. This LGBTQ social networking
-            app puts the power in your hands to create meaningful experiences
-            and bring people together.
+            With Bessa&apos;s event listings, the gay social media app makes it
+            easier than ever to discover and organize inclusive queer spaces.
+            Bessa puts the power in your hands to create meaningful experiences,
+            share your own events, and bring LGBTQ people together in real life.
           </Text>
         </MediaLeft>
         <Section>
-          <Heading mb={4}>Why fit in when you can log on and belong?</Heading>
+          <Heading mb={4}>Drop a Review and Tell your Friends</Heading>
           <Text>
-            Bessa is the free LGBTQ social networking app built by and for our
-            community. Find friends, discover queer-friendly spots, and show up
-            for events. Whether you&apos;re looking for chosen fam, a new
-            hangout, or a reason to get out and connect, Bessa&apos;s got you.
-            Download Bessa today and start building the community you&apos;ve
-            always wanted.
-          </Text>
-          <Flex gap={4} flexWrap={"wrap"}>
-            {appStores.map((store) => (
-              <Link key={store.href} href={store.href}>
-                <Button colorScheme={"primary"} size={"lg"} w={["100%", 140]}>
-                  <Flex mr={2}>{store.icon}</Flex>
-                  {store.name}
-                </Button>
-              </Link>
-            ))}
-          </Flex>
-        </Section>
-        <Section>
-          <Heading mb={4}>Loving Bessa?</Heading>
-          <Text>
-            Help us grow the vibe! If Bessa has made a difference for you, leave
-            a review on the App Store or Google Play. It helps more people find
-            this amazing LGBTQ social media app. And don&apos;t keep it to
-            yourself. Tell your friends, your group chat, your chosen fam. The
-            more of us here, the better it gets!
+            Help us grow the vibe on the gay social media app everyone’s talking
+            about! If Bessa has made a difference for you, leave a review on the
+            App Store or Google Play. It helps more people discover this LGBTQ
+            social media app built for real queer connection. And don’t keep it
+            to yourself. Tell your friends, your group chat, and your chosen
+            fam. The more LGBTQ people who join Bessa, the better and more
+            vibrant our community becomes.
           </Text>
           <Flex gap={4} flexWrap={"wrap"}>
             <Link
