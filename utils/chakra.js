@@ -128,13 +128,6 @@ const theme = extendTheme({
           textDecoration: "none"
         }
       }
-    },
-    Card: {
-      baseStyle: {
-        container: {
-          boxShadow: "none"
-        }
-      }
     }
   }
 });
