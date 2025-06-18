@@ -9,7 +9,7 @@ import {
   Stack,
   Center
 } from "@chakra-ui/react";
-import { sectionHeight, customMetadata } from "@/utils/constants";
+import { sectionHeight, customMetadata, titles } from "@/utils/constants";
 import Hero from "@/components/Hero";
 import MediaRight from "@/components/MediaRight";
 import Link from "next/link";
@@ -18,12 +18,10 @@ import MediaLeft from "@/components/MediaLeft";
 import LeftImage from "@/images/stock/donate.webp";
 import Image from "next/image";
 
-const pageTitle = "Fuel the Next Generation of Gay Social Media";
-
 export const metadata = customMetadata({
-  metadataTitle: pageTitle,
+  metadataTitle: titles.donate,
   metadataDescription:
-    "Join the movement to support queer community apps like Bessa. Fund queer apps and help build LGBTQ social platforms made for connection, not clicks.",
+    "Support Bessa, the gay social media app built for LGBTQ connection and community. Your donation helps us grow queer spaces, add features, and keep this inclusive social platform thriving.",
   path: "/donate",
   imagePath: "/images/stock/pride-flag.jpg"
 });
@@ -32,8 +30,8 @@ export default function Donate() {
   return (
     <>
       <Hero
-        heading={pageTitle}
-        lead={"Uplift LGBTQ Voices on Gay Social Media"}
+        heading={titles.donate}
+        lead={"Donate"}
         bgImage={"/images/stock/pride-flag.jpg"}
       />
       <MediaRight
@@ -144,12 +142,7 @@ export default function Donate() {
         heading={
           "Support Gay Social Media Built by the Queer Community, Not Big Tech"
         }
-        image={
-          <Image
-            src={LeftImage}
-            alt={"Fuel the Next Generation of Gay Social Media"}
-          />
-        }
+        image={<Image src={LeftImage} alt={titles.donate} />}
       >
         <Text>
           When you become a member, you&apos;re not just donating; you&apos;re

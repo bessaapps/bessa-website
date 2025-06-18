@@ -8,43 +8,23 @@ import {
   Center,
   Stack
 } from "@chakra-ui/react";
-import { sectionHeight, title, url } from "@/utils/constants";
+import { customMetadata, sectionHeight, titles } from "@/utils/constants";
 import Hero from "@/components/Hero";
 import MediaRight from "@/components/MediaRight";
 
-export const metadata = {
-  title: `Guidelines | ${title}`,
-  description:
-    "Read the Bessa community guidelines to learn what’s allowed on our LGBTQ social networking app. Help build a respectful, queer-friendly social app by following a few simple rules.",
-  openGraph: {
-    title: `Guidelines | ${title}`,
-    description:
-      "Read the Bessa community guidelines to learn what’s allowed on our LGBTQ social networking app. Help build a respectful, queer-friendly social app by following a few simple rules.",
-    url: `${url}/guidelines`,
-    images: [
-      {
-        url: `${url}/images/stock/guidelines-1.jpg`
-      }
-    ]
-  },
-  twitter: {
-    title: `Guidelines | ${title}`,
-    description:
-      "Read the Bessa community guidelines to learn what’s allowed on our LGBTQ social networking app. Help build a respectful, queer-friendly social app by following a few simple rules.",
-    images: {
-      url: `${url}/images/stock/guidelines-1.jpg`,
-      alt: `Guidelines | ${title}`
-    }
-  }
-};
+export const metadata = customMetadata({
+  metadataTitle: titles.guidelines,
+  metadataDescription:
+    "Learn the community guidelines for Bessa, the gay social media app built for real LGBTQ connection. Find out what's encouraged, what'’'s not allowed, and how to help keep the vibe strong.",
+  path: "/guidelines",
+  imagePath: "/images/stock/guidelines-1.jpg"
+});
 
 export default function Guidelines() {
   return (
     <>
       <Hero
-        heading={
-          "Keep Bessa Fun, Respectful, and Welcoming for all LGBTQ People"
-        }
+        heading={titles.guidelines}
         lead={"Guidelines"}
         bgImage={"/images/stock/guidelines-1.jpg"}
       />

@@ -1,13 +1,11 @@
 import { Heading, Text, Link, Button, Flex } from "@chakra-ui/react";
-import { customMetadata, title } from "@/utils/constants";
+import { customMetadata, title, titles } from "@/utils/constants";
 import Hero from "@/components/Hero";
 import MediaRight from "@/components/MediaRight";
 import Section from "@/components/Section";
 
-const pageTitle = "Everything you need to know about Bessa";
-
 export const metadata = customMetadata({
-  metadataTitle: pageTitle,
+  metadataTitle: titles.faq,
   metadataDescription:
     "Find answers to your questions about Bessa, the gay social media app and LGBTQ social networking app built for real connection, queer community, and content sharing.",
   path: "/faq",
@@ -18,8 +16,8 @@ export default function FAQ() {
   return (
     <>
       <Hero
-        heading={pageTitle}
-        lead={"Got Questions? We've Got You!"}
+        heading={titles.faq}
+        lead={"FAQ"}
         bgImage={"/images/stock/pride-flag.jpg"}
       />
       <MediaRight

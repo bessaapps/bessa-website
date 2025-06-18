@@ -12,7 +12,8 @@ import {
   customMetadata,
   jsonLd,
   sectionHeight,
-  title
+  title,
+  titles
 } from "@/utils/constants";
 import Hero from "@/components/Hero";
 import MediaRight from "@/components/MediaRight";
@@ -20,10 +21,8 @@ import MediaLeft from "@/components/MediaLeft";
 import LeftImage from "@/images/stock/about.jpg";
 import Image from "next/image";
 
-const pageTitle = "Gay Social Media for Real LGBTQ Community Building";
-
 export const metadata = customMetadata({
-  metadataTitle: pageTitle,
+  metadataTitle: titles.about,
   metadataDescription:
     "Discover Bessa, a gay social media app designed for real LGBTQ connection. Built by a queer developer, Bessa is an inclusive social platform where you can post, message, and share with a diverse global community.",
   path: "/about",
@@ -40,8 +39,8 @@ export default function About() {
         }}
       />
       <Hero
-        heading={pageTitle}
-        lead={"Building Belonging with Gay Social Media"}
+        heading={titles.about}
+        lead={"About"}
         bgImage={"/images/stock/gay-community.jpg"}
       />
       <MediaRight
@@ -114,12 +113,7 @@ export default function About() {
       </Container>
       <MediaLeft
         heading={"Explore Places, Events, and Community on Gay Social Media"}
-        image={
-          <Image
-            src={LeftImage}
-            alt={"Gay Social Media for Real LGBTQ Community Building"}
-          />
-        }
+        image={<Image src={LeftImage} alt={titles.about} />}
       >
         <Text>
           Bessa is a gay social media app where LGBTQ members can post and share
