@@ -1,24 +1,14 @@
 import { Container, Flex, Heading, Tag, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import { title, url } from "@/utils/constants";
+import { customMetadata, title } from "@/utils/constants";
 import { LinearClient } from "@linear/sdk";
 
-export const metadata = {
-  title: `Roadmap | ${title}`,
-  description:
+export const metadata = customMetadata({
+  metadataTitle: `Roadmap | ${title}`,
+  metadataDescription:
     "Explore Bessa's LGBTQ social media roadmap! See what's next, share your ideas, and help shape the future of our inclusive queer community.",
-  openGraph: {
-    title: `Roadmap | ${title}`,
-    description:
-      "Explore Bessa's LGBTQ social media roadmap! See what's next, share your ideas, and help shape the future of our inclusive queer community.",
-    url: `${url}/roadmap`
-  },
-  twitter: {
-    title: `Roadmap | ${title}`,
-    description:
-      "Explore Bessa's LGBTQ social media roadmap! See what's next, share your ideas, and help shape the future of our inclusive queer community."
-  }
-};
+  path: "/roadmap"
+});
 
 export default async function Roadmap() {
   const linearClient = new LinearClient({

@@ -7,24 +7,14 @@ import {
   ListItem,
   Link
 } from "@chakra-ui/react";
-import { title, url } from "@/utils/constants";
+import { customMetadata, title } from "@/utils/constants";
 
-export const metadata = {
-  title: `Privacy Policy | ${title}`,
-  description:
+export const metadata = customMetadata({
+  metadataTitle: `Privacy Policy | ${title}`,
+  metadataDescription:
     "Learn how Bessa, a gay social media app, protects your personal information. Read our privacy policy to understand what data we collect, how it's used, and your rights as a member of our LGBTQ community app.",
-  openGraph: {
-    title: `Privacy Policy | ${title}`,
-    description:
-      "Learn how Bessa, a gay social media app, protects your personal information. Read our privacy policy to understand what data we collect, how it's used, and your rights as a member of our LGBTQ community app.",
-    url: `${url}/cookies`
-  },
-  twitter: {
-    title: `Privacy Policy | ${title}`,
-    description:
-      "Learn how Bessa, a gay social media app, protects your personal information. Read our privacy policy to understand what data we collect, how it's used, and your rights as a member of our LGBTQ community app."
-  }
-};
+  path: "/privacy"
+});
 
 export default function Privacy() {
   return (
