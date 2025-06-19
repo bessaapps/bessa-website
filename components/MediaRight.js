@@ -3,7 +3,7 @@ import { Flex, GridItem, Heading, SimpleGrid, Stack } from "@chakra-ui/react";
 export default function MediaRight({ lead, bottomContent, bgImage, children }) {
   return (
     <SimpleGrid columns={[1, 2]}>
-      <GridItem p={[8, 16, 32]}>
+      <GridItem p={[4, 8, 16]}>
         <Flex
           direction={"column"}
           h={"100%"}

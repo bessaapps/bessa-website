@@ -118,7 +118,7 @@ export default async function Home() {
           }
           bgImage={"/images/stock/main.jpg"}
           bottomContent={
-            <Flex gap={4} mb={8}>
+            <Flex gap={4}>
               {appStores.map((store) => (
                 <Link key={store.href} href={store.href}>
                   <Button colorScheme={"primary"} size={"lg"} w={140}>
@@ -145,7 +145,7 @@ export default async function Home() {
           </Text>
         </MediaRight>
         <Box>
-          <Center minH={sectionHeight} p={[16, 64]}>
+          <Center minH={sectionHeight} p={[8, 64]}>
             <Stack>
               <Text fontSize={"1.5rem"} lineHeight={1.5} textAlign={"center"}>
                 &ldquo;Created by a team of the community, for community &
