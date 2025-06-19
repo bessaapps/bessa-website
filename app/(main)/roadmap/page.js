@@ -39,24 +39,30 @@ export default async function Roadmap() {
         </Text>
         .
       </Text>
-      {issues?.nodes?.map(async ({ id, title, labelIds, _state }) => {
-        const state = await linearClient.workflowState(_state?.id);
-        const label = await linearClient.issueLabel(labelIds?.[0]);
+      {issues?.nodes
+        ?.filter(
+          ({ _state }) => _state?.id === "8d2aed5e-8d0a-473a-9276-7111c89d7c55"
+        )
+        .sort((a, b) => {
+          const stateA = a.labelIds?.[0];
+          const stateB = b.labelIds?.[0];
 
-        return (
-          <Flex key={id} align={"center"} gap={2}>
-            <Text fontWeight={700} mr={2}>
-              {title}
-            </Text>
-            <Tag bg={label?.color} color={"whiteAlpha.900"}>
-              {label?.name}
-            </Tag>
-            <Tag bg={state?.color} color={"whiteAlpha.900"}>
-              {state?.name}
-            </Tag>
-          </Flex>
-        );
-      })}
+          return stateB > stateA ? -1 : stateB < stateA ? 1 : 0;
+        })
+        ?.map(async ({ id, title, labelIds }) => {
+          const label = await linearClient.issueLabel(labelIds?.[0]);
+
+          return (
+            <Flex key={id} align={"center"} gap={2}>
+              <Text fontWeight={700} mr={2}>
+                {title}
+              </Text>
+              <Tag bg={label?.color} color={"whiteAlpha.900"}>
+                {label?.name}
+              </Tag>
+            </Flex>
+          );
+        })}
     </Container>
   );
 }

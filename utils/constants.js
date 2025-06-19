@@ -1,10 +1,44 @@
 import { SiAppstore, SiGoogleplay } from "react-icons/si";
+import { BookOpen, CircleHelp, Heart, LifeBuoy, Map } from "lucide-react";
 
 export const keyword = "Gay Social Media";
 export const title = `Bessa ${keyword}`;
 export const description =
   "Bessa is an LGBTQ social networking app and inclusive community of all genders, colors, shapes, sizes, and abilities. Bessa is a hub for queer connections, places, and events.";
 export const url = "https://getbessa.com";
+
+export const links = [
+  {
+    href: "/about",
+    anchor: "About",
+    icon: <BookOpen size={"1rem"} color={"#f2f2f2"} />
+  },
+  {
+    href: "/donate",
+    anchor: "Donate",
+    icon: <Heart size={"1rem"} color={"#f2f2f2"} />
+  },
+  {
+    href: "/support",
+    anchor: "Help & Support",
+    icon: <LifeBuoy size={"1rem"} color={"#f2f2f2"} />
+  },
+  {
+    href: "/faq",
+    anchor: "FAQ's",
+    icon: <CircleHelp size={"1rem"} color={"#f2f2f2"} />
+  },
+  {
+    href: "/roadmap",
+    anchor: "Roadmap",
+    icon: <Map size={"1rem"} color={"#f2f2f2"} />
+  }
+];
+
+export const legalLinks = [
+  { href: "guidelines", anchor: "Guidelines" },
+  { href: "privacy", anchor: "Privacy Policy" }
+];
 
 export const jsonLd = {
   "@context": "https://schema.org",

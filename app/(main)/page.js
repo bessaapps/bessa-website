@@ -10,7 +10,8 @@ import {
   SimpleGrid,
   Text,
   Divider,
-  Center
+  Center,
+  Stack
 } from "@chakra-ui/react";
 import Mockup1 from "../../images/mockups/1.png";
 import Mockup2 from "../../images/mockups/2.png";
@@ -87,14 +88,14 @@ export default async function Home() {
             </GridItem>
           </SimpleGrid>
         </Container>
-        <Box bg={"gray.900"} minH={sectionHeight}>
-          <Center minH={"calc(100vh - 129px)"} p={[8, 32]}>
+        <Box bg={"gray.900"}>
+          <Center minH={sectionHeight} p={[8, 32]}>
             <Heading
               as={"h3"}
               lineHeight={1.5}
               color={"primary.50"}
               textAlign={"center"}
-              mb={4}
+              fontSize={"1.5rem !important"}
             >
               <Highlight
                 query={["connections", "community"]}
@@ -143,6 +144,18 @@ export default async function Home() {
             community in mind.
           </Text>
         </MediaRight>
+        <Box>
+          <Center minH={sectionHeight} p={[16, 64]}>
+            <Stack>
+              <Text fontSize={"1.5rem"} lineHeight={1.5} textAlign={"center"}>
+                &ldquo;Created by a team of the community, for community &
+                allies, an app thoughtfully created to bring people together for
+                fun times and new connections.&rdquo;
+              </Text>
+              <Text textAlign={"right"}>May 20, 2025 - Blackunik0rn</Text>
+            </Stack>
+          </Center>
+        </Box>
         <MediaLeft
           heading={"Discover your Gayborhood"}
           image={<Image src={Mockup3} alt={title} />}

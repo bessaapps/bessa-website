@@ -13,33 +13,11 @@ import {
 import { FiMenu } from "react-icons/fi";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { legalLinks, links } from "@/utils/constants";
 
 export default function DrawerNavigation() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const router = useRouter();
-
-  const links = [
-    {
-      href: "/about",
-      anchor: "About"
-    },
-    {
-      href: "/donate",
-      anchor: "Donate"
-    },
-    {
-      href: "/support",
-      anchor: "Help & Support"
-    },
-    {
-      href: "/roadmap",
-      anchor: "Roadmap"
-    },
-    {
-      href: "/faq",
-      anchor: "FAQ's"
-    }
-  ];
 
   return (
     <>
@@ -62,6 +40,18 @@ export default function DrawerNavigation() {
           >
             <Stack>
               {links.map(({ href, anchor }) => (
+                <Link
+                  key={href}
+                  color={"gray.50"}
+                  onClick={() => {
+                    setIsDrawerOpen(false);
+                    router.push(href);
+                  }}
+                >
+                  {anchor}
+                </Link>
+              ))}
+              {legalLinks.map(({ href, anchor }) => (
                 <Link
                   key={href}
                   color={"gray.50"}

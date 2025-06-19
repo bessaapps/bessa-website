@@ -9,47 +9,10 @@ import {
   Button
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import {
-  BookOpen,
-  CircleHelp,
-  Heart,
-  Instagram,
-  LifeBuoy,
-  Linkedin,
-  Map,
-  Twitter,
-  Youtube
-} from "lucide-react";
+import { Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { legalLinks, links } from "@/utils/constants";
 
 export default function Footer({ buttons, children }) {
-  const links = [
-    {
-      href: "/about",
-      anchor: "About",
-      icon: <BookOpen size={"1rem"} color={"#f2f2f2"} />
-    },
-    {
-      href: "/donate",
-      anchor: "Donate",
-      icon: <Heart size={"1rem"} color={"#f2f2f2"} />
-    },
-    {
-      href: "/support",
-      anchor: "Help & Support",
-      icon: <LifeBuoy size={"1rem"} color={"#f2f2f2"} />
-    },
-    {
-      href: "/faq",
-      anchor: "FAQ's",
-      icon: <CircleHelp size={"1rem"} color={"#f2f2f2"} />
-    },
-    {
-      href: "/roadmap",
-      anchor: "Roadmap",
-      icon: <Map size={"1rem"} color={"#f2f2f2"} />
-    }
-  ];
-
   const socialLinks = [
     {
       href: "https://www.youtube.com/@getbessa",
@@ -67,11 +30,6 @@ export default function Footer({ buttons, children }) {
       href: "https://www.linkedin.com/company/getbessa/about",
       icon: <Linkedin size={32} color={"#f2f2f2"} />
     }
-  ];
-
-  const legalLinks = [
-    { href: "guidelines", anchor: "Guidelines" },
-    { href: "privacy", anchor: "Privacy Policy" }
   ];
 
   return (
