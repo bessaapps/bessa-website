@@ -1,12 +1,13 @@
-import { Container, Flex, Heading, Tag, Text } from "@chakra-ui/react";
+import { Flex, Heading, Stack, Tag, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import { customMetadata, title } from "@/utils/constants";
+import { customMetadata, titles } from "@/utils/constants";
 import { LinearClient } from "@linear/sdk";
+import Section from "@/components/Section";
 
 export const metadata = customMetadata({
-  metadataTitle: `Roadmap | ${title}`,
+  metadataTitle: titles.roadmap,
   metadataDescription:
-    "Explore Bessa's LGBTQ social media roadmap! See what's next, share your ideas, and help shape the future of our inclusive queer community.",
+    "Explore upcoming features on Bessa, the best LGBTQ social media app. See what's next for this inclusive social platform and help shape the future of queer connection.",
   path: "/roadmap"
 });
 
@@ -18,51 +19,59 @@ export default async function Roadmap() {
   const issues = await linearClient.issues();
 
   return (
-    <Container maxW={"container.xl"} my={16}>
+    <Section>
       <Heading as={"h1"} mb={4}>
-        Roadmap
+        {titles.roadmap}
       </Heading>
       <Text mb={4}>
-        Discover the future of Bessa with our dynamic roadmap! Bessa is
-        committed to creating a vibrant, inclusive social media experience for
-        LGBTQ individuals. From exciting new features to enhanced privacy tools,
-        this roadmap outlines what&apos;s next on our journey to make Bessa the
-        most welcoming queer community online. Stay connected and be part of
-        shaping our inclusive future!
+        Bessa isn&apos;t just another gay social media app. It&apos;s a growing,
+        community-powered movement. The roadmap outlines what&apos;s next for
+        this LGBTQ social networking app, from new ways to post and share LGBTQ
+        content to features that help you find LGBTQ friends online and connect
+        with local LGBTQ people. Everything being built is shaped by your
+        feedback and grounded in the belief that queer-friendly social apps
+        should prioritize connection.
       </Text>
-      <Heading mb={4}>Have an idea for Bessa?</Heading>
-      <Text mb={8}>
-        Bessa is for you! If you&apos;ve got a feature in mind, an improvement
-        suggestion, or feedback to make our community even better, email{" "}
+      <Text mb={4}>
+        As an inclusive social platform, Bessa is constantly evolving. Whether
+        it&apos;s improving LGBTQ messaging and media sharing, launching better
+        tools for trans and nonbinary users, or adding location-based event
+        discovery, each update brings us closer to a richer, more dynamic space
+        for queer connection. This page is your front-row seat to everything
+        we&apos;re working on. And you&apos;re always invited to help shape what
+        comes next. Just email{" "}
         <Text as={"span"} fontWeight={700}>
           <Link href={"mailto:topher@getbessa.com"}>topher@getbessa.com</Link>
         </Text>
         .
       </Text>
-      {issues?.nodes
-        ?.filter(
-          ({ _state }) => _state?.id === "8d2aed5e-8d0a-473a-9276-7111c89d7c55"
-        )
-        .sort((a, b) => {
-          const stateA = a.labelIds?.[0];
-          const stateB = b.labelIds?.[0];
+      <Stack>
+        {issues?.nodes
+          ?.filter(
+            ({ _state }) =>
+              _state?.id === "8d2aed5e-8d0a-473a-9276-7111c89d7c55"
+          )
+          .sort((a, b) => {
+            const stateA = a.labelIds?.[0];
+            const stateB = b.labelIds?.[0];
 
-          return stateB > stateA ? -1 : stateB < stateA ? 1 : 0;
-        })
-        ?.map(async ({ id, title, labelIds }) => {
-          const label = await linearClient.issueLabel(labelIds?.[0]);
+            return stateB > stateA ? -1 : stateB < stateA ? 1 : 0;
+          })
+          ?.map(async ({ id, title, labelIds }) => {
+            const label = await linearClient.issueLabel(labelIds?.[0]);
 
-          return (
-            <Flex key={id} align={"center"} gap={2}>
-              <Text fontWeight={700} mr={2}>
-                {title}
-              </Text>
-              <Tag bg={label?.color} color={"whiteAlpha.900"}>
-                {label?.name}
-              </Tag>
-            </Flex>
-          );
-        })}
-    </Container>
+            return (
+              <Flex key={id} align={"center"} gap={2}>
+                <Text fontWeight={700} mr={2}>
+                  {title}
+                </Text>
+                <Tag bg={label?.color} color={"whiteAlpha.900"}>
+                  {label?.name}
+                </Tag>
+              </Flex>
+            );
+          })}
+      </Stack>
+    </Section>
   );
 }
