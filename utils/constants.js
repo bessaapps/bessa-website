@@ -36,8 +36,8 @@ export const links = [
 ];
 
 export const legalLinks = [
-  { href: "guidelines", anchor: "Guidelines" },
-  { href: "privacy", anchor: "Privacy Policy" }
+  { href: "/guidelines", anchor: "Guidelines" },
+  { href: "/privacy", anchor: "Privacy Policy" }
 ];
 
 export const jsonLd = {
@@ -124,9 +124,11 @@ export const appStores = [
 export const titles = {
   about: "Gay Social Media for Real LGBTQ Community Building",
   donate: "Fuel the Next Generation of Gay Social Media",
+  support: "Help & Support",
   faq: "Answers About the Best Gay Social Media App Around",
   guidelines: "What's Cool, and What's Not, on Bessa, the Gay Social Media App",
-  roadmap: "What's Next for the Best LGBTQ Social Media App"
+  roadmap: "What's Next for the Best LGBTQ Social Media App",
+  privacy: "Privacy Policy"
 };
 
 export const sectionHeight = "calc(100vh - 80px)";

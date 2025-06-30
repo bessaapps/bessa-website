@@ -1,5 +1,6 @@
 import { Box, Button, Container, Flex, Text } from "@chakra-ui/react";
 import Link from "next/link";
+import { title, titles } from "@/utils/constants";
 
 export default function TopBanner() {
   return (
@@ -13,7 +14,7 @@ export default function TopBanner() {
           <Text fontWeight={"bold"} color={"gray.50"}>
             Support LGBTQ communities.
           </Text>
-          <Link href={"/donate"}>
+          <Link href={"/donate"} title={`${titles.donate} | ${title}`}>
             <Button colorScheme={"primary"} size={"sm"}>
               Donate
             </Button>

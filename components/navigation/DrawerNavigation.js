@@ -13,7 +13,7 @@ import {
 import { FiMenu } from "react-icons/fi";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { legalLinks, links } from "@/utils/constants";
+import { legalLinks, links, title, titles } from "@/utils/constants";
 
 export default function DrawerNavigation() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -47,6 +47,7 @@ export default function DrawerNavigation() {
                     setIsDrawerOpen(false);
                     router.push(href);
                   }}
+                  title={`${titles[href?.slice(1)]} | ${title}`}
                 >
                   {anchor}
                 </Link>
@@ -59,6 +60,7 @@ export default function DrawerNavigation() {
                     setIsDrawerOpen(false);
                     router.push(href);
                   }}
+                  title={`${titles[href?.slice(1)]} | ${title}`}
                 >
                   {anchor}
                 </Link>

@@ -53,10 +53,9 @@ export default async function Home() {
                 Your New Favorite Queer Community
               </Heading>
               <Text mb={8}>
-                Bessa is a <Text as={"strong"}>gay social media app</Text> and
-                inclusive community of all genders, colors, shapes, sizes, and
-                abilities. Bessa is a hub for queer connections, places, and
-                events.
+                Bessa is a gay social media app and inclusive community of all
+                genders, colors, shapes, sizes, and abilities. Bessa is a hub
+                for queer connections, places, and events.
               </Text>
               <Flex align={"center"} gap={8} h={"100px"}>
                 <Box>
