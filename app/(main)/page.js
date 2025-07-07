@@ -11,7 +11,8 @@ import {
   Text,
   Divider,
   Center,
-  Stack
+  Stack,
+  HStack
 } from "@chakra-ui/react";
 import Mockup1 from "../../images/mockups/1.png";
 import Mockup2 from "../../images/mockups/2.png";
@@ -29,6 +30,7 @@ import {
 import MediaRight from "@/components/MediaRight";
 import MediaLeft from "@/components/MediaLeft";
 import Section from "@/components/Section";
+import { Star } from "lucide-react";
 
 export const metadata = customMetadata({
   metadataTitle: title,
@@ -62,7 +64,9 @@ export default async function Home() {
                   <Heading as={"h3"} textAlign={"center"}>
                     5
                   </Heading>
-                  <Text textAlign={"center"}>Star Rating</Text>
+                  <Text textAlign={"center"} lineHeight={1}>
+                    Star Rating
+                  </Text>
                 </Box>
                 <Center height={"50px"}>
                   <Divider
@@ -75,7 +79,9 @@ export default async function Home() {
                   <Heading as={"h3"} textAlign={"center"}>
                     1K+
                   </Heading>
-                  <Text textAlign={"center"}>Downloads</Text>
+                  <Text textAlign={"center"} lineHeight={1}>
+                    Downloads
+                  </Text>
                 </Box>
               </Flex>
             </GridItem>
@@ -152,6 +158,13 @@ export default async function Home() {
                 fun times and new connections.&rdquo;
               </Text>
               <Text textAlign={"right"}>May 20, 2025 - Blackunik0rn</Text>
+              <HStack alignSelf={"center"}>
+                <Star />
+                <Star />
+                <Star />
+                <Star />
+                <Star />
+              </HStack>
             </Stack>
           </Center>
         </Box>
