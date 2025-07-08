@@ -8,12 +8,17 @@ import {
   Center,
   Stack
 } from "@chakra-ui/react";
-import { customMetadata, sectionHeight, titles } from "@/utils/constants";
+import {
+  customMetadata,
+  sectionHeight,
+  title,
+  titles
+} from "@/utils/constants";
 import Hero from "@/components/Hero";
 import MediaRight from "@/components/MediaRight";
 
 export const metadata = customMetadata({
-  metadataTitle: titles.guidelines,
+  metadataTitle: `${titles.guidelines} | ${title}`,
   metadataDescription:
     "Learn the community guidelines for Bessa, the gay social media app built for real LGBTQ connection. Find out what's encouraged, what'’'s not allowed, and how to help keep the vibe strong.",
   path: "/guidelines",

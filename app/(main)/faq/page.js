@@ -5,7 +5,7 @@ import MediaRight from "@/components/MediaRight";
 import Section from "@/components/Section";
 
 export const metadata = customMetadata({
-  metadataTitle: titles.faq,
+  metadataTitle: `${titles.faq} | ${title}`,
   metadataDescription:
     "Find answers to your questions about Bessa, the gay social media app and LGBTQ social networking app built for real connection, queer community, and content sharing.",
   path: "/faq",

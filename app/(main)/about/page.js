@@ -22,7 +22,7 @@ import LeftImage from "@/images/stock/about.jpg";
 import Image from "next/image";
 
 export const metadata = customMetadata({
-  metadataTitle: titles.about,
+  metadataTitle: `${titles.about} | ${title}`,
   metadataDescription:
     "Discover Bessa, a gay social media app designed for real LGBTQ connection. Built by a queer developer, Bessa is an inclusive social platform where you can post, message, and share with a diverse global community.",
   path: "/about",
