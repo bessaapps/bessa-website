@@ -1,5 +1,12 @@
 import { SiAppstore, SiGoogleplay } from "react-icons/si";
-import { BookOpen, CircleHelp, Heart, LifeBuoy, Map } from "lucide-react";
+import {
+  BookOpen,
+  CircleHelp,
+  CirclePlus,
+  Heart,
+  LifeBuoy,
+  Map
+} from "lucide-react";
 
 export const keyword = "Gay Social Media";
 export const title = `Bessa ${keyword}`;
@@ -27,6 +34,11 @@ export const links = [
     href: "/faq",
     anchor: "FAQ's",
     icon: <CircleHelp size={"1rem"} color={"#f2f2f2"} />
+  },
+  {
+    href: "/whats-new",
+    anchor: "What's New",
+    icon: <CirclePlus size={"1rem"} color={"#f2f2f2"} />
   },
   {
     href: "/roadmap",
@@ -126,7 +138,8 @@ export const titles = {
   donate: "Fuel the Next Generation of Gay Social Media",
   faq: "Answers About the Best Gay Social Media App Around",
   guidelines: "What's Cool, and What's Not, on Bessa, the Gay Social Media App",
-  roadmap: "What's Next for the Best LGBTQ Social Media App"
+  roadmap: "What's Next for the Best LGBTQ Social Media App",
+  whatsNew: "More Ways to Connect on LGBTQ Social Media"
 };
 
 export const sectionHeight = "calc(100vh - 80px)";
