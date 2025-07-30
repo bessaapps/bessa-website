@@ -32,7 +32,7 @@ export const links = [
   },
   {
     href: "/faq",
-    anchor: "FAQ's",
+    anchor: "FAQs",
     icon: <CircleHelp size={"1rem"} color={"#f2f2f2"} />
   },
   {

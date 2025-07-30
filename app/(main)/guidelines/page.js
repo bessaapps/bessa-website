@@ -30,7 +30,7 @@ export default function Guidelines() {
     <>
       <Hero
         heading={titles.guidelines}
-        lead={"Guidelines"}
+        lead={"Guidelines (EULA)"}
         bgImage={"/images/stock/guidelines-1.jpg"}
       />
       <MediaRight

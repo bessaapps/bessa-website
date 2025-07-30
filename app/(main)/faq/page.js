@@ -17,7 +17,7 @@ export default function FAQ() {
     <>
       <Hero
         heading={titles.faq}
-        lead={"FAQ"}
+        lead={"FAQs"}
         bgImage={"/images/stock/pride-flag.jpg"}
       />
       <MediaRight
