@@ -1,11 +1,16 @@
 import { Flex, Heading, Stack, Tag, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import { customMetadata, formatTitle, title, titles } from "@/utils/constants";
+import {
+  customMetadata,
+  formatTitle,
+  title,
+  pageTitles
+} from "@/utils/constants";
 import { LinearClient } from "@linear/sdk";
 import Section from "@/components/Section";
 
 export const metadata = customMetadata({
-  metadataTitle: formatTitle(titles.roadmap),
+  metadataTitle: formatTitle(pageTitles.roadmap),
   metadataDescription:
     "Explore upcoming features on Bessa, the best LGBTQ social media app. See what's next for this inclusive social platform and help shape the future of queer connection.",
   path: "/roadmap"
@@ -21,7 +26,7 @@ export default async function Roadmap() {
   return (
     <Section>
       <Heading as={"h1"} mb={4}>
-        {titles.roadmap}
+        {pageTitles.roadmap}
       </Heading>
       <Text mb={4}>
         Bessa isn&apos;t just another gay social media app. It&apos;s a growing,

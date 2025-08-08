@@ -15,7 +15,7 @@ import {
   legalLinks,
   links,
   title,
-  titles
+  pageTitles
 } from "@/utils/constants";
 
 export default function Footer({ buttons, children }) {
@@ -75,7 +75,7 @@ export default function Footer({ buttons, children }) {
                 <Text color={"gray.50"}>
                   <Link
                     href={link.href}
-                    title={formatTitle(titles[link.href?.slice(1)])}
+                    title={formatTitle(pageTitles[link.href?.slice(1)])}
                   >
                     {link.anchor}
                   </Link>
@@ -88,7 +88,7 @@ export default function Footer({ buttons, children }) {
               <Text key={link.href} color={"gray.50"}>
                 <Link
                   href={link.href}
-                  title={formatTitle(titles[link.href?.slice(1)])}
+                  title={formatTitle(pageTitles[link.href?.slice(1)])}
                 >
                   {link.anchor}
                 </Link>

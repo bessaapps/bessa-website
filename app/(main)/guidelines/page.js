@@ -12,13 +12,13 @@ import {
   customMetadata,
   formatTitle,
   sectionHeight,
-  titles
+  pageTitles
 } from "@/utils/constants";
 import Hero from "@/components/Hero";
 import MediaRight from "@/components/MediaRight";
 
 export const metadata = customMetadata({
-  metadataTitle: formatTitle(titles.guidelines),
+  metadataTitle: formatTitle(pageTitles.guidelines),
   metadataDescription:
     "Learn the community guidelines for Bessa, the gay social media app built for real LGBTQ connection. Find out what's encouraged, what'’'s not allowed, and how to help keep the vibe strong.",
   path: "/guidelines",
@@ -29,7 +29,7 @@ export default function Guidelines() {
   return (
     <>
       <Hero
-        heading={titles.guidelines}
+        heading={pageTitles.guidelines}
         lead={"Guidelines (EULA)"}
         bgImage={"/images/stock/guidelines-1.jpg"}
       />

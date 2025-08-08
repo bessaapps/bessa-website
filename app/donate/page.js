@@ -12,7 +12,7 @@ import {
 import {
   sectionHeight,
   customMetadata,
-  titles,
+  pageTitles,
   formatTitle
 } from "@/utils/constants";
 import Hero from "@/components/Hero";
@@ -24,7 +24,7 @@ import LeftImage from "@/images/stock/donate.webp";
 import Image from "next/image";
 
 export const metadata = customMetadata({
-  metadataTitle: formatTitle(titles.donate),
+  metadataTitle: formatTitle(pageTitles.donate),
   metadataDescription:
     "Support Bessa, the gay social media app built for LGBTQ connection and community. Your donation helps us grow queer spaces, add features, and keep this inclusive social platform thriving.",
   path: "/donate",
@@ -35,7 +35,7 @@ export default function Donate() {
   return (
     <>
       <Hero
-        heading={titles.donate}
+        heading={pageTitles.donate}
         lead={"Donate"}
         bgImage={"/images/stock/pride-flag.jpg"}
       />
@@ -147,7 +147,7 @@ export default function Donate() {
         heading={
           "Support Gay Social Media Built by the Queer Community, Not Big Tech"
         }
-        image={<Image src={LeftImage} alt={titles.donate} />}
+        image={<Image src={LeftImage} alt={pageTitles.donate} />}
       >
         <Text>
           When you become a member, you&apos;re not just donating; you&apos;re

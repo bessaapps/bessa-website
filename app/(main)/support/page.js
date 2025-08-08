@@ -9,10 +9,10 @@ import {
   OrderedList,
   Text
 } from "@chakra-ui/react";
-import { customMetadata, formatTitle, titles } from "@/utils/constants";
+import { customMetadata, formatTitle, pageTitles } from "@/utils/constants";
 
 export const metadata = customMetadata({
-  metadataTitle: formatTitle(titles.support),
+  metadataTitle: formatTitle(pageTitles.support),
   metadataDescription:
     "Get help with Bessa, the LGBTQ Social Networking App. Find answers to common questions and explore how to connect, post, and share in a queer-friendly space.",
   path: "/support"

@@ -18,7 +18,7 @@ import {
   legalLinks,
   links,
   title,
-  titles
+  pageTitles
 } from "@/utils/constants";
 
 export default function DrawerNavigation() {
@@ -53,7 +53,7 @@ export default function DrawerNavigation() {
                     setIsDrawerOpen(false);
                     router.push(href);
                   }}
-                  title={formatTitle(titles[href?.slice(1)])}
+                  title={formatTitle(pageTitles[href?.slice(1)])}
                 >
                   {anchor}
                 </Link>
@@ -66,7 +66,7 @@ export default function DrawerNavigation() {
                     setIsDrawerOpen(false);
                     router.push(href);
                   }}
-                  title={formatTitle(titles[href?.slice(1)])}
+                  title={formatTitle(pageTitles[href?.slice(1)])}
                 >
                   {anchor}
                 </Link>

@@ -13,7 +13,7 @@ export const keyword = "Gay Social Media";
 export const description =
   "Bessa is an LGBTQ social networking app and inclusive community of all genders, colors, shapes, sizes, and abilities. Bessa is a hub for queer connections, places, and events.";
 export const url = "https://getbessa.com";
-export const titles = {
+export const pageTitles = {
   about: "Gay Social Media for Real LGBTQ Community Building",
   donate: "Fuel the Next Generation of Gay Social Media",
   support: "Help & Support",

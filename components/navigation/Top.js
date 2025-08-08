@@ -10,7 +10,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/images/logo.png";
-import { appStores, formatTitle, title, titles } from "@/utils/constants";
+import { appStores, formatTitle, title, pageTitles } from "@/utils/constants";
 import DrawerNavigation from "@/components/navigation/DrawerNavigation";
 
 export default function Top() {
@@ -47,7 +47,7 @@ export default function Top() {
                     <Link
                       key={href}
                       href={href}
-                      title={formatTitle(titles[href?.slice(1)])}
+                      title={formatTitle(pageTitles[href?.slice(1)])}
                     >
                       <Button variant={"ghost"} fontWeight={500}>
                         {anchor}
