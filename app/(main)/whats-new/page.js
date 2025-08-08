@@ -1,10 +1,10 @@
 import { Heading, Stack, Text } from "@chakra-ui/react";
-import { customMetadata, title, titles } from "@/utils/constants";
+import { customMetadata, formatTitle, title, titles } from "@/utils/constants";
 import { LinearClient } from "@linear/sdk";
 import Section from "@/components/Section";
 
 export const metadata = customMetadata({
-  metadataTitle: `${titles.whatsNew} | ${title}`,
+  metadataTitle: formatTitle(titles.whatsNew),
   metadataDescription:
     "Discover the latest updates on Bessa, the gay social media app built for LGBTQ connection. Explore new features for messaging, profiles, and finding your queer community.",
   path: "/whats-new"

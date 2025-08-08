@@ -10,7 +10,13 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
-import { legalLinks, links, title, titles } from "@/utils/constants";
+import {
+  formatTitle,
+  legalLinks,
+  links,
+  title,
+  titles
+} from "@/utils/constants";
 
 export default function Footer({ buttons, children }) {
   const socialLinks = [
@@ -69,7 +75,7 @@ export default function Footer({ buttons, children }) {
                 <Text color={"gray.50"}>
                   <Link
                     href={link.href}
-                    title={`${titles[link.href?.slice(1)]} | ${title}`}
+                    title={formatTitle(titles[link.href?.slice(1)])}
                   >
                     {link.anchor}
                   </Link>
@@ -82,7 +88,7 @@ export default function Footer({ buttons, children }) {
               <Text key={link.href} color={"gray.50"}>
                 <Link
                   href={link.href}
-                  title={`${titles[link.href?.slice(1)]} | ${title}`}
+                  title={formatTitle(titles[link.href?.slice(1)])}
                 >
                   {link.anchor}
                 </Link>

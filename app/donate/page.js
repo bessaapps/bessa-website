@@ -13,7 +13,7 @@ import {
   sectionHeight,
   customMetadata,
   titles,
-  title
+  formatTitle
 } from "@/utils/constants";
 import Hero from "@/components/Hero";
 import MediaRight from "@/components/MediaRight";
@@ -24,7 +24,7 @@ import LeftImage from "@/images/stock/donate.webp";
 import Image from "next/image";
 
 export const metadata = customMetadata({
-  metadataTitle: `${titles.donate} | ${title}`,
+  metadataTitle: formatTitle(titles.donate),
   metadataDescription:
     "Support Bessa, the gay social media app built for LGBTQ connection and community. Your donation helps us grow queer spaces, add features, and keep this inclusive social platform thriving.",
   path: "/donate",

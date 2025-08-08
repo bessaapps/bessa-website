@@ -23,9 +23,9 @@ import {
   appStores,
   customMetadata,
   description,
+  formatTitle,
   jsonLd,
-  sectionHeight,
-  title
+  sectionHeight
 } from "@/utils/constants";
 import MediaRight from "@/components/MediaRight";
 import MediaLeft from "@/components/MediaLeft";
@@ -33,7 +33,7 @@ import Section from "@/components/Section";
 import { Star } from "lucide-react";
 
 export const metadata = customMetadata({
-  metadataTitle: title,
+  metadataTitle: formatTitle(),
   metadataDescription: description,
   imagePath: "/images/social.png"
 });
@@ -170,7 +170,7 @@ export default async function Home() {
         </Box>
         <MediaLeft
           heading={"Discover your Gayborhood"}
-          image={<Image src={Mockup3} alt={title} />}
+          image={<Image src={Mockup3} alt={formatTitle(false, true, true)} />}
         >
           <Text>
             Bessa is the gay social media app that makes it easy to find
@@ -212,7 +212,7 @@ export default async function Home() {
         </Section>
         <MediaLeft
           heading={"Party with your People"}
-          image={<Image src={Mockup4} alt={title} />}
+          image={<Image src={Mockup4} alt={formatTitle(false, true, true)} />}
         >
           <Text>
             Bessa is the gay social media app that helps you stay connected to

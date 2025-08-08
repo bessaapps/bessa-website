@@ -8,11 +8,25 @@ import {
   Map
 } from "lucide-react";
 
+const title = "Bessa";
 export const keyword = "Gay Social Media";
-export const title = `Bessa ${keyword}`;
 export const description =
   "Bessa is an LGBTQ social networking app and inclusive community of all genders, colors, shapes, sizes, and abilities. Bessa is a hub for queer connections, places, and events.";
 export const url = "https://getbessa.com";
+export const titles = {
+  about: "Gay Social Media for Real LGBTQ Community Building",
+  donate: "Fuel the Next Generation of Gay Social Media",
+  support: "Help & Support",
+  faq: "Answers About the Best Gay Social Media App Around",
+  whatsNew: "More Ways to Connect on LGBTQ Social Media",
+  roadmap: "What's Next for the Best LGBTQ Social Media App",
+  guidelines: "What's Cool, and What's Not, on Bessa, the Gay Social Media App",
+  privacy: "Privacy Policy"
+};
+
+export const formatTitle = (pageTitle) => {
+  return [...(pageTitle ? [pageTitle] : []), title, keyword].join(" | ");
+};
 
 export const links = [
   {
@@ -132,14 +146,5 @@ export const appStores = [
     icon: <SiGoogleplay />
   }
 ];
-
-export const titles = {
-  about: "Gay Social Media for Real LGBTQ Community Building",
-  donate: "Fuel the Next Generation of Gay Social Media",
-  faq: "Answers About the Best Gay Social Media App Around",
-  guidelines: "What's Cool, and What's Not, on Bessa, the Gay Social Media App",
-  roadmap: "What's Next for the Best LGBTQ Social Media App",
-  whatsNew: "More Ways to Connect on LGBTQ Social Media"
-};
 
 export const sectionHeight = "calc(100vh - 80px)";

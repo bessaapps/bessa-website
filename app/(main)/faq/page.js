@@ -1,11 +1,11 @@
 import { Heading, Text, Link, Button, Flex } from "@chakra-ui/react";
-import { customMetadata, title, titles } from "@/utils/constants";
+import { customMetadata, formatTitle, titles } from "@/utils/constants";
 import Hero from "@/components/Hero";
 import MediaRight from "@/components/MediaRight";
 import Section from "@/components/Section";
 
 export const metadata = customMetadata({
-  metadataTitle: `${titles.faq} | ${title}`,
+  metadataTitle: formatTitle(titles.faq),
   metadataDescription:
     "Find answers to your questions about Bessa, the gay social media app and LGBTQ social networking app built for real connection, queer community, and content sharing.",
   path: "/faq",
@@ -26,7 +26,7 @@ export default function FAQ() {
         }
         bottomContent={
           <Flex w={"100%"} gap={2} flexWrap={"wrap"}>
-            <Link href={"/"} title={title}>
+            <Link href={"/"} title={formatTitle()}>
               <Button colorScheme={"primary"} size={"lg"}>
                 Learn More
               </Button>
@@ -47,12 +47,13 @@ export default function FAQ() {
           Bessa is a gay social media app and LGBTQ social networking app built
           to bring queer people together in meaningful, authentic ways. As a
           queer-friendly social app, Bessa provides a vibrant space to post and
-          share LGBTQ content, connect with local LGBTQ+ individuals, and
-          discover community events and LGBTQ-vetted hangouts. It&apos;s not
-          just another app; it&apos;s an inclusive social platform where you can
-          find LGBTQ friends online, message your chosen fam, and build lasting
-          connections beyond dating or hookup culture. Bessa centers real
-          stories, real people, and real community.
+          share LGBTQ content,{" "}
+          <Text as={"b"}>connect with LGBTQ individuals</Text>, and discover
+          community events and LGBTQ-vetted hangouts. It&apos;s not just another
+          app; it&apos;s an inclusive social platform where you can find LGBTQ
+          friends online, message your chosen fam, and build lasting connections
+          beyond dating or hookup culture. Bessa centers real stories, real
+          people, and real community.
         </Text>
       </MediaRight>
       <Section>
@@ -128,7 +129,7 @@ export default function FAQ() {
           support helps it grow. You can{" "}
           <Link
             href={"/donate"}
-            title={"Fuel the Next Generation of Gay Social Media"}
+            title={formatTitle(titles.donate)}
             fontWeight={700}
           >
             donate or become a sponsor

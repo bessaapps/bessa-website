@@ -7,10 +7,10 @@ import {
   ListItem,
   Link
 } from "@chakra-ui/react";
-import { customMetadata, title } from "@/utils/constants";
+import { customMetadata, formatTitle, titles } from "@/utils/constants";
 
 export const metadata = customMetadata({
-  metadataTitle: `Privacy Policy | ${title}`,
+  metadataTitle: formatTitle(titles.privacy),
   metadataDescription:
     "Learn how Bessa, a gay social media app, protects your personal information. Read our privacy policy to understand what data we collect, how it's used, and your rights as a member of our LGBTQ community app.",
   path: "/privacy"

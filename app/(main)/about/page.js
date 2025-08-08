@@ -10,9 +10,9 @@ import {
 } from "@chakra-ui/react";
 import {
   customMetadata,
+  formatTitle,
   jsonLd,
   sectionHeight,
-  title,
   titles
 } from "@/utils/constants";
 import Hero from "@/components/Hero";
@@ -22,7 +22,7 @@ import LeftImage from "@/images/stock/about.jpg";
 import Image from "next/image";
 
 export const metadata = customMetadata({
-  metadataTitle: `${titles.about} | ${title}`,
+  metadataTitle: formatTitle(titles.about),
   metadataDescription:
     "Discover Bessa, a gay social media app designed for real LGBTQ connection. Built by a queer developer, Bessa is an inclusive social platform where you can post, message, and share with a diverse global community.",
   path: "/about",
@@ -49,12 +49,12 @@ export default function About() {
         }
         bottomContent={
           <Flex w={"100%"} gap={2} flexWrap={"wrap"}>
-            <Link href={"/"} title={title}>
+            <Link href={"/"} title={formatTitle()}>
               <Button colorScheme={"primary"} size={"lg"}>
                 Learn More
               </Button>
             </Link>
-            <Link href={"/donate"} title={`Sponsor & Donate | ${title}`}>
+            <Link href={"/donate"} title={formatTitle(titles.donate)}>
               <Button colorScheme={"primary"} size={"lg"}>
                 Donate
               </Button>

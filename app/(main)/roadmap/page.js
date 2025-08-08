@@ -1,11 +1,11 @@
 import { Flex, Heading, Stack, Tag, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import { customMetadata, title, titles } from "@/utils/constants";
+import { customMetadata, formatTitle, title, titles } from "@/utils/constants";
 import { LinearClient } from "@linear/sdk";
 import Section from "@/components/Section";
 
 export const metadata = customMetadata({
-  metadataTitle: `${titles.roadmap} | ${title}`,
+  metadataTitle: formatTitle(titles.roadmap),
   metadataDescription:
     "Explore upcoming features on Bessa, the best LGBTQ social media app. See what's next for this inclusive social platform and help shape the future of queer connection.",
   path: "/roadmap"

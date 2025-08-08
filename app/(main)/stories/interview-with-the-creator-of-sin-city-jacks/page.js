@@ -17,15 +17,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: `Interview with the Creator of Sin City Jacks| Queer-Made | ${title}`,
+  title: "Interview with the Creator of Sin City Jacks| Queer-Made",
   description: "",
   openGraph: {
-    title: `Interview with the Creator of Sin City Jacks| Queer-Made | ${title}`,
+    title: "Interview with the Creator of Sin City Jacks| Queer-Made",
     description: ""
     // url: `${url}/stories`
   },
   twitter: {
-    title: `Interview with the Creator of Sin City Jacks| Queer-Made | ${title}`,
+    title: "Interview with the Creator of Sin City Jacks| Queer-Made",
     description: ""
   }
 };
@@ -118,7 +118,7 @@ export default function InterviewWithTheCreatorOfSinCityJacks() {
           <AspectRatio maxW={"100%"} ratio={4 / 3}>
             <Image
               src={"https://bit.ly/naruto-sage"}
-              alt={`Interview with the Creator of Sin City Jacks| Queer-Made | ${title}`}
+              alt={"Interview with the Creator of Sin City Jacks| Queer-Made"}
               height={1000}
               width={1000}
               objectFit={"cover"}

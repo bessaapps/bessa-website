@@ -1,21 +1,21 @@
 import Top from "@/components/navigation/Top";
 import Providers from "@/app/providers";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { description, title, url } from "@/utils/constants";
+import { description, formatTitle, title, url } from "@/utils/constants";
 import "./global.css";
 import TopBanner from "@/components/navigation/TopBanner";
 
 export const metadata = {
-  title,
+  title: formatTitle(),
   description,
   languages: {
     "en-US": "/en-US"
   },
   openGraph: {
-    title,
+    title: formatTitle(),
     description,
     url,
-    siteName: title,
+    siteName: formatTitle(),
     images: [
       {
         url: `${url}/images/social.png`,
@@ -28,12 +28,12 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title,
+    title: formatTitle(),
     description,
     creator: "@getbessa",
     images: {
       url: `${url}/images/social.png`,
-      alt: title
+      alt: formatTitle()
     }
   },
   appLinks: {
