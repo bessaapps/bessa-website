@@ -37,40 +37,37 @@ export default async function Interview({ params }) {
     <>
       <SimpleGrid columns={2} gap={4}>
         <GridItem minH={"calc(100vh - 80px)"} px={[8, 16, 32]} py={[4, 8, 16]}>
-          <Stack gap={2}>
+          <Stack gap={4}>
             <Heading as={"h1"}>{article.Title}</Heading>
-            <Text>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-              aperiam at deleniti deserunt esse harum illum ipsam maxime
-              molestias neque non odio, optio, possimus praesentium quas quo
-              quod quos temporibus!
-            </Text>
-            <Text mb={4}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-              aperiam delectus est itaque maiores quia repellendus sed sint!
-              Aliquam at corporis delectus error fuga harum id ipsam nulla
-              officiis voluptate.
-            </Text>
+            {article?.Summary?.map((item, i) => (
+              <Text key={i}>
+                {item?.children?.map((child, j) => (
+                  <Text as={child?.italic ? "i" : "span"} key={j}>
+                    {child?.text}
+                  </Text>
+                ))}
+              </Text>
+            ))}
             <Flex align={"center"} gap={4}>
               <Avatar
                 src={"/images/queer-made/rocio-headshot-Rocio-Sanchez.jpg"}
                 size={"xl"}
               />
               <Box>
-                <Heading as={"h3"}>Rocio</Heading>
-                <Text>Creator of Marketing by Rocio</Text>
+                <Heading as={"h3"}>{article?.Name}</Heading>
+                <Text>{article?.Position}</Text>
                 <Flex gap={4}>
                   <Text fontWeight={600}>
-                    <Link href={"https://instagram.com/marketingbyrocio"}>
-                      @marketingbyrocio
+                    <Link href={article?.SocialURL} target={"_blank"}>
+                      @{article?.SocialHandle}
                     </Link>
                   </Text>
                   <Text fontWeight={600}>
                     <Link
-                      href={"https://marketingbyrocio.com/"}
-                      title={"Marketing by Rocio"}
+                      href={`https://${article?.Website}`}
+                      target={"_blank"}
                     >
-                      marketingbyrocio.com
+                      {article?.Website}
                     </Link>
                   </Text>
                 </Flex>
