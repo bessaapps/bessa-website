@@ -27,12 +27,10 @@ export const metadata = {
   }
 };
 
-export default async function Interview() {
-  const { data } = await getInterviewAPI("f4h4w6lf35rn5c7d1j14thuq");
-
+export default async function Interview({ params }) {
+  const { slug } = await params;
+  const { data } = await getInterviewAPI(slug);
   const article = data?.data?.[0];
-
-  console.log(article);
 
   return (
     <>
