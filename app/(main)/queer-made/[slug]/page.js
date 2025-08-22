@@ -9,23 +9,24 @@ import {
   Stack,
   Text
 } from "@chakra-ui/react";
-import { title } from "@/utils/constants";
+import { customMetadata, formatTitle } from "@/utils/constants";
 import Link from "next/link";
 import { getInterviewAPI } from "@/utils/api";
+import { Fragment } from "react";
 
-export const metadata = {
-  title: "Interview with the Creator of Sin City Jacks| Queer-Made",
-  description: "",
-  openGraph: {
-    title: "Interview with the Creator of Sin City Jacks| Queer-Made",
-    description: ""
-    // url: `${url}/stories`
-  },
-  twitter: {
-    title: "Interview with the Creator of Sin City Jacks| Queer-Made",
-    description: ""
-  }
-};
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const { data } = await getInterviewAPI(slug);
+  const article = data?.data?.[0];
+
+  return customMetadata({
+    metadataTitle: formatTitle(article?.Title),
+    metadataDescription:
+      "Discover Bessa, a gay social media app designed for real LGBTQ connection. Built by a queer developer, Bessa is an inclusive social platform where you can post, message, and share with a diverse global community.",
+    path: `/queer-made/${article?.slug}`
+    // todo: imagePath: "/images/stock/gay-community.jpg"
+  });
+}
 
 export default async function Interview({ params }) {
   const { slug } = await params;
@@ -58,7 +59,6 @@ export default async function Interview({ params }) {
               <Box>
                 <Heading as={"h3"}>Rocio</Heading>
                 <Text>Creator of Marketing by Rocio</Text>
-
                 <Flex gap={4}>
                   <Text fontWeight={600}>
                     <Link href={"https://instagram.com/marketingbyrocio"}>
@@ -89,17 +89,27 @@ export default async function Interview({ params }) {
       </SimpleGrid>
       <Container maxW={"container.xl"} py={[16, 32, 64]}>
         <Stack gap={4}>
-          {article?.Content?.map((item) => {
+          {article?.Content?.map((item, i) => {
             switch (item?.type) {
               case "heading":
                 return (
-                  <Heading>
-                    {item?.children?.map((child) => child?.text)}
+                  <Heading key={i}>
+                    {item?.children?.map((child, j) => (
+                      <Text as={child?.italic ? "i" : "span"} key={j}>
+                        {child?.text}
+                      </Text>
+                    ))}
                   </Heading>
                 );
               case "paragraph":
                 return (
-                  <Text>{item?.children?.map((child) => child?.text)}</Text>
+                  <Text key={i}>
+                    {item?.children?.map((child, j) => (
+                      <Text as={child?.italic ? "i" : "span"} key={j}>
+                        {child?.text}
+                      </Text>
+                    ))}
+                  </Text>
                 );
             }
           })}
