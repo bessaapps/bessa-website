@@ -1,5 +1,4 @@
 import {
-  AspectRatio,
   Avatar,
   Box,
   Container,
@@ -11,8 +10,8 @@ import {
   Text
 } from "@chakra-ui/react";
 import { title } from "@/utils/constants";
-import Image from "next/image";
 import Link from "next/link";
+import { getInterviewAPI } from "@/utils/api";
 
 export const metadata = {
   title: "Interview with the Creator of Sin City Jacks| Queer-Made",
@@ -28,33 +27,19 @@ export const metadata = {
   }
 };
 
-export default function CommunityBuildingWithRocioOnlineAndOffline() {
+export default async function Interview() {
+  const { data } = await getInterviewAPI("f4h4w6lf35rn5c7d1j14thuq");
+
+  const article = data?.data?.[0];
+
+  console.log(article);
+
   return (
     <>
-      {/*<Box*/}
-      {/*  bgImage={"/images/queer-made/mesh-4.png"}*/}
-      {/*  bgPosition={"center"}*/}
-      {/*  bgSize={"cover"}*/}
-      {/*>*/}
-      {/*  <Center minH={"calc(100vh - 129px)"} p={4}>*/}
-      {/*    <Stack textAlign={"center"}>*/}
-      {/*      <Box>*/}
-      {/*        <Tag colorScheme={"whiteAlpha"} size={"lg"} mb={4}>*/}
-      {/*          Queer-Made*/}
-      {/*        </Tag>*/}
-      {/*      </Box>*/}
-      {/*      <Heading as={"h1"} color={"white"} textAlign={"center"}>*/}
-      {/*        Community Building with Rocio Online and Offline*/}
-      {/*      </Heading>*/}
-      {/*    </Stack>*/}
-      {/*  </Center>*/}
-      {/*</Box>*/}
       <SimpleGrid columns={2} gap={4}>
         <GridItem minH={"calc(100vh - 80px)"} px={[8, 16, 32]} py={[4, 8, 16]}>
           <Stack gap={2}>
-            <Heading as={"h1"}>
-              Community Building with Rocio Online and Offline
-            </Heading>
+            <Heading as={"h1"}>{article.Title}</Heading>
             <Text>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
               aperiam at deleniti deserunt esse harum illum ipsam maxime
@@ -106,32 +91,20 @@ export default function CommunityBuildingWithRocioOnlineAndOffline() {
       </SimpleGrid>
       <Container maxW={"container.xl"} py={[16, 32, 64]}>
         <Stack gap={4}>
-          <Heading>Heading</Heading>
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
-            doloremque facilis nisi numquam vitae! At, cum deserunt eius et
-            libero ullam! Error eveniet ex, in perspiciatis quod sed similique
-            voluptas.
-          </Text>
-          <AspectRatio maxW={"100%"} ratio={4 / 3}>
-            <Image
-              src={"https://bit.ly/naruto-sage"}
-              alt={"Interview with the Creator of Sin City Jacks| Queer-Made"}
-              height={1000}
-              width={1000}
-              objectFit={"cover"}
-            />
-          </AspectRatio>
-          <Text color={"gray.500"} fontSize={".75rem"}>
-            Credit
-          </Text>
-          <Heading>Heading</Heading>
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
-            doloremque facilis nisi numquam vitae! At, cum deserunt eius et
-            libero ullam! Error eveniet ex, in perspiciatis quod sed similique
-            voluptas.
-          </Text>
+          {article?.Content?.map((item) => {
+            switch (item?.type) {
+              case "heading":
+                return (
+                  <Heading>
+                    {item?.children?.map((child) => child?.text)}
+                  </Heading>
+                );
+              case "paragraph":
+                return (
+                  <Text>{item?.children?.map((child) => child?.text)}</Text>
+                );
+            }
+          })}
         </Stack>
       </Container>
     </>
