@@ -37,7 +37,7 @@ export default async function Interview({ params }) {
     <>
       <SimpleGrid columns={2} gap={4}>
         <GridItem minH={"calc(100vh - 80px)"} px={[8, 16, 32]} py={[4, 8, 16]}>
-          <Stack gap={4}>
+          <Stack gap={4} mb={8}>
             <Heading as={"h1"}>{article.Title}</Heading>
             {article?.Summary?.map((item, i) => (
               <Text key={i}>
@@ -48,32 +48,29 @@ export default async function Interview({ params }) {
                 ))}
               </Text>
             ))}
-            <Flex align={"center"} gap={4}>
-              <Avatar
-                src={"/images/queer-made/rocio-headshot-Rocio-Sanchez.jpg"}
-                size={"xl"}
-              />
-              <Box>
-                <Heading as={"h3"}>{article?.Name}</Heading>
-                <Text>{article?.Position}</Text>
-                <Flex gap={4}>
-                  <Text fontWeight={600}>
-                    <Link href={article?.SocialURL} target={"_blank"}>
-                      @{article?.SocialHandle}
-                    </Link>
-                  </Text>
-                  <Text fontWeight={600}>
-                    <Link
-                      href={`https://${article?.Website}`}
-                      target={"_blank"}
-                    >
-                      {article?.Website}
-                    </Link>
-                  </Text>
-                </Flex>
-              </Box>
-            </Flex>
           </Stack>
+          <Flex align={"center"} gap={4}>
+            <Avatar
+              src={"/images/queer-made/rocio-headshot-Rocio-Sanchez.jpg"}
+              size={"xl"}
+            />
+            <Box>
+              <Heading as={"h3"}>{article?.Name}</Heading>
+              <Text>{article?.Position}</Text>
+              <Flex gap={4}>
+                <Text fontWeight={600}>
+                  <Link href={article?.SocialURL} target={"_blank"}>
+                    @{article?.SocialHandle}
+                  </Link>
+                </Text>
+                <Text fontWeight={600}>
+                  <Link href={`https://${article?.Website}`} target={"_blank"}>
+                    {article?.Website}
+                  </Link>
+                </Text>
+              </Flex>
+            </Box>
+          </Flex>
         </GridItem>
         <GridItem
           bgImage={

@@ -3,6 +3,7 @@ import {
   BookOpen,
   CircleHelp,
   CirclePlus,
+  Hammer,
   Heart,
   LifeBuoy,
   Map
@@ -58,6 +59,11 @@ export const links = [
     href: "/roadmap",
     anchor: "Roadmap",
     icon: <Map size={"1rem"} color={"#f2f2f2"} />
+  },
+  {
+    href: "/queer-made/community-building-with-rocio-online-and-offline",
+    anchor: '"Queer-Made"',
+    icon: <Hammer size={"1rem"} color={"#f2f2f2"} />
   }
 ];
 
