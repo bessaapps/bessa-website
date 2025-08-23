@@ -37,10 +37,7 @@ export default async function Interview({ params }) {
       <MediaRight
         bottomContent={
           <Flex align={"center"} gap={4}>
-            <Avatar
-              src={"/images/queer-made/rocio-headshot-Rocio-Sanchez.jpg"}
-              size={"xl"}
-            />
+            <Avatar src={article?.Profile?.url} size={"xl"} />
             <Box>
               <Heading as={"h3"}>{article?.Name}</Heading>
               <Text>{article?.Position}</Text>
@@ -59,7 +56,7 @@ export default async function Interview({ params }) {
             </Box>
           </Flex>
         }
-        bgImage={"/images/queer-made/rocio-sanchez-marketing-Rocio Sanchez.jpg"}
+        bgImage={article?.Hero?.url}
       >
         <Stack gap={4} mb={8}>
           <Heading as={"h1"}>{article.Title}</Heading>

@@ -14,6 +14,7 @@ export const getInterviewAPI = (slug) =>
     .get(
       `https://bessa-website-cms-production.up.railway.app/api/interviews?filters[Slug][$eq]=${slug}`,
       {
+        params: { populate: "*" },
         headers: {
           Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_API_KEY}`
         }
