@@ -3,9 +3,7 @@ import {
   Box,
   Container,
   Flex,
-  GridItem,
   Heading,
-  SimpleGrid,
   Stack,
   Text
 } from "@chakra-ui/react";
@@ -13,6 +11,7 @@ import { customMetadata, formatTitle } from "@/utils/constants";
 import Link from "next/link";
 import { getInterviewAPI } from "@/utils/api";
 import { Fragment } from "react";
+import MediaRight from "@/components/MediaRight";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -35,20 +34,8 @@ export default async function Interview({ params }) {
 
   return (
     <>
-      <SimpleGrid columns={2} gap={4}>
-        <GridItem minH={"calc(100vh - 80px)"} px={[8, 16, 32]} py={[4, 8, 16]}>
-          <Stack gap={4} mb={8}>
-            <Heading as={"h1"}>{article.Title}</Heading>
-            {article?.Summary?.map((item, i) => (
-              <Text key={i}>
-                {item?.children?.map((child, j) => (
-                  <Text as={child?.italic ? "i" : "span"} key={j}>
-                    {child?.text}
-                  </Text>
-                ))}
-              </Text>
-            ))}
-          </Stack>
+      <MediaRight
+        bottomContent={
           <Flex align={"center"} gap={4}>
             <Avatar
               src={"/images/queer-made/rocio-headshot-Rocio-Sanchez.jpg"}
@@ -71,16 +58,22 @@ export default async function Interview({ params }) {
               </Flex>
             </Box>
           </Flex>
-        </GridItem>
-        <GridItem
-          bgImage={
-            "/images/queer-made/rocio-sanchez-marketing-Rocio Sanchez.jpg"
-          }
-          bgPosition={"center"}
-          bgSize={"cover"}
-          style={{ filter: "grayscale(1)" }}
-        />
-      </SimpleGrid>
+        }
+        bgImage={"/images/queer-made/rocio-sanchez-marketing-Rocio Sanchez.jpg"}
+      >
+        <Stack gap={4} mb={8}>
+          <Heading as={"h1"}>{article.Title}</Heading>
+          {article?.Summary?.map((item, i) => (
+            <Text key={i}>
+              {item?.children?.map((child, j) => (
+                <Text as={child?.italic ? "i" : "span"} key={j}>
+                  {child?.text}
+                </Text>
+              ))}
+            </Text>
+          ))}
+        </Stack>
+      </MediaRight>
       <Container maxW={"container.xl"} py={[16, 32, 64]}>
         <Stack gap={4}>
           {article?.Content?.map((item, i) => {

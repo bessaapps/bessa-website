@@ -11,9 +11,11 @@ export default function MediaRight({ lead, bottomContent, bgImage, children }) {
           gap={[8, 16, 32]}
         >
           <Stack>
-            <Heading as={"p"} fontSize={"1.5rem"} mb={4}>
-              {lead}
-            </Heading>
+            {lead && (
+              <Heading as={"p"} fontSize={"1.5rem"} mb={4}>
+                {lead}
+              </Heading>
+            )}
             {children}
           </Stack>
           {bottomContent}
