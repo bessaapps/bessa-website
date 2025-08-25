@@ -31,6 +31,8 @@ import MediaRight from "@/components/MediaRight";
 import MediaLeft from "@/components/MediaLeft";
 import Section from "@/components/Section";
 import { Star } from "lucide-react";
+import { getInterviewsAPI } from "@/utils/api";
+import dayjs from "dayjs";
 
 export const metadata = customMetadata({
   metadataTitle: formatTitle(),
@@ -39,6 +41,9 @@ export const metadata = customMetadata({
 });
 
 export default async function Home() {
+  const { data } = await getInterviewsAPI();
+  const articles = data?.data;
+
   return (
     <section>
       <script
@@ -229,6 +234,33 @@ export default async function Home() {
             share your own events, and bring LGBTQ people together in real life.
           </Text>
         </MediaLeft>
+        <Section>
+          <Heading mb={4}>Queer-Made</Heading>
+          <Text>
+            Where queer creators, builders, and dreamers share their stories in
+            their own words. From grassroots projects to bold new ideas, each
+            interview highlights the power of queer imagination and community.
+            Dive in and discover voices that inspire, challenge, and celebrate
+            what it means to be queer today.
+          </Text>
+          {articles?.map(({ documentId, Title, Slug, publishedAt }) => (
+            <Link
+              href={`/queer-made/${Slug}`}
+              title={formatTitle(Title)}
+              key={documentId}
+            >
+              <Flex
+                justify={"space-between"}
+                borderTop={"1px"}
+                borderColor={"gray.900"}
+                py={4}
+              >
+                <Text fontWeight={700}>{Title}</Text>
+                <Text>{dayjs(publishedAt).format("M.D.YY")}</Text>
+              </Flex>
+            </Link>
+          ))}
+        </Section>
         <Section>
           <Heading mb={4}>Drop a Review and Tell your Friends</Heading>
           <Text>
