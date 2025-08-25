@@ -21,9 +21,9 @@ export async function generateMetadata({ params }) {
   return customMetadata({
     metadataTitle: formatTitle(article?.Title),
     metadataDescription:
-      "Discover Bessa, a gay social media app designed for real LGBTQ connection. Built by a queer developer, Bessa is an inclusive social platform where you can post, message, and share with a diverse global community.",
-    path: `/queer-made/${article?.slug}`
-    // todo: imagePath: "/images/stock/gay-community.jpg"
+      "Explore the Queer-Made interview with Rocio of Marketing by Rocio, where they share insights on community building online and offline. Learn how queer identity shapes digital spaces, visibility, and connection in this inspiring story on our gay social media platform.",
+    path: `/queer-made/${article?.slug}`,
+    imagePath: article?.Hero?.url
   });
 }
 
