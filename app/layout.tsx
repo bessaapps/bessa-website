@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import TopNavigation from "@/components/navigation/TopNavigation";
+import BottomNavigation from "@/components/navigation/BottomNavigation";
 
 const interSans = Inter({
   variable: "--font-inter-sans",
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body>
         <TopNavigation />
         {children}
+        <BottomNavigation />
       </body>
     </html>
   );

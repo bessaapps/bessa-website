@@ -4,6 +4,7 @@ import Stock2 from "@/assets/images/stock/2.jpg";
 import Stock3 from "@/assets/images/stock/3.jpg";
 import Reviewer from "@/assets/images/reviewer.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -159,15 +160,29 @@ export default function Home() {
             <Image
               src={Stock3}
               alt={
-                "Two Black men laughing and sharing content on a smartphone outdoors, representing the Bessa community's focus on queer connection and found family."
+                "A person laughing while giving a friend a piggyback ride, wearing a shirt with social justice messages like 'No Homophobia' and 'Yes Equality,' embodying Bessa's commitment to queer activism and joy."
               }
               className={"grayscale"}
             />
           </div>
         </div>
       </div>
+      <div className={"max-w-7xl mx-auto"}>
+        <h2 className={"text-4xl font-medium"}>Read More</h2>
+        <div className={"flex items-center justify-between border-t-1"}>
+          <Link href={"/"}>
+            <p className={"text-lg font-medium"}>
+              No Cover, All Community: Interview with QSC
+            </p>
+          </Link>
+          <p>
+            <time dateTime={"2026-12-25"}>Dec 25, 2026</time>&nbsp;&mdash; in
+            Tens Across the Board
+          </p>
+        </div>
+      </div>
       <div className={"bg-primary"}>
-        <div className={"max-w-7xl mx-auto flex gap-4 py-24 my-24"}>
+        <div className={"max-w-7xl mx-auto flex gap-4 py-24 mt-24"}>
           <div>
             <p className={"text-white mb-4"}>
               Amplify your voice in a space built for it.
