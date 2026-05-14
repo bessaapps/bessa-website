@@ -45,7 +45,7 @@ export default function Home() {
         />
       </div>
       <div className={"max-w-7xl mx-auto gap-4 my-24"}>
-        <div className={"grid grid-cols-2 items-center gap-4"}>
+        <div className={"grid grid-cols-1 sm:grid-cols-2 items-center gap-4"}>
           <Image
             src={Stock2}
             alt={
@@ -198,10 +198,18 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <p className={"text-black text-9xl font-bold text-right uppercase"}>
+            <p
+              className={
+                "text-black text-xl sm:text-9xl font-bold text-right uppercase"
+              }
+            >
               Find your people
             </p>
-            <p className={"text-white text-9xl font-bold text-right uppercase"}>
+            <p
+              className={
+                "text-white text-xl sm:text-9xl font-bold text-right uppercase"
+              }
+            >
               Share your story
             </p>
           </div>
