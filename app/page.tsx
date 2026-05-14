@@ -18,10 +18,18 @@ export default function Home() {
           conversations that help you find your people.
         </p>
         <div className={"flex justify-center gap-2"}>
-          <a href={iOSLink} target={"_blank"} className={"btn btn-primary"}>
+          <a
+            href={iOSLink}
+            target={"_blank"}
+            className={"btn btn-primary btn-lg"}
+          >
             iOS
           </a>
-          <a href={androidLink} target={"_blank"} className={"btn btn-primary"}>
+          <a
+            href={androidLink}
+            target={"_blank"}
+            className={"btn btn-primary btn-lg"}
+          >
             Android
           </a>
         </div>
