@@ -17,7 +17,7 @@ export default function Home() {
           Beyond the scroll, we celebrate queer culture and spark the real
           conversations that help you find your people.
         </p>
-        <div className={"flex justify-center gap-2"}>
+        <div className={"flex justify-center gap-4"}>
           <a
             href={iOSLink}
             target={"_blank"}
@@ -42,7 +42,7 @@ export default function Home() {
           }
         />
       </div>
-      <div className={"max-w-7xl mx-auto flex flex-col gap-4 my-24"}>
+      <div className={"max-w-7xl mx-auto gap-4 my-24"}>
         <div className={"grid grid-cols-2 items-center gap-4"}>
           <Image
             src={Stock2}
@@ -132,7 +132,7 @@ export default function Home() {
         </div>
       </div>
       <div className={"bg-secondary"}>
-        <div className={"max-w-7xl mx-auto flex flex-col gap-4 py-24 my-24"}>
+        <div className={"max-w-7xl mx-auto gap-4 py-24 my-24"}>
           <div className={"grid grid-cols-2 gap-4"}>
             <div className={"flex flex-col gap-4"}>
               <h2
@@ -150,7 +150,7 @@ export default function Home() {
                 <a
                   href={"https://buymeacoffee.com/getbessa"}
                   target={"_blank"}
-                  className={"btn"}
+                  className={"btn btn-lg"}
                 >
                   Donate
                 </a>
@@ -163,6 +163,31 @@ export default function Home() {
               }
               className={"grayscale"}
             />
+          </div>
+        </div>
+      </div>
+      <div className={"bg-primary"}>
+        <div className={"max-w-7xl mx-auto flex gap-4 py-24 my-24"}>
+          <div>
+            <p className={"text-white mb-4"}>
+              Amplify your voice in a space built for it.
+            </p>
+            <div className={"flex gap-4"}>
+              <a href={iOSLink} target={"_blank"} className={"btn btn-lg"}>
+                iOS
+              </a>
+              <a href={androidLink} target={"_blank"} className={"btn btn-lg"}>
+                Android
+              </a>
+            </div>
+          </div>
+          <div>
+            <p className={"text-black text-9xl font-bold text-right uppercase"}>
+              Find your people
+            </p>
+            <p className={"text-white text-9xl font-bold text-right uppercase"}>
+              Share your story
+            </p>
           </div>
         </div>
       </div>
