@@ -41,6 +41,7 @@ export default function Home() {
           alt={
             "A person in an expressive dance pose wearing a black lace bodysuit and platform boots, performing on a stone floor during a queer creative showcase."
           }
+          loading={"eager"}
         />
       </div>
       <div className={"max-w-7xl mx-auto gap-4 my-24"}>
@@ -169,7 +170,7 @@ export default function Home() {
       </div>
       <div className={"max-w-7xl mx-auto"}>
         <h2 className={"text-4xl font-medium"}>Read More</h2>
-        <div className={"flex items-center justify-between border-t-1"}>
+        <div className={"flex items-center justify-between border-t"}>
           <Link href={"/"}>
             <p className={"text-lg font-medium"}>
               No Cover, All Community: Interview with QSC

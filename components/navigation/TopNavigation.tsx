@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Logo from "@/assets/images/logo.png";
 import Image from "next/image";
-import { androidLink, iOSLink, links } from "@/lib/constants";
+import { androidLink, iOSLink, links, sEOTitle } from "@/lib/constants";
 
 export default function TopNavigation() {
   return (
@@ -50,8 +50,20 @@ export default function TopNavigation() {
               </ul>
             </nav>
           </div>
-          <Image src={Logo} alt={"Bessa Logo"} width={40} height={40} />
-          <a className="text-base-content text-xl font-bold">Bessa</a>
+          <Link
+            href={"/"}
+            title={sEOTitle}
+            className={"text-base-content text-xl font-bold"}
+          >
+            <Image src={Logo} alt={"Bessa Logo"} width={40} height={40} />
+          </Link>
+          <Link
+            href={"/"}
+            title={sEOTitle}
+            className={"text-base-content text-xl font-bold"}
+          >
+            Bessa
+          </Link>
         </div>
         <div className={"navbar-center hidden lg:flex"}>
           <nav>
