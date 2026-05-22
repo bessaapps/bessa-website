@@ -4,7 +4,6 @@ import Stock2 from "@/assets/images/stock/2.jpg";
 import Stock3 from "@/assets/images/stock/3.jpg";
 import Reviewer from "@/assets/images/reviewer.jpg";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -174,20 +173,21 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={"max-w-6xl mx-auto"}>
-        <h2 className={"text-4xl font-medium"}>Read More</h2>
-        <div className={"flex items-center justify-between border-t"}>
-          <Link href={"/"}>
-            <p className={"text-lg font-medium"}>
-              No Cover, All Community: Interview with QSC
-            </p>
-          </Link>
-          <p>
-            <time dateTime={"2026-12-25"}>Dec 25, 2026</time>&nbsp;&mdash; in
-            Tens Across the Board
-          </p>
-        </div>
-      </div>
+      {/*todo:*/}
+      {/*<div className={"max-w-6xl mx-auto"}>*/}
+      {/*  <h2 className={"text-4xl font-medium"}>Read More</h2>*/}
+      {/*  <div className={"flex items-center justify-between border-t"}>*/}
+      {/*    <Link href={"/"}>*/}
+      {/*      <p className={"text-lg font-medium"}>*/}
+      {/*        No Cover, All Community: Interview with QSC*/}
+      {/*      </p>*/}
+      {/*    </Link>*/}
+      {/*    <p>*/}
+      {/*      <time dateTime={"2026-12-25"}>Dec 25, 2026</time>&nbsp;&mdash; in*/}
+      {/*      Tens Across the Board*/}
+      {/*    </p>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </main>
   );
 }

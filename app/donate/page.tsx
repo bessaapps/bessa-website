@@ -6,7 +6,7 @@ export default function DonatePage() {
   return (
     <>
       <div className={"max-w-3xl flex flex-col gap-4 mx-auto my-24"}>
-        <h1 className={"text-4xl font-semibold text-center"}>Donate</h1>
+        <h1 className={"text-4xl font-semibold text-center mb-6"}>Donate</h1>
         <p className={"font-bold"}>Fuel the Fabulous. Fund the Fam.</p>
         <p>
           Bessa is more than just an app; it’s where your story belongs, a

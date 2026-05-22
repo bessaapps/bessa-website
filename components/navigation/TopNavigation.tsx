@@ -2,28 +2,16 @@ import Link from "next/link";
 import Logo from "@/assets/images/logo.png";
 import Image from "next/image";
 import { androidLink, iOSLink, links, sEOTitle } from "@/lib/constants";
+import { LuMenu } from "react-icons/lu";
 
 export default function TopNavigation() {
   return (
     <header className={"sticky top-0 z-50"}>
-      <div className={"navbar bg-white px-4 sm:px-8"}>
-        <div className={"navbar-start gap-2"}>
+      <div className={"navbar bg-white px-2 sm:px-8"}>
+        <div className={"navbar-start gap-2 sm:gap-4"}>
           <div className={"dropdown lg:hidden"}>
-            <div tabIndex={0} role={"button"} className={"btn btn-ghost"}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+            <div tabIndex={0}>
+              <LuMenu size={24} />
             </div>
             <nav>
               <ul
@@ -70,7 +58,7 @@ export default function TopNavigation() {
             </ul>
           </nav>
         </div>
-        <div className={"navbar-end gap-2"}>
+        <div className={"navbar-end gap-2 sm:gap-4"}>
           <a href={iOSLink} target={"_blank"} className={"btn btn-secondary"}>
             iOS
           </a>

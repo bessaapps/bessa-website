@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /_next/static/
+Disallow: /cdn-cgi/
+
+Sitemap: https://getbessa.com/sitemap.xml

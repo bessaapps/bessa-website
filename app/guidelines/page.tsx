@@ -2,7 +2,9 @@ export default function GuidelinesPage() {
   return (
     <>
       <div className={"max-w-3xl flex flex-col gap-4 mx-auto my-24"}>
-        <h1 className={"text-4xl font-semibold text-center"}>Guidelines</h1>
+        <h1 className={"text-4xl font-semibold text-center mb-6"}>
+          Guidelines
+        </h1>
         <p>
           By using Bessa, you agree to follow the following guidelines. Bessa
           reserves the right to remove your content or your profile from the app

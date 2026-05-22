@@ -2,7 +2,7 @@ export default function AboutPage() {
   return (
     <>
       <div className={"max-w-3xl flex flex-col gap-4 mx-auto my-24"}>
-        <h1 className={"text-4xl font-semibold text-center"}>About</h1>
+        <h1 className={"text-4xl font-semibold text-center mb-6"}>About</h1>
         <p className={"font-bold"}>
           Bessa is an unapologetically queer hub for creative expression and
           real connections, standing out from other gay social media apps by
