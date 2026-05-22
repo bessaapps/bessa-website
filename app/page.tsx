@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main>
       <div className={"max-w-lg mx-auto flex flex-col gap-4 my-24"}>
-        <h1 className={"text-4xl font-medium text-center"}>
+        <h1 className={"text-4xl font-semibold text-center"}>
           Gay Social Media, Reimagined
         </h1>
         <p className={"text-center"}>
@@ -35,24 +35,30 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className={"max-w-7xl mx-auto flex flex-col gap-4 my-24"}>
-        <Image
-          src={Stock1}
-          alt={
-            "A person in an expressive dance pose wearing a black lace bodysuit and platform boots, performing on a stone floor during a queer creative showcase."
-          }
-          loading={"eager"}
-        />
-      </div>
-      <div className={"max-w-7xl mx-auto gap-4 my-24"}>
-        <div className={"grid grid-cols-1 sm:grid-cols-2 items-center gap-4"}>
+      <div className={"max-w-6xl mx-auto flex flex-col gap-4 my-24"}>
+        <div className={"aspect-[1.4]"}>
           <Image
-            src={Stock2}
+            src={Stock1}
             alt={
-              "Two Black men laughing and sharing content on a smartphone outdoors, representing the Bessa community's focus on queer connection and found family."
+              "A person in an expressive dance pose wearing a black lace bodysuit and platform boots, performing on a stone floor during a queer creative showcase."
             }
-            className={"grayscale"}
+            loading={"eager"}
+            className={"object-cover"}
           />
+        </div>
+      </div>
+      <div className={"max-w-6xl mx-auto gap-4 my-24"}>
+        <div className={"grid grid-cols-1 sm:grid-cols-2 items-center gap-4"}>
+          <div className={"relative aspect-[1.4]"}>
+            <Image
+              src={Stock2}
+              alt={
+                "Two Black men laughing and sharing content on a smartphone outdoors, representing the Bessa community's focus on queer connection and found family."
+              }
+              className={"object-cover grayscale"}
+              fill
+            />
+          </div>
           <div className={"flex flex-col gap-4"}>
             <h2 className={"text-4xl font-medium"}>
               Loud, Proud, and Right at Home
@@ -100,7 +106,7 @@ export default function Home() {
           <p className={"text-white font-bold"}>Tee Kay</p>
         </div>
       </div>
-      <div className={"max-w-7xl mx-auto flex gap-16"}>
+      <div className={"max-w-6xl mx-auto flex gap-16"}>
         <div>
           <p>
             Bessa is the best gay social media app where being queer comes to
@@ -134,7 +140,7 @@ export default function Home() {
         </div>
       </div>
       <div className={"bg-secondary"}>
-        <div className={"max-w-7xl mx-auto gap-4 py-24 my-24"}>
+        <div className={"max-w-6xl mx-auto gap-4 py-24 my-24"}>
           <div className={"grid grid-cols-2 gap-4"}>
             <div className={"flex flex-col gap-4"}>
               <h2
@@ -168,7 +174,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={"max-w-7xl mx-auto"}>
+      <div className={"max-w-6xl mx-auto"}>
         <h2 className={"text-4xl font-medium"}>Read More</h2>
         <div className={"flex items-center justify-between border-t"}>
           <Link href={"/"}>
@@ -180,39 +186,6 @@ export default function Home() {
             <time dateTime={"2026-12-25"}>Dec 25, 2026</time>&nbsp;&mdash; in
             Tens Across the Board
           </p>
-        </div>
-      </div>
-      <div className={"bg-primary"}>
-        <div className={"max-w-7xl mx-auto flex gap-4 py-24 mt-24"}>
-          <div>
-            <p className={"text-white mb-4"}>
-              Amplify your voice in a space built for it.
-            </p>
-            <div className={"flex gap-4"}>
-              <a href={iOSLink} target={"_blank"} className={"btn btn-lg"}>
-                iOS
-              </a>
-              <a href={androidLink} target={"_blank"} className={"btn btn-lg"}>
-                Android
-              </a>
-            </div>
-          </div>
-          <div>
-            <p
-              className={
-                "text-black text-xl sm:text-9xl font-bold text-right uppercase"
-              }
-            >
-              Find your people
-            </p>
-            <p
-              className={
-                "text-white text-xl sm:text-9xl font-bold text-right uppercase"
-              }
-            >
-              Share your story
-            </p>
-          </div>
         </div>
       </div>
     </main>

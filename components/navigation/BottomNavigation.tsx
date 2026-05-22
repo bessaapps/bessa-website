@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Logo from "@/assets/images/logo.png";
 import Image from "next/image";
-import { links, sEOTitle } from "@/lib/constants";
+import { androidLink, iOSLink, links, sEOTitle } from "@/lib/constants";
 
 export default function BottomNavigation() {
   const socialLinks = [
@@ -12,49 +12,84 @@ export default function BottomNavigation() {
   ];
 
   return (
-    <footer className={"bg-white"}>
-      <div className={"max-w-7xl mx-auto grid grid-cols-4 py-24"}>
-        <div className={"col-span-2 flex flex-col justify-between"}>
-          <Link
-            href={"/"}
-            title={sEOTitle}
-            className={"text-base-content text-xl font-bold"}
-          >
-            <Image src={Logo} alt={"Bessa Logo"} width={40} height={40} />
-          </Link>
-          <p>
-            Proudly created by{" "}
-            <Link
-              href={"https://bessaapps.com"}
-              title={"Startup App Development"}
-              target={"_blank"}
-              className={"underline"}
+    <>
+      <div className={"bg-primary"}>
+        <div className={"max-w-6xl mx-auto flex gap-4 py-24 mt-24"}>
+          <div>
+            <p className={"text-white mb-4"}>
+              Amplify your voice in a space built for it.
+            </p>
+            <div className={"flex gap-4"}>
+              <a href={iOSLink} target={"_blank"} className={"btn btn-lg"}>
+                iOS
+              </a>
+              <a href={androidLink} target={"_blank"} className={"btn btn-lg"}>
+                Android
+              </a>
+            </div>
+          </div>
+          <div>
+            <p
+              className={
+                "text-black text-xl sm:text-9xl font-bold text-right uppercase"
+              }
             >
-              Bessa Community Apps
-            </Link>
-          </p>
+              Find your people
+            </p>
+            <p
+              className={
+                "text-white text-xl sm:text-9xl font-bold text-right uppercase"
+              }
+            >
+              Share your story
+            </p>
+          </div>
         </div>
-        <nav>
+      </div>
+      <footer className={"bg-white"}>
+        <div className={"max-w-6xl mx-auto grid grid-cols-4 py-24"}>
+          <div className={"col-span-2 flex flex-col justify-between"}>
+            <Link
+              href={"/"}
+              title={sEOTitle}
+              className={"text-base-content text-xl font-bold"}
+            >
+              <Image src={Logo} alt={"Bessa Logo"} width={40} height={40} />
+            </Link>
+            <p>
+              Proudly created by{" "}
+              <Link
+                href={"https://bessaapps.com"}
+                title={"Startup App Development"}
+                target={"_blank"}
+                className={"underline"}
+              >
+                Bessa Community Apps
+              </Link>
+            </p>
+          </div>
+          <nav>
+            <ul>
+              {links.map(({ href, anchor }) => (
+                <li key={href}>
+                  <Link href={href} className={"font-semibold"}>
+                    {anchor}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
           <ul>
-            {links.map(({ href, anchor }) => (
+            {socialLinks.map(({ href, anchor }) => (
               <li key={href}>
-                <Link href={href} className={"font-semibold"}>
+                <Link href={href} target={"_blank"} className={"font-semibold"}>
                   {anchor}
                 </Link>
               </li>
             ))}
           </ul>
-        </nav>
-        <ul>
-          {socialLinks.map(({ href, anchor }) => (
-            <li key={href}>
-              <Link href={href} target={"_blank"} className={"font-semibold"}>
-                {anchor}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </footer>
+        </div>
+      </footer>
+    </>
   );
 }
