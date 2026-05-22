@@ -4,7 +4,7 @@ import { sEOTitle } from "@/lib/constants";
 export default function PrivacyPage() {
   return (
     <>
-      <div className={"max-w-3xl flex flex-col gap-4 mx-auto my-24"}>
+      <div className={"max-w-3xl flex flex-col gap-4 px-4 mx-auto my-24"}>
         <h1 className={"text-4xl font-semibold text-center mb-6"}>Privacy</h1>
         <p>
           At Bessa, your privacy is a key factor in keeping this space safe and
@@ -45,8 +45,8 @@ export default function PrivacyPage() {
           <p>Camera/Photo Gallery (Optionally)</p>
         </div>
       </div>
-      <div className={"max-w-3xl flex flex-col gap-4 mx-auto my-24"}>
-        <h2 className={"text-4xl font-medium"}>Deltion</h2>
+      <div className={"max-w-3xl flex flex-col gap-4 px-4 mx-auto my-24"}>
+        <h2 className={"text-4xl font-medium"}>Deletion</h2>
         <p>
           You can delete your account and all previously mentioned data at any
           time by emailing us at{" "}

@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function DonatePage() {
   return (
     <>
-      <div className={"max-w-3xl flex flex-col gap-4 mx-auto my-24"}>
+      <div className={"max-w-3xl flex flex-col gap-4 px-4 mx-auto my-24"}>
         <h1 className={"text-4xl font-semibold text-center mb-6"}>Donate</h1>
         <p className={"font-bold"}>Fuel the Fabulous. Fund the Fam.</p>
         <p>
@@ -25,7 +25,7 @@ export default function DonatePage() {
           className={"grayscale"}
         />
       </div>
-      <div className={"max-w-3xl flex flex-col gap-4 mx-auto my-24"}>
+      <div className={"max-w-3xl flex flex-col gap-4 px-4 mx-auto my-24"}>
         <h2 className={"text-4xl font-medium"}>
           This is your chance to turn found family into a home.
         </h2>

@@ -14,7 +14,7 @@ export default function BottomNavigation() {
   return (
     <>
       <div className={"bg-primary"}>
-        <div className={"max-w-6xl mx-auto flex gap-4 py-24 mt-24"}>
+        <div className={"max-w-6xl mx-auto flex gap-4 px-4 py-24 mt-24"}>
           <div>
             <p className={"text-white mb-4"}>
               Amplify your voice in a space built for it.
@@ -47,8 +47,10 @@ export default function BottomNavigation() {
         </div>
       </div>
       <footer className={"bg-white"}>
-        <div className={"max-w-6xl mx-auto grid grid-cols-4 py-24"}>
-          <div className={"col-span-2 flex flex-col justify-between"}>
+        <div
+          className={"max-w-6xl mx-auto grid sm:grid-cols-4 gap-4 px-4 py-24"}
+        >
+          <div className={"sm:col-span-2 flex flex-col justify-between"}>
             <Link
               href={"/"}
               title={sEOTitle}

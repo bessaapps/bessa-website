@@ -1,7 +1,7 @@
 export default function GuidelinesPage() {
   return (
     <>
-      <div className={"max-w-3xl flex flex-col gap-4 mx-auto my-24"}>
+      <div className={"max-w-3xl flex flex-col gap-4 px-4 mx-auto my-24"}>
         <h1 className={"text-4xl font-semibold text-center mb-6"}>
           Guidelines
         </h1>
@@ -42,7 +42,7 @@ export default function GuidelinesPage() {
           </p>
         </div>
       </div>
-      <div className={"max-w-3xl flex flex-col gap-4 mx-auto my-24"}>
+      <div className={"max-w-3xl flex flex-col gap-4 px-4 mx-auto my-24"}>
         <h2 className={"text-4xl font-medium"}>Media</h2>
         <p className={"font-bold"}>
           This includes images and videos; profile pictures, posts, and direct
@@ -102,7 +102,7 @@ export default function GuidelinesPage() {
           <p>Gore (AI-moderated)</p>
         </div>
       </div>
-      <div className={"max-w-3xl flex flex-col gap-4 mx-auto my-24"}>
+      <div className={"max-w-3xl flex flex-col gap-4 px-4 mx-auto my-24"}>
         <h2 className={"text-4xl font-medium"}>Text</h2>
         <p className={"font-bold"}>
           This includes posts, comments, direct messages, and reviews.
