@@ -4,6 +4,7 @@ import "./globals.css";
 import TopNavigation from "@/components/navigation/TopNavigation";
 import BottomNavigation from "@/components/navigation/BottomNavigation";
 import { sEOTitle } from "@/lib/constants";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const interSans = Inter({
   variable: "--font-inter-sans",
@@ -26,6 +27,9 @@ export default function RootLayout({
         {children}
         <BottomNavigation />
       </body>
+      {process.env.NODE_ENV !== "development" && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!} />
+      )}
     </html>
   );
 }
