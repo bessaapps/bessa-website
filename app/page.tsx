@@ -10,12 +10,11 @@ export default function Home() {
     <main>
       <div className={"max-w-lg mx-auto flex flex-col gap-4 my-24"}>
         <h1 className={"text-4xl font-semibold text-center"}>
-          Gay Social Media, Reimagined
+          An LGBTQ+ Social Media App, Reimagined
         </h1>
         <p className={"text-center"}>
-          Experience the gay social media app designed for true community.
-          Beyond the scroll, we celebrate queer culture and spark the real
-          conversations that help you find your people.
+          Bessa is an inclusive, LGBTQ+ social media app designed for you to
+          share your story, create queer culture, build real connections.
         </p>
         <div className={"flex justify-center gap-4"}>
           <a
@@ -63,11 +62,13 @@ export default function Home() {
               Loud, Proud, and Right at Home
             </h2>
             <p>
-              Bessa is the ultimate hub for queer community and culture,
-              designed as an inclusive home for all genders, colors, shapes,
-              sizes, and abilities. We are unapologetically queer, trading
-              superficial interactions for meaningful connections. Bessa is the
-              gay social media app where creativity meets community.
+              Bessa is a queer LGBTQ+ social media app built to amplify your
+              voice and celebrate the art of being us. We are ditching the
+              superficial mindset to focus on user-generated content and
+              meaningful conversations, helping you create queer culture and
+              foster real connections. Whether you are sharing your latest
+              passion project or advocating for the community, you will find
+              your people right here.
             </p>
             <div className={"flex gap-2"}>
               <a href={iOSLink} target={"_blank"} className={"btn btn-primary"}>
