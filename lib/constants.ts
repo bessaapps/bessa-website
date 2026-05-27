@@ -1,5 +1,5 @@
-export const sEOTitle =
-  "Bessa - Gay Social Media Built for Real Queer Connections";
+const keyword = "LGBTQ+ Social Media App";
+export const sEOTitle = `Bessa ${keyword}`;
 
 export const iOSLink =
   "https://apps.apple.com/us/app/bessa-queer-social-media/id6471383138";

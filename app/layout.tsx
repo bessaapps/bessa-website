@@ -11,7 +11,9 @@ const interSans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Bessa LGBTQ+ Social Media App"
+  title: "Bessa LGBTQ+ Social Media App",
+  description:
+    "Queer content. Real connections. Join Bessa, an inclusive LGBTQ+ social media app and creative hub to share your story and find your family."
 };
 
 export default function RootLayout({

@@ -99,7 +99,7 @@ export default function Home() {
           </blockquote>
           <div className={"avatar"}>
             <div className="w-24 rounded-full">
-              <Image src={Reviewer} alt={""} />
+              <Image src={Reviewer} alt={"Tee Kay"} />
             </div>
           </div>
           <p className={"text-white font-bold"}>Tee Kay</p>
