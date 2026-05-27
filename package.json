@@ -28,6 +28,5 @@
   },
   "prettier": {
     "trailingComma": "none"
-  },
-  "browserslist": "> 1%"
+  }
 }
