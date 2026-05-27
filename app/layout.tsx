@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import TopNavigation from "@/components/navigation/TopNavigation";
 import BottomNavigation from "@/components/navigation/BottomNavigation";
-import { sEOTitle } from "@/lib/constants";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 const interSans = Inter({
@@ -12,7 +11,7 @@ const interSans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: sEOTitle
+  title: "Bessa LGBTQ+ Social Media App"
 };
 
 export default function RootLayout({
