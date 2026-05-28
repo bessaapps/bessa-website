@@ -107,34 +107,50 @@ export default function Home() {
         </div>
       </div>
       <div className={"max-w-6xl mx-auto flex gap-16"}>
-        <div>
-          <p>
-            Bessa is the best gay social media app where being queer comes to
-            life through meaningful interaction.
-          </p>
-        </div>
-        <div className={"flex flex-col gap-8"}>
-          <p className={"text-4xl"}>
-            Bessa is a vibrant gay social media app that transforms the
-            traditional social feed into a dedicated hub for queer culture,
-            prioritizing authentic user-generated content over mindless
-            scrolling. It’s a space where LGBTQ people can amplify their voices,
-            share creative projects, and connect.
-          </p>
-          <div className={"grid grid-cols-2 gap-4"}>
-            <p className={"text-lg"}>
-              <b>Direct Messaging</b>: Chat is designed to move past small talk
-              and create deep, meaningful connections within the LGBTQ
-              community. It’s a space to engage with others thoughtfully. DM’s
-              turns digital interactions into real-world energy.
+        <div className={"grid grid-cols-1 sm:grid-cols-2 gap-4"}>
+          <div>
+            <h2 className={"text-4xl font-medium mb-2"}>
+              Your Feed, Your Family
+            </h2>
+            <p>
+              Welcome to the heart of Bessa, an LGBTQ+ social media app where
+              creativity meets community. By breaking away from a superficial
+              mindset, the Bessa social feed delivers a vibrant timeline that is
+              queer and deeply authentic.
             </p>
-            <p className={"text-lg"}>
-              <b>Member Profiles</b>: Bessa offers a fresh take on the
-              traditional user profile, shifting the focus away from a
-              superficial mindset to celebrate the full spectrum of who you are.
-              Profiles go beyond just sexual preferences, providing a space to
-              showcase your queer creativity. From filmmakers to activists, your
-              story belongs here.
+          </div>
+          <div>
+            <h2 className={"text-4xl font-medium mb-2"}>
+              No Filters. Just Us.
+            </h2>
+            <p>
+              Tired of scrolling through platforms that reduce you to a basic
+              checklist of preferences? We are too, honey! That is why the
+              member directory in Bessa, your new favorite LGBTQ+ social media
+              app, offers a completely fresh take on how we display user
+              profiles.
+            </p>
+          </div>
+          <div>
+            <h2 className={"text-4xl font-medium mb-2"}>
+              Slide Into Something Meaningful
+            </h2>
+            <p>
+              Whether you are hyping up a local drag queen&apos;s latest
+              performance, coordinating a coffee date with a new creative
+              collaborator, or just sharing some late-night tea, the direct
+              messaging feature in Bessa is where the real magic happens.
+            </p>
+          </div>
+          <div>
+            <h2 className={"text-4xl font-medium mb-2"}>
+              Your Story Belongs Here
+            </h2>
+            <p>
+              Bessa is officially breaking away from a superficial mindset. The
+              member profiles are designed to celebrate the art of being us,
+              giving you a digital canvas that is as vibrant and multifaceted as
+              you are!
             </p>
           </div>
         </div>
