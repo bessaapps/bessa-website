@@ -44,9 +44,9 @@ export default function PrivacyPage() {
           ⚠️
           <p>Camera/Photo Gallery (Optionally)</p>
         </div>
-      </div>
-      <div className={"max-w-3xl flex flex-col gap-4 px-4 mx-auto my-24"}>
-        <h2 className={"text-4xl font-medium"}>Deletion</h2>
+        <h2 className={"text-secondary text-3xl font-medium sm:w-1/2 mt-4"}>
+          Deletion
+        </h2>
         <p>
           You can delete your account and all previously mentioned data at any
           time by emailing us at{" "}

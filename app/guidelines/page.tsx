@@ -41,10 +41,10 @@ export default function GuidelinesPage() {
             is not allowed.
           </p>
         </div>
-      </div>
-      <div className={"max-w-3xl flex flex-col gap-4 px-4 mx-auto my-24"}>
-        <h2 className={"text-4xl font-medium"}>Media</h2>
-        <p className={"font-bold"}>
+        <h2 className={"text-secondary text-3xl font-medium sm:w-1/2 mt-4"}>
+          Media
+        </h2>
+        <p className={"italic"}>
           This includes images and videos; profile pictures, posts, and direct
           messages
         </p>
@@ -101,10 +101,10 @@ export default function GuidelinesPage() {
           🚫
           <p>Gore (AI-moderated)</p>
         </div>
-      </div>
-      <div className={"max-w-3xl flex flex-col gap-4 px-4 mx-auto my-24"}>
-        <h2 className={"text-4xl font-medium"}>Text</h2>
-        <p className={"font-bold"}>
+        <h2 className={"text-secondary text-3xl font-medium sm:w-1/2 mt-4"}>
+          Text
+        </h2>
+        <p className={"italic"}>
           This includes posts, comments, direct messages, and reviews.
         </p>
         <p>

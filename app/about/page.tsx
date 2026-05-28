@@ -3,7 +3,7 @@ export default function AboutPage() {
     <>
       <div className={"max-w-3xl flex flex-col gap-4 px-4 mx-auto my-24"}>
         <h1 className={"text-4xl font-semibold text-center mb-6"}>About</h1>
-        <p className={"font-bold"}>
+        <p>
           Bessa is an unapologetically queer hub for creative expression and
           real connections, standing out from other gay social media apps by
           focusing on found family. This inclusive platform is where your voice
@@ -18,12 +18,9 @@ export default function AboutPage() {
           more than just a queer community app; it’s a space for real
           connection, thoughtful design, and queer tech done right.
         </p>
-      </div>
-      <div className={"max-w-3xl flex flex-col gap-4 px-4 mx-auto my-24"}>
-        <h2 className={"text-4xl font-medium"}>Queer. Open. Ours.</h2>
-        <p className={"font-bold"}>
-          A social app designed to celebrate diversity without losing identity.
-        </p>
+        <h2 className={"text-secondary text-3xl font-medium sm:w-1/2 mt-4"}>
+          Queer. Open. Ours.
+        </h2>
         <p>
           What does inclusivity really mean, and how far can it go without
           diluting the heart of a community? Bessa is a queer social media app

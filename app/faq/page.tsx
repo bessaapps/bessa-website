@@ -13,9 +13,9 @@ export default function FAQPage() {
           has all the answers you need so you can sip, scroll, and join the
           party fully informed. There’s no messy group chat required.
         </p>
-      </div>
-      <div className={"max-w-3xl flex flex-col gap-4 px-4 mx-auto my-24"}>
-        <h2 className={"text-4xl font-medium"}>What is Bessa?</h2>
+        <h2 className={"text-secondary text-3xl font-medium sm:w-1/2 mt-4"}>
+          What is Bessa?
+        </h2>
         <p>
           Bessa is a gay social media app and LGBTQ social networking app made
           by and for the LGBTQ community. It’s a place to post and share LGBTQ
@@ -26,18 +26,16 @@ export default function FAQPage() {
           friends, or just a space where you feel seen, Bessa helps you find
           your people and stay connected.
         </p>
-      </div>
-      <div className={"max-w-3xl flex flex-col gap-4 px-4 mx-auto my-24"}>
-        <h2 className={"text-4xl font-medium"}>Who can join Bessa?</h2>
+        <h2 className={"text-secondary text-3xl font-medium sm:w-1/2 mt-4"}>
+          Who can join Bessa?
+        </h2>
         <p>
           Bessa is designed for everyone under the LGBTQ umbrella. While allies
           are welcome to support the project, the app itself is built to serve
           LGBTQ users who want space to connect, share experiences, and find
           each other outside of hookup culture.
         </p>
-      </div>
-      <div className={"max-w-3xl flex flex-col gap-4 px-4 mx-auto my-24"}>
-        <h2 className={"text-4xl font-medium"}>
+        <h2 className={"text-secondary text-3xl font-medium sm:w-1/2 mt-4"}>
           How is Bessa different from Grindr, HER, and Taimi?
         </h2>
         <p>
@@ -47,9 +45,7 @@ export default function FAQPage() {
           and events. If you’re tired of swiping and want an app like HER or
           Taimi without hookup culture, Bessa offers a refreshing alternative.
         </p>
-      </div>
-      <div className={"max-w-3xl flex flex-col gap-4 px-4 mx-auto my-24"}>
-        <h2 className={"text-4xl font-medium"}>
+        <h2 className={"text-secondary text-3xl font-medium sm:w-1/2 mt-4"}>
           Is Bessa available for iOS or Android?
         </h2>
         <p>
@@ -75,9 +71,9 @@ export default function FAQPage() {
           to start connecting. The app works across devices so you can keep up
           with your community anywhere.
         </p>
-      </div>
-      <div className={"max-w-3xl flex flex-col gap-4 px-4 mx-auto my-24"}>
-        <h2 className={"text-4xl font-medium"}>How do I support Bessa?</h2>
+        <h2 className={"text-secondary text-3xl font-medium sm:w-1/2 mt-4"}>
+          How do I support Bessa?
+        </h2>
         <p>
           Bessa is an independent LGBTQ social networking app, and community
           support helps it grow. You can{" "}
