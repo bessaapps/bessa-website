@@ -33,7 +33,7 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className={"max-w-6xl mx-auto flex flex-col gap-4 my-24"}>
+      <div className={"max-w-5xl mx-auto flex flex-col gap-4 my-24"}>
         <div className={"aspect-[1.4]"}>
           <Image
             src={Stock1}
@@ -45,7 +45,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className={"max-w-6xl mx-auto gap-4 my-24"}>
+      <div className={"max-w-5xl mx-auto gap-4 my-24"}>
         <div className={"grid grid-cols-1 sm:grid-cols-2 items-center gap-4"}>
           <div className={"relative aspect-[1.4]"}>
             <Image
@@ -106,7 +106,7 @@ export default function Home() {
           <p className={"text-white font-bold"}>Tee Kay</p>
         </div>
       </div>
-      <div className={"max-w-6xl mx-auto flex gap-16"}>
+      <div className={"max-w-5xl mx-auto flex gap-16"}>
         <div className={"grid grid-cols-1 sm:grid-cols-2 gap-4"}>
           <div>
             <h2 className={"text-4xl font-medium mb-2"}>
@@ -156,7 +156,7 @@ export default function Home() {
         </div>
       </div>
       <div className={"bg-secondary"}>
-        <div className={"max-w-6xl mx-auto gap-4 py-24 my-24"}>
+        <div className={"max-w-5xl mx-auto gap-4 py-24 my-24"}>
           <div className={"grid grid-cols-2 gap-4"}>
             <div className={"flex flex-col gap-4"}>
               <h2
@@ -191,7 +191,7 @@ export default function Home() {
         </div>
       </div>
       {/*todo:*/}
-      {/*<div className={"max-w-6xl mx-auto"}>*/}
+      {/*<div className={"max-w-5xl mx-auto"}>*/}
       {/*  <h2 className={"text-4xl font-medium"}>Read More</h2>*/}
       {/*  <div className={"flex items-center justify-between border-t"}>*/}
       {/*    <Link href={"/"}>*/}
