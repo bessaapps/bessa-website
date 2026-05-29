@@ -1,4 +1,4 @@
-const keyword = "LGBTQ+ Social Media App";
+const keyword = "LGBTQ Social Media";
 export const sEOTitle = `Bessa ${keyword}`;
 
 export const iOSLink =
