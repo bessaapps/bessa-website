@@ -15,8 +15,8 @@ export default function BottomNavigation() {
   return (
     <>
       <div className={"bg-primary"}>
-        <div className={"px-4 py-16"}>
-          <div className={"flex gap-4"}>
+        <div className={"w-full max-w-5xl px-4 py-16 mx-auto"}>
+          <div className={"flex justify-between gap-4"}>
             <div>
               <p className={"text-white mb-4"}>
                 Amplify your voice
@@ -35,18 +35,18 @@ export default function BottomNavigation() {
                 </a>
               </div>
             </div>
-            <div className={"flex justify-end max-w-300"}>
+            <div className={"max-w-300"}>
               <div>
                 <p
                   className={
-                    "text-black text-xl sm:text-9xl font-bold text-right uppercase"
+                    "text-black text-xl sm:text-8xl font-bold text-right uppercase"
                   }
                 >
                   Find your people
                 </p>
                 <p
                   className={
-                    "text-white text-xl sm:text-9xl font-bold text-right uppercase"
+                    "text-white text-xl sm:text-8xl font-bold text-right uppercase"
                   }
                 >
                   Share your story

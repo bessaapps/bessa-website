@@ -1,7 +1,6 @@
 import { androidLink, iOSLink } from "@/lib/constants";
 import Stock1 from "@/assets/images/stock/1.jpg";
 import Stock2 from "@/assets/images/stock/2.jpg";
-import Stock3 from "@/assets/images/stock/3.jpg";
 import Reviewer from "@/assets/images/reviewer.jpg";
 import Image from "next/image";
 import Section from "@/components/Section";
@@ -154,41 +153,6 @@ export default function Home() {
               giving you a digital canvas that is as vibrant and multifaceted as
               you are!
             </p>
-          </div>
-        </div>
-      </Section>
-      <Section containerClassName={"bg-secondary"}>
-        <div className={"max-w-5xl"}>
-          <div className={"grid grid-cols-2 gap-4"}>
-            <div className={"flex flex-col gap-4"}>
-              <h2
-                className={"text-white text-9xl font-medium"}
-                style={{ writingMode: "sideways-lr" }}
-              >
-                SUPPORT
-              </h2>
-              <p className={"text-white"}>
-                Bessa is where creativity meets community. Your contribution
-                ensures we can continue offering a fresh take on queer
-                connection.
-              </p>
-              <div>
-                <a
-                  href={"https://buymeacoffee.com/getbessa"}
-                  target={"_blank"}
-                  className={"btn btn-lg"}
-                >
-                  Donate
-                </a>
-              </div>
-            </div>
-            <Image
-              src={Stock3}
-              alt={
-                "A person laughing while giving a friend a piggyback ride, wearing a shirt with social justice messages like 'No Homophobia' and 'Yes Equality,' embodying Bessa's commitment to queer activism and joy."
-              }
-              className={"grayscale"}
-            />
           </div>
         </div>
       </Section>
