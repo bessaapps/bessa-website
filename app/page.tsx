@@ -9,14 +9,20 @@ export default function Home() {
   return (
     <main>
       <Section>
-        <div className={"flex flex-col gap-4 max-w-lg mx-auto"}>
-          <h1 className={"text-4xl font-semibold text-center"}>
-            An LGBTQ+ Social Media App, Reimagined
+        <div className={"flex flex-col gap-4 mx-auto"}>
+          <h1
+            className={
+              "text-7xl text-center uppercase text-transparent bg-clip-text bg-linear-to-b from-primary to-secondary"
+            }
+          >
+            An LGBTQ Social Media App, Reimagined
           </h1>
-          <p className={"text-center"}>
-            Bessa is an inclusive, LGBTQ+ social media app designed for you to
-            share your story, create queer culture, build real connections.
-          </p>
+          <div className={"max-w-lg mx-auto"}>
+            <p>
+              Bessa is an inclusive, LGBTQ social media app designed for you to
+              share your story, create queer culture, build real connections.
+            </p>
+          </div>
           <div className={"flex justify-center gap-4"}>
             <a
               href={iOSLink}

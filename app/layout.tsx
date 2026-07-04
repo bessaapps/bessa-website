@@ -1,13 +1,27 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import TopNavigation from "@/components/navigation/TopNavigation";
 import BottomNavigation from "@/components/navigation/BottomNavigation";
 import Script from "next/script";
+import localFont from "next/font/local";
 
-const interSans = Inter({
-  variable: "--font-inter-sans",
-  subsets: ["latin"]
+const fonts = localFont({
+  src: [
+    {
+      path: "./fonts/queering-bold-expanded.woff2",
+      weight: "800",
+      style: "normal"
+    },
+    {
+      path: "./fonts/queering-semibold-expanded.woff2",
+      weight: "700",
+      style: "normal"
+    },
+    {
+      path: "./fonts/public-sans.ttf",
+      style: "normal"
+    }
+  ]
 });
 
 export const metadata: Metadata = {
@@ -22,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang={"en"} className={`${interSans.variable} h-full antialiased`}>
+    <html lang={"en"} className={`${fonts.className} h-full antialiased`}>
       <body>
         <TopNavigation />
         {children}
