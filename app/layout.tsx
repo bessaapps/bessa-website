@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import TopNavigation from "@/components/navigation/TopNavigation";
 import BottomNavigation from "@/components/navigation/BottomNavigation";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 
 const interSans = Inter({
   variable: "--font-inter-sans",
@@ -29,7 +29,18 @@ export default function RootLayout({
         <BottomNavigation />
       </body>
       {process.env.NODE_ENV !== "development" && (
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!} />
+        <>
+          <Script
+            src={"https://plausible.io/js/pa-jx0cEX4XPPCKsuWlj56BJ.js"}
+            strategy={"beforeInteractive"}
+          />
+          <Script id={"plausible"} strategy={"beforeInteractive"}>
+            {`
+              window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+              plausible.init()
+            `}
+          </Script>
+        </>
       )}
     </html>
   );
