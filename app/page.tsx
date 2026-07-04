@@ -12,7 +12,7 @@ export default function Home() {
         <div className={"flex flex-col gap-4 mx-auto"}>
           <h1
             className={
-              "text-6xl sm:text-7xl text-center uppercase text-transparent bg-clip-text bg-linear-to-b from-primary to-secondary"
+              "text-6xl sm:text-7xl text-center uppercase text-transparent bg-clip-text bg-linear-to-b from-primary to-[#ff66b3]"
             }
           >
             An LGBTQ Social Media App, Reimagined

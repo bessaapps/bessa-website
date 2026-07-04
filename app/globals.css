@@ -6,13 +6,13 @@
   prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
   color-scheme: light; /* color of browser-provided UI */
 
-  --color-base-100: #f9f9f9;
-  --color-base-200: #ececec;
-  --color-base-300: #e4dee4;
-  --color-base-content: #071e22;
+  --color-base-100: #f1f1f1;
+  --color-base-200: #d4d4d4;
+  --color-base-300: #b8b8b8;
+  --color-base-content: #0e0e0e;
   --color-primary: #9e0059;
   --color-primary-content: #ffffff;
-  --color-secondary: #ff66b3;
+  --color-secondary: #9e4f00;
   --color-secondary-content: #ffffff;
   --color-accent: oklch(65% 0.25 160);
   --color-accent-content: oklch(98% 0.01 160);
@@ -20,11 +20,11 @@
   --color-neutral-content: oklch(98% 0.01 240);
   --color-info: oklch(70% 0.2 220);
   --color-info-content: oklch(98% 0.01 220);
-  --color-success: oklch(65% 0.25 140);
+  --color-success: #009e00;
   --color-success-content: oklch(98% 0.01 140);
   --color-warning: oklch(80% 0.25 80);
   --color-warning-content: oklch(20% 0.05 80);
-  --color-error: oklch(65% 0.3 30);
+  --color-error: #9e0000;
   --color-error-content: oklch(98% 0.01 30);
 
   /* border radius */
