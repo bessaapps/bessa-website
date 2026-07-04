@@ -22,7 +22,7 @@ export default function TopNavigation() {
               >
                 {links.map(({ href, anchor }) => (
                   <li key={href}>
-                    <Link href={href} className={"font-semibold"}>
+                    <Link href={href} className={"font-semibold uppercase"}>
                       {anchor}
                     </Link>
                   </li>
@@ -40,7 +40,7 @@ export default function TopNavigation() {
           <Link
             href={"/"}
             title={sEOTitle}
-            className={"text-base-content text-xl font-bold"}
+            className={"text-base-content text-xl font-bold uppercase"}
           >
             Bessa
           </Link>
@@ -50,7 +50,7 @@ export default function TopNavigation() {
             <ul className={"menu menu-horizontal px-1"}>
               {links.map(({ href, anchor }) => (
                 <li key={href}>
-                  <Link href={href} className={"font-semibold"}>
+                  <Link href={href} className={"font-semibold uppercase"}>
                     {anchor}
                   </Link>
                 </li>
