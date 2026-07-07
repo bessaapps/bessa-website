@@ -15,12 +15,12 @@ export default function Home() {
               "text-6xl sm:text-7xl text-center uppercase text-transparent bg-clip-text bg-linear-to-b from-primary to-[#ff66b3]"
             }
           >
-            An LGBTQ Social Media App, Reimagined
+            LGBTQ Social Media, Reimagined
           </h1>
           <div className={"max-w-lg mx-auto"}>
-            <p>
-              Bessa is an inclusive, LGBTQ social media app designed for you to
-              share your story, create queer culture, build real connections.
+            <p className={"text-center"}>
+              Bessa is an inclusive online creative community of all genders,
+              sexual orientations, colors, shapes, sizes, and abilities.
             </p>
           </div>
           <div className={"flex justify-center gap-4"}>

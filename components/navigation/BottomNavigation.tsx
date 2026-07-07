@@ -23,13 +23,17 @@ export default function BottomNavigation() {
                 <br /> in a space built for it.
               </p>
               <div className={"flex gap-4"}>
-                <a href={iOSLink} target={"_blank"} className={"btn sm:btn-lg"}>
+                <a
+                  href={iOSLink}
+                  target={"_blank"}
+                  className={"btn btn-accent sm:btn-lg"}
+                >
                   iOS
                 </a>
                 <a
                   href={androidLink}
                   target={"_blank"}
-                  className={"btn sm:btn-lg"}
+                  className={"btn btn-accent sm:btn-lg"}
                 >
                   Android
                 </a>
