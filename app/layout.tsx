@@ -8,17 +8,17 @@ import localFont from "next/font/local";
 const fonts = localFont({
   src: [
     {
-      path: "./fonts/queering-bold-expanded.woff2",
+      path: "../assets/fonts/queering-bold-expanded.woff2",
       weight: "800",
       style: "normal"
     },
     {
-      path: "./fonts/queering-semibold-expanded.woff2",
+      path: "../assets/fonts/queering-semibold-expanded.woff2",
       weight: "700",
       style: "normal"
     },
     {
-      path: "./fonts/public-sans.ttf",
+      path: "../assets/fonts/public-sans.ttf",
       style: "normal"
     }
   ]
