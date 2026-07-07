@@ -8,7 +8,6 @@ export const androidLink =
 
 export const links = [
   { href: "/about", anchor: "About" },
-  { href: "/donate", anchor: "Tip Bessa" },
   { href: "/guidelines", anchor: "Guidelines" },
   { href: "/privacy", anchor: "Privacy" },
   { href: "/faq", anchor: "FAQ" }

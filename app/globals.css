@@ -14,10 +14,10 @@
   --color-primary-content: #ffffff;
   --color-secondary: #9e4f00;
   --color-secondary-content: #ffffff;
-  --color-accent: #ffffff;
-  --color-accent-content: #0e0e0e;
-  --color-neutral: oklch(50% 0.05 240);
-  --color-neutral-content: oklch(98% 0.01 240);
+  --color-accent: #ff66b3;
+  --color-accent-content: #ffffff;
+  --color-neutral: #ffffff;
+  --color-neutral-content: #0e0e0e;
   --color-info: oklch(70% 0.2 220);
   --color-info-content: oklch(98% 0.01 220);
   --color-success: #009e00;
@@ -48,6 +48,6 @@ h1 {
   font-weight: 800;
 }
 h2 {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-weight: 700;
 }

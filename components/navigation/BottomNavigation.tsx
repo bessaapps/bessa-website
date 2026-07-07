@@ -26,14 +26,14 @@ export default function BottomNavigation() {
                 <a
                   href={iOSLink}
                   target={"_blank"}
-                  className={"btn btn-accent sm:btn-lg"}
+                  className={"btn btn-neutral sm:btn-lg"}
                 >
                   iOS
                 </a>
                 <a
                   href={androidLink}
                   target={"_blank"}
-                  className={"btn btn-accent sm:btn-lg"}
+                  className={"btn btn-neutral sm:btn-lg"}
                 >
                   Android
                 </a>
