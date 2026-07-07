@@ -1,5 +1,11 @@
 export default async function sitemap() {
-  const links = ["about", "donate", "faq", "guidelines", "privacy"];
+  const LINKS = [
+    "about",
+    "faq",
+    "free-drink-coasters-for-lgbt-bars",
+    "guidelines",
+    "privacy"
+  ];
 
   return [
     {
@@ -8,7 +14,7 @@ export default async function sitemap() {
       changeFrequency: "daily",
       priority: 1.0
     },
-    ...links.map((link) => ({
+    ...LINKS.map((link) => ({
       url: `https://getbessa.com/${link}`,
       lastModified: new Date(),
       changeFrequency: "daily",
