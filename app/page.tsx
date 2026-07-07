@@ -64,6 +64,7 @@ export default function Home() {
               }
               className={"object-cover grayscale"}
               fill
+              sizes={"(max-width: 639px) 100vw, 488px"}
             />
           </div>
           <div className={"flex flex-col gap-4"}>
