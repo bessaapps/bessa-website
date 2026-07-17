@@ -44,8 +44,8 @@ export default function GuidelinesPage() {
           <div className={"flex gap-2"}>
             🚫
             <p>
-              Excessive self-promotion, spam, or repeated creation of new
-              accounts is not allowed.
+              Excessive self-promotion, spam, requests for or offers of money,
+              or repeated creation of new accounts is not allowed.
             </p>
           </div>
           <h2 className={"text-secondary text-3xl font-medium sm:w-1/2 mt-4"}>
